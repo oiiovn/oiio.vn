@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<link rel="stylesheet" href="{{ asset('viewsCustom/assets/css/style.css') }}">
 <head>
     <x-layout.head />
 </head>
@@ -21,7 +21,7 @@
                 </div>
                 <div class="col-12 col-md-9 main-sec-content">
 
-                    <div class="row">
+                    <div class="row"style="width: 100%;margin-left: 16px !important;">
                         <div class="col-12 col-md-9 main-content">
                             @yield('content')
                         </div>
