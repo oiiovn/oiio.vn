@@ -30,6 +30,6 @@
 @if($job->note)
     <div class="border job-note text-muted p-2 mb-3 rounded">
         <p class="text-danger fw-bold">{{ __('Lưu ý từ admin:') }}</p>
-        {!! $job->note !!}
+        {{--{!! $job->note !!}--}}
     </div>
 @endif
