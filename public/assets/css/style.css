@@ -38,15 +38,19 @@ form {
 }
 @media (min-width: 768px) {
     #sidebar-left.sidebar-left-right {
-        width: 20%;
+        width: 16.88%;
     }
 
     body .col-12.col-md-9.main-sec-content {
-        width: 80%;
+        width: 82.01%;
     }
 
     body .col-12.col-md-6.main-content {
         width: 60%;
+    }
+    .col-md-3 {
+        flex: 0 0 auto;
+        width: 25%;
     }
 }
 

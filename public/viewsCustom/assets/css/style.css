@@ -2239,8 +2239,8 @@ progress {
 .container-xl,
 .container-xxl {
   width: 100%;
-  padding-right: var(--bs-gutter-x, 0.75rem);
-  padding-left: var(--bs-gutter-x, 0.75rem);
+  padding-right: 0 !important;
+  padding-left: 0 !important;
   margin-right: auto;
   margin-left: auto; }
 
@@ -2262,7 +2262,7 @@ progress {
 
 @media (min-width: 1400px) {
   .container, .container-sm, .container-md, .container-lg, .container-xl, .container-xxl {
-    max-width: 1320px; } }
+    max-width: 1440px !important; } }
 
 .row {
   --bs-gutter-x: 40px;
@@ -2273,15 +2273,15 @@ progress {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   margin-top: calc(-1 * var(--bs-gutter-y));
-  margin-right: calc(-.5 * var(--bs-gutter-x));
-  margin-left: calc(-.5 * var(--bs-gutter-x)); }
+  margin-right: 0 !important;
+  margin-left: 0 !important; }
   .row > * {
     -ms-flex-negative: 0;
     flex-shrink: 0;
     width: 100%;
     max-width: 100%;
-    padding-right: calc(var(--bs-gutter-x) * .5);
-    padding-left: calc(var(--bs-gutter-x) * .5);
+    padding-right:0 !important;
+    padding-left:0 !important;
     margin-top: var(--bs-gutter-y); }
 
 .col {
