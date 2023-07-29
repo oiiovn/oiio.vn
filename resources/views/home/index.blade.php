@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-    <div id="jobList" style="padding-right: 16px;">
+    <div id="jobList" style="">
         @each('jobs.loop.job-simple', $jobs, 'job', 'others.empty-data')
     </div>
     @include('others.effect-loadmore')

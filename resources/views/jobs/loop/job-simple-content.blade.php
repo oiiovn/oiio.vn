@@ -34,13 +34,17 @@
     <div class=" job-note text-muted rounded index-web" style="width:100%;">
         {{--<p class="text-danger fw-bold">{{ __('Lưu ý từ admin:') }}</p>--}}
         {{--{!! $job->note !!}--}}
-        <div class="content__body-header" style="display:flex;padding-left:25px;padding-top:15px;">
+        <div class="content__body-header" style="display:flex;padding-left:17px;padding-top:7px;">
             <div class="header-left-pp" style="display:flex;">
                     <div class="header-left-pp__img">
                          <img src="{{ asset('viewsCustom/assets/images/hinh1.png') }}" width:45px height:45px/>
                     </div>
+                    
                     <div class="header-left-pp__text" style="display:bock;padding-left:9px;margin-top:5px;">
-                        <div class="header-left-pp__text__top fs14" style="color: #000;font-style: normal;font-weight: 500;line-height: normal;width: 107px;">SHOP SAKURA</div>
+                    <div style="display:flex;">
+                            <div class="header-left-pp__text__top fs16" style="color: #000;font-style: normal;font-weight: 500;line-height: normal;max-width:200px;"><b>Korina</b></div>
+                            <img style="padding-left:4px;" src="{{ asset('viewsCustom/assets/images/tick.svg') }}" width:8.7px height:8.7px/>
+                    </div>
                         <div class="header-left-pp__text__bottom fs13" style="color: #A6A4A4;font-style: normal;font-weight: 400;line-height: normal;">22 giờ trước</div>
                     </div>
             </div>
@@ -85,10 +89,12 @@
                          <img src="{{ asset('viewsCustom/assets/images/hinh1.png') }}" width:45px height:45px/>
                     </div>
                     <div class="header-left-pp__text" style="display:bock;padding-left:9px;margin-top:5px;">
-                        <div class="header-left-pp__text__top fs16" style="color: #000;font-style: normal;font-weight: 500;line-height: normal;width:114px;">SHOP SAKURA</div>
                         <div style="display:flex;">
-                            <div class="header-left-pp__text__bottom fs12" style="color: #A6A4A4;font-style: normal;font-weight: 400;line-height: normal;width:100px;">22 giờ trước</div>
-                            
+                            <div class="header-left-pp__text__top fs16" style="color: #000;font-style: normal;font-weight: 500;line-height: normal;width:114px;"><b>Korina</b></div>
+                            <img style="padding-left:4px;" src="{{ asset('viewsCustom/assets/images/tick.svg') }}" width:8.7px height:8.7px/>
+                        </div>    
+                        <div style="display:flex;">
+                            <div class="header-left-pp__text__bottom fs12" style="color: #A6A4A4;font-style: normal;font-weight: 400;line-height: normal;width:100px;">22 giờ trước</div>                  
                         </div>                           
                     </div>
                     <div class="header-right-pp" style="display:flex;padding-top:10px;">
@@ -305,8 +311,8 @@
      }
      .see-more {
         position: absolute;
-    top: 30px;
-    right: 30px;
+    top: 22px;
+    right: 15px;
      }
      .modal-content {
         width:850px !important;
@@ -365,8 +371,8 @@
      }
      .see-more {
         position: absolute;
-    top: 30px;
-    right: 30px;
+    top: 22px;
+    right: 15px;
      }
      .modal-content {
         width:850px !important;
@@ -385,7 +391,7 @@
         margin-left: 41%;
      }
      .header-right-pp{
-        padding-left:20%;
+        padding-left:3%;
      }
      .items-tiktok-webside{
         margin-top: -5px;
@@ -418,8 +424,8 @@
      }
      .see-more {
         position: absolute;
-    top: 30px;
-    right: 30px;
+    top: 22px;
+    right: 15px;
      }
 
     }
