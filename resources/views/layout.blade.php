@@ -23,6 +23,32 @@
      .ads-content{
         display:flex;
     }
+        
+    /* width */
+    ::-webkit-scrollbar {
+        width:5px;
+    }
+    /* Track */
+    ::-webkit-scrollbar-track {
+        border-radius: 10px;
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        background: #3333;
+        border-radius: 10px;
+        height: 5px;
+    }
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        opacity: 0.8;
+    }
+    /* @media (min-width:1500px) {
+        #sidebar-left-child{
+            max-width:11.01%;
+        }
+    } */
 </style>
 <body>
     <header>
@@ -31,14 +57,14 @@
     <main>
         <div class="container pt-3">
             <div class="row">
-                <div class="col-12 col-md-3 sidebar-left-right d-mobi-none position-relative" id="sidebar-left" style="">
-                    <div @class([
+                <div class="col-12 col-md-3 sidebar-left-right d-mobi-none position-relative" id="sidebar-left" style="background: #FFF;padding-top:65px;padding-right:2px;">
+                    <div style="position: fixed;overflow-y:scroll;height: 95%;width:16.88%;max-width:243px;" @class([
                             'd-none' => Route::is('login.index', 'register.index')
                         ]) id="sidebar-left-child">
                         <x-sidebar_home_left />
                     </div>
                 </div>
-                <div class="col-12 col-md-9 main-sec-content">
+                <div class="col-12 col-md-9 main-sec-content" style="margin-top:70px;" id="content">
 
                     <div class="row"style="width: 100%;margin-left: 16px !important;">
                         <div class="col-12 col-md-9 main-content" style="width:71.72%;display:flex; ">
@@ -58,7 +84,7 @@
                             
                                
                         </div>
-                        <div class="col-12 col-md-3 sidebar-left-right d-mobi-none " id="sidebarRight" style="width:28.28% !important;">
+                        <div class="col-12 col-md-3 sidebar-left-right d-mobi-none " id="sidebarRight" style="width:28.28% !important;border-radius: 10px;">
                             <div @class([
                                     'd-none' => Route::is('login.index', 'register.index'),
                                     'sidebar-right-child' => !Route::is('homepage')

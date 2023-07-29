@@ -2880,7 +2880,6 @@ progress {
 .container-lg,
 .container-xl,
 .container-xxl {
-    width: 100%;
     padding-right: 0 !important;
     padding-left: 0 !important;
     margin-right: auto;
@@ -2929,6 +2928,7 @@ progress {
     .container-xl,
     .container-xxl {
         max-width: 1440px !important;
+        width:100% !important;
     }
 }
 
