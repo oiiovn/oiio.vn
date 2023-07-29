@@ -29,7 +29,8 @@
     </table>
 </div>--}}
 @if($job->note)
-<div class="content-all" style="display:flex;">
+<div style="width:100%;display:flex;">
+<div class="content-all" style="display:flex;width:71.72%;">
     <!-- Webside -->
     <div class=" job-note text-muted rounded index-web" style="width:100%;">
         {{--<p class="text-danger fw-bold">{{ __('Lưu ý từ admin:') }}</p>--}}
@@ -140,6 +141,8 @@
     </div>
     
 </div>
+ 
+</div>
 <!-- Modals mobile -->
 <div class="modal fade" id="exampleModalMobile" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog " role="document"style="width:100%;" >
@@ -242,6 +245,7 @@
         </div>
     </div>
 </div>
+
 @endif
 <style>
     
@@ -333,7 +337,7 @@
      }
      .btn-receive-application{
         padding-bottom: 20px;
-        padding-top: 84px;
+        padding-top: 95px;
         margin-left: 41%;
      }
      .header-right-pp{
@@ -387,7 +391,7 @@
      }
      .btn-receive-application{
         padding-bottom: 20px;
-        padding-top: 84px;
+        padding-top: 95px;
         margin-left: 41%;
      }
      .header-right-pp{
@@ -409,7 +413,7 @@
     @media (max-width:1440px){
      .btn-receive-application{
         padding-bottom: 20px;
-        padding-top: 84px;
+        padding-top: 95px;
         margin-left: 41%;
      }
      .wage{

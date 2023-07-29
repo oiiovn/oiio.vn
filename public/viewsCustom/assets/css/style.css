@@ -19767,8 +19767,8 @@ dl li {
 }
 
 .content-wrapper {
-    background: #f2edf3;
-    padding: 2.75rem 2.25rem;
+    /* background: #f2edf3;
+    padding: 2.75rem 2.25rem; */
     width: 100%;
     -webkit-box-flex: 1;
     -ms-flex-positive: 1;
