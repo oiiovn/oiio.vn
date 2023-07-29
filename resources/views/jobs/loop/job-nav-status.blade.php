@@ -1,4 +1,4 @@
-<div class="card-body p-0">
+{{--<div class="card-body p-0">
     <div class="wrap-control-tab pb-2 pt-3">
         <div class="job-status-nav-tabs d-flex border-b">
             @foreach ($job_status[$type] as $key => $value)
@@ -20,4 +20,4 @@
             @endforeach
         </div>
     </div>
-</div>
+</div>--}}

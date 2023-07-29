@@ -1,4 +1,4 @@
-@if(isset($only_show))
+{{--@if(isset($only_show))
     @if($only_show)
         @if (auth()->check() && ($job->isAuthShop() || $job->isAuthWorker()))
             <div class="text-center">
@@ -15,4 +15,4 @@
             </button>
         </div>
     @endif
-@endif
+@endif--}}
