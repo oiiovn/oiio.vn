@@ -42,10 +42,8 @@
 
                     <div class="row"style="width: 100%;margin-left: 16px !important;">
                        
-                        <div class="col-12 col-md-9 main-content" >
-                            
-                                <div style=""> @yield('content')</div>
-                                               
+                        <div class="col-12 col-md-9 main-content" >                          
+                                <div style=""> @yield('content')</div>                                             
                         </div>
                         
                         <div class="col-12 col-md-3 sidebar-left-right d-mobi-none " id="sidebarRight" style="width:28.28% !important;">
