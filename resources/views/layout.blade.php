@@ -57,7 +57,7 @@
     <main>
         <div class="container pt-3">
             <div class="row">
-                <div class="col-12 col-md-3 sidebar-left-right d-mobi-none position-relative" id="sidebar-left" style="background: #FFF;padding-top:65px;padding-right:2px;">
+                <div class="col-12 col-md-3 sidebar-left-right d-mobi-none position-relative" id="sidebar-left" style="background: #e9e9e9;padding-top:65px;padding-right:2px;">
                     <div style="position: fixed;overflow-y:scroll;height: 95%;width:16.88%;max-width:243px;" @class([
                             'd-none' => Route::is('login.index', 'register.index')
                         ]) id="sidebar-left-child">

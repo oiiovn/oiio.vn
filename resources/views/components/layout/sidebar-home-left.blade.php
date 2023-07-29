@@ -205,7 +205,6 @@
     </x-card> -->
     <!-- Đã sửa -->
 </x-card>
-<p class="d-mobi-none" style="padding-bottom: 100px"></p>
 <style>
     * {
         list-style-type: none !important;
@@ -310,4 +309,5 @@
     .menu-title{
         font-size: 14px;
     }
+
 </style>
