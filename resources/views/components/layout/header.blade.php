@@ -1,79 +1,39 @@
-<nav class="navbar navbar-expand-lg" style="width: 100%; height: 80px; border-bottom: 1px solid rgba(233, 233, 233, 0.95);">
-    <div class="container" style="
-    width: 100%;
-">
+<nav class="navbar navbar-expand-lg" style="width: 100%; height: 80px; border-bottom: 1px solid rgba(233, 233, 233, 0.95);"> <!-- Đã sửa -->
+    <div class="container" style="width:100%;">
         <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-            <a class="navbar-brand me-2" href="http://127.0.0.1:8000" style="
-    /* margin: 0; */
-    margin-right: 0 !important;
-">
-                <img src="http://127.0.0.1:8000/icon/logoHeader.png" style="width: auto; height: 60px; justify-content: center; align-items: center; flex-shrink: 0;">
+            <a class="navbar-brand me-2" href="{{ route('homepage') }}" style="width: 100%;margin-right: 0 !important;">
+                <img src="{{ asset('icon/logoHeader.png') }}" style="width: auto; height: 50px; justify-content: center; align-items: center; flex-shrink: 0;" />
             </a>
         </div>
-        <!-- 
-
-
-
-
-
-
-
-
- -->
-        <!--  -->
-        <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown" style="width: 82.01%;margin-left: 16px;">
-            <!-- <ul class="navbar-nav">
-                <li class="nav-item">
-                    <form class="d-flex d-desktop-none" role="search" style="width: 93%">
-                        <input class="form-control me-2" type="search" placeholder="Tìm kiếm công việc">
-                        <button class="btn btn-orange" type="submit">Tìm kiếm</button>
-                    </form>
-                </li>
-
-                                    <li class="nav-item me-2">
-    
-                        <a class="nav-link border-0 rounded text-dark" href="">
-                            <img src="http://127.0.0.1:8000/icon/settings.svg"
-                                 style="display: flex;
-                                        width: 24px;
-                                        height: 24px;
-                                        padding: 1px;
-                                        justify-content: center;
-                                        align-items: center;
-                                        flex-shrink: 0;">
-                        </a>
-                    </li>
-
-                    <li class="nav-item me-2">
-                        <a class="nav-link border-0 rounded text-dark" href="">
-                            <img src="http://127.0.0.1:8000/icon/bell.svg"
-                                 style="display: flex;
-                                        width: 24px;
-                                        height: 24px;
-                                        padding: 1px;
-                                        justify-content: center;
-                                        align-items: center;
-                                        flex-shrink: 0;">
-                        </a>
-                    </li>
-                            </ul> -->
-            <div class="navbar-menu-wrapper d-flex align-items-center justify-content-between"style="margin-left: 20px;">
-
-                <div class="search-field-s d-none d-md-block">
+        <!-- {{--        <div class="d-flex align-items-center gap-2">--}}
+{{--            <x-link class="fs-14 d-flex align-items-center gap-1 text-orange p-2" :href="'tel:'.$settings['hotline']">--}}
+{{--                <i class="fa-duotone fa-phone"></i>--}}
+{{--                <span class="d-none d-md-block">{{ $settings['hotline'] }}</span>--}}
+{{--            </x-link>--}}
+{{--            <x-link class="d-flex align-items-center gap-1 fs-14 text-orange ms-2 p-2" :href="$settings['admin_facebook_link']" target="_blank">--}}
+{{--                <i class="fa-brands fa-facebook"></i>--}}
+{{--                <span class="d-none d-md-block">{{ $settings['admin_facebook_name'] }}</span>--}}
+{{--            </x-link>--}}
+{{--        </div>--}} -->
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown" style="width: 82.01%;">
+            <div class="navbar-menu-wrapper d-flex align-items-center justify-content-between" style="margin-left: 16px;list-style:none;width: 100%;">
+                @if (auth()->guard('web')->check())
+                {{-- Tìm kiếm --}}
+                <div class="search-field-s d-none d-md-block" style="width: 51.01%;margin-left:22px;">
                     <form class="d-flex align-items-center h-100" action="#">
                         <div class="input-group-s">
                             <input type="text" class="form-control-s" placeholder="Tìm kiếm">
                             <div style="position: relative;border-left: 1px solid #3333;align-items: center;justify-content: center;display: flex;width: 20%;margin-left: auto;" class="input-group-prepend-s bg-transparent">
-                                <img src="http://127.0.0.1:8000/icon/search.svg" alt="logo">
+                                <img src="{{ asset('icon/search.svg') }}" alt="logo">
                             </div>
                         </div>
                     </form>
                 </div>
                 <ul class="navbar-nav navbar-nav-right" style="margin-right:0;width: 28.99%;">
-
-                    <li class="nav-item dropdown" style="border: none;width: 30%;display:flex;">
+                    {{-- Thông báo --}}
+                    <li class="nav-item dropdown" style="border: none;width: 30%;display: flex;">
                         <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="#" data-bs-toggle="dropdown">
-                            <img src="http://127.0.0.1:8000/icon/bell.svg" style="display: flex;
+                            <img src="{{ asset('icon/bell.svg') }}" style="display: flex;
                                                     height: 25px;
                                                     padding: 1px;
                                                     justify-content: center;
@@ -81,7 +41,7 @@
                                                     flex-shrink: 0;">
                             <span class="count-symbol bg-danger"></span>
                         </a>
-                        <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="notificationDropdown" style="width: fit-content;"><!-- ãã sửa-->
+                        <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="notificationDropdown"style="width: fit-content;"><!-- ãã sửa-->
                             <h6 class="p-3 mb-0">Notifications</h6>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item preview-item">
@@ -123,78 +83,53 @@
                             <h6 class="p-3 mb-0 text-center">See all notifications</h6>
                         </div>
                     </li>
-
+                    {{-- Thông tin người dùng --}}
+                    @else
+                    <li class="nav-item" style="justify-content: end;display:flex;margin-left:90%;">
+                        <a class="nav-link active" aria-current="page" href="{{ route('login.index') }}">Đăng nhập</a>
+                    </li>
+                    <li class="nav-item" style="justify-content: end;display:flex;margin-left:auto;">
+                        <a class="nav-link" href="{{ route('register.index') }}">Đăng ký</a>
+                    </li>
+                    @endif
                     <li class="nav-item nav-profile dropdown" style="border: none;width: 70%;">
+                        @if (auth()->check())
 
-                        <a class="nav-link dropdown-toggle" id="profileDropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false" style="width: fit-content;">
+                        <a class="nav-link dropdown-toggle" id="profileDropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false"style="width: fit-content;">
+                            @if (auth()->check())
                             <div class="nav-profile-img">
-                                <img src="http://127.0.0.1:8000/uploads/users/112/user//vf77RAlA0ZQik6ONJFIGiMhBY2rmLuSiHEMXB4Xr.png" width="35px" height="35px" style="display: flex;align-items: flex-end;gap: 10px;" alt="image">
+                                <img src="{{asset(auth()->user()->getAvatar())}}" width="35px" height="35px" style="display: flex;align-items: flex-end;gap: 10px;" alt="image">
                                 <span class="availability-status online"></span>
                             </div>
                             <div class="nav-profile-text">
-                                <p class="mb-1 text-black">thong2085</p>
+                                <p class="mb-1 text-black">{{ auth()->user()->username }}</p>
                             </div>
+                            @endif
                         </a>
                         <div class="dropdown-menu navbar-dropdown" aria-labelledby="profileDropdown">
-                            <a id="item-menu" class="dropdown-item" href="http://127.0.0.1:8000/thong-tin-tai-khoan"> Thông tin tài khoản </a>
+                            <a id="item-menu" class="dropdown-item" href="{{ route('user.index') }}"> Thông tin tài khoản </a>
                             <div class="dropdown-divider"></div>
-                            <a id="item-menu" class="dropdown-item" href="http://127.0.0.1:8000/thong-tin-tai-khoan/tai-khoan-ngan-hang"> Tài khoản ngân hàng </a>
+                            <a id="item-menu" class="dropdown-item" href="{{ route('user.bank.index') }}"> Tài khoản ngân hàng </a>
                             <div class="dropdown-divider"></div>
                             <a id="item-menu" class="dropdown-item" href="#"> Đổi mật khẩu </a>
                             <div class="dropdown-divider"></div>
-                            <form action="http://127.0.0.1:8000/dang-xuat" method="POST" class="">
-
-
-                                <input type="hidden" name="_token" value="NIpq7vpgMSWnFxJ1tpHQoUZVVGL0JQF2EYqldUbN">
-
-
-                                <button id="item-menu" type="submit" class="dropdown-item border-0" style="background: transparent !important">Đăng xuất
-                                    <img style="margin-left:auto;" src="http://127.0.0.1:8000/viewsCustom/assets/images/ic4.svg" alt="">
+                            <x-form class="" :action="route('logout')" type="post">
+                                <button id="item-menu" type="submit" class="dropdown-item border-0" style="background: transparent !important">{{ __('Đăng xuất') }}
+                                    <img style="margin-left:auto;" src="{{ asset('viewsCustom/assets/images/ic4.svg') }}" alt="">
                                 </button>
-
-                            </form>
+                            </x-form>
                         </div>
                     </li>
+                    @endif
                 </ul>
             </div>
+
         </div>
 
         <!-- Side bar on mobile devices -->
-        <button class="navbar-toggler d-desktop-none border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenuMobile" aria-controls="offcanvasMenuMobile">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="offcanvas offcanvas-end d-desktop-none" style="width: 80%;" tabindex="-1" id="offcanvasMenuMobile" aria-labelledby="offcanvasMenuMobileLabel">
-            <div class="offcanvas-header d-mobi-none">
-                <p class="offcanvas-title" id="offcanvasMenuMobileLabel">
-                    <span>
-                        <img class="rounded-circle shadow-sm bg-body-tertiary rounded" src="http://127.0.0.1:8000/uploads/users/112/user//vf77RAlA0ZQik6ONJFIGiMhBY2rmLuSiHEMXB4Xr.png" width="35px">
-                    </span>
-                    <span>Thống Lâm</span>
-                </p>
-                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div>
-            <div class="offcanvas-body"></div>
-        </div> <!-- End Side bar on mobile devices -->
+        @include('components.layout.nav-mobile')
+        <!-- End Side bar on mobile devices -->
 
-        <!--         <div class="d-flex gap-2 align-items-center d-mobi-none">
-            <a class="" href="http://127.0.0.1:8000/thong-tin-tai-khoan">
-                <span>
-                    <img class="rounded-circle shadow-sm bg-body-tertiary rounded"
-                        src="http://127.0.0.1:8000/uploads/users/112/user//vf77RAlA0ZQik6ONJFIGiMhBY2rmLuSiHEMXB4Xr.png" width="35px" height="35px" style="border: 2px solid #ed6237;"/>
-                </span>
-                <span>thong2085</span>
-            </a>
-            <span class="">|</span>
-            <form action="http://127.0.0.1:8000/dang-xuat" method="POST" class="" >
-    
-    
-        <input type="hidden" name="_token" value="NIpq7vpgMSWnFxJ1tpHQoUZVVGL0JQF2EYqldUbN">
-        
-    
-    <button type="submit" class="border-0" style="background: transparent !important">Đăng xuất</button>
-
-</form>        </div>
-         -->
     </div>
 </nav>
 <style>
