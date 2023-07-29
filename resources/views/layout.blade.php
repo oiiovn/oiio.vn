@@ -46,7 +46,7 @@
                                 <div style=""> @yield('content')</div>                                             
                         </div>
                         
-                        <div class="col-12 col-md-3 sidebar-left-right d-mobi-none " id="sidebarRight" style="width:28.28% !important;">
+                        
                             <div @class([
                                     'd-none' => Route::is('login.index', 'register.index'),
                                     'sidebar-right-child' => !Route::is('homepage')
