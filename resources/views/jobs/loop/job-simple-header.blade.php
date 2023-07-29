@@ -1,4 +1,4 @@
-@if (isset($show_full) && $show_full)
+{{--@if (isset($show_full) && $show_full)
     <div class="row align-items-center mb-2">
         <div class="col-8 col-md-8">
             <div class="mb-0 float-start">
@@ -40,4 +40,4 @@
                 {{ __('Đăng :diffTime', ['diffTime' => $job->created_at->diffForHumans()]) }}</p>
         </div>
     </div>
-@endif
+@endif--}}
