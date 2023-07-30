@@ -358,6 +358,9 @@
     }
 </style>
 <style>
+    .nav-item{
+        padding:10px;
+    }
     /* @media (min-width: 768px){
     .col-md-9 {
         flex: 0 0 auto;
