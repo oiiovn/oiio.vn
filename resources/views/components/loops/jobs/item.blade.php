@@ -1,5 +1,5 @@
 <x-card>
-    <div class="order-note card-body p-2">
+    <div class="order-note card-body "  style="padding:0px !important;">
         @isset($header)
             {{ $header }}
         @endisset
