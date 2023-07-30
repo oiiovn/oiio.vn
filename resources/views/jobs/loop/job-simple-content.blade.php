@@ -214,6 +214,7 @@
         </div>
     </div>
 </div>
+<!-- phần quảng cáo -->
 <div class=" content-ads index-web shadow-sm" style="margin-left:22px;width:200px;height:290px;background:#FFF;border-radius:10px;    position: absolute;right: 0px;">
                                         <a href="https://shopee.vn/%C3%81o-thun-Unisex-m%C3%A1c-RealLife-cao-su-FKZ-Unisex-ph%C3%B4ng-tr%C6%A1n-nam-n%E1%BB%AF-tay-l%E1%BB%A1-oversize-form-r%E1%BB%99ng-i.183840366.23825993719?sp_atk=af391579-fcac-4eb1-b2ce-358e20fcc785&xptdk=af391579-fcac-4eb1-b2ce-358e20fcc785" style="display:block;">
                                     <div><img src="{{ asset('viewsCustom/assets/images/product-demo.svg') }}" style="width:200px;height:200px;border-bottom: 1px #888888 !important;border-radius:10px 10px 0px 0px" /></div>
