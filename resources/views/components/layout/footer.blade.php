@@ -2,7 +2,7 @@
 
     {{-- Chính sách --}}
         <span class="text-muted col-8 d-block text-center text-sm-start d-sm-inline-block" style="text-align: left !important;">
-            <a href="#" style="color: #A6A4A4; display: inline-flex; align-items: center; gap: 12px; margin-right: 12px; text-decoration: none;">Trợ giúp</a>
+            <a href="https://help.oiio.vn" style="color: #A6A4A4; display: inline-flex; align-items: center; gap: 12px; margin-right: 12px; text-decoration: none;">Trợ giúp</a>
         </span>
     {{-- Logo --}}
     <span class="float-none float-sm-end mt-1 mt-sm-0 text-end"

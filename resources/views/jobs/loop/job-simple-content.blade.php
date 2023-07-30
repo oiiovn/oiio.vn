@@ -164,7 +164,7 @@
                     </ul>
                     <div class="items" style="padding-top:17px;display:flex;padding-left:100px;">
                         <a href="#"><button type="button" class="btn btn-secondary fs14" data-dismiss="modal" style="border-radius: 5px;border: 1.5px solid #A6A4A4;background:none;color: #A6A4A4;font-style: normal;font-weight: 700;line-height: normal;height:32px;width:65px;">Hủy</button></a>
-                        <button type="button" class="btn btn-primary fs14" style="margin-left:15px;border-radius: 5px;border: 1.5px solid #E0793F;background: #E0793F;color: #FFF;font-style: normal;font-weight: 700;line-height: normal;padding:5px 18px;width;110px;height:32px;">Nhận đơn</button>
+                        <button type="button" class="btn btn-primary fs14" style="margin-left:15px;border-radius: 5px;border: 1.5px solid #E0793F;background: #E0793F;color: #FFF;font-style: normal;font-weight: 700;line-height: normal;padding:5px 18px;width:110px;height:32px;">Nhận đơn</button>
                     </div>
                 </div>
             </div>
@@ -212,7 +212,7 @@
                     <div class="items fs13 items-tiktok-webside" style="color: #FFF;font-style: normal;font-weight: 700;line-height: normal;border-radius: 5px;background: #000;padding:8px 25px ;width:90px;">Tiktok</div>
                     <div class="items fs13" style="color: rgba(38, 147, 0, 0.80);font-style: normal;font-weight: 700;line-height: normal;">Hoàn thành</div>
                     <div class="items">Không nhận hàng</div>
-                    <div class="items fs13" style="color: #DE8C49;font-style: normal;font-weight: 700line-height: normal;">Đơn giao nhanh</div>
+                    <div class="items fs13" style="color: #DE8C49;font-style: normal;font-weight: 700;line-height: normal;">Đơn giao nhanh</div>
                     <div class="items">Shop thanh toán</div>
                     <div class="items">Shop gửi đánh giá</div>
                     <div class="items" style="border-radius: 5px;background: #FBC250;width:130px;padding: 8px 20px;">Tài khoàn vàng</div>
@@ -561,7 +561,7 @@
         width: 600px !important;
 }
         .modal-dialog{
-            left: 0px%;
+            left: 0px;
             top: 10%;
         }
     }
