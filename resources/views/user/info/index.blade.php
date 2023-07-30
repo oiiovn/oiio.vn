@@ -147,6 +147,9 @@
         </div>
     </x-card>
 </x-form>
+<div style="width: 100%;height:68px;background-color:#e9e9e9;">
+            <div style="height: 68px;"></div>
+    </div>
 <script>
     // --> Xử lí cập nhật avartar và cover-photo
     let avatar = document.getElementById('avatar-img');

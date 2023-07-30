@@ -49,7 +49,40 @@
             max-width:11.01%;
         }
     } */
-    
+    @media (max-width: 991px){
+        #sidebar-left-child{
+            position: relative !important;
+            width: 100% !important;
+            margin-bottom: 10px !important;
+            height: auto !important;
+            overflow-x: hidden;
+        }
+        #sidebar-right-child{
+            position:fixed !important ; 
+            width: 50%;
+            overflow-y: scroll !important;
+        }
+        .navbar .navbar-menu-wrapper {
+            width: auto;
+            padding-left: 15px;
+            padding-right: 15px;
+            display:flex;
+        }
+        .navbar-brand-wrapper{
+            margin-left: 10px;
+        }
+        .offcanvas-body{
+            margin-left:0 !important;
+            padding-left: 0 !important;
+        }
+        .card-list{
+            grid-template-columns: 50% 50% !important;
+            padding: 0 !important;
+        }
+        .card-list span{
+            font-size: 20px;
+        }
+    }
 </style>
 <body>
     <header>
@@ -58,7 +91,7 @@
     <main>
         <div class="container pt-3">
             <div class="row">
-                <div class="col-12 col-md-3 sidebar-left-right d-mobi-none position-relative" id="sidebar-left" style="background: #e9e9e9;padding-top:65px;padding-right:2px;">
+                <div class="col-12 col-md-3 sidebar-left-right d-mobi-none position-relative" id="sidebar-left" style="background: #fff;padding-top:65px;padding-right:2px;">
                     <div style="position: fixed;overflow-y:scroll;height: 95%;width:16.88%;max-width:243px;" @class([
                             'd-none' => Route::is('login.index', 'register.index')
                         ]) id="sidebar-left-child">
@@ -70,8 +103,8 @@
                     <div class="row"style="width: 100%;margin-left: 16px !important;">
                         <div class="col-12 col-md-9 main-content" style="width:71.72%;display:flex; ">
                             
-                                <div style="width:71.9%;"> @yield('content')</div>
-                                <div class=" content-ads index-web shadow-sm" style="margin-left:22px;width:200px;height:290px;background:#FFF;border-radius:10px;">
+                                <div style="width:98.11%;"> @yield('content')</div>
+                                <!-- <div class=" content-ads index-web shadow-sm" style="margin-left:22px;width:200px;height:290px;background:#FFF;border-radius:10px;">
                                         <a href="https://shopee.vn/%C3%81o-thun-Unisex-m%C3%A1c-RealLife-cao-su-FKZ-Unisex-ph%C3%B4ng-tr%C6%A1n-nam-n%E1%BB%AF-tay-l%E1%BB%A1-oversize-form-r%E1%BB%99ng-i.183840366.23825993719?sp_atk=af391579-fcac-4eb1-b2ce-358e20fcc785&xptdk=af391579-fcac-4eb1-b2ce-358e20fcc785" style="display:block;">
                                     <div><img src="{{ asset('viewsCustom/assets/images/product-demo.svg') }}" style="width:200px;height:200px;border-bottom: 1px #888888 !important;border-radius:10px 10px 0px 0px" /></div>
                                     <div style="color: #000;font-size: 16px;font-style: normal;font-weight: 400;line-height: normal;width:169px;height:auto;padding-top:6px;margin-left:10px;text-align:left;">Áo thun nam freesize Unisex</div>
@@ -81,7 +114,7 @@
                                         <div style="color: #FFF;font-size: 13px;font-style: normal;font-weight: 400;line-height: normal;letter-spacing: 1.235px;border-radius: 3px;background: #E0793F;width:90px;height:23px;margin-left:9px;padding:4px;text-align:center;">659.000 đ</div>
                                     </div>
                                 </a>
-                                </div> 
+                                </div>  -->
                             
                                
                         </div>

@@ -83,15 +83,17 @@
                             <h6 class="p-3 mb-0 text-center">See all notifications</h6>
                         </div>
                     </li>
-                    {{-- Thông tin người dùng --}}
                     @else
-                    <li class="nav-item" style="justify-content: end;display:flex;margin-left:90%;">
-                        <a class="nav-link active" aria-current="page" href="{{ route('login.index') }}">Đăng nhập</a>
-                    </li>
-                    <li class="nav-item" style="justify-content: end;display:flex;margin-left:auto;">
-                        <a class="nav-link" href="{{ route('register.index') }}">Đăng ký</a>
-                    </li>
+                        <div class="nav-item-grid" style="display:flex;">
+                            <li class="nav-item" style="border:none;">
+                                <a class="nav-link active" aria-current="page" href="{{ route('login.index') }}">Đăng nhập</a>
+                            </li>
+                            <li class="nav-item" style="border:none;margin-left:16px;">
+                                <a class="nav-link" href="{{ route('register.index') }}">Đăng ký</a>
+                            </li>
+                        </div>
                     @endif
+                    {{-- Thông tin người dùng --}}
                     <li class="nav-item nav-profile dropdown" style="border: none;width: 70%;">
                         @if (auth()->check())
 
@@ -119,16 +121,18 @@
                                 </button>
                             </x-form>
                         </div>
+                        
                     </li>
+                    
                     @endif
                 </ul>
             </div>
-
-        </div>
-
         <!-- Side bar on mobile devices -->
         @include('components.layout.nav-mobile')
         <!-- End Side bar on mobile devices -->
+
+        </div>
+
 
     </div>
 </nav>
@@ -645,8 +649,8 @@
     }
     .content-news .btn-date-news a:hover{
         color:#E0793F;
-    } */
-    /* @media (max-width: 991px) {
+    }*/
+    @media (max-width: 991px) {
         .navbar .navbar-menu-wrapper .navbar-nav .nav-item.dropdown {
             position: static !important;
         }
@@ -667,7 +671,7 @@
             margin-left: 50px;
         }
         .search-field-s{
-            display: none !important;
-        }
-    } */
+        display: none !important;
+    }
+    }
 </style>

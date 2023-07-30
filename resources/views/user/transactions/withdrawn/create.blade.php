@@ -1,4 +1,4 @@
-@extends('layout')
+<!-- @extends('layout')
 
 @section('content')
     <x-form type="post" action="{{ route('transaction.withdrawn.store') }}" :validate="true">
@@ -30,4 +30,4 @@
             </div>
         </x-card>
     </x-form>
-@endsection
+@endsection -->
