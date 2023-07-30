@@ -1,40 +1,11 @@
-{{-- <p class="fw-bold">{{ $job->name }}</p> --}}
-<div class="row ">
-    {{-- <div class="col-12 col-md-6 mb-mobi">
-        <p class="text-orange btn-yellow-light">{{__('Tiền mua SP:')}} <strong>{{ format_price($job->money_product) }}</strong></p>
-    </div> --}}
-    <div class="col-12 col-md-12">
-        {{--<div class="d-flex flex-column flex-md-row justify-content-between align-items-center bg-success-light btn-yellow-light">
-            <span class="text-success">
-                {{__('Tiền công:')}} <strong>+{{ format_price($job->money) }}</strong>
-            </span>
-            <span class="text-muted fs-12">{{ __('Lưu ý: Tiền công chưa bao gồm phí dịch vụ.') }}</span>
-        </div>--}}
-    </div>
-</div>
-<!-- commit phần content cũ -->
-{{--<div class="attribute">
-    <table class="table table-light">
-        <tbody>
-            @foreach ($job->details as $detail)
-                <tr class="border-white">
-                    <th scope="row" class="align-middle">{{ $detail->name_attribute }}</th>
-                    <td>@include('admin.jobs.partials.attribute-option-name', [
-                        'meta' => $detail->meta,
-                        'name_attribute_option' => $detail->name_attribute_option
-                    ])</td>
-                </tr>
-            @endforeach
-        </tbody>
-    </table>
-</div>--}}
-@if($job->note)
-<div class="content-all" style="display:flex;">
+
+<div class="content__ads" style="display:flex;background:#E9E9E9;">
+<div class="content-all" style="display:flex;width:73.3%;background:#fff">
     <!-- Webside -->
     <div class=" job-note text-muted rounded index-web" style="width:100%;">
         {{--<p class="text-danger fw-bold">{{ __('Lưu ý từ admin:') }}</p>--}}
         {{--{!! $job->note !!}--}}
-        <div class="content__body-header" style="display:flex;padding-left:17px;padding-top:7px;">
+        <div class="content__body-header" style="display:flex;padding-left:25px;padding-top:15px;">
             <div class="header-left-pp" style="display:flex;">
                     <div class="header-left-pp__img">
                          <img src="{{ asset('viewsCustom/assets/images/hinh1.png') }}" width:45px height:45px/>
@@ -81,8 +52,11 @@
         </div>
     </div>
     
-    <!-- Mobile -->
-    <div class="index-mobile" style="">
+    
+    
+</div>
+<!-- Mobile -->
+<div class="index-mobile" style="width:100%;background: #fff;">
         <div class="content__body-header" style="display:flex;padding-left:10px;padding-top:10px;padding-right:10px;">
             <div class="header-left-pp" style="display:flex;">
                     <div class="header-left-pp__img">
@@ -90,7 +64,7 @@
                     </div>
                     <div class="header-left-pp__text" style="display:bock;padding-left:9px;margin-top:5px;">
                         <div style="display:flex;">
-                            <div class="header-left-pp__text__top fs16" style="color: #000;font-style: normal;font-weight: 500;line-height: normal;width:114px;"><b>Korina</b></div>
+                            <div class="header-left-pp__text__top fs16" style="color: #000;font-style: normal;font-weight: 500;line-height: normal;max-width;200px;"><b>Korina</b></div>
                             <img style="padding-left:4px;" src="{{ asset('viewsCustom/assets/images/tick.svg') }}" width:8.7px height:8.7px/>
                         </div>    
                         <div style="display:flex;">
@@ -135,11 +109,9 @@
                 </div>               
         </div>
         <div class=btn-receive-application-mobile>
-            <button type="button" class="btn btn-primary fs14 font-lato" data-toggle="modal" data-target="#exampleModalMobile" style="border-radius: 5px;border: 1.5px solid #E0793F;background: #E0793F;color: #FFF;font-style: normal;font-weight: 700;line-height: normal;padding:10px 18px;">Nhận đơn</button>
+            <button type="button" class="btn btn-primary fs14 font-lato" data-toggle="modal" data-target="#exampleModalMobile" style="border-radius: 5px;border: 1.5px solid #E0793F;background: #E0793F;color: #FFF;font-style: normal;font-weight: 700;line-height: normal;padding:10px 18px;margin-bottom: 18px;">Nhận đơn</button>
         </div>        
     </div>
-    
-</div>
 <!-- Modals mobile -->
 <div class="modal fade" id="exampleModalMobile" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog " role="document"style="width:100%;" >
@@ -164,7 +136,7 @@
                     </ul>
                     <div class="items" style="padding-top:17px;display:flex;padding-left:100px;">
                         <a href="#"><button type="button" class="btn btn-secondary fs14" data-dismiss="modal" style="border-radius: 5px;border: 1.5px solid #A6A4A4;background:none;color: #A6A4A4;font-style: normal;font-weight: 700;line-height: normal;height:32px;width:65px;">Hủy</button></a>
-                        <button type="button" class="btn btn-primary fs14" style="margin-left:15px;border-radius: 5px;border: 1.5px solid #E0793F;background: #E0793F;color: #FFF;font-style: normal;font-weight: 700;line-height: normal;padding:5px 18px;width:110px;height:32px;">Nhận đơn</button>
+                        <button type="button" class="btn btn-primary fs14" style="margin-left:15px;border-radius: 5px;border: 1.5px solid #E0793F;background: #E0793F;color: #FFF;font-style: normal;font-weight: 700;line-height: normal;padding:5px 18px;width;110px;height:32px;">Nhận đơn</button>
                     </div>
                 </div>
             </div>
@@ -212,7 +184,7 @@
                     <div class="items fs13 items-tiktok-webside" style="color: #FFF;font-style: normal;font-weight: 700;line-height: normal;border-radius: 5px;background: #000;padding:8px 25px ;width:90px;">Tiktok</div>
                     <div class="items fs13" style="color: rgba(38, 147, 0, 0.80);font-style: normal;font-weight: 700;line-height: normal;">Hoàn thành</div>
                     <div class="items">Không nhận hàng</div>
-                    <div class="items fs13" style="color: #DE8C49;font-style: normal;font-weight: 700;line-height: normal;">Đơn giao nhanh</div>
+                    <div class="items fs13" style="color: #DE8C49;font-style: normal;font-weight: 700line-height: normal;">Đơn giao nhanh</div>
                     <div class="items">Shop thanh toán</div>
                     <div class="items">Shop gửi đánh giá</div>
                     <div class="items" style="border-radius: 5px;background: #FBC250;width:130px;padding: 8px 20px;">Tài khoàn vàng</div>
@@ -242,7 +214,19 @@
         </div>
     </div>
 </div>
-@endif
+<!-- phần quảng cáo -->
+<div class=" content-ads index-web shadow-sm" style="margin-left:22px;width:200px;height:290px;background:#FFF;border-radius:10px;    position: absolute;right: 0px;">
+                                        <a href="https://shopee.vn/%C3%81o-thun-Unisex-m%C3%A1c-RealLife-cao-su-FKZ-Unisex-ph%C3%B4ng-tr%C6%A1n-nam-n%E1%BB%AF-tay-l%E1%BB%A1-oversize-form-r%E1%BB%99ng-i.183840366.23825993719?sp_atk=af391579-fcac-4eb1-b2ce-358e20fcc785&xptdk=af391579-fcac-4eb1-b2ce-358e20fcc785" style="display:block;">
+                                    <div><img src="{{ asset('viewsCustom/assets/images/product-demo.svg') }}" style="width:200px;height:200px;border-bottom: 1px #888888 !important;border-radius:10px 10px 0px 0px" /></div>
+                                    <div style="color: #000;font-size: 16px;font-style: normal;font-weight: 400;line-height: normal;width:169px;height:auto;padding-top:6px;margin-left:10px;text-align:left;">Áo thun nam freesize Unisex</div>
+                                    <div class="ads-content"  style="display:left !important;">
+                                        <div style="border-radius: 3px 0px 0px 3px;border: 1px solid rgba(0, 0, 0, 0.50);border-right:none;width:31px;height:23px;margin-left:10px;color: #000;font-family: Inter;font-size: 12px;font-style: normal;font-weight: 400;line-height: normal;text-align:center;padding:3px;">30%</div>
+                                        <div style="border-radius: 0px 3px 3px 0px;border: 1px solid rgba(0, 0, 0, 0.50);width:56px;height:23px;color: rgba(0, 0, 0, 0.90);font-family: Inter;font-size: 12px;font-style: normal;font-weight: 700;line-height: normal;text-align:center;padding:3px;">AC5F</div>                                     
+                                        <div style="color: #FFF;font-size: 13px;font-style: normal;font-weight: 400;line-height: normal;letter-spacing: 1.235px;border-radius: 3px;background: #E0793F;width:90px;height:23px;margin-left:9px;padding:4px;text-align:center;">659.000 đ</div>
+                                    </div>
+                                </a>
+                                </div>
+</div>
 <style>
     
     .content__body-content__act .items{
@@ -312,7 +296,7 @@
      .see-more {
         position: absolute;
     top: 22px;
-    right: 15px;
+    right: 250px;
      }
      .modal-content {
         width:850px !important;
@@ -333,7 +317,7 @@
      }
      .btn-receive-application{
         padding-bottom: 20px;
-        padding-top: 84px;
+        padding-top: 94px;
         margin-left: 41%;
      }
      .header-right-pp{
@@ -372,7 +356,7 @@
      .see-more {
         position: absolute;
     top: 22px;
-    right: 15px;
+    right: 250px;
      }
      .modal-content {
         width:850px !important;
@@ -387,7 +371,7 @@
      }
      .btn-receive-application{
         padding-bottom: 20px;
-        padding-top: 84px;
+        padding-top: 94px;
         margin-left: 41%;
      }
      .header-right-pp{
@@ -409,7 +393,7 @@
     @media (max-width:1440px){
      .btn-receive-application{
         padding-bottom: 20px;
-        padding-top: 84px;
+        padding-top: 94px;
         margin-left: 41%;
      }
      .wage{
@@ -425,7 +409,7 @@
      .see-more {
         position: absolute;
     top: 22px;
-    right: 15px;
+    right: 250px;
      }
 
     }
@@ -459,7 +443,7 @@
        .btn-receive-application{
       
         padding-bottom: 20px;
-        padding-top: 84px;
+        padding-top: 94px;
         padding-left: 150px;
        }
 
@@ -489,7 +473,7 @@
             margin-left: 0px;
         }
         .card{
-            width: 565px;
+            width: 767px;
         }
         
         .fs15{
@@ -531,12 +515,25 @@
        .index-web{
         display:none;
        }
+       .content-all{
+        display:none !important;
+       }
        .index-mobile{
         width:48rem;
        }
        .card{
         
             width: 48rem;
+        }
+        .main-content{
+            width:100% !important;
+        }
+        .body-title{
+            padding-right:5% !important;
+        }
+        .container{
+            margin-left:-16px;
+            max-width:767px !important;
         }
         .mobile-wage{
             padding-left:40%;
@@ -561,7 +558,7 @@
         width: 600px !important;
 }
         .modal-dialog{
-            left: 0px;
+            left: 0px%;
             top: 10%;
         }
     }
