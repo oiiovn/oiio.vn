@@ -270,6 +270,9 @@
     letter-spacing: 0.36px;
     }
     @media (max-width: 2400px){
+        .row{
+            margin-left: 16px !important;
+        }
         .body-title .items{
         color: #303030;
         font-family: "lato", sans-serif;
@@ -512,6 +515,9 @@
     }
     
     @media (max-width: 767px){
+        .row{
+            margin-left: 8px !important;
+        }
        .index-web{
         display:none;
        }
