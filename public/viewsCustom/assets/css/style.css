@@ -2311,7 +2311,7 @@ body {
     line-height: var(--bs-body-line-height);
     color: var(--bs-body-color);
     text-align: var(--bs-body-text-align);
-    background-color:#e9e9e9 !important ;
+    background-color: #e9e9e9 !important ;
     -webkit-text-size-adjust: 100%;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
@@ -2928,7 +2928,7 @@ progress {
     .container-xl,
     .container-xxl {
         max-width: 1440px !important;
-        width:100% !important;
+        width: 100% !important;
     }
 }
 
@@ -2941,8 +2941,8 @@ progress {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     margin-top: calc(-1 * var(--bs-gutter-y));
-    margin-right: 0 !important;
-    margin-left: 0 !important;
+    margin-right: 0;
+    margin-left: 0;
 }
 .row > * {
     -ms-flex-negative: 0;
@@ -18817,11 +18817,11 @@ dl li {
         width: 300px;
     }
     .navbar
-    .navbar-menu-wrapper
-    .navbar-nav
-    .nav-item.nav-profile.dropdown
-    .navbar-dropdown{
-        width:200px;
+        .navbar-menu-wrapper
+        .navbar-nav
+        .nav-item.nav-profile.dropdown
+        .navbar-dropdown {
+        width: 200px;
     }
 }
 .navbar .navbar-menu-wrapper .navbar-nav .nav-item.nav-settings {
@@ -19781,59 +19781,58 @@ dl li {
     -ms-flex-positive: 1;
     flex-grow: 1;
 }
-@media(max-width:1390px){
-    #sidebar-left.sidebar-left-right{
+@media (max-width: 1390px) {
+    #sidebar-left.sidebar-left-right {
         display: none;
     }
-    .navbar-toggler{
+    .navbar-toggler {
         display: inline-block !important;
     }
-    #sidebarRight.sidebar-left-right{
-        display:none;
+    #sidebarRight.sidebar-left-right {
+        display: none;
     }
-    .col-md-9{
+    .col-md-9 {
         width: 100% !important;
     }
-    footer{
-        display:none;
+    footer {
+        display: none;
     }
-
 }
 /* reponsive màn hình ipad */
-@media(max-width:768px){
-    .navbar{
+@media (max-width: 768px) {
+    .navbar {
         height: 60px !important;
     }
     .navbar .navbar-brand-wrapper {
         width: 55px;
         height: 50px;
     }
-    .navbar-brand img{
+    .navbar-brand img {
         width: auto;
         height: 40px !important;
-        padding-bottom:5px;
+        padding-bottom: 5px;
     }
-    .card-list{
+    .card-list {
         padding: 0 !important;
         width: 100% !important;
     }
-    .card-content{
+    .card-content {
         margin-left: 2rem !important;
     }
-    .card-warning{
-        display:block !important;
+    .card-warning {
+        display: block !important;
     }
-    .card-item button{
+    .card-item button {
         width: 250px !important;
     }
-    .card-item .item-logo{
+    .card-item .item-logo {
         margin-left: -4rem !important;
     }
-    #content{
-        margin-top:3rem !important;
+    #content {
+        margin-top: 3rem !important;
     }
     .navbar .navbar-brand-wrapper {
-        height:auto !important;
+        height: auto !important;
     }
 }
 /* reponsive màn hình điện thoại */
@@ -19841,24 +19840,28 @@ dl li {
     .navbar .navbar-brand-wrapper .brand-logo-mini {
         padding-top: 0px;
     }
-    .navbar .navbar-menu-wrapper .navbar-nav .nav-item.dropdown .dropdown-menu.navbar-dropdown{
+    .navbar
+        .navbar-menu-wrapper
+        .navbar-nav
+        .nav-item.dropdown
+        .dropdown-menu.navbar-dropdown {
         left: -45px;
     }
-    .card-item button{
+    .card-item button {
         width: 195px !important;
     }
-    .card-warning p{
-        font-size:12px !important;
+    .card-warning p {
+        font-size: 12px !important;
     }
 }
-@media(max-width:520px){
-    .card-item button{
+@media (max-width: 520px) {
+    .card-item button {
         width: 140px !important;
     }
-    .card-item button span{
+    .card-item button span {
         font-size: 16px;
     }
-    .card-item .item-logo{
+    .card-item .item-logo {
         width: 65px !important;
         margin-left: -3rem !important;
     }

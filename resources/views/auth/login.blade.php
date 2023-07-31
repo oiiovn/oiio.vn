@@ -1,35 +1,9 @@
-{{--@extends('layout')
-
-@section('content')
-<x-card>
-    <x-slot name="header">
-        <span class="text-white"><i class="fa-solid fa-right-to-bracket"></i> Đăng nhập</span>
-    </x-slot>
-    <div class="card-body">
-        <x-form type="post" :validate="true">
-            <div class="mb-3">
-                <label class="form-label">{{ __('Email') }}</label>
-                <x-input-email class="w-100" name="email" :required="true" />
-            </div>
-            <div class="mb-3">
-                <label class="form-label">{{ __('Mật khẩu') }}</label>
-                <x-input-password class="w-100" name="password" :required="true" />
-            </div>
-            <div class="mb-3">
-                <x-link href="{{ route('register.index') }}">Chưa có tài khoản? Đăng ký ngay!</x-link>
-                <br><x-link href="{{ route('password.get') }}">Quên mật khẩu?</x-link>
-            </div>
-            <x-button type="submit" class="btn-orange w-100">Đăng nhập</x-button>
-        </x-form>
-    </div>
-</x-card>
-@endsection--}}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Red Square</title>
+    <title>Đăng nhập - Web đặt đơn</title>
     <style>
         body {
             margin: 0;
@@ -179,20 +153,20 @@
                                 <input class="form-control form-control-lg mb-3 h55 w100" type="password" name="password" :required="true" placeholder="Nhập Password"
                                        style=" flex-shrink: 0; border-radius: 5px; border: 1px solid #C7C6C1; font-family: 'Lato', sans-serif;"/>
                             </div>
-                            <div class="my-2 d-flex justify-content-between align-items-center"
-                                 style="display: flex; width: 100%; height: 10px; justify-content: center; align-items: center; margin-top: 12px">
+                            <div class="my-2 d-flex justify-content-between align-items-center mb-3"
+                                 style="display: flex; width: 100%; height: 10px;  justify-content: left; align-items: center; margin-top: 12px">
                                 <label class="remember" style="display: flex; justify-content: left; align-items: center;gap: 10px;">
                                     <input type="checkbox" class="checkbox" />
-                                    <span style="color: #AEAEAE; font-size: 14px; font-family: 'Lato', sans-serif; font-weight: 400; line-height: 22.40px; word-wrap: break-word">Ghi nhớ tôi</span>
+                                    <span style="color: #AEAEAE; font-size: 14px; font-family: 'Lato', sans-serif; font-weight: 400; line-height: 22.40px; word-wrap: break-word">Ghi nhớ đăng nhập</span>
                                 </label>
-                                <a href="{{ route('password.get') }}" class="auth-link text-black"
-                                   style="color: #333; font-size: 14px; font-family: 'Lato', sans-serif; font-style: normal; font-weight: 400; line-height: 22.4px; text-decoration: none;padding-left:4px;">
+                                <a href="{{ route('password.get') }}" class="auth-link text-black "
+                                   style="color: #333; font-size: 14px; font-family: 'Lato', sans-serif; font-style: normal; font-weight: 500; line-height: 22.4px; text-decoration: none;padding-left:4px;">
                                     Quên mật khẩu?
                                 </a>
                             </div>
                             <button type="submit" class="btn btn-block btn-gradient-primary btn-lg font-weight-medium auth-form-btn btn-warning h55 mb-3"
                                     style=" flex-shrink: 0; border-radius: 5px; margin-top: 22px; font-family: 'Lato', sans-serif; font-weight: bold;border:none;
-                                          background: linear-gradient(90deg, #FBC250 0%, #DEA143 24.48%, #F5AE5D 50%, #DE8C49 77.08%, #E0793F 100%)"><span>Đăng nhập</span>
+                                          background: linear-gradient(90deg, #FBC250 0%, #DEA143 24.48%, #F5AE5D 50%, #DE8C49 77.08%, #E0793F 100%)"><span style="color: #FFF;font-size: 16px;font-style: normal;font-weight: 600;line-height: 22.4px;">Đăng nhập</span>
                                 
                             </button>
                             <div class="form-check" style="color: #333333; font-size: 14px; font-family: 'Lato', sans-serif; font-style: normal; font-weight: 400; line-height: 22.4px; text-align: center;padding-bottom:18px;margin-top:10px;">
@@ -221,6 +195,7 @@
                                         display: none;
                                     }
                                 }
+                               
                             </style>
                         </x-form>
                     </div>
