@@ -5,7 +5,7 @@
         <div class="job-status-nav-tabs d-flex border-b">
             <div class="nav-item">
                 <span>Tất cả đơn</span>
-                <span class="job-status-number">10000</span>
+                <span class="job-status-number-test">10000</span>
             </div>
             @foreach ($job_status[$type] as $key => $value)
             <div @class([ 'nav-item' , 'position-relative' , 'active'=> $key == $current_status
@@ -13,7 +13,7 @@
                 role="button"
                 data-route="{{ route($route_name, $key) }}">
                 {{ $value['text'] }}
-                <span class="job-status-number">{{ $value['number'] }}</span>
+                <span class="job-status-number-test">{{ $value['number'] }}</span>
                 <!-- @if($value['number'])
                         <span class="job-status-number position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                             {{ $value['number'] }}
