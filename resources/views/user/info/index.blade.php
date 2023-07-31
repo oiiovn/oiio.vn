@@ -142,110 +142,395 @@
         </div>
     </x-card>
 </x-form> -->
-<div style="width: 134.42%; background:transparent; margin-left: 24px; margin-right: 40px; height:800px; position: relative;">
+<div style="width: 134.42%; background:transparent; margin-left: 24px; margin-right: 40px; position: relative;border-radius: 10px;">
     <x-form type="post" :validate="true" enctype="multipart/form-data">
         <input name="id" type="hidden" value="{{ $user->id }}" />
-        <div class="img-info" style="border-radius:10px;">
-            <div style="top: 0; height: 270px;border-radius: 10px;" class="cover-img" onclick="document.getElementById('file-cover_img').click();" @if(auth()->user()->getBackground()) style="background-image: url({{ asset($user->cover_photo) }})" @endif>
-                <img id="edit" onclick="document.getElementById('file-cover_img').click();" src="{{ asset('viewsCustom/assets/images/edit-ic-tron.svg') }}" alt="" style="position: absolute; top: 0; right: 0; background-color: rgba(255, 255, 255, 0.5); border-radius:10px; padding: 5px;margin-right: 15px;margin-top:15px; filter: drop-shadow(0px 7px 8px rgba(0, 0, 0, 0.24));" />
-                <input id="file-cover_img" type="file" name="cover_photo" class="d-none"></input>
+        <div style="width:100%;">
+            <div class="img-info" style="border-radius: 10px;">
+                <div class="cover-img" onclick="document.getElementById('file-cover_img').click();" @if(auth()->user()->getBackground()) style="background-image: url({{ asset($user->cover_photo) }})" @endif>
+                    <input id="file-cover_img" type="file" name="cover_photo" class="d-none"></input>
+                    <img id="edit" src="{{ asset('viewsCustom/assets/images/edit-ic-tron.svg') }}" alt="" style="position: absolute; top: 0; right: 0; background-color: rgba(255, 255, 255, 0.5); border-radius:10px; padding: 5px;margin-right: 15px;margin-top:15px; filter: drop-shadow(0px 7px 8px rgba(0, 0, 0, 0.24));" />
+                </div>
             </div>
+            <div style="background: #fff;width:378px;height:336px;border-radius: 10px;position:absolute;top:154px;right:19px;">
+                    <div style="display: block;width: 100%;text-align:center;padding-top:20px;">
+                        <div class="profile-img">
+                            <div style="display: block; position: relative;">
+                                <img onclick="document.getElementById('file-avatar').click();" id="avatar-img" src="{{ asset(auth()->user()->getAvatar()) }}" class="img-fluid" />
+                                <img id="edit" onclick="document.getElementById('file-avatar').click();" src="{{ asset('viewsCustom/assets/images/edit-ic-tron.svg') }}" alt="" style="position: absolute; bottom: 0; right:110px; background-color: rgba(255, 255, 255, 0.5); border-radius: 100%; padding: 5px; margin-bottom: 8px; margin-right: 8px; filter: drop-shadow(0px 7px 8px rgba(0, 0, 0, 0.24));" />
+                            </div>
+                            <input id="file-avatar" name="avatar" type="file" class="d-none"></input>
+
+                        </div>
+                        <p style="margin-top:15px;width:100%;color: #000;font-family:'Lato' sans-serif;font-size: 20px;font-style: normal;font-weight: 600;line-height: normal;">{{ auth()->user()->fullname ?? auth()->user()->username }}</p>
+
+                    </div>
+                    <div class="content-profile">
+                        <div class="content-item-profile">
+                            <img src="{{ asset('viewsCustom/assets/images/mail.svg') }}" alt="">
+                            <p class="">{{ $user->email }}</p>
+                        </div>
+
+                        <div class="content-item-profile">
+                            <img src="{{ asset('viewsCustom/assets/images/phone.svg') }}" alt="">
+                            <p class="">{{ $user->phone }}</p>
+                        </div>
+                    </div>
+                    <div class="btn-profile">
+                        <!-- <button type="submit">Nhắn tin</button> -->
+                    </div>
+                </div>
         </div>
 
 
-        <div style="height: 100%; background:transparent; margin-top: 154px; margin-right: 20px; position: absolute; top: 0; right: 0; bottom: 0; left: 0;display: flex;justify-content: space-between;">
-            <div style="background:transparent;width:63.54%;height: 100%;margin-top:140px;border-radius: 10px;">
+        <div style=" background:transparent;margin-right: 20px;display: flex;justify-content: space-between;border-radius: 10px;margin-bottom:68px;height: 100%;margin-top:24px;">
+            <div style="background:transparent;width:63.54%;border-radius: 10px;">
                 <div style="background: #fff;width:100%;height:391px;margin-bottom:20px;border-radius: 10px;">
                     <div style="width:100%;height:55px;display: flex;align-items: center;padding-left:40px;">
                         <div style="width:29.41%;color: #E0793F;font-family: 'Lato' sans-serif;font-size: 18px;font-style: normal;font-weight: 800;line-height: normal;border-bottom:1px solid rgba(0, 0, 0, 0.11);padding-bottom:10px;">Thông tin cá nhân</div>
-                        <div style="width:108px;display: flex;align-items: center;justify-content: center; margin-left:auto;">
-                            <img id="edit" src="{{ asset('viewsCustom/assets/images/edit-info-ic.svg') }}" alt="" style="margin-top:20px;background-color:#E0793F; border-radius:10px; padding:10px; filter: drop-shadow(0px 7px 8px rgba(0, 0, 0, 0.24));" />
-                        </div> 
+                        <div style="display: flex;align-items: center;justify-content: center; margin-left:auto;margin-right:10px;margin-top:20px;">
+                            <x-button type="submit" class="" style="background-color:#E0793F; border-radius:10px; padding:10px; filter: drop-shadow(0px 7px 8px rgba(0, 0, 0, 0.24));color:#fff;display: flex;align-items: baseline;gap:10px;">
+                                <!-- <img id="edit" src="{{ asset('viewsCustom/assets/images/edit-info-ic.svg') }}" alt="" /> -->
+                                Lưu
+                            </x-button>
+                        </div>
                     </div>
-                    <div class="content-edit-info"style="width:100%;height: 336px;display:block;">
+                    <div class="content-edit-info" style="width:100%;height: 336px;display:block;">
                         <div style="height: 51.3333px;margin-left:40px;display: flex;align-items:center;">
                             <label>{{ __('Họ và tên') }}</label>
-                            <input type="text" name="fullname"value="{{ $user->fullname }}" style="width: 65%;margin-left:auto;">
+                            <input type="text" name="fullname" value="{{ $user->fullname }}" style="width: 65%;margin-left:auto;">
                         </div>
                         <div style="height: 51.3333px;margin-left:40px;display: flex;align-items:center;">
                             <label>{{ __('Tên tài khoản') }}</label>
-                            <input type="text" name="username"value="{{ $user->username }}" style="width: 65%;margin-left:auto;">
+                            <input type="text" name="username" value="{{ $user->username }}" style="width: 65%;margin-left:auto;">
                         </div>
                         <div style="height: 51.3333px;margin-left:40px;display: flex;align-items:center;">
                             <label>{{ __('Email') }}</label>
-                            <input type="text" name="email"value="{{ $user->email }}" style="width: 65%;margin-left:auto;">
+                            <input type="text" name="email" value="{{ $user->email }}" style="width: 65%;margin-left:auto;">
                         </div>
                         <div style="height: 51.3333px;margin-left:40px;display: flex;align-items:center;">
                             <label>{{ __('Số điện thoại') }}</label>
-                            <input type="text" name="phone"value="{{ $user->phone }}" style="width: 65%;margin-left:auto;">
+                            <input type="text" name="phone" value="{{ $user->phone }}" style="width: 65%;margin-left:auto;">
                         </div>
                         <div style="height: 51.3333px;margin-left:40px;display: flex;align-items:center;">
                             <label>{{ __('Tài khoản ngân hàng') }}</label>
-                            <input type="text" name="namebank"value="" style="width: 65%;margin-left:auto;">    <!--cần đổ dữ liệu-->
+                            <input type="text" name="namebank" value="" style="width: 65%;margin-left:auto;"> <!--cần đổ dữ liệu-->
                         </div>
                         <div style="height: 51.3333px;margin-left:40px;display: flex;align-items:center;">
                             <label>{{ __('Tên shop') }}</label>
-                            <input type="text" name="nameshop"value="" style="width: 65%;margin-left:auto;"><!--cần đổ dữ liệu-->
+                            <input type="text" name="nameshop" value="" style="width: 65%;margin-left:auto;"><!--cần đổ dữ liệu-->
                         </div>
                     </div>
                 </div>
-                <div style="background: #fff;width:100%;height:100vh;border-radius: 10px;">
-                    <div style="height: 109px;padding-left:40px;">
-                    <div style="width:29.41%;color: #E0793F;font-family: 'Lato' sans-serif;font-size: 18px;font-style: normal;font-weight: 800;line-height: normal;border-bottom:1px solid rgba(0, 0, 0, 0.11);padding-bottom:10px;margin-bottom:28px;padding-top:20px;">Giao dịch cá nhân</div>
+                <div style="background: #fff;width:100%;border-radius: 10px;">
+                    <div style="height: 109px;padding-left:40px;margin-bottom:35px;">
+                        <div style="width:29.41%;color: #E0793F;font-family: 'Lato' sans-serif;font-size: 18px;font-style: normal;font-weight: 800;line-height: normal;border-bottom:1px solid rgba(0, 0, 0, 0.11);padding-bottom:10px;margin-bottom:28px;padding-top:20px;">Giao dịch cá nhân</div>
                         <div style="height: 29px;width:100%;margin-left:28.5px;display: inline-flex;align-items: flex-start;gap:35px;">
-                            <li style="height:29px;display: flex;justify-content: center;align-items: center;" class="active">Lịch sử giao dịch</li>
-                            <li style="height:29px;display: flex;justify-content: center;align-items: center;">Lịch sử nạp tiền</li>
-                            <li style="height:29px;display: flex;justify-content: center;align-items: center;">Lịch sử rút tiền</li>
-                            <li style="height:29px;display: flex;justify-content: center;align-items: center;">Tháng
+                            <li style="height:29px;display: flex;justify-content: center;align-items: center;" class="active">
+                                <a href="#">Lịch sử giao dịch</a>
+                            </li>
+                            <li style="height:29px;display: flex;justify-content: center;align-items: center;">
+                                <a href="#">Lịch sử nạp tiền</a>
+                            </li>
+                            <li style="height:29px;display: flex;justify-content: center;align-items: center;">
+                                <a href="#">Lịch sử rút tiền</a>
+                            </li>
+                            <li style="height:29px;display: flex;justify-content: center;align-items: center;">
+                                <a href="#">Tháng</a>
                                 <i style="margin-left:auto;font-size:20px;" class="ri-arrow-down-s-line"></i>
                             </li>
                         </div>
                     </div>
-                    <div style="background: red;height: 100vh;">
-                        <div style="width:88.52%;background:#fff;height: 100vh;margin-left:40px;">
-                    </div>
+                    <div style="height: 100%;">
+                        <div style="margin-bottom:32px;width:88.52%;background:#fff;height: 150px;margin-left:40px;border-radius: 8px;border: 1px solid #D2D2CD;box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.15);display:flex;justify-content: space-between;padding-left:24px;padding-right:34px;padding-top:18px;">
+                            <div class="content-bank" style="display:block;">
+                                <span style="display:flex;justify-content: flex-start;align-items: baseline;color: #000;font-family: 'Lato' sans-serif;font-size: 16px;font-style: normal;font-weight: 700;line-height: normal;letter-spacing: 2.88px;">TB763495AE2735</span>
+                                <span style="margin-top:10px;gap:10px;display:flex;justify-content: flex-start;align-items: baseline;">Loại giao dịch: <p>Nạp tiền</p></span>
+                                <span style="gap:10px;display:flex;justify-content: flex-start;align-items: baseline;">Trạng thái: <p style="color: #269300;font-weight: 700;">Thành công</p></span>
+                                <span style="gap:10px;display:flex;justify-content: flex-start;align-items: baseline;color: #A6A4A4;font-size: 12px;font-weight: 500;letter-spacing: 1.2px;">20/07/2023 - 16:08</span>
+                            </div>
+                            <div class="content-money" style="display: inline-flex;flex-direction: column;align-items: flex-end;gap: 14px;">
+                                <span style="display:flex;justify-content: flex-end;align-items: baseline;color: #269300;font-family: 'Lato' sans-serif;font-size: 16px;font-style: normal;font-weight: 700;line-height: normal;letter-spacing: 1.6px;">+10.hvvvv.000.000 đ</span>
+                                <span style="gap:10px;display:flex;justify-content: flex-end;align-items: baseline;">Phí giao dịch: <p>- 0đ</p></span>
+                                <span style="gap:10px;display:flex;justify-content: flex-end;align-items: baseline;">Ví tiền: <p>10.000.000.000 đ</p></span>
+                            </div>
+                        </div>
+
+                        <div style="margin-bottom:32px;width:88.52%;background:#fff;height: 150px;margin-left:40px;border-radius: 8px;border: 1px solid #D2D2CD;box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.15);display:flex;justify-content: space-between;padding-left:24px;padding-right:34px;padding-top:18px;">
+                            <div class="content-bank" style="display:block;">
+                                <span style="display:flex;justify-content: flex-start;align-items: baseline;color: #000;font-family: 'Lato' sans-serif;font-size: 16px;font-style: normal;font-weight: 700;line-height: normal;letter-spacing: 2.88px;">TB763495AE2735</span>
+                                <span style="margin-top:10px;gap:10px;display:flex;justify-content: flex-start;align-items: baseline;">Loại giao dịch: <p>Nạp tiền</p></span>
+                                <span style="gap:10px;display:flex;justify-content: flex-start;align-items: baseline;">Trạng thái: <p style="color: #269300;font-weight: 700;">Thành công</p></span>
+                                <span style="gap:10px;display:flex;justify-content: flex-start;align-items: baseline;color: #A6A4A4;font-size: 12px;font-weight: 500;letter-spacing: 1.2px;">20/07/2023 - 16:08</span>
+                            </div>
+                            <div class="content-money" style="display: inline-flex;flex-direction: column;align-items: flex-end;gap: 14px;">
+                                <span style="display:flex;justify-content: flex-end;align-items: baseline;color: #269300;font-family: 'Lato' sans-serif;font-size: 16px;font-style: normal;font-weight: 700;line-height: normal;letter-spacing: 1.6px;">+10.hvvvv.000.000 đ</span>
+                                <span style="gap:10px;display:flex;justify-content: flex-end;align-items: baseline;">Phí giao dịch: <p>- 0đ</p></span>
+                                <span style="gap:10px;display:flex;justify-content: flex-end;align-items: baseline;">Ví tiền: <p>10.000.000.000 đ</p></span>
+                            </div>
+                        </div>
+
+                        <div style="margin-bottom:32px;width:88.52%;background:#fff;height: 150px;margin-left:40px;border-radius: 8px;border: 1px solid #D2D2CD;box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.15);display:flex;justify-content: space-between;padding-left:24px;padding-right:34px;padding-top:18px;">
+                            <div class="content-bank" style="display:block;">
+                                <span style="display:flex;justify-content: flex-start;align-items: baseline;color: #000;font-family: 'Lato' sans-serif;font-size: 16px;font-style: normal;font-weight: 700;line-height: normal;letter-spacing: 2.88px;">TB763495AE2735</span>
+                                <span style="margin-top:10px;gap:10px;display:flex;justify-content: flex-start;align-items: baseline;">Loại giao dịch: <p>Nạp tiền</p></span>
+                                <span style="gap:10px;display:flex;justify-content: flex-start;align-items: baseline;">Trạng thái: <p style="color: #269300;font-weight: 700;">Thành công</p></span>
+                                <span style="gap:10px;display:flex;justify-content: flex-start;align-items: baseline;color: #A6A4A4;font-size: 12px;font-weight: 500;letter-spacing: 1.2px;">20/07/2023 - 16:08</span>
+                            </div>
+                            <div class="content-money" style="display: inline-flex;flex-direction: column;align-items: flex-end;gap: 14px;">
+                                <span style="display:flex;justify-content: flex-end;align-items: baseline;color: #269300;font-family: 'Lato' sans-serif;font-size: 16px;font-style: normal;font-weight: 700;line-height: normal;letter-spacing: 1.6px;">+10.hvvvv.000.000 đ</span>
+                                <span style="gap:10px;display:flex;justify-content: flex-end;align-items: baseline;">Phí giao dịch: <p>- 0đ</p></span>
+                                <span style="gap:10px;display:flex;justify-content: flex-end;align-items: baseline;">Ví tiền: <p>10.000.000.000 đ</p></span>
+                            </div>
+                        </div>
+
+                        <div style="margin-bottom:32px;width:88.52%;background:#fff;height: 150px;margin-left:40px;border-radius: 8px;border: 1px solid #D2D2CD;box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.15);display:flex;justify-content: space-between;padding-left:24px;padding-right:34px;padding-top:18px;">
+                            <div class="content-bank" style="display:block;">
+                                <span style="display:flex;justify-content: flex-start;align-items: baseline;color: #000;font-family: 'Lato' sans-serif;font-size: 16px;font-style: normal;font-weight: 700;line-height: normal;letter-spacing: 2.88px;">TB763495AE2735</span>
+                                <span style="margin-top:10px;gap:10px;display:flex;justify-content: flex-start;align-items: baseline;">Loại giao dịch: <p>Nạp tiền</p></span>
+                                <span style="gap:10px;display:flex;justify-content: flex-start;align-items: baseline;">Trạng thái: <p style="color: #269300;font-weight: 700;">Thành công</p></span>
+                                <span style="gap:10px;display:flex;justify-content: flex-start;align-items: baseline;color: #A6A4A4;font-size: 12px;font-weight: 500;letter-spacing: 1.2px;">20/07/2023 - 16:08</span>
+                            </div>
+                            <div class="content-money" style="display: inline-flex;flex-direction: column;align-items: flex-end;gap: 14px;">
+                                <span style="display:flex;justify-content: flex-end;align-items: baseline;color: #269300;font-family: 'Lato' sans-serif;font-size: 16px;font-style: normal;font-weight: 700;line-height: normal;letter-spacing: 1.6px;">+10.hvvvv.000.000 đ</span>
+                                <span style="gap:10px;display:flex;justify-content: flex-end;align-items: baseline;">Phí giao dịch: <p>- 0đ</p></span>
+                                <span style="gap:10px;display:flex;justify-content: flex-end;align-items: baseline;">Ví tiền: <p>10.000.000.000 đ</p></span>
+                            </div>
+                        </div>
+                        <div style="text-align: center;">
+                            <span>Xem thêm <i style="margin-left:auto;font-size:20px;" class="ri-arrow-down-s-line"></i></span>
+                        </div>
                     </div>
                 </div>
             </div>
+                
+            <div style="width: 34.46%;border-radius: 10px;margin-top: 220px;">
 
-            <div style="background:#e9e9e9;width: 34.46%;height: 100%;border-radius: 10px;">
-                <div style="background: #fff;width:100%;height:391px;margin-bottom:25px;border-radius: 10px;">
-                    <div style="display: block;align-items: center;width: 100%;padding-left:30.27%;padding-top:20px;">
-                        <div class="profile-img">
-                            <div style="display: block; position: relative;">
-                                <img onclick="document.getElementById('file-avatar').click();" id="avatar-img" src="{{ asset(auth()->user()->getAvatar()) }}" class="img-fluid" />
-                                <img id="edit" onclick="document.getElementById('file-avatar').click();" src="{{ asset('viewsCustom/assets/images/edit-ic-tron.svg') }}" alt="" style="position: absolute; bottom: 0; right: 0; background-color: rgba(255, 255, 255, 0.5); border-radius: 100%; padding: 5px; margin-bottom: 8px; margin-right: 8px; filter: drop-shadow(0px 7px 8px rgba(0, 0, 0, 0.24));" />
+                <div style="background: #fff;width:100%;border-radius: 10px;">
+                    <div style="width:100%;height:55px;display: flex;align-items: center;padding-left:40px;">
+                        <div style="width:59.14%;color: #E0793F;font-family: 'Lato' sans-serif;font-size: 18px;font-style: normal;font-weight: 800;line-height: normal;border-bottom:1px solid rgba(0, 0, 0, 0.11);padding-bottom:10px;">Đánh giá cộng đồng</div>
+                    </div>
+                    <div style="height: 100%;">
+                        <div style="width:83.43%;padding-left:40px;margin-top:20px;">
+                            <div style="width:100%;">
+                                <div style="justify-content: space-between;display: flex;align-items: center;">
+                                    <div style="display: inline-flex;align-items: center;gap: 10px;">
+                                        <div>
+                                            <img width="45px" height="45px" src="{{ asset('viewsCustom/assets/images/faces-clipart/pic-1.png') }}" alt="">
+                                        </div>
+                                        <div style="display: block; width: 59.59%;">
+                                            <span style="color: #000;font-family: 'Lato' sans-serif;font-size: 14px;font-style: normal;font-weight: 600;line-height: normal;">Trần Tuấn Anh</span>
+                                            <span style="color: rgba(166, 164, 164, 0.70);font-family: 'Lato' sans-serif;font-size: 14px;font-style: normal;font-weight: 600;line-height: normal;">2023/06/14 - 19:50</span>
+                                        </div>
+                                    </div>
+                                    <div style="display: inline-flex;align-items: flex-start;gap: 5px;width: 12.33%;margin-left:auto;">
+                                        <span style="color: #FBC250;font-family:' Lato' sans-serif;font-size: 18px;font-style: normal;font-weight: 700;line-height: normal;">5</span>
+                                        <img src="{{ asset('viewsCustom/assets/images/star.svg') }}" alt="">
+                                    </div>
+                                </div>
                             </div>
-                            <input id="file-avatar" name="avatar" type="file" class="d-none"></input>
-                            <p style="text-align: center;margin-top:15px;" class="h5 fw-bold">{{ auth()->user()->fullname ?? auth()->user()->username }}</p>
+                            <div style="width:100%;border-bottom:1px solid #D2D2CD;margin-top:10px;padding-bottom:20px;">
+                                <span>Shop uy tín. Chất lượng tốt! Shop uy tín. Chất lượng tốt! Shop uy tín. Chất lượng tốt! Shop uy tín. Chất lượng tốt!</span>
+                            </div>
                         </div>
 
-                    </div>
-                    <div class="content-profile">
-                            <div class="content-item-profile">
-                                <img src="{{ asset('viewsCustom/assets/images/mail.svg') }}" alt="">
-                                <p class="">{{ $user->email }}</p>
+                        <div style="width:83.43%;padding-left:40px;margin-top:20px;">
+                            <div style="width:100%;">
+                                <div style="justify-content: space-between;display: flex;align-items: center;">
+                                    <div style="display: inline-flex;align-items: center;gap: 10px;">
+                                        <div>
+                                            <img width="45px" height="45px" src="{{ asset('viewsCustom/assets/images/faces-clipart/pic-1.png') }}" alt="">
+                                        </div>
+                                        <div style="display: block; width: 59.59%;">
+                                            <span style="color: #000;font-family: 'Lato' sans-serif;font-size: 14px;font-style: normal;font-weight: 600;line-height: normal;">Trần Tuấn Anh</span>
+                                            <span style="color: rgba(166, 164, 164, 0.70);font-family: 'Lato' sans-serif;font-size: 14px;font-style: normal;font-weight: 600;line-height: normal;">2023/06/14 - 19:50</span>
+                                        </div>
+                                    </div>
+                                    <div style="display: inline-flex;align-items: flex-start;gap: 5px;width: 12.33%;margin-left:auto;">
+                                        <span style="color: #FBC250;font-family:' Lato' sans-serif;font-size: 18px;font-style: normal;font-weight: 700;line-height: normal;">5</span>
+                                        <img src="{{ asset('viewsCustom/assets/images/star.svg') }}" alt="">
+                                    </div>
+                                </div>
                             </div>
+                            <div style="width:100%;border-bottom:1px solid #D2D2CD;margin-top:10px;padding-bottom:20px;">
+                                <span>Shop uy tín. Chất lượng tốt! Shop uy tín. Chất lượng tốt! Shop uy tín. Chất lượng tốt! Shop uy tín. Chất lượng tốt!</span>
+                            </div>
+                        </div>
 
-                            <div class="content-item-profile">
-                                <img src="{{ asset('viewsCustom/assets/images/phone.svg') }}" alt="">
-                                <p class="">{{ $user->phone }}</p>
+                        <div style="width:83.43%;padding-left:40px;margin-top:20px;">
+                            <div style="width:100%;">
+                                <div style="justify-content: space-between;display: flex;align-items: center;">
+                                    <div style="display: inline-flex;align-items: center;gap: 10px;">
+                                        <div>
+                                            <img width="45px" height="45px" src="{{ asset('viewsCustom/assets/images/faces-clipart/pic-1.png') }}" alt="">
+                                        </div>
+                                        <div style="display: block; width: 59.59%;">
+                                            <span style="color: #000;font-family: 'Lato' sans-serif;font-size: 14px;font-style: normal;font-weight: 600;line-height: normal;">Trần Tuấn Anh</span>
+                                            <span style="color: rgba(166, 164, 164, 0.70);font-family: 'Lato' sans-serif;font-size: 14px;font-style: normal;font-weight: 600;line-height: normal;">2023/06/14 - 19:50</span>
+                                        </div>
+                                    </div>
+                                    <div style="display: inline-flex;align-items: flex-start;gap: 5px;width: 12.33%;margin-left:auto;">
+                                        <span style="color: #FBC250;font-family:' Lato' sans-serif;font-size: 18px;font-style: normal;font-weight: 700;line-height: normal;">5</span>
+                                        <img src="{{ asset('viewsCustom/assets/images/star.svg') }}" alt="">
+                                    </div>
+                                </div>
                             </div>
+                            <div style="width:100%;border-bottom:1px solid #D2D2CD;margin-top:10px;padding-bottom:20px;">
+                                <span>Shop uy tín. Chất lượng tốt! Shop uy tín. Chất lượng tốt! Shop uy tín. Chất lượng tốt! Shop uy tín. Chất lượng tốt!</span>
+                            </div>
+                        </div>
+
+                        <div style="width:83.43%;padding-left:40px;margin-top:20px;">
+                            <div style="width:100%;">
+                                <div style="justify-content: space-between;display: flex;align-items: center;">
+                                    <div style="display: inline-flex;align-items: center;gap: 10px;">
+                                        <div>
+                                            <img width="45px" height="45px" src="{{ asset('viewsCustom/assets/images/faces-clipart/pic-1.png') }}" alt="">
+                                        </div>
+                                        <div style="display: block; width: 59.59%;">
+                                            <span style="color: #000;font-family: 'Lato' sans-serif;font-size: 14px;font-style: normal;font-weight: 600;line-height: normal;">Trần Tuấn Anh</span>
+                                            <span style="color: rgba(166, 164, 164, 0.70);font-family: 'Lato' sans-serif;font-size: 14px;font-style: normal;font-weight: 600;line-height: normal;">2023/06/14 - 19:50</span>
+                                        </div>
+                                    </div>
+                                    <div style="display: inline-flex;align-items: flex-start;gap: 5px;width: 12.33%;margin-left:auto;">
+                                        <span style="color: #FBC250;font-family:' Lato' sans-serif;font-size: 18px;font-style: normal;font-weight: 700;line-height: normal;">5</span>
+                                        <img src="{{ asset('viewsCustom/assets/images/star.svg') }}" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="width:100%;border-bottom:1px solid #D2D2CD;margin-top:10px;padding-bottom:20px;">
+                                <span>Shop uy tín. Chất lượng tốt! Shop uy tín. Chất lượng tốt! Shop uy tín. Chất lượng tốt! Shop uy tín. Chất lượng tốt!</span>
+                            </div>
+                        </div>
+
+                        <div style="width:83.43%;padding-left:40px;margin-top:20px;">
+                            <div style="width:100%;">
+                                <div style="justify-content: space-between;display: flex;align-items: center;">
+                                    <div style="display: inline-flex;align-items: center;gap: 10px;">
+                                        <div>
+                                            <img width="45px" height="45px" src="{{ asset('viewsCustom/assets/images/faces-clipart/pic-1.png') }}" alt="">
+                                        </div>
+                                        <div style="display: block; width: 59.59%;">
+                                            <span style="color: #000;font-family: 'Lato' sans-serif;font-size: 14px;font-style: normal;font-weight: 600;line-height: normal;">Trần Tuấn Anh</span>
+                                            <span style="color: rgba(166, 164, 164, 0.70);font-family: 'Lato' sans-serif;font-size: 14px;font-style: normal;font-weight: 600;line-height: normal;">2023/06/14 - 19:50</span>
+                                        </div>
+                                    </div>
+                                    <div style="display: inline-flex;align-items: flex-start;gap: 5px;width: 12.33%;margin-left:auto;">
+                                        <span style="color: #FBC250;font-family:' Lato' sans-serif;font-size: 18px;font-style: normal;font-weight: 700;line-height: normal;">5</span>
+                                        <img src="{{ asset('viewsCustom/assets/images/star.svg') }}" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="width:100%;border-bottom:1px solid #D2D2CD;margin-top:10px;padding-bottom:20px;">
+                                <span>Shop uy tín. Chất lượng tốt! Shop uy tín. Chất lượng tốt! Shop uy tín. Chất lượng tốt! Shop uy tín. Chất lượng tốt!</span>
+                            </div>
+                        </div>
+
+                        <div style="width:83.43%;padding-left:40px;margin-top:20px;">
+                            <div style="width:100%;">
+                                <div style="justify-content: space-between;display: flex;align-items: center;">
+                                    <div style="display: inline-flex;align-items: center;gap: 10px;">
+                                        <div>
+                                            <img width="45px" height="45px" src="{{ asset('viewsCustom/assets/images/faces-clipart/pic-1.png') }}" alt="">
+                                        </div>
+                                        <div style="display: block; width: 59.59%;">
+                                            <span style="color: #000;font-family: 'Lato' sans-serif;font-size: 14px;font-style: normal;font-weight: 600;line-height: normal;">Trần Tuấn Anh</span>
+                                            <span style="color: rgba(166, 164, 164, 0.70);font-family: 'Lato' sans-serif;font-size: 14px;font-style: normal;font-weight: 600;line-height: normal;">2023/06/14 - 19:50</span>
+                                        </div>
+                                    </div>
+                                    <div style="display: inline-flex;align-items: flex-start;gap: 5px;width: 12.33%;margin-left:auto;">
+                                        <span style="color: #FBC250;font-family:' Lato' sans-serif;font-size: 18px;font-style: normal;font-weight: 700;line-height: normal;">5</span>
+                                        <img src="{{ asset('viewsCustom/assets/images/star.svg') }}" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="width:100%;border-bottom:1px solid #D2D2CD;margin-top:10px;padding-bottom:20px;">
+                                <span>Shop uy tín. Chất lượng tốt! Shop uy tín. Chất lượng tốt! Shop uy tín. Chất lượng tốt! Shop uy tín. Chất lượng tốt!</span>
+                            </div>
+                        </div>
+
+                        <div style="width:83.43%;padding-left:40px;margin-top:20px;">
+                            <div style="width:100%;">
+                                <div style="justify-content: space-between;display: flex;align-items: center;">
+                                    <div style="display: inline-flex;align-items: center;gap: 10px;">
+                                        <div>
+                                            <img width="45px" height="45px" src="{{ asset('viewsCustom/assets/images/faces-clipart/pic-1.png') }}" alt="">
+                                        </div>
+                                        <div style="display: block; width: 59.59%;">
+                                            <span style="color: #000;font-family: 'Lato' sans-serif;font-size: 14px;font-style: normal;font-weight: 600;line-height: normal;">Trần Tuấn Anh</span>
+                                            <span style="color: rgba(166, 164, 164, 0.70);font-family: 'Lato' sans-serif;font-size: 14px;font-style: normal;font-weight: 600;line-height: normal;">2023/06/14 - 19:50</span>
+                                        </div>
+                                    </div>
+                                    <div style="display: inline-flex;align-items: flex-start;gap: 5px;width: 12.33%;margin-left:auto;">
+                                        <span style="color: #FBC250;font-family:' Lato' sans-serif;font-size: 18px;font-style: normal;font-weight: 700;line-height: normal;">5</span>
+                                        <img src="{{ asset('viewsCustom/assets/images/star.svg') }}" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="width:100%;border-bottom:1px solid #D2D2CD;margin-top:10px;padding-bottom:20px;">
+                                <span>Shop uy tín. Chất lượng tốt! Shop uy tín. Chất lượng tốt! Shop uy tín. Chất lượng tốt! Shop uy tín. Chất lượng tốt!</span>
+                            </div>
+                        </div>
+
+                        <div style="width:83.43%;padding-left:40px;margin-top:20px;">
+                            <div style="width:100%;">
+                                <div style="justify-content: space-between;display: flex;align-items: center;">
+                                    <div style="display: inline-flex;align-items: center;gap: 10px;">
+                                        <div>
+                                            <img width="45px" height="45px" src="{{ asset('viewsCustom/assets/images/faces-clipart/pic-1.png') }}" alt="">
+                                        </div>
+                                        <div style="display: block; width: 59.59%;">
+                                            <span style="color: #000;font-family: 'Lato' sans-serif;font-size: 14px;font-style: normal;font-weight: 600;line-height: normal;">Trần Tuấn Anh</span>
+                                            <span style="color: rgba(166, 164, 164, 0.70);font-family: 'Lato' sans-serif;font-size: 14px;font-style: normal;font-weight: 600;line-height: normal;">2023/06/14 - 19:50</span>
+                                        </div>
+                                    </div>
+                                    <div style="display: inline-flex;align-items: flex-start;gap: 5px;width: 12.33%;margin-left:auto;">
+                                        <span style="color: #FBC250;font-family:' Lato' sans-serif;font-size: 18px;font-style: normal;font-weight: 700;line-height: normal;">5</span>
+                                        <img src="{{ asset('viewsCustom/assets/images/star.svg') }}" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="width:100%;border-bottom:1px solid #D2D2CD;margin-top:10px;padding-bottom:20px;">
+                                <span>Shop uy tín. Chất lượng tốt! Shop uy tín. Chất lượng tốt! Shop uy tín. Chất lượng tốt! Shop uy tín. Chất lượng tốt!</span>
+                            </div>
+                        </div>
+
+                        <div style="width:83.43%;padding-left:40px;margin-top:20px;">
+                            <div style="width:100%;">
+                                <div style="justify-content: space-between;display: flex;align-items: center;">
+                                    <div style="display: inline-flex;align-items: center;gap: 10px;">
+                                        <div>
+                                            <img width="45px" height="45px" src="{{ asset('viewsCustom/assets/images/faces-clipart/pic-1.png') }}" alt="">
+                                        </div>
+                                        <div style="display: block; width: 59.59%;">
+                                            <span style="color: #000;font-family: 'Lato' sans-serif;font-size: 14px;font-style: normal;font-weight: 600;line-height: normal;">Trần Tuấn Anh</span>
+                                            <span style="color: rgba(166, 164, 164, 0.70);font-family: 'Lato' sans-serif;font-size: 14px;font-style: normal;font-weight: 600;line-height: normal;">2023/06/14 - 19:50</span>
+                                        </div>
+                                    </div>
+                                    <div style="display: inline-flex;align-items: flex-start;gap: 5px;width: 12.33%;margin-left:auto;">
+                                        <span style="color: #FBC250;font-family:' Lato' sans-serif;font-size: 18px;font-style: normal;font-weight: 700;line-height: normal;">5</span>
+                                        <img src="{{ asset('viewsCustom/assets/images/star.svg') }}" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="width:100%;border-bottom:1px solid #D2D2CD;margin-top:10px;padding-bottom:20px;">
+                                <span>Shop uy tín. Chất lượng tốt! Shop uy tín. Chất lượng tốt! Shop uy tín. Chất lượng tốt! Shop uy tín. Chất lượng tốt!</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="btn-profile">
-                        <button type="submit">Nhắn tin</button>
+                    <div style="text-align: center;">
+                        <span>Xem thêm <i style="margin-left:auto;font-size:20px;" class="ri-arrow-down-s-line"></i></span>
                     </div>
                 </div>
-                <div style="background: #fff;width:100%;height:300px;border-radius: 10px;">
-
-                </div>
+                
             </div>
 
         </div>
     </x-form>
 </div>
 <style>
-    li{
+
+    li a {
         color: #303030;
         font-family: 'Lato' sans-serif;
         font-size: 16px;
@@ -253,31 +538,69 @@
         font-weight: 700;
         line-height: normal;
     }
-    .active{
+
+    li a:hover {
+        color: #E0793F;
+    }
+
+    .active a:hover {
+        color: #fff;
+    }
+
+    .active a {
         border-radius: 20px;
         background: #E0793F;
-        color:#fff;
+        color: #fff;
         display: flex;
         padding: 5px 10px;
         align-items: flex-end;
         gap: 5px;
     }
+
+    .content-bank span {
+        color: #000;
+        font-family: ' Lato' sans-serif;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+
+    .content-money span {
+        color: #000;
+        font-family: 'Lato' sans-serif;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+
+    .content-bank p {
+        font-weight: 700;
+    }
+
+    .content-money p {
+        font-weight: 700;
+    }
+
     #sidebarRight {
         display: none;
     }
-    .content-profile{
-        margin-top: 55px;
+
+    .content-profile {
         display: inline-flex;
         flex-direction: column;
         align-items: flex-start;
         margin-left: 41px;
     }
-    .content-item-profile{
+
+    .content-item-profile {
         display: flex;
         align-items: start;
         gap: 15px;
     }
-    .content-item-profile p{
+
+    .content-item-profile p {
         color: #000;
         font-family: 'Lato' sans-serif;
         font-size: 16px;
@@ -285,10 +608,12 @@
         font-weight: 400;
         line-height: normal;
     }
-    .btn-profile{
+
+    .btn-profile {
         text-align: center;
     }
-    .btn-profile button{
+
+    .btn-profile button {
         width: 117px;
         height: 33px;
         flex-shrink: 0;
@@ -300,32 +625,34 @@
         font-style: normal;
         font-weight: 700;
         line-height: normal;
-        border:none;
+        border: none;
         margin-top: 35px;
     }
-    .content-edit-info input{
-        padding-left:15px;
+
+    .content-edit-info input {
+        padding-left: 15px;
         color: #000;
         font-family: 'Lato' sans-serif;
         font-size: 16px;
         font-style: normal;
         font-weight: 400;
         line-height: normal;
-        padding-top:10px;
-        padding-bottom:10px;
+        padding-top: 10px;
+        padding-bottom: 10px;
         background: #FFF;
         border-radius: 5px;
         border-bottom: 1px solid #A6A4A4;
-        border-top:none;
+        border-top: none;
         border-left: none;
         border-right: none;
     }
+
     .profile-img {
         z-index: 1;
         position: relative;
         bottom: 0 !important;
         left: 0 !important;
-        width: 150px;
+        width: 100%;
         height: 150px;
         display: block !important;
         cursor: pointer;
@@ -342,8 +669,7 @@
         position: relative;
         background-image: url(https://c4.wallpaperflare.com/wallpaper/428/45/96/digital-illustration-landscape-artwork-sunset-hd-wallpaper-preview.jpg);
         background-size: cover;
-        border-top-left-radius: 5px;
-        border-top-right-radius: 5px;
+        border-radius: 10px;
     }
 
     #edit:hover {
