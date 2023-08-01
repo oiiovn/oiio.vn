@@ -35,13 +35,16 @@ if (! function_exists('uniqid_real')) {
 if (! function_exists('format_price')) {
     function format_price($price, $positionCurrent = null) {
         $positionCurrent = $positionCurrent ?: config('custom.currency.position'); 
-        return $positionCurrent == 'left' ? config('custom.currency.unit').number_format($price) : number_format($price).config('custom.currency.unit');
+        $formattedPrice = $positionCurrent == 'left' ? config('custom.currency.unit') . ' ' . number_format($price) : number_format($price) . ' ' . config('custom.currency.unit');
+        return $formattedPrice;
     } 
 }
 
-if (! function_exists('format_datetime')) {
+if (!function_exists('format_datetime')) {
     function format_datetime($datetime, $format = null) {
         $format = $format ?: config('custom.format.datetime');
-        return date(config('custom.format.datetime'), strtotime($datetime));
-    } 
+        $formattedDate = date($format, strtotime($datetime));
+        $formattedTime = date('H:i', strtotime($datetime));
+        return $formattedDate . ' - ' . $formattedTime;
+    }
 }
