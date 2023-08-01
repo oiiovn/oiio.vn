@@ -152,7 +152,7 @@
                     <img id="edit" src="{{ asset('viewsCustom/assets/images/edit-ic-tron.svg') }}" alt="" style="position: absolute; top: 0; right: 0; background-color: rgba(255, 255, 255, 0.5); border-radius:10px; padding: 5px;margin-right: 15px;margin-top:15px; filter: drop-shadow(0px 7px 8px rgba(0, 0, 0, 0.24));" />
                 </div>
             </div>
-            <div style="background: #fff;width:378px;height:336px;border-radius: 10px;position:absolute;top:154px;right:19px;">
+            <div style="background: #fff;width: 34%;height:336px;border-radius: 10px;position:absolute;top:154px;right:19px;">
                     <div style="display: block;width: 100%;text-align:center;padding-top:20px;">
                         <div class="profile-img">
                             <div style="display: block; position: relative;">
