@@ -2,7 +2,6 @@
 @push('libs-css')
     <link href="{{ asset('libs/Parsley.js-2.9.2/style.css') }}" rel="stylesheet">
 @endpush
-@section('change-pass')
 @section('content')
     <div class="page-create-order" style="display:block;">
         <div class="header-create-order" style="margin-top:20px;">

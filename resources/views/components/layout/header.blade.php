@@ -1,3 +1,4 @@
+
 <nav class="navbar navbar-expand-lg" style="width: 100%; height: 80px; border-bottom: 1px solid rgba(233, 233, 233, 0.95);"> <!-- Đã sửa -->
     <div class="container" style="width:100%;">
         <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
@@ -674,4 +675,106 @@
         display: none !important;
     }
     }
+</style>
+<!-- Modal đổi mật khẩu -->
+<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true" style="">
+  <div class="modal-dialog" role="document">
+    <div class=" content-dmk " style="margin-left: auto;margin-right: auto;">
+      <div class="modal-header" style="border:none;">
+        <h5 class="modal-title" id="exampleModalLongTitle" style="color: #000;font-size: 20px;font-style: normal;font-weight: 600;line-height: normal;">Cập nhật mật khẩu của bạn</h5>
+        
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"  style="border: none;background:none;"><span aria-hidden="true"><img src="{{ asset('viewsCustom/assets/images/clone.svg') }}" ></span> </button>
+
+      </div>
+      <div class="modal-body" style="padding-top:9px;">
+        <div>
+            <div>
+                Nhập mật khẩu mới
+            </div>
+            <div>
+            <input id="password" class="form-control form-control-flush h55 w100" type="password" name="password" placeholder="Mật khẩu"
+                                       style=" flex-shrink: 0; border-radius: 5px; border: 1px solid #C7C6C1; font-family: 'Lato', sans-serif;"/>
+            </div>
+        </div>
+        <div style="padding-top:24px;">
+            <div>
+                Nhập lại mật khẩu mới
+            </div>
+            <div>
+            <input id="password" class="form-control form-control-flush h55 w100" type="password" name="password" placeholder="Nhập lại mật khẩu"
+                                       style=" flex-shrink: 0; border-radius: 5px; border: 1px solid #C7C6C1; font-family: 'Lato', sans-serif;"/>
+            </div>
+        </div>
+    
+      </div>
+      <div class="modal-footer" style="border:none;">
+        <button type="button" class="" style="border-radius: 5px;background: #E0793F;width:90%;margin-left:5%;margin-right:5%;border:none;height:40px;"><span style="color: #FFF;font-size: 13px;font-style: normal;font-weight: 700;line-height: normal;">Cập nhật</span></button>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <style>
+        .modal-backdrop{
+            display:none;
+        }
+    .content-dmk{
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 100%;
+    pointer-events: auto;
+    background-color: #FFF;
+    background-clip: padding-box;
+    border: 1px solid #ebedf2;
+    border-radius: 0.3rem;
+    outline: 0;
+}
+    .fs16{
+        font-size: 16px !important;
+    }
+    .fs15{
+        font-size: 15px;
+    }
+    .fs14{
+        font-size: 14px;
+    }
+    .fs13{
+        font-size: 13px;
+    }
+    .fs12{
+        font-size: 12px;
+    }
+    .font-lato{
+        font-family: "lato", sans-serif !important;
+    }
+    @media (max-width: 2400px){
+        .content-dmk{
+        width: 500px !important;
+        
+     }  
+    }
+    @media (max-width: 1000px){
+        .content-dmk{
+        left:0%;
+     }
+    }
+    @media (max-width: 768px){
+        .content-dmk{
+        width: 400px !important;
+     }
+    }
+    @media (max-width: 460px){
+.content-dmk{
+        width: 300px !important;
+        left:0%;
+     }
+}
 </style>
