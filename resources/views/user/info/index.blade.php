@@ -195,7 +195,6 @@
                             </x-button>
                         </div>
                     </div>
-                    @if(auth()->user()->hasBankAccount())
                     <div class="content-edit-info" style="width:100%;height: 336px;display:block;">
                     <input name="user_id" type="hidden" value="{{ $user->id }}" hidden />
                         <div style="height: 51.3333px;margin-left:40px;display: flex;align-items:center;">
@@ -214,18 +213,20 @@
                             <label>{{ __('Số điện thoại') }}</label>
                             <input type="text" name="phone" value="{{ $user->phone }}" style="width: 65%;margin-left:auto;">
                         </div>
+                        @if(auth()->user()->hasBankAccount())
                         @foreach($user->bankAccount as $value)
                         <div style="height: 51.3333px;margin-left:40px;display: flex;align-items:center;">
                             <label>{{ __('Tài khoản ngân hàng') }}</label>
                             <input type="text" name="namebank" value="{{ $value->account_number }} - {{ $value->bank_name }}" style="width: 65%;margin-left:auto;"> 
                         </div>
                         @endforeach
+                        @endif
                         <div style="height: 51.3333px;margin-left:40px;display: flex;align-items:center;">
                             <label>{{ __('Tên shop') }}</label>
                             <input type="text" name="nameshop" value="{{ $user->name_shop }}" style="width: 65%;margin-left:auto;"><!--cần đổ dữ liệu-->
                         </div>
                     </div>
-                    @endif
+
                 </div>
                 <div style="background: #fff;width:100%;border-radius: 10px;">
                     <div style="height: 109px;padding-left:40px;margin-bottom:35px;">
