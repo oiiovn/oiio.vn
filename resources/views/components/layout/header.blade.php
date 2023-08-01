@@ -556,7 +556,6 @@
         justify-content: center;
         align-items: center;
         flex-shrink: 0;
-        background-color: rgba(var(--bs-tertiary-bg-rgb), var(--bs-bg-opacity)) !important;
         backdrop-filter: blur(20px);
         cursor: pointer;
     }

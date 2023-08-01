@@ -152,7 +152,7 @@
                     <img id="edit" src="{{ asset('viewsCustom/assets/images/edit-ic-tron.svg') }}" alt="" style="position: absolute; top: 0; right: 0; background-color: rgba(255, 255, 255, 0.5); border-radius:10px; padding: 5px;margin-right: 15px;margin-top:15px; filter: drop-shadow(0px 7px 8px rgba(0, 0, 0, 0.24));" />
                 </div>
             </div>
-            <div style="background: #fff;width:378px;height:336px;border-radius: 10px;position:absolute;top:154px;right:19px;">
+            <div style="background: #fff;width: 34%;height:336px;border-radius: 10px;position:absolute;top:154px;right:19px;">
                     <div style="display: block;width: 100%;text-align:center;padding-top:20px;">
                         <div class="profile-img">
                             <div style="display: block; position: relative;">
@@ -195,7 +195,9 @@
                             </x-button>
                         </div>
                     </div>
+                    @if(auth()->user()->hasBankAccount())
                     <div class="content-edit-info" style="width:100%;height: 336px;display:block;">
+                    <input name="user_id" type="hidden" value="{{ $user->id }}" hidden />
                         <div style="height: 51.3333px;margin-left:40px;display: flex;align-items:center;">
                             <label>{{ __('Họ và tên') }}</label>
                             <input type="text" name="fullname" value="{{ $user->fullname }}" style="width: 65%;margin-left:auto;">
@@ -212,15 +214,18 @@
                             <label>{{ __('Số điện thoại') }}</label>
                             <input type="text" name="phone" value="{{ $user->phone }}" style="width: 65%;margin-left:auto;">
                         </div>
+                        @foreach($user->bankAccount as $value)
                         <div style="height: 51.3333px;margin-left:40px;display: flex;align-items:center;">
                             <label>{{ __('Tài khoản ngân hàng') }}</label>
-                            <input type="text" name="namebank" value="" style="width: 65%;margin-left:auto;"> <!--cần đổ dữ liệu-->
+                            <input type="text" name="namebank" value="{{ $value->account_number }} - {{ $value->bank_name }}" style="width: 65%;margin-left:auto;"> 
                         </div>
+                        @endforeach
                         <div style="height: 51.3333px;margin-left:40px;display: flex;align-items:center;">
                             <label>{{ __('Tên shop') }}</label>
-                            <input type="text" name="nameshop" value="" style="width: 65%;margin-left:auto;"><!--cần đổ dữ liệu-->
+                            <input type="text" name="nameshop" value="{{ $user->name_shop }}" style="width: 65%;margin-left:auto;"><!--cần đổ dữ liệu-->
                         </div>
                     </div>
+                    @endif
                 </div>
                 <div style="background: #fff;width:100%;border-radius: 10px;">
                     <div style="height: 109px;padding-left:40px;margin-bottom:35px;">
@@ -255,7 +260,8 @@
                                 <span style="gap:10px;display:flex;justify-content: flex-end;align-items: baseline;">Ví tiền: <p>10.000.000.000 đ</p></span>
                             </div>
                         </div>
-
+                        
+<!-- 
                         <div style="margin-bottom:32px;width:88.52%;background:#fff;height: 150px;margin-left:40px;border-radius: 8px;border: 1px solid #D2D2CD;box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.15);display:flex;justify-content: space-between;padding-left:24px;padding-right:34px;padding-top:18px;">
                             <div class="content-bank" style="display:block;">
                                 <span style="display:flex;justify-content: flex-start;align-items: baseline;color: #000;font-family: 'Lato' sans-serif;font-size: 16px;font-style: normal;font-weight: 700;line-height: normal;letter-spacing: 2.88px;">TB763495AE2735</span>
@@ -296,7 +302,7 @@
                                 <span style="gap:10px;display:flex;justify-content: flex-end;align-items: baseline;">Phí giao dịch: <p>- 0đ</p></span>
                                 <span style="gap:10px;display:flex;justify-content: flex-end;align-items: baseline;">Ví tiền: <p>10.000.000.000 đ</p></span>
                             </div>
-                        </div>
+                        </div> -->
                         <div style="text-align: center;">
                             <span>Xem thêm <i style="margin-left:auto;font-size:20px;" class="ri-arrow-down-s-line"></i></span>
                         </div>
