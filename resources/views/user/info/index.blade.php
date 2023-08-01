@@ -247,62 +247,31 @@
                         </div>
                     </div>
                     <div style="height: 100%;">
-                        <div style="margin-bottom:32px;width:88.52%;background:#fff;height: 150px;margin-left:40px;border-radius: 8px;border: 1px solid #D2D2CD;box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.15);display:flex;justify-content: space-between;padding-left:24px;padding-right:34px;padding-top:18px;">
-                            <div class="content-bank" style="display:block;">
-                                <span style="display:flex;justify-content: flex-start;align-items: baseline;color: #000;font-family: 'Lato' sans-serif;font-size: 16px;font-style: normal;font-weight: 700;line-height: normal;letter-spacing: 2.88px;">TB763495AE2735</span>
-                                <span style="margin-top:10px;gap:10px;display:flex;justify-content: flex-start;align-items: baseline;">Loại giao dịch: <p>Nạp tiền</p></span>
-                                <span style="gap:10px;display:flex;justify-content: flex-start;align-items: baseline;">Trạng thái: <p style="color: #269300;font-weight: 700;">Thành công</p></span>
-                                <span style="gap:10px;display:flex;justify-content: flex-start;align-items: baseline;color: #A6A4A4;font-size: 12px;font-weight: 500;letter-spacing: 1.2px;">20/07/2023 - 16:08</span>
-                            </div>
-                            <div class="content-money" style="display: inline-flex;flex-direction: column;align-items: flex-end;gap: 14px;">
-                                <span style="display:flex;justify-content: flex-end;align-items: baseline;color: #269300;font-family: 'Lato' sans-serif;font-size: 16px;font-style: normal;font-weight: 700;line-height: normal;letter-spacing: 1.6px;">+10.hvvvv.000.000 đ</span>
-                                <span style="gap:10px;display:flex;justify-content: flex-end;align-items: baseline;">Phí giao dịch: <p>- 0đ</p></span>
-                                <span style="gap:10px;display:flex;justify-content: flex-end;align-items: baseline;">Ví tiền: <p>10.000.000.000 đ</p></span>
-                            </div>
-                        </div>
-                        
-<!-- 
-                        <div style="margin-bottom:32px;width:88.52%;background:#fff;height: 150px;margin-left:40px;border-radius: 8px;border: 1px solid #D2D2CD;box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.15);display:flex;justify-content: space-between;padding-left:24px;padding-right:34px;padding-top:18px;">
-                            <div class="content-bank" style="display:block;">
-                                <span style="display:flex;justify-content: flex-start;align-items: baseline;color: #000;font-family: 'Lato' sans-serif;font-size: 16px;font-style: normal;font-weight: 700;line-height: normal;letter-spacing: 2.88px;">TB763495AE2735</span>
-                                <span style="margin-top:10px;gap:10px;display:flex;justify-content: flex-start;align-items: baseline;">Loại giao dịch: <p>Nạp tiền</p></span>
-                                <span style="gap:10px;display:flex;justify-content: flex-start;align-items: baseline;">Trạng thái: <p style="color: #269300;font-weight: 700;">Thành công</p></span>
-                                <span style="gap:10px;display:flex;justify-content: flex-start;align-items: baseline;color: #A6A4A4;font-size: 12px;font-weight: 500;letter-spacing: 1.2px;">20/07/2023 - 16:08</span>
-                            </div>
-                            <div class="content-money" style="display: inline-flex;flex-direction: column;align-items: flex-end;gap: 14px;">
-                                <span style="display:flex;justify-content: flex-end;align-items: baseline;color: #269300;font-family: 'Lato' sans-serif;font-size: 16px;font-style: normal;font-weight: 700;line-height: normal;letter-spacing: 1.6px;">+10.hvvvv.000.000 đ</span>
-                                <span style="gap:10px;display:flex;justify-content: flex-end;align-items: baseline;">Phí giao dịch: <p>- 0đ</p></span>
-                                <span style="gap:10px;display:flex;justify-content: flex-end;align-items: baseline;">Ví tiền: <p>10.000.000.000 đ</p></span>
-                            </div>
-                        </div>
+                    @php
+                        // Lấy thông tin người dùng hiện tại từ dòng 252 đến dòng 257
+                        $currentUser = Auth::user(); 
+                        // Khởi tạo TransactionRepository và lấy lịch sử giao dịch của người dùng hiện tại
+                        $transactionRepository = new \App\Repositories\Transactions\TransactionRepository();
+                        $transactions = $transactionRepository->getQueryBuilderWithRelations()->where('user_id', $currentUser->id)->get();
+                        @endphp
 
+                        @foreach($transactions as $transaction)
                         <div style="margin-bottom:32px;width:88.52%;background:#fff;height: 150px;margin-left:40px;border-radius: 8px;border: 1px solid #D2D2CD;box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.15);display:flex;justify-content: space-between;padding-left:24px;padding-right:34px;padding-top:18px;">
                             <div class="content-bank" style="display:block;">
-                                <span style="display:flex;justify-content: flex-start;align-items: baseline;color: #000;font-family: 'Lato' sans-serif;font-size: 16px;font-style: normal;font-weight: 700;line-height: normal;letter-spacing: 2.88px;">TB763495AE2735</span>
-                                <span style="margin-top:10px;gap:10px;display:flex;justify-content: flex-start;align-items: baseline;">Loại giao dịch: <p>Nạp tiền</p></span>
-                                <span style="gap:10px;display:flex;justify-content: flex-start;align-items: baseline;">Trạng thái: <p style="color: #269300;font-weight: 700;">Thành công</p></span>
-                                <span style="gap:10px;display:flex;justify-content: flex-start;align-items: baseline;color: #A6A4A4;font-size: 12px;font-weight: 500;letter-spacing: 1.2px;">20/07/2023 - 16:08</span>
+                                <span style="display:flex;justify-content: flex-start;align-items: baseline;color: #000;font-family: 'Lato' sans-serif;font-size: 16px;font-style: normal;font-weight: 700;line-height: normal;letter-spacing: 2.88px;">{{ $transaction->code }}</span>
+                                <span style="margin-top:10px;gap:10px;display:flex;justify-content: flex-start;align-items: baseline;">Lọai giao dịch: <p>{{ $transaction->type->description()  }}</p></span>
+                                <span style="gap:10px;display:flex;justify-content: flex-start;align-items: baseline;">Trạng thái: <p style="color: #269300;font-weight: 700;">{{ $transaction->status->description() }}</p></span>
+                                <!-- <span class="d-lg-flex d-block">Mã giao dịch VNPAY: <b class="text-dark">{{ $transaction->code_vnpay }}</b></span>
+                                    <span class="d-lg-flex d-block">Mã ngân hàng: <b class="text-dark">{{ $transaction->bank }}</b></span> -->
+                                <span style="gap:10px;display:flex;justify-content: flex-start;align-items: baseline;color: #A6A4A4;font-size: 12px;font-weight: 500;letter-spacing: 1.2px;">{{ format_datetime($transaction->created_at) }}</span>
                             </div>
                             <div class="content-money" style="display: inline-flex;flex-direction: column;align-items: flex-end;gap: 14px;">
-                                <span style="display:flex;justify-content: flex-end;align-items: baseline;color: #269300;font-family: 'Lato' sans-serif;font-size: 16px;font-style: normal;font-weight: 700;line-height: normal;letter-spacing: 1.6px;">+10.hvvvv.000.000 đ</span>
+                                <span style="display:flex;justify-content: flex-end;align-items: baseline;color: #269300;font-family: 'Lato' sans-serif;font-size: 16px;font-style: normal;font-weight: 700;line-height: normal;letter-spacing: 1.6px;">Số tiền: <p>{{ format_price($transaction->amount) }}</p></span>
                                 <span style="gap:10px;display:flex;justify-content: flex-end;align-items: baseline;">Phí giao dịch: <p>- 0đ</p></span>
-                                <span style="gap:10px;display:flex;justify-content: flex-end;align-items: baseline;">Ví tiền: <p>10.000.000.000 đ</p></span>
+                                <span style="gap:10px;display:flex;justify-content: flex-end;align-items: baseline;">Ví tiền: <p>{{format_price(auth()->user()->wallet()->value('amount'))}}</p></span>
                             </div>
                         </div>
-
-                        <div style="margin-bottom:32px;width:88.52%;background:#fff;height: 150px;margin-left:40px;border-radius: 8px;border: 1px solid #D2D2CD;box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.15);display:flex;justify-content: space-between;padding-left:24px;padding-right:34px;padding-top:18px;">
-                            <div class="content-bank" style="display:block;">
-                                <span style="display:flex;justify-content: flex-start;align-items: baseline;color: #000;font-family: 'Lato' sans-serif;font-size: 16px;font-style: normal;font-weight: 700;line-height: normal;letter-spacing: 2.88px;">TB763495AE2735</span>
-                                <span style="margin-top:10px;gap:10px;display:flex;justify-content: flex-start;align-items: baseline;">Loại giao dịch: <p>Nạp tiền</p></span>
-                                <span style="gap:10px;display:flex;justify-content: flex-start;align-items: baseline;">Trạng thái: <p style="color: #269300;font-weight: 700;">Thành công</p></span>
-                                <span style="gap:10px;display:flex;justify-content: flex-start;align-items: baseline;color: #A6A4A4;font-size: 12px;font-weight: 500;letter-spacing: 1.2px;">20/07/2023 - 16:08</span>
-                            </div>
-                            <div class="content-money" style="display: inline-flex;flex-direction: column;align-items: flex-end;gap: 14px;">
-                                <span style="display:flex;justify-content: flex-end;align-items: baseline;color: #269300;font-family: 'Lato' sans-serif;font-size: 16px;font-style: normal;font-weight: 700;line-height: normal;letter-spacing: 1.6px;">+10.hvvvv.000.000 đ</span>
-                                <span style="gap:10px;display:flex;justify-content: flex-end;align-items: baseline;">Phí giao dịch: <p>- 0đ</p></span>
-                                <span style="gap:10px;display:flex;justify-content: flex-end;align-items: baseline;">Ví tiền: <p>10.000.000.000 đ</p></span>
-                            </div>
-                        </div> -->
+                        @endforeach
                         <div style="text-align: center;">
                             <span>Xem thêm <i style="margin-left:auto;font-size:20px;" class="ri-arrow-down-s-line"></i></span>
                         </div>
@@ -408,121 +377,7 @@
                                 <span>Shop uy tín. Chất lượng tốt! Shop uy tín. Chất lượng tốt! Shop uy tín. Chất lượng tốt! Shop uy tín. Chất lượng tốt!</span>
                             </div>
                         </div>
-
-                        <div style="width:83.43%;padding-left:40px;margin-top:20px;">
-                            <div style="width:100%;">
-                                <div style="justify-content: space-between;display: flex;align-items: center;">
-                                    <div style="display: inline-flex;align-items: center;gap: 10px;">
-                                        <div>
-                                            <img width="45px" height="45px" src="{{ asset('viewsCustom/assets/images/faces-clipart/pic-1.png') }}" alt="">
-                                        </div>
-                                        <div style="display: block; width: 59.59%;">
-                                            <span style="color: #000;font-family: 'Lato' sans-serif;font-size: 14px;font-style: normal;font-weight: 600;line-height: normal;">Trần Tuấn Anh</span>
-                                            <span style="color: rgba(166, 164, 164, 0.70);font-family: 'Lato' sans-serif;font-size: 14px;font-style: normal;font-weight: 600;line-height: normal;">2023/06/14 - 19:50</span>
-                                        </div>
-                                    </div>
-                                    <div style="display: inline-flex;align-items: flex-start;gap: 5px;width: 12.33%;margin-left:auto;">
-                                        <span style="color: #FBC250;font-family:' Lato' sans-serif;font-size: 18px;font-style: normal;font-weight: 700;line-height: normal;">5</span>
-                                        <img src="{{ asset('viewsCustom/assets/images/star.svg') }}" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                            <div style="width:100%;border-bottom:1px solid #D2D2CD;margin-top:10px;padding-bottom:20px;">
-                                <span>Shop uy tín. Chất lượng tốt! Shop uy tín. Chất lượng tốt! Shop uy tín. Chất lượng tốt! Shop uy tín. Chất lượng tốt!</span>
-                            </div>
-                        </div>
-
-                        <div style="width:83.43%;padding-left:40px;margin-top:20px;">
-                            <div style="width:100%;">
-                                <div style="justify-content: space-between;display: flex;align-items: center;">
-                                    <div style="display: inline-flex;align-items: center;gap: 10px;">
-                                        <div>
-                                            <img width="45px" height="45px" src="{{ asset('viewsCustom/assets/images/faces-clipart/pic-1.png') }}" alt="">
-                                        </div>
-                                        <div style="display: block; width: 59.59%;">
-                                            <span style="color: #000;font-family: 'Lato' sans-serif;font-size: 14px;font-style: normal;font-weight: 600;line-height: normal;">Trần Tuấn Anh</span>
-                                            <span style="color: rgba(166, 164, 164, 0.70);font-family: 'Lato' sans-serif;font-size: 14px;font-style: normal;font-weight: 600;line-height: normal;">2023/06/14 - 19:50</span>
-                                        </div>
-                                    </div>
-                                    <div style="display: inline-flex;align-items: flex-start;gap: 5px;width: 12.33%;margin-left:auto;">
-                                        <span style="color: #FBC250;font-family:' Lato' sans-serif;font-size: 18px;font-style: normal;font-weight: 700;line-height: normal;">5</span>
-                                        <img src="{{ asset('viewsCustom/assets/images/star.svg') }}" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                            <div style="width:100%;border-bottom:1px solid #D2D2CD;margin-top:10px;padding-bottom:20px;">
-                                <span>Shop uy tín. Chất lượng tốt! Shop uy tín. Chất lượng tốt! Shop uy tín. Chất lượng tốt! Shop uy tín. Chất lượng tốt!</span>
-                            </div>
-                        </div>
-
-                        <div style="width:83.43%;padding-left:40px;margin-top:20px;">
-                            <div style="width:100%;">
-                                <div style="justify-content: space-between;display: flex;align-items: center;">
-                                    <div style="display: inline-flex;align-items: center;gap: 10px;">
-                                        <div>
-                                            <img width="45px" height="45px" src="{{ asset('viewsCustom/assets/images/faces-clipart/pic-1.png') }}" alt="">
-                                        </div>
-                                        <div style="display: block; width: 59.59%;">
-                                            <span style="color: #000;font-family: 'Lato' sans-serif;font-size: 14px;font-style: normal;font-weight: 600;line-height: normal;">Trần Tuấn Anh</span>
-                                            <span style="color: rgba(166, 164, 164, 0.70);font-family: 'Lato' sans-serif;font-size: 14px;font-style: normal;font-weight: 600;line-height: normal;">2023/06/14 - 19:50</span>
-                                        </div>
-                                    </div>
-                                    <div style="display: inline-flex;align-items: flex-start;gap: 5px;width: 12.33%;margin-left:auto;">
-                                        <span style="color: #FBC250;font-family:' Lato' sans-serif;font-size: 18px;font-style: normal;font-weight: 700;line-height: normal;">5</span>
-                                        <img src="{{ asset('viewsCustom/assets/images/star.svg') }}" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                            <div style="width:100%;border-bottom:1px solid #D2D2CD;margin-top:10px;padding-bottom:20px;">
-                                <span>Shop uy tín. Chất lượng tốt! Shop uy tín. Chất lượng tốt! Shop uy tín. Chất lượng tốt! Shop uy tín. Chất lượng tốt!</span>
-                            </div>
-                        </div>
-
-                        <div style="width:83.43%;padding-left:40px;margin-top:20px;">
-                            <div style="width:100%;">
-                                <div style="justify-content: space-between;display: flex;align-items: center;">
-                                    <div style="display: inline-flex;align-items: center;gap: 10px;">
-                                        <div>
-                                            <img width="45px" height="45px" src="{{ asset('viewsCustom/assets/images/faces-clipart/pic-1.png') }}" alt="">
-                                        </div>
-                                        <div style="display: block; width: 59.59%;">
-                                            <span style="color: #000;font-family: 'Lato' sans-serif;font-size: 14px;font-style: normal;font-weight: 600;line-height: normal;">Trần Tuấn Anh</span>
-                                            <span style="color: rgba(166, 164, 164, 0.70);font-family: 'Lato' sans-serif;font-size: 14px;font-style: normal;font-weight: 600;line-height: normal;">2023/06/14 - 19:50</span>
-                                        </div>
-                                    </div>
-                                    <div style="display: inline-flex;align-items: flex-start;gap: 5px;width: 12.33%;margin-left:auto;">
-                                        <span style="color: #FBC250;font-family:' Lato' sans-serif;font-size: 18px;font-style: normal;font-weight: 700;line-height: normal;">5</span>
-                                        <img src="{{ asset('viewsCustom/assets/images/star.svg') }}" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                            <div style="width:100%;border-bottom:1px solid #D2D2CD;margin-top:10px;padding-bottom:20px;">
-                                <span>Shop uy tín. Chất lượng tốt! Shop uy tín. Chất lượng tốt! Shop uy tín. Chất lượng tốt! Shop uy tín. Chất lượng tốt!</span>
-                            </div>
-                        </div>
-
-                        <div style="width:83.43%;padding-left:40px;margin-top:20px;">
-                            <div style="width:100%;">
-                                <div style="justify-content: space-between;display: flex;align-items: center;">
-                                    <div style="display: inline-flex;align-items: center;gap: 10px;">
-                                        <div>
-                                            <img width="45px" height="45px" src="{{ asset('viewsCustom/assets/images/faces-clipart/pic-1.png') }}" alt="">
-                                        </div>
-                                        <div style="display: block; width: 59.59%;">
-                                            <span style="color: #000;font-family: 'Lato' sans-serif;font-size: 14px;font-style: normal;font-weight: 600;line-height: normal;">Trần Tuấn Anh</span>
-                                            <span style="color: rgba(166, 164, 164, 0.70);font-family: 'Lato' sans-serif;font-size: 14px;font-style: normal;font-weight: 600;line-height: normal;">2023/06/14 - 19:50</span>
-                                        </div>
-                                    </div>
-                                    <div style="display: inline-flex;align-items: flex-start;gap: 5px;width: 12.33%;margin-left:auto;">
-                                        <span style="color: #FBC250;font-family:' Lato' sans-serif;font-size: 18px;font-style: normal;font-weight: 700;line-height: normal;">5</span>
-                                        <img src="{{ asset('viewsCustom/assets/images/star.svg') }}" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                            <div style="width:100%;border-bottom:1px solid #D2D2CD;margin-top:10px;padding-bottom:20px;">
-                                <span>Shop uy tín. Chất lượng tốt! Shop uy tín. Chất lượng tốt! Shop uy tín. Chất lượng tốt! Shop uy tín. Chất lượng tốt!</span>
-                            </div>
-                        </div>
+                                
                     </div>
                     <div style="text-align: center;">
                         <span>Xem thêm <i style="margin-left:auto;font-size:20px;" class="ri-arrow-down-s-line"></i></span>
