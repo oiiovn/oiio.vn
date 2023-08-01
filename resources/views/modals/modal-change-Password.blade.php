@@ -1,5 +1,3 @@
-
-@yield('change-pass')
 <!-- Modal đổi mật khẩu -->
 <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true" style="">
   <div class="modal-dialog" role="document">
@@ -37,18 +35,3 @@
     </div>
   </div>
 </div>
-<script>
-    // Hàm này được gọi khi modal được hiển thị
-    $('#exampleModalLongTitle').on('shown.bs.modal', function () {
-        // Đặt focus vào input đầu tiên trong modal (nếu có)
-        $('#password').focus();
-    });
-
-    // Hàm này được gọi khi người dùng click vào button "Cập nhật"
-    function capNhatMatKhau() {
-        // Xử lý logic cập nhật mật khẩu ở đây
-        // Lưu ý: Bạn cần viết logic xử lý đổi mật khẩu tại đây
-        // Sau khi xử lý xong, bạn có thể ẩn modal bằng cách gọi:
-        // $('#exampleModalLong').modal('hide');
-    }
-</script>
