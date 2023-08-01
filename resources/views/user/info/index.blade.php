@@ -153,33 +153,33 @@
                 </div>
             </div>
             <div style="background: #fff;width: 34%;height:336px;border-radius: 10px;position:absolute;top:154px;right:19px;">
-                    <div style="display: block;width: 100%;text-align:center;padding-top:20px;">
-                        <div class="profile-img">
-                            <div style="display: block; position: relative;">
-                                <img onclick="document.getElementById('file-avatar').click();" id="avatar-img" src="{{ asset(auth()->user()->getAvatar()) }}" class="img-fluid" />
-                                <img id="edit" onclick="document.getElementById('file-avatar').click();" src="{{ asset('viewsCustom/assets/images/edit-ic-tron.svg') }}" alt="" style="position: absolute; bottom: 0; right:110px; background-color: rgba(255, 255, 255, 0.5); border-radius: 100%; padding: 5px; margin-bottom: 8px; margin-right: 8px; filter: drop-shadow(0px 7px 8px rgba(0, 0, 0, 0.24));" />
-                            </div>
-                            <input id="file-avatar" name="avatar" type="file" class="d-none"></input>
-
+                <div style="display: block;width: 100%;text-align:center;padding-top:20px;">
+                    <div class="profile-img">
+                        <div style="display: block; position: relative;">
+                            <img onclick="document.getElementById('file-avatar').click();" id="avatar-img" src="{{ asset(auth()->user()->getAvatar()) }}" class="img-fluid" />
+                            <img id="edit" onclick="document.getElementById('file-avatar').click();" src="{{ asset('viewsCustom/assets/images/edit-ic-tron.svg') }}" alt="" style="position: absolute; bottom: 0; right:110px; background-color: rgba(255, 255, 255, 0.5); border-radius: 100%; padding: 5px; margin-bottom: 8px; margin-right: 8px; filter: drop-shadow(0px 7px 8px rgba(0, 0, 0, 0.24));" />
                         </div>
-                        <p style="margin-top:15px;width:100%;color: #000;font-family:'Lato' sans-serif;font-size: 20px;font-style: normal;font-weight: 600;line-height: normal;">{{ auth()->user()->fullname ?? auth()->user()->username }}</p>
+                        <input id="file-avatar" name="avatar" type="file" class="d-none"></input>
 
                     </div>
-                    <div class="content-profile">
-                        <div class="content-item-profile">
-                            <img src="{{ asset('viewsCustom/assets/images/mail.svg') }}" alt="">
-                            <p class="">{{ $user->email }}</p>
-                        </div>
+                    <p style="margin-top:15px;width:100%;color: #000;font-family:'Lato' sans-serif;font-size: 20px;font-style: normal;font-weight: 600;line-height: normal;">{{ auth()->user()->fullname ?? auth()->user()->username }}</p>
 
-                        <div class="content-item-profile">
-                            <img src="{{ asset('viewsCustom/assets/images/phone.svg') }}" alt="">
-                            <p class="">{{ $user->phone }}</p>
-                        </div>
+                </div>
+                <div class="content-profile">
+                    <div class="content-item-profile">
+                        <img src="{{ asset('viewsCustom/assets/images/mail.svg') }}" alt="">
+                        <p class="">{{ $user->email }}</p>
                     </div>
-                    <div class="btn-profile">
-                        <!-- <button type="submit">Nhắn tin</button> -->
+
+                    <div class="content-item-profile">
+                        <img src="{{ asset('viewsCustom/assets/images/phone.svg') }}" alt="">
+                        <p class="">{{ $user->phone }}</p>
                     </div>
                 </div>
+                <div class="btn-profile">
+                    <!-- <button type="submit">Nhắn tin</button> -->
+                </div>
+            </div>
         </div>
 
 
@@ -196,7 +196,7 @@
                         </div>
                     </div>
                     <div class="content-edit-info" style="width:100%;height: 336px;display:block;">
-                    <input name="user_id" type="hidden" value="{{ $user->id }}" hidden />
+                        <input name="user_id" type="hidden" value="{{ $user->id }}" hidden />
                         <div style="height: 51.3333px;margin-left:40px;display: flex;align-items:center;">
                             <label>{{ __('Họ và tên') }}</label>
                             <input type="text" name="fullname" value="{{ $user->fullname }}" style="width: 65%;margin-left:auto;">
@@ -217,7 +217,7 @@
                         @foreach($user->bankAccount as $value)
                         <div style="height: 51.3333px;margin-left:40px;display: flex;align-items:center;">
                             <label>{{ __('Tài khoản ngân hàng') }}</label>
-                            <input type="text" name="namebank" value="{{ $value->account_number }} - {{ $value->bank_name }}" style="width: 65%;margin-left:auto;"> 
+                            <input type="text" name="namebank" value="{{ $value->account_number }} - {{ $value->bank_name }}" style="width: 65%;margin-left:auto;">
                         </div>
                         @endforeach
                         @endif
@@ -248,28 +248,28 @@
                         </div>
                     </div>
                     <div style="height: 100%;">
-                    @php
+                        @php
                         // Lấy thông tin người dùng hiện tại từ dòng 252 đến dòng 257
-                        $currentUser = Auth::user(); 
+                        $currentUser = Auth::user();
                         // Khởi tạo TransactionRepository và lấy lịch sử giao dịch của người dùng hiện tại
                         $transactionRepository = new \App\Repositories\Transactions\TransactionRepository();
                         $transactions = $transactionRepository->getQueryBuilderWithRelations()->where('user_id', $currentUser->id)->get();
                         @endphp
 
                         @foreach($transactions as $transaction)
-                        <div style="margin-bottom:32px;width:88.52%;background:#fff;height: 150px;margin-left:40px;border-radius: 8px;border: 1px solid #D2D2CD;box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.15);display:flex;justify-content: space-between;padding-left:24px;padding-right:34px;padding-top:18px;">
+                        <div style="margin-bottom:32px;width:88.52%;background:#fff;height: 133px;margin-left:40px;border-radius: 8px;border: 1px solid #D2D2CD;box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.15);display:flex;justify-content: space-between;padding-left:24px;padding-right:34px;padding-top:18px;">
                             <div class="content-bank" style="display:block;">
                                 <span style="display:flex;justify-content: flex-start;align-items: baseline;color: #000;font-family: 'Lato' sans-serif;font-size: 16px;font-style: normal;font-weight: 700;line-height: normal;letter-spacing: 2.88px;">{{ $transaction->code }}</span>
-                                <span style="margin-top:10px;gap:10px;display:flex;justify-content: flex-start;align-items: baseline;">Loại giao dịch: <p>{{ $transaction->type->description()  }}</p></span>
+                                <span style="margin-top:10px;gap:10px;display:flex;justify-content: flex-start;align-items: baseline;">Loại giao dịch: <p style="margin-top: 5px;">{{ $transaction->type->description()  }}</p></span>
                                 <span style="gap:10px;display:flex;justify-content: flex-start;align-items: baseline;">Trạng thái: <p style="color: #269300;font-weight: 700;">{{ $transaction->status->description() }}</p></span>
                                 <!-- <span class="d-lg-flex d-block">Mã giao dịch VNPAY: <b class="text-dark">{{ $transaction->code_vnpay }}</b></span>
                                     <span class="d-lg-flex d-block">Mã ngân hàng: <b class="text-dark">{{ $transaction->bank }}</b></span> -->
-                                <span style="gap:10px;display:flex;justify-content: flex-start;align-items: baseline;color: #A6A4A4;font-size: 12px;font-weight: 500;letter-spacing: 1.2px;">{{ format_datetime($transaction->created_at) }}</span>
                             </div>
                             <div class="content-money" style="display: inline-flex;flex-direction: column;align-items: flex-end;gap: 14px;">
-                                <span style="display:flex;justify-content: flex-end;align-items: baseline;color: #269300;font-family: 'Lato' sans-serif;font-size: 16px;font-style: normal;font-weight: 700;line-height: normal;letter-spacing: 1.6px;color:#EB3131;">{{$transaction->type->value == 2 ? "-" : ""}}{{ format_price($transaction->amount) }}</span>
-                                <span style="gap:10px;display:flex;justify-content: flex-end;align-items: baseline;">Phí giao dịch: <p style="color:#EB3131;">-{{ format_price($transaction->fee) }}</p></span>
-                                <span style="gap:10px;display:flex;justify-content: flex-end;align-items: baseline;">Ví tiền: <p>{{ format_price(auth()->user()->wallet()->value('amount')) }}</p></span>
+                                <span style="display:flex;justify-content: flex-end;align-items: baseline;font-family: 'Lato' sans-serif;font-size: 16px;font-style: normal;font-weight: 700;line-height: normal;letter-spacing: 1.6px; color: {{ $transaction->amount < 0 ? '#EB3131' : '#269300' }}">
+                                    {{ $transaction->type->value == 2 ? "-" : "" }}{{ format_price($transaction->amount) }}</span>
+                                <span style="gap:10px;display:flex;justify-content: flex-end;align-items: baseline;">Phí giao dịch: <p style="color:#EB3131;margin-bottom:0;">{{ format_price($transaction->fee) }}</p></span>
+                                <span style="gap:10px;display:flex;justify-content: flex-start;align-items: baseline;color: #A6A4A4;font-size: 12px;font-weight: 500;letter-spacing: 1.2px;">{{ format_datetime($transaction->created_at) }}</span>
                             </div>
                         </div>
                         @endforeach
@@ -279,7 +279,7 @@
                     </div>
                 </div>
             </div>
-                
+
             <div style="width: 34.46%;border-radius: 10px;margin-top: 220px;">
 
                 <div style="background: #fff;width:100%;border-radius: 10px;">
@@ -378,20 +378,19 @@
                                 <span>Shop uy tín. Chất lượng tốt! Shop uy tín. Chất lượng tốt! Shop uy tín. Chất lượng tốt! Shop uy tín. Chất lượng tốt!</span>
                             </div>
                         </div>
-                                
+
                     </div>
                     <div style="text-align: center;">
                         <span>Xem thêm <i style="margin-left:auto;font-size:20px;" class="ri-arrow-down-s-line"></i></span>
                     </div>
                 </div>
-                
+
             </div>
 
         </div>
     </x-form>
 </div>
 <style>
-
     li a {
         color: #303030;
         font-family: 'Lato' sans-serif;
