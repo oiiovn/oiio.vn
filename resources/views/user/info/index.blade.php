@@ -267,9 +267,9 @@
                                 <span style="gap:10px;display:flex;justify-content: flex-start;align-items: baseline;color: #A6A4A4;font-size: 12px;font-weight: 500;letter-spacing: 1.2px;">{{ format_datetime($transaction->created_at) }}</span>
                             </div>
                             <div class="content-money" style="display: inline-flex;flex-direction: column;align-items: flex-end;gap: 14px;">
-                                <span style="display:flex;justify-content: flex-end;align-items: baseline;color: #269300;font-family: 'Lato' sans-serif;font-size: 16px;font-style: normal;font-weight: 700;line-height: normal;letter-spacing: 1.6px;">Số tiền: <p>{{ format_price($transaction->amount) }}</p></span>
-                                <span style="gap:10px;display:flex;justify-content: flex-end;align-items: baseline;">Phí giao dịch: <p>- 0đ</p></span>
-                                <span style="gap:10px;display:flex;justify-content: flex-end;align-items: baseline;">Ví tiền: <p>{{format_price(auth()->user()->wallet()->value('amount'))}}</p></span>
+                                <span style="display:flex;justify-content: flex-end;align-items: baseline;color: #269300;font-family: 'Lato' sans-serif;font-size: 16px;font-style: normal;font-weight: 700;line-height: normal;letter-spacing: 1.6px;color:#EB3131;">{{$transaction->type->value == 2 ? "-" : ""}}{{ format_price($transaction->amount) }}</span>
+                                <span style="gap:10px;display:flex;justify-content: flex-end;align-items: baseline;">Phí giao dịch: <p style="color:#EB3131;">-{{ format_price($transaction->fee) }}</p></span>
+                                <span style="gap:10px;display:flex;justify-content: flex-end;align-items: baseline;">Ví tiền: <p>{{ format_price(auth()->user()->wallet()->value('amount')) }}</p></span>
                             </div>
                         </div>
                         @endforeach

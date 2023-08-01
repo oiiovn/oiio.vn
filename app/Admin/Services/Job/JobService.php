@@ -142,7 +142,7 @@ class JobService implements JobServiceInterface
                 'type_id' => $job->id,
                 'type' => TransactionType::Job,
                 'amount' => -$amount,
-                'fee' => -0,
+                'fee' => - 0,
                 'status' => TransactionStatus::Approved,
                 'note' => $note,
                 'detail' => [
