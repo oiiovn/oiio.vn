@@ -1,55 +1,44 @@
 <x-card>
-    <div class="slide-image">
-        <img class="rounded-top" src="{{ asset('assets/images/default/banner.jpeg') }}" width="100%" />
-    </div>
-
-    <div class="card-body bg-yellow-light" id="test" style="border-bottom: 1px solid #fff;">
-        <h3 class="d-flex align-items-center fw-bold">
-            <img src="{{ asset('assets/image/logo.png') }}" class="border-logo" width="100" />
-            <span class="fs-sm-15">Đặt Đơn Shopee - TikTok Shop</span>
-        </h3>
-        <p class="mb-0 text-center text-md-start">Cộng đồng facebook: 
-            <x-link :href="$settings['group_facebook']" class="text-orange">Xem Facebook ngay</x-link>
-        </p>
-    </div>
 
     <x-slot name="footer">
-        <div class="card-body bg-yellow-light">
-            <div class="row d-mobi-none">
-                <div class="col-12 col-md-4">
-                    <p class="mb-0">
-                        Số lượng shop: <span class="text-orange">{{ number_format($count_shop + $settings['statistic_virtual_user_shop']) }} <i class="fa-duotone fa-shop"></i></span>
-                    </p>
-                </div>
-                <div class="col-12 col-md-4 text-center">
-                    <p class="mb-0">
-                        Số thành viên: <span class="text-orange">{{ number_format($users->sum('total') + $settings['statistic_virtual_user_member']) }} <i class="fa-regular fa-users"></i></span>
-                    </p>
-                </div>
-                <div class="col-12 col-md-4 text-end">
-                    <p class="mb-0">
-                        Đơn hoàn thành: <span class="text-orange">{{ number_format($count_job + $settings['statistic_virtual_job_complete']) }} <i class="fa-solid fa-clipboard-list"></i></span>
-                    </p>
-                </div>
-            </div>
-            <div class="row d-desktop-none">
-                <div class="col-4 col-md-4">
-                    <p class="mb-0">
-                        <span class="text-orange"><i class="fa-duotone fa-shop"></i> {{ number_format($count_shop + $settings['statistic_virtual_user_shop']) }}</span>
-                    </p>
-                </div>
-                <div class="col-4 col-md-4 text-center">
-                    <p class="mb-0">
-                        <span class="text-orange"><i class="fa-regular fa-users"></i> {{ number_format($users->sum('total') + $settings['statistic_virtual_user_member']) }}</span>
-                    </p>
-                </div>
-                <div class="col-4 col-md-4 text-end">
-                    <p class="mb-0">
-                        <span class="text-orange"><i class="fa-solid fa-clipboard-list"></i> {{ number_format($count_job + $settings['statistic_virtual_job_complete']) }}</span>
-                    </p>
-                </div>
-            </div>
-        </div>
+    <ul class="nav-r" style="width:100%;">
+                <li class="nav-item" style="margin-left: 5px;margin-bottom: 10px;">
+                    <span style="color: #000;font-size: 18px;font-style: normal;font-weight: 700;line-height: normal;">Cộng đồng đặt đơn</span>
+                </li>
+                <li class="nav-item" style="display:block;">
+                    <div class="nav-link">
+                        <span style="font-size: 14px;" class="menu-title">Số lượng shop: </span>
+                        <div class="nav-content" style="margin-left:auto;display:flex;justify-content:center;">
+                            <span style="font-size: 14px;color:#d0011b;padding-right:5px;" class="menu-title-wallet">
+                                {{ number_format($count_shop + $settings['statistic_virtual_user_shop']) }}
+                            </span>
+                            <img style="color:#303030;width: 22px;height: 22px;align-items: center;" src="{{ asset('viewsCustom/assets/images/ic2.svg') }}" alt="">
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item" style="display:block;">
+                    <div class="nav-link">
+                        <span style="font-size: 14px;" class="menu-title">Số thành viên: </span>
+                        <div class="nav-content" style="margin-left:auto;display:flex;justify-content:center;">
+                            <span style="font-size: 14px;color:#d0011b;padding-right:5px;" class="menu-title-wallet">
+                                {{ number_format($users->sum('total') + $settings['statistic_virtual_user_member']) }}
+                            </span>
+                            <img style="color:#303030;width: 22px;height: 22px;align-items: center;" src="{{ asset('viewsCustom/assets/images/ic6.svg') }}" alt="">
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item" style="display:block;">
+                    <div class="nav-link">
+                        <span style="font-size: 14px;" class="menu-title">Đơn hoàn thành: </span>
+                        <div class="nav-content" style="margin-left:auto;display:flex;justify-content:center;">
+                            <span style="font-size: 14px;color:#d0011b;padding-right:5px;" class="menu-title-wallet">
+                                {{ number_format($count_job + $settings['statistic_virtual_job_complete']) }}
+                            </span>
+                            <img style="color:#303030;width: 22px;height: 22px;align-items: center;" src="{{ asset('viewsCustom/assets/images/ic3.svg') }}" alt="">
+                        </div>
+                    </div>
+                </li>
+            </ul>
     </x-slot>
 </x-card>
 

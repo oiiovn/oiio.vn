@@ -677,42 +677,95 @@
     }
 </style>
 <!-- Modal đổi mật khẩu -->
-<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true" style="">
+<!-- Modal -->
+<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
   <div class="modal-dialog" role="document">
-    <div class=" content-dmk " style="margin-left: auto;margin-right: auto;">
-      <div class="modal-header" style="border:none;">
-        <h5 class="modal-title" id="exampleModalLongTitle" style="color: #000;font-size: 20px;font-style: normal;font-weight: 600;line-height: normal;">Cập nhật mật khẩu của bạn</h5>
-        
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"  style="border: none;background:none;"><span aria-hidden="true"><img src="{{ asset('viewsCustom/assets/images/clone.svg') }}" ></span> </button>
-
+    <div class="content-dmk" style="margin-left: auto; margin-right: auto;">
+      <div class="modal-header" style="border: none;">
+        <h5 class="modal-title" id="exampleModalLongTitle" style="color: #000; font-size: 20px; font-style: normal; font-weight: 600; line-height: normal;">Cập nhật mật khẩu của bạn</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="border: none; background: none;">
+          <span aria-hidden="true"><img src="{{ asset('viewsCustom/assets/images/clone.svg') }}"></span>
+        </button>
       </div>
-      <div class="modal-body" style="padding-top:9px;">
+      <div class="modal-body" style="padding-top: 9px;">
         <div>
-            <div>
-                Nhập mật khẩu mới
-            </div>
-            <div>
-            <input id="password" class="form-control form-control-flush h55 w100" type="password" name="password" placeholder="Mật khẩu"
-                                       style=" flex-shrink: 0; border-radius: 5px; border: 1px solid #C7C6C1; font-family: 'Lato', sans-serif;"/>
-            </div>
+          <div>
+            Nhập mật khẩu mới
+          </div>
+          <div>
+            <input id="new-password" class="form-control form-control-flush h55 w100" type="password" name="password" placeholder="Mật khẩu" style="flex-shrink: 0; border-radius: 5px; border: 1px solid #C7C6C1; font-family: 'Lato', sans-serif;" />
+            <span id="new-password-err" class="text-danger"></span>
+          </div>
         </div>
-        <div style="padding-top:24px;">
-            <div>
-                Nhập lại mật khẩu mới
-            </div>
-            <div>
-            <input id="password" class="form-control form-control-flush h55 w100" type="password" name="password" placeholder="Nhập lại mật khẩu"
-                                       style=" flex-shrink: 0; border-radius: 5px; border: 1px solid #C7C6C1; font-family: 'Lato', sans-serif;"/>
-            </div>
+        <div style="padding-top: 24px;">
+          <div>
+            Nhập lại mật khẩu mới
+          </div>
+          <div>
+            <input id="re-password" class="form-control form-control-flush h55 w100" type="password" name="re_password" placeholder="Nhập lại mật khẩu" style="flex-shrink: 0; border-radius: 5px; border: 1px solid #C7C6C1; font-family: 'Lato', sans-serif;" />
+            <span id="re-password-err" class="text-danger"></span>
+          </div>
         </div>
-    
       </div>
-      <div class="modal-footer" style="border:none;">
-        <button type="button" class="" style="border-radius: 5px;background: #E0793F;width:90%;margin-left:5%;margin-right:5%;border:none;height:40px;"><span style="color: #FFF;font-size: 13px;font-style: normal;font-weight: 700;line-height: normal;">Cập nhật</span></button>
+      <div class="modal-footer" style="border: none;">
+        <button type="button" id="btn-resetpass" class="" style="border-radius: 5px; background: #E0793F; width: 90%; margin-left: 5%; margin-right: 5%; border: none; height: 40px;">
+        Cập nhật
+        </button>
       </div>
     </div>
   </div>
 </div>
+
+<script>
+  //Validate reset password
+  let newPassword = document.querySelector('#new-password');
+  let rePassword = document.querySelector('#re-password');
+  let newPassword_err = document.querySelector('#new-password-err');
+  let rePassword_err = document.querySelector('#re-password-err');
+  let btnResetpass = document.querySelector('#btn-resetpass');
+
+  function checkFieldsValidity() {
+    return newPassword_err.textContent === '' && rePassword_err.textContent === '' && rePassword.value !== '';
+  }
+
+  function toggleUpdateButton() {
+    btnResetpass.disabled = !checkFieldsValidity();
+  }
+
+  newPassword.addEventListener('input', (e) => {
+    let passwordRegex = /^(?=.*[a-zA-Z]).{8,}$/;
+    if (!passwordRegex.test(e.target.value)) {
+      newPassword_err.textContent = 'Mật khẩu tối thiểu phải có 8 kí tự và ít nhất một chữ cái.';
+    } else {
+      newPassword_err.textContent = '';
+    }
+    toggleUpdateButton();
+  });
+
+  rePassword.addEventListener('input', (e) => {
+    if (e.target.value === newPassword.value) {
+      rePassword_err.textContent = '';
+    } else if (e.target.value == '') {
+      rePassword_err.textContent = '';
+    } else {
+      rePassword_err.textContent = 'Mật khẩu chưa khớp với mật khẩu ở trên.';
+    }
+    toggleUpdateButton();
+  });
+
+  btnResetpass.addEventListener('click', () => {
+    console.log('Button clicked!');
+    if (checkFieldsValidity()) {
+      // Xử lý các hành động tùy thuộc vào yêu cầu của ứng dụng của bạn
+      // Ví dụ: gửi form bằng cách sử dụng AJAX hoặc thông báo thành công, v.v.
+      // Sau khi xử lý thành công, bạn có thể đóng modal bằng cách gọi hàm
+      // tương ứng để ẩn modal, ví dụ: (giả sử bạn đang sử dụng Bootstrap)
+      $('#exampleModalLong').modal('hide');
+    }
+  });
+</script>
+
+
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>

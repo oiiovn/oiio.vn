@@ -229,8 +229,19 @@
 
                 </div>
                 <div style="background: #fff;width:100%;border-radius: 10px;">
-                    <div style="height: 109px;padding-left:40px;margin-bottom:35px;">
+                    <div style="height: 200px;padding-left:40px;margin-bottom:20px;">
                         <div style="width:29.41%;color: #E0793F;font-family: 'Lato' sans-serif;font-size: 18px;font-style: normal;font-weight: 800;line-height: normal;border-bottom:1px solid rgba(0, 0, 0, 0.11);padding-bottom:10px;margin-bottom:28px;padding-top:20px;">Giao dịch cá nhân</div>
+                        {{-- Tìm kiếm --}}
+                        <div class="search-field-x d-none d-md-block" style="border-radius: 10px;margin-bottom:20px;">
+                            <form class="d-flex align-items-center h-100" action="#">
+                                <div class="input-group-s" style="border-radius:5px;">
+                                    <input type="text" class="form-control-s" placeholder="Tìm kiếm mã đơn, v.v" style="margin:17px 30px 16px 0;color: rgba(86, 86, 86, 0.50);font-family: Lato;font-size: 14px;font-style: normal;font-weight: 400;line-height: normal;padding:0 0.75rem;">
+                                    <div style="position: relative;border-left: 1px solid #3333;align-items: center;justify-content: center;display: flex;width: 20%;margin-left: auto;" class="input-group-prepend-s bg-transparent">
+                                        <img src="{{ asset('icon/search.svg') }}" alt="logo">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
                         <div style="height: 29px;width:100%;margin-left:28.5px;display: inline-flex;align-items: flex-start;gap:35px;">
                             <li style="height:29px;display: flex;justify-content: center;align-items: center;" class="active">
                                 <a href="#">Lịch sử giao dịch</a>
@@ -536,6 +547,14 @@
     #edit:hover {
         opacity: 0.8;
     }
+    .search-field-x {
+        width: 370px;
+        margin-bottom: 23px;
+        height: 50px;
+        flex-shrink: 0;
+        background: #FFF;
+        backdrop-filter: blur(20px);
+    }
 </style>
 
 <script>
@@ -565,45 +584,6 @@
             cover_img.style.backgroundImage = `url("${base64Image}")`;
         };
     })
-
-    //Validate reset password
-    let newPassword = document.querySelector('#new-password')
-    let rePassword = document.querySelector('#re-password')
-    let newPassword_err = document.querySelector('#new-password-err')
-    let rePassword_err = document.querySelector('#re-password-err')
-    let form_resetPassword = document.querySelector('#form-resetpass')
-    let btnResetpass = document.querySelector('#btn-resetpass')
-
-    newPassword.addEventListener('input', (e) => {
-        let passwordRegex = /^(?=.*[a-zA-Z]).{8,}$/;
-        if (!passwordRegex.test(e.target.value)) {
-            newPassword_err.textContent = 'Mật khẩu tối thiểu phải có 8 kí tự và ít nhất một chữ cái.';
-        } else {
-            newPassword_err.textContent = '';
-        }
-    })
-
-
-    rePassword.addEventListener('input', (e) => {
-
-        if (e.target.value === newPassword.value) {
-
-            rePassword_err.textContent = '';
-        } else if (e.target.value == '') {
-            rePassword_err.textContent = '';
-        } else {
-            rePassword_err.textContent = 'Mật khẩu chưa khớp với mật khẩu ở trên.';
-        }
-    })
-
-    form_resetPassword.addEventListener('input', () => {
-        // Check if all fields are valid
-        if (newPassword_err.textContent === '' && rePassword_err.textContent === '' && rePassword.value !== '') {
-            btnResetpass.disabled = false;
-        } else {
-            btnResetpass.disabled = true;
-        }
-    });
 </script>
 <script src="/public/viewsCustom/assets/js/cropper.min.js"></script>
 @endsection

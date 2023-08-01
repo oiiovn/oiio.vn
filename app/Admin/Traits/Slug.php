@@ -1,13 +1,16 @@
 <?php
-namespace App\Admin\Traits;
-use Illuminate\Support\Str;
+namespace App\Models;
 
-trait Slug{
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Str; // Đảm bảo import Str
+
+trait Slug
+{
     public function createSlug($title, $id = 0)
     {
         $slug = Str::slug($title);
         $allSlugs = $this->getRelatedSlugs($slug, $id);
-        if (! $allSlugs->contains('slug', $slug)){
+        if (!$allSlugs->contains('slug', $slug)) {
             return $slug;
         }
 
@@ -22,10 +25,11 @@ trait Slug{
             $i++;
         } while ($is_contain);
     }
+
     protected function getRelatedSlugs($slug, $id = 0)
     {
-        return Self::select('slug')->where('slug', 'like', $slug.'%')
-        ->where('id', '<>', $id)
-        ->get();
+        return self::select('slug')->where('slug', 'like', $slug . '%')
+            ->where('id', '<>', $id)
+            ->get();
     }
 }

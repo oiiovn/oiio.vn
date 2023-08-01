@@ -62,37 +62,9 @@
                 <li class="nav-item" style="margin-left: 5px;margin-bottom: 10px;">
                     <span style="color: #000;font-size: 18px;font-style: normal;font-weight: 700;line-height: normal;">Cộng đồng đặt đơn</span>
                 </li>
-                <li class="nav-item" style="display:block;">
-                    <div class="nav-link">
-                        <span style="font-size: 14px;" class="menu-title">Số lượng shop: </span>
-                        <div class="nav-content" style="margin-left:auto;display:flex;justify-content:center;">
-                            <span style="font-size: 14px;color:#d0011b;padding-right:5px;" class="menu-title-wallet">50</span>
-                            <img style="color:#303030;width: 22px;height: 22px;align-items: center;" src="{{ asset('viewsCustom/assets/images/ic2.svg') }}" alt="">
-                        </div>
-
-                    </div>
-                </li>
-                <li class="nav-item" style="display:block;">
-                    <div class="nav-link">
-                        <span style="font-size: 14px;" class="menu-title">Số thành viên: </span>
-                        <div class="nav-content" style="margin-left:auto;display:flex;justify-content:center;">
-                            <span style="font-size: 14px;color:#d0011b;padding-right:5px;" class="menu-title-wallet">12000</span>
-                            <img style="color:#303030;width: 22px;height: 22px;align-items: center;" src="{{ asset('viewsCustom/assets/images/ic6.svg') }}" alt="">
-                        </div>
-
-                    </div>
-                </li>
-                <li class="nav-item" style="display:block;">
-                    <div class="nav-link">
-                        <span style="font-size: 14px;" class="menu-title">Đơn hoàn thành: </span>
-                        <div class="nav-content" style="margin-left:auto;display:flex;justify-content:center;">
-                            <span style="font-size: 14px;color:#d0011b;padding-right:5px;" class="menu-title-wallet">150</span>
-                            <img style="color:#303030;width: 22px;height: 22px;align-items: center;" src="{{ asset('viewsCustom/assets/images/ic3.svg') }}" alt="">
-                        </div>
-
-                    </div>
-                </li>
+                <x-banner />
             </ul>
+
         </div>
     </x-slot>
 
@@ -109,7 +81,7 @@
         <div class="nav text-center" style="width:100%;height: 200px;flex-direction: column;justify-content: flex-start;align-items: center;gap: 10px;display: inline-flex;">
             @foreach($users as $user)
             <a href="{{ route('info.shop_detail', $user->slug) }}">
-                <img style="width: 45px; height: 45px; border-radius: 9999px; border: 0.50px black solid" src="#" alt="" />
+                <img style="width: 45px; height: 45px; border-radius: 9999px; border: 0.50px black solid" src="{{ $user->avatar }}" alt="" />
                 <div @class([ ""=> !$loop->last
                     ])>
                     <p>
@@ -121,8 +93,9 @@
                 </div>
             </a>
             @endforeach
+
         </div>
-            <!-- <div style="padding-top:10px;width: 289px; height: 168px; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 34px; display: inline-flex">
+        <!-- <div style="padding-top:10px;width: 289px; height: 168px; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 34px; display: inline-flex">
                 <div style="justify-content: flex-start; align-items: flex-start; gap: 31px; display: inline-flex">
                     <div style="flex-direction: column; justify-content: flex-start; align-items: center; gap: 5px; display: inline-flex">
                         <img style="width: 45px; height: 45px; border-radius: 9999px; border: 0.50px black solid" src="{{ asset('viewsCustom/assets/images/hinh1.png') }}" />
@@ -195,9 +168,11 @@
     ul {
         padding-left: 0 !important;
     }
-    .nav a{
+
+    .nav a {
         width: 100px;
     }
+
     .nav .nav-item .nav-link {
         display: flex;
         -webkit-box-align: center;
