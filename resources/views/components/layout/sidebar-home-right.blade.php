@@ -66,7 +66,7 @@
                     <div class="nav-link">
                         <span style="font-size: 14px;" class="menu-title">Số lượng shop: </span>
                         <div class="nav-content" style="margin-left:auto;display:flex;justify-content:center;">
-                            <span style="font-size: 14px;color:#d0011b;padding-right:5px;" class="menu-title-wallet">0</span>
+                            <span style="font-size: 14px;color:#d0011b;padding-right:5px;" class="menu-title-wallet">50</span>
                             <img style="color:#303030;width: 22px;height: 22px;align-items: center;" src="{{ asset('viewsCustom/assets/images/ic2.svg') }}" alt="">
                         </div>
 
@@ -76,7 +76,7 @@
                     <div class="nav-link">
                         <span style="font-size: 14px;" class="menu-title">Số thành viên: </span>
                         <div class="nav-content" style="margin-left:auto;display:flex;justify-content:center;">
-                            <span style="font-size: 14px;color:#d0011b;padding-right:5px;" class="menu-title-wallet">0</span>
+                            <span style="font-size: 14px;color:#d0011b;padding-right:5px;" class="menu-title-wallet">12000</span>
                             <img style="color:#303030;width: 22px;height: 22px;align-items: center;" src="{{ asset('viewsCustom/assets/images/ic6.svg') }}" alt="">
                         </div>
 
@@ -86,7 +86,7 @@
                     <div class="nav-link">
                         <span style="font-size: 14px;" class="menu-title">Đơn hoàn thành: </span>
                         <div class="nav-content" style="margin-left:auto;display:flex;justify-content:center;">
-                            <span style="font-size: 14px;color:#d0011b;padding-right:5px;" class="menu-title-wallet">0</span>
+                            <span style="font-size: 14px;color:#d0011b;padding-right:5px;" class="menu-title-wallet">150</span>
                             <img style="color:#303030;width: 22px;height: 22px;align-items: center;" src="{{ asset('viewsCustom/assets/images/ic3.svg') }}" alt="">
                         </div>
 
@@ -107,7 +107,7 @@
             </div>
         </x-slot>
         <div class="nav text-center" style="width:100%;height: 200px;flex-direction: column;justify-content: flex-start;align-items: center;gap: 10px;display: inline-flex;">
-            <!-- @foreach($users as $user)
+            @foreach($users as $user)
             <a href="{{ route('info.shop_detail', $user->slug) }}">
                 <img style="width: 45px; height: 45px; border-radius: 9999px; border: 0.50px black solid" src="#" alt="" />
                 <div @class([ ""=> !$loop->last
@@ -120,8 +120,9 @@
                     </p>
                 </div>
             </a>
-            @endforeach -->
-            <div style="padding-top:10px;width: 289px; height: 168px; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 34px; display: inline-flex">
+            @endforeach
+        </div>
+            <!-- <div style="padding-top:10px;width: 289px; height: 168px; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 34px; display: inline-flex">
                 <div style="justify-content: flex-start; align-items: flex-start; gap: 31px; display: inline-flex">
                     <div style="flex-direction: column; justify-content: flex-start; align-items: center; gap: 5px; display: inline-flex">
                         <img style="width: 45px; height: 45px; border-radius: 9999px; border: 0.50px black solid" src="{{ asset('viewsCustom/assets/images/hinh1.png') }}" />
@@ -165,7 +166,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
     </x-card>
     <!-- @if (auth()->check())
     <x-card>
@@ -194,7 +195,9 @@
     ul {
         padding-left: 0 !important;
     }
-
+    .nav a{
+        width: 100px;
+    }
     .nav .nav-item .nav-link {
         display: flex;
         -webkit-box-align: center;
