@@ -113,7 +113,8 @@
                             <div class="dropdown-divider"></div>
                             <a id="item-menu" class="dropdown-item" href="{{ route('user.bank.index') }}"> Tài khoản ngân hàng </a>
                             <div class="dropdown-divider"></div>
-                            <a id="item-menu" class="dropdown-item" href="#"> Đổi mật khẩu </a>
+                            
+                            <button type="button" id="item-menu" class="dropdown-item " data-toggle="modal" data-target="#exampleModalLong">Đổi mật khẩu </button>
                             <div class="dropdown-divider"></div>
                             <x-form class="" :action="route('logout')" type="post">
                                 <button id="item-menu" type="submit" class="dropdown-item border-0" style="background: transparent !important">{{ __('Đăng xuất') }}

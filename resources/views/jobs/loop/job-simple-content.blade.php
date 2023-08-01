@@ -214,6 +214,45 @@
         </div>
     </div>
 </div>
+
+<!-- Modal đổi mật khẩu -->
+<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true" style="">
+  <div class="modal-dialog" role="document">
+    <div class=" content-dmk " style="margin-left: auto;margin-right: auto;">
+      <div class="modal-header" style="border:none;">
+        <h5 class="modal-title" id="exampleModalLongTitle" style="color: #000;font-size: 20px;font-style: normal;font-weight: 600;line-height: normal;">Cập nhật mật khẩu của bạn</h5>
+        
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"  style="border: none;background:none;"><span aria-hidden="true"><img src="{{ asset('viewsCustom/assets/images/clone.svg') }}" ></span> </button>
+
+      </div>
+      <div class="modal-body" style="padding-top:9px;">
+        <div>
+            <div>
+                Nhập mật khẩu mới
+            </div>
+            <div>
+            <input id="password" class="form-control form-control-flush h55 w100" type="password" name="password" placeholder="Mật khẩu"
+                                       style=" flex-shrink: 0; border-radius: 5px; border: 1px solid #C7C6C1; font-family: 'Lato', sans-serif;"/>
+            </div>
+        </div>
+        <div style="padding-top:24px;">
+            <div>
+                Nhập lại mật khẩu mới
+            </div>
+            <div>
+            <input id="password" class="form-control form-control-flush h55 w100" type="password" name="password" placeholder="Nhập lại mật khẩu"
+                                       style=" flex-shrink: 0; border-radius: 5px; border: 1px solid #C7C6C1; font-family: 'Lato', sans-serif;"/>
+            </div>
+        </div>
+    
+      </div>
+      <div class="modal-footer" style="border:none;">
+        <button type="button" class="" style="border-radius: 5px;background: #E0793F;width:90%;margin-left:5%;margin-right:5%;border:none;height:40px;"><span style="color: #FFF;font-size: 13px;font-style: normal;font-weight: 700;line-height: normal;">Cập nhật</span></button>
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- phần quảng cáo -->
 <div class=" content-ads index-web shadow-sm" style="margin-left:22px;width:200px;height:290px;background:#FFF;border-radius:10px;    position: absolute;right: 0px;">
                                         <a href="https://shopee.vn/%C3%81o-thun-Unisex-m%C3%A1c-RealLife-cao-su-FKZ-Unisex-ph%C3%B4ng-tr%C6%A1n-nam-n%E1%BB%AF-tay-l%E1%BB%A1-oversize-form-r%E1%BB%99ng-i.183840366.23825993719?sp_atk=af391579-fcac-4eb1-b2ce-358e20fcc785&xptdk=af391579-fcac-4eb1-b2ce-358e20fcc785" style="display:block;">
@@ -228,7 +267,23 @@
                                 </div>
 </div>
 <style>
-    
+    .content-dmk{
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 100%;
+    pointer-events: auto;
+    background-color: #f2edf3;
+    background-clip: padding-box;
+    border: 1px solid #ebedf2;
+    border-radius: 0.3rem;
+    outline: 0;
+}
     .content__body-content__act .items{
         
         margin-bottom:15px;
@@ -270,6 +325,10 @@
     letter-spacing: 0.36px;
     }
     @media (max-width: 2400px){
+        .content-dmk{
+        width: 500px !important;
+        left:30%;
+     }
         .row{
             margin-left: 16px !important;
         }
@@ -333,6 +392,7 @@
      
     }
     @media (max-width: 1920px){
+       
         .body-title .items{
         color: #303030;
         font-family: "lato", sans-serif;
@@ -417,6 +477,9 @@
 
     }
     @media (max-width: 1000px){
+        .content-dmk{
+        left:0%;
+     }
         .body-title{
             padding-right:5% !important;
         }
@@ -466,6 +529,10 @@
     }
    
     @media (max-width: 768px){
+        .content-dmk{
+        width: 400px !important;
+        left:0%;
+     }
         .body-title{
             padding-right:5% !important;
         }
@@ -515,6 +582,10 @@
     }
     
     @media (max-width: 767px){
+        .content-dmk{
+        
+        left:0%;
+     }
         .row{
             margin-left: 8px !important;
         }
@@ -633,6 +704,10 @@
 .index-mobile{
  width:28.75rem;
 }
+.content-dmk{
+        width: 300px !important;
+        left:0%;
+     }
 .card{
      width: 28.75rem;
  }
