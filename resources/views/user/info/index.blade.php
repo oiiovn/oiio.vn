@@ -195,7 +195,6 @@
                             </x-button>
                         </div>
                     </div>
-                    @if(auth()->user()->hasBankAccount())
                     <div class="content-edit-info" style="width:100%;height: 336px;display:block;">
                     <input name="user_id" type="hidden" value="{{ $user->id }}" hidden />
                         <div style="height: 51.3333px;margin-left:40px;display: flex;align-items:center;">
@@ -214,18 +213,20 @@
                             <label>{{ __('Số điện thoại') }}</label>
                             <input type="text" name="phone" value="{{ $user->phone }}" style="width: 65%;margin-left:auto;">
                         </div>
+                        @if(auth()->user()->hasBankAccount())
                         @foreach($user->bankAccount as $value)
                         <div style="height: 51.3333px;margin-left:40px;display: flex;align-items:center;">
                             <label>{{ __('Tài khoản ngân hàng') }}</label>
                             <input type="text" name="namebank" value="{{ $value->account_number }} - {{ $value->bank_name }}" style="width: 65%;margin-left:auto;"> 
                         </div>
                         @endforeach
+                        @endif
                         <div style="height: 51.3333px;margin-left:40px;display: flex;align-items:center;">
                             <label>{{ __('Tên shop') }}</label>
                             <input type="text" name="nameshop" value="{{ $user->name_shop }}" style="width: 65%;margin-left:auto;"><!--cần đổ dữ liệu-->
                         </div>
                     </div>
-                    @endif
+
                 </div>
                 <div style="background: #fff;width:100%;border-radius: 10px;">
                     <div style="height: 109px;padding-left:40px;margin-bottom:35px;">
@@ -259,16 +260,16 @@
                         <div style="margin-bottom:32px;width:88.52%;background:#fff;height: 150px;margin-left:40px;border-radius: 8px;border: 1px solid #D2D2CD;box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.15);display:flex;justify-content: space-between;padding-left:24px;padding-right:34px;padding-top:18px;">
                             <div class="content-bank" style="display:block;">
                                 <span style="display:flex;justify-content: flex-start;align-items: baseline;color: #000;font-family: 'Lato' sans-serif;font-size: 16px;font-style: normal;font-weight: 700;line-height: normal;letter-spacing: 2.88px;">{{ $transaction->code }}</span>
-                                <span style="margin-top:10px;gap:10px;display:flex;justify-content: flex-start;align-items: baseline;">Lọai giao dịch: <p>{{ $transaction->type->description()  }}</p></span>
+                                <span style="margin-top:10px;gap:10px;display:flex;justify-content: flex-start;align-items: baseline;">Loại giao dịch: <p>{{ $transaction->type->description()  }}</p></span>
                                 <span style="gap:10px;display:flex;justify-content: flex-start;align-items: baseline;">Trạng thái: <p style="color: #269300;font-weight: 700;">{{ $transaction->status->description() }}</p></span>
                                 <!-- <span class="d-lg-flex d-block">Mã giao dịch VNPAY: <b class="text-dark">{{ $transaction->code_vnpay }}</b></span>
                                     <span class="d-lg-flex d-block">Mã ngân hàng: <b class="text-dark">{{ $transaction->bank }}</b></span> -->
                                 <span style="gap:10px;display:flex;justify-content: flex-start;align-items: baseline;color: #A6A4A4;font-size: 12px;font-weight: 500;letter-spacing: 1.2px;">{{ format_datetime($transaction->created_at) }}</span>
                             </div>
                             <div class="content-money" style="display: inline-flex;flex-direction: column;align-items: flex-end;gap: 14px;">
-                                <span style="display:flex;justify-content: flex-end;align-items: baseline;color: #269300;font-family: 'Lato' sans-serif;font-size: 16px;font-style: normal;font-weight: 700;line-height: normal;letter-spacing: 1.6px;">Số tiền: <p>{{ format_price($transaction->amount) }}</p></span>
-                                <span style="gap:10px;display:flex;justify-content: flex-end;align-items: baseline;">Phí giao dịch: <p>- 0đ</p></span>
-                                <span style="gap:10px;display:flex;justify-content: flex-end;align-items: baseline;">Ví tiền: <p>{{format_price(auth()->user()->wallet()->value('amount'))}}</p></span>
+                                <span style="display:flex;justify-content: flex-end;align-items: baseline;color: #269300;font-family: 'Lato' sans-serif;font-size: 16px;font-style: normal;font-weight: 700;line-height: normal;letter-spacing: 1.6px;color:#EB3131;">{{$transaction->type->value == 2 ? "-" : ""}}{{ format_price($transaction->amount) }}</span>
+                                <span style="gap:10px;display:flex;justify-content: flex-end;align-items: baseline;">Phí giao dịch: <p style="color:#EB3131;">-{{ format_price($transaction->fee) }}</p></span>
+                                <span style="gap:10px;display:flex;justify-content: flex-end;align-items: baseline;">Ví tiền: <p>{{ format_price(auth()->user()->wallet()->value('amount')) }}</p></span>
                             </div>
                         </div>
                         @endforeach
