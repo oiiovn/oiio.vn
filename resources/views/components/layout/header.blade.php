@@ -84,16 +84,6 @@
                             <h6 class="p-3 mb-0 text-center">See all notifications</h6>
                         </div>
                     </li>
-                    @else
-                        <div class="nav-item-grid" style="display:flex;">
-                            <li class="nav-item" style="border:none;">
-                                <a class="nav-link active" aria-current="page" href="{{ route('login.index') }}">Đăng nhập</a>
-                            </li>
-                            <li class="nav-item" style="border:none;margin-left:16px;">
-                                <a class="nav-link" href="{{ route('register.index') }}">Đăng ký</a>
-                            </li>
-                        </div>
-                    @endif
                     {{-- Thông tin người dùng --}}
                     <li class="nav-item nav-profile dropdown" style="border: none;width: 70%;">
                         @if (auth()->check())
@@ -134,7 +124,16 @@
         <!-- End Side bar on mobile devices -->
 
         </div>
-
+        @else
+    <div class="nav-item-grid" style="display:flex; margin-left: auto;">
+        <li class="nav-item" style="border:none;">
+            <a class="nav-link active" aria-current="page" href="{{ route('login.index') }}">Đăng nhập</a>
+        </li>
+        <li class="nav-item" style="border:none;margin-left:16px;">
+            <a class="nav-link" href="{{ route('register.index') }}">Đăng ký</a>
+        </li>
+    </div>
+@endif
 
     </div>
 </nav>

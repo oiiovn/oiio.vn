@@ -261,12 +261,16 @@
             </div>
             <div class="mb-3 d-flex align-items-center">
                 <label for="" style="margin-right:67px;color: #000;font-family: 'Lato' sans-serif;font-size: 16px;font-style: normal;font-weight: 500;line-height: normal;">Chọn tài khoản ngân hàng</label>
-                <select style="width: 387px;height: 46px;flex-shrink: 0;border-radius: 5px;border: 1px solid rgba(48, 48, 48, 0.21);">
-                    <option value="">Chọn tài khoản ngân hàng</option>
+                <select style="width:387px; height: 46px; flex-shrink: 0; border-radius: 5px; border: 1px solid rgba(48, 48, 48, 0.21);">
+                    @foreach ($user->bankAccount as $item)
+                    <option value="{{ $item->id }}">{{ $item->bank_name }} - {{ $item->account_name }}</option>
+                    @endforeach
                 </select>
-                
+
+
+
             </div>
-            @each('user.transactions.withdrawn.include.bank-row', $user->bankAccount, 'item') 
+            <!-- @each('user.transactions.withdrawn.include.bank-row', $user->bankAccount, 'item')  -->
             <x-button type="submit" class="btn-orang" style="display: inline-flex;padding: 10px 20px;justify-content:center;align-items: center;border-radius: 5px;background: #E0793F;color:#FFF;margin-left:610px;">
                 Tạo lệnh rút tiền</x-button>
         </div>
