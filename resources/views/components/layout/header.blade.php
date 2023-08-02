@@ -679,7 +679,7 @@
 <!-- Modal -->
 <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
   <div class="modal-dialog" role="document">
-    <div class="content-dmk" style="margin-left: auto; margin-right: auto;">
+    <div class="content-dmk" style="margin-left: auto; margin-right: auto;background:#fff;">
       <div class="modal-header" style="border: none;">
         <h5 class="modal-title" id="exampleModalLongTitle" style="color: #000; font-size: 20px; font-style: normal; font-weight: 600; line-height: normal;">Cập nhật mật khẩu của bạn</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="border: none; background: none;">
