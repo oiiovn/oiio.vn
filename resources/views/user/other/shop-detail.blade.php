@@ -83,8 +83,6 @@
         </x-card>
     </div>
 </x-card>--}}
-
-
 {{--@if($users != null)
     @foreach($users->where('id', $user->id) as $value)
         @if(count($value->reviews->where('author_id', auth()->user()->id)->where('user_id', $value->id)) 
