@@ -235,11 +235,11 @@
                         <div class="search-field-x d-none d-md-block" style="border-radius: 10px;margin-bottom:20px;">
                             <form class="d-flex align-items-center h-100" action="#">
                                 <div class="input-group-s" style="border-radius:5px;">
-                                    <input type="text" class="form-control-s"value="{{isset($_GET['search'])?$_GET['search']:""}}" placeholder="Nhập mã giao dịch..." style="margin:17px 30px 16px 0;color: rgba(86, 86, 86, 0.50);font-family: Lato;font-size: 14px;font-style: normal;font-weight: 400;line-height: normal;padding:0 0.75rem;">
+                                    <input type="text" class="form-control-s" value="{{isset($_GET['search'])?$_GET['search']:""}}" placeholder="Nhập mã giao dịch..." style="margin:17px 30px 16px 0;color: rgba(86, 86, 86, 0.50);font-family: Lato;font-size: 14px;font-style: normal;font-weight: 400;line-height: normal;padding:0 0.75rem;">
                                     <div style="position: relative;border-left: 1px solid #3333;align-items: center;justify-content: center;display: flex;width: 20%;margin-left: auto;" class="input-group-prepend-s bg-transparent">
                                         <img src="{{ asset('icon/search.svg') }}" alt="logo">
                                     </div>
-                                    
+
                                 </div>
                             </form>
                         </div>
@@ -278,7 +278,10 @@
                                     <span class="d-lg-flex d-block">Mã ngân hàng: <b class="text-dark">{{ $transaction->bank }}</b></span> -->
                             </div>
                             <div class="content-money" style="display: inline-flex;flex-direction: column;align-items: flex-end;gap: 14px;">
-                                <span style="display:flex;justify-content: flex-end;align-items: baseline;font-family: 'Lato' sans-serif;font-size: 16px;font-style: normal;font-weight: 700;line-height: normal;letter-spacing: 1.6px; color: {{ $transaction->amount > 0 ? '#EB3131' : '#269300' }}">
+                                @php
+                                $color = $transaction->amount > 0 ? '#EB3131' : '#269300';
+                                @endphp
+                                <span style="display:flex;justify-content: flex-end;align-items: baseline;font-family: 'Lato' sans-serif;font-size: 16px;font-style: normal;font-weight: 700;line-height: normal;letter-spacing: 1.6px;color:{!! $color !!}">
                                     {{ $transaction->type->value == 2 ? "-" : "" }}{{ format_price($transaction->amount) }}</span>
                                 <span style="gap:10px;display:flex;justify-content: flex-end;align-items: baseline;">Phí giao dịch: <p style="color:#EB3131;margin-bottom:0;">{{ format_price($transaction->fee) }}</p></span>
                                 <span style="gap:10px;display:flex;justify-content: flex-start;align-items: baseline;color: #A6A4A4;font-size: 12px;font-weight: 500;letter-spacing: 1.2px;">{{ format_datetime($transaction->created_at) }}</span>
@@ -548,6 +551,7 @@
     #edit:hover {
         opacity: 0.8;
     }
+
     .search-field-x {
         width: 370px;
         margin-bottom: 23px;
