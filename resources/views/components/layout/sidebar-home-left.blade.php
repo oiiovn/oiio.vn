@@ -123,7 +123,7 @@
             </div>
         </x-slot>
     </x-card>
-    <x-card style="width: 100%;height: 100%;background-color:#FFF;">
+    <x-card style="width: 100%;height: 100px;background-color:#FFF;">
             <div style="height: 68px;"></div>
     </x-card>
     @else
