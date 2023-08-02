@@ -6119,7 +6119,7 @@ fieldset:disabled .btn {
 }
 
 .fade {
-    background-color: rgba(0, 0, 0, 0.1) !important;
+    background-color: rgba(0, 0, 0, 0.5) !important;
     -webkit-transition: opacity 0.15s linear;
     transition: opacity 0.15s linear;
 }
