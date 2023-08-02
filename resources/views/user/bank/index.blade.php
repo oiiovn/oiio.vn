@@ -224,8 +224,8 @@
             // Tạo thẻ img và gắn vào phần tử DIV (c)
             var img = document.createElement("img");
             img.src = imgSrc;
-            img.style.width = "30px"; // Định dạng kích thước ảnh
-            img.style.height = "30px";
+            img.style.width = "70px"; // Định dạng kích thước ảnh
+            img.style.height = "20px";
 
             // Gắn thẻ img vào phần tử DIV (c) - Trước hoặc sau văn bản, tùy vào yêu cầu hiển thị của bạn
             c.insertBefore(img, c.firstChild); // Hoặc c.appendChild(img);
