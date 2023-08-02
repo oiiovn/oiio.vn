@@ -174,7 +174,7 @@
                     <div class="" style="font-size:18px;color: #D0011B;font-style: normal;font-weight: 400;line-height: normal;padding-left:8px;">4.5</div>
                     <div class="" style="font-size:18px;color: #D0011B;font-style: normal;font-weight: 400;line-height: normal;width: 150px;padding-left:3px;">(25,5k đánh giá)</div>
                 </div>
-                <button class="header-left-pp__text__bottom " style="border:none;width: 99px;height: 33px;background: #0D6EFD;text-align:center;padding;7px;border-radius:5px;">
+                <button class="header-left-pp__text__bottom " style="border:none;width: 99px;height: 33px;background: #0D6EFD;text-align:center;padding:7px;border-radius:5px;">
                     <span style="color: #FFF;font-size: 16px;font-style: normal;font-weight: 700;line-height: normal;">Nhắn tin</span>
                 </button>
             </div>
@@ -1145,6 +1145,9 @@
     }
     #sidebarRight{
         display:none;
+    }
+    #sidebar-left{
+        height: 1500px;
     }
 </style>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
