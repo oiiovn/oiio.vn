@@ -39,12 +39,12 @@ if (! function_exists('format_price')) {
         return $formattedPrice;
     } 
 }
-
 if (!function_exists('format_datetime')) {
     function format_datetime($datetime, $format = null) {
         $format = $format ?: config('custom.format.datetime');
-        $formattedDate = date($format, strtotime($datetime));
+        $formattedDate = date('d-m-Y', strtotime($datetime));
         $formattedTime = date('H:i', strtotime($datetime));
         return $formattedDate . ' - ' . $formattedTime;
     }
+
 }

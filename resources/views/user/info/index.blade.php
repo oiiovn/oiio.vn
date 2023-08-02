@@ -153,33 +153,33 @@
                 </div>
             </div>
             <div style="background: #fff;width: 34%;height:336px;border-radius: 10px;position:absolute;top:154px;right:19px;">
-                    <div style="display: block;width: 100%;text-align:center;padding-top:20px;">
-                        <div class="profile-img">
-                            <div style="display: block; position: relative;">
-                                <img onclick="document.getElementById('file-avatar').click();" id="avatar-img" src="{{ asset(auth()->user()->getAvatar()) }}" class="img-fluid" />
-                                <img id="edit" onclick="document.getElementById('file-avatar').click();" src="{{ asset('viewsCustom/assets/images/edit-ic-tron.svg') }}" alt="" style="position: absolute; bottom: 0; right:110px; background-color: rgba(255, 255, 255, 0.5); border-radius: 100%; padding: 5px; margin-bottom: 8px; margin-right: 8px; filter: drop-shadow(0px 7px 8px rgba(0, 0, 0, 0.24));" />
-                            </div>
-                            <input id="file-avatar" name="avatar" type="file" class="d-none"></input>
-
+                <div style="display: block;width: 100%;text-align:center;padding-top:20px;">
+                    <div class="profile-img">
+                        <div style="display: block; position: relative;">
+                            <img onclick="document.getElementById('file-avatar').click();" id="avatar-img" src="{{ asset(auth()->user()->getAvatar()) }}" class="img-fluid" />
+                            <img id="edit" onclick="document.getElementById('file-avatar').click();" src="{{ asset('viewsCustom/assets/images/edit-ic-tron.svg') }}" alt="" style="position: absolute; bottom: 0; right:110px; background-color: rgba(255, 255, 255, 0.5); border-radius: 100%; padding: 5px; margin-bottom: 8px; margin-right: 8px; filter: drop-shadow(0px 7px 8px rgba(0, 0, 0, 0.24));" />
                         </div>
-                        <p style="margin-top:15px;width:100%;color: #000;font-family:'Lato' sans-serif;font-size: 20px;font-style: normal;font-weight: 600;line-height: normal;">{{ auth()->user()->fullname ?? auth()->user()->username }}</p>
+                        <input id="file-avatar" name="avatar" type="file" class="d-none"></input>
 
                     </div>
-                    <div class="content-profile">
-                        <div class="content-item-profile">
-                            <img src="{{ asset('viewsCustom/assets/images/mail.svg') }}" alt="">
-                            <p class="">{{ $user->email }}</p>
-                        </div>
+                    <p style="margin-top:15px;width:100%;color: #000;font-family:'Lato' sans-serif;font-size: 20px;font-style: normal;font-weight: 600;line-height: normal;">{{ auth()->user()->fullname ?? auth()->user()->username }}</p>
 
-                        <div class="content-item-profile">
-                            <img src="{{ asset('viewsCustom/assets/images/phone.svg') }}" alt="">
-                            <p class="">{{ $user->phone }}</p>
-                        </div>
+                </div>
+                <div class="content-profile">
+                    <div class="content-item-profile">
+                        <img src="{{ asset('viewsCustom/assets/images/mail.svg') }}" alt="">
+                        <p class="">{{ $user->email }}</p>
                     </div>
-                    <div class="btn-profile">
-                        <!-- <button type="submit">Nhắn tin</button> -->
+
+                    <div class="content-item-profile">
+                        <img src="{{ asset('viewsCustom/assets/images/phone.svg') }}" alt="">
+                        <p class="">{{ $user->phone }}</p>
                     </div>
                 </div>
+                <div class="btn-profile">
+                    <!-- <button type="submit">Nhắn tin</button> -->
+                </div>
+            </div>
         </div>
 
 
@@ -196,7 +196,7 @@
                         </div>
                     </div>
                     <div class="content-edit-info" style="width:100%;height: 336px;display:block;">
-                    <input name="user_id" type="hidden" value="{{ $user->id }}" hidden />
+                        <input name="user_id" type="hidden" value="{{ $user->id }}" hidden />
                         <div style="height: 51.3333px;margin-left:40px;display: flex;align-items:center;">
                             <label>{{ __('Họ và tên') }}</label>
                             <input type="text" name="fullname" value="{{ $user->fullname }}" style="width: 65%;margin-left:auto;">
@@ -217,7 +217,7 @@
                         @foreach($user->bankAccount as $value)
                         <div style="height: 51.3333px;margin-left:40px;display: flex;align-items:center;">
                             <label>{{ __('Tài khoản ngân hàng') }}</label>
-                            <input type="text" name="namebank" value="{{ $value->account_number }} - {{ $value->bank_name }}" style="width: 65%;margin-left:auto;"> 
+                            <input type="text" name="namebank" value="{{ $value->account_number }} - {{ $value->bank_name }}" style="width: 65%;margin-left:auto;">
                         </div>
                         @endforeach
                         @endif
@@ -229,8 +229,20 @@
 
                 </div>
                 <div style="background: #fff;width:100%;border-radius: 10px;">
-                    <div style="height: 109px;padding-left:40px;margin-bottom:35px;">
+                    <div style="height: 200px;padding-left:40px;margin-bottom:20px;">
                         <div style="width:29.41%;color: #E0793F;font-family: 'Lato' sans-serif;font-size: 18px;font-style: normal;font-weight: 800;line-height: normal;border-bottom:1px solid rgba(0, 0, 0, 0.11);padding-bottom:10px;margin-bottom:28px;padding-top:20px;">Giao dịch cá nhân</div>
+                        {{-- Tìm kiếm --}}
+                        <div class="search-field-x d-none d-md-block" style="border-radius: 10px;margin-bottom:20px;">
+                            <form class="d-flex align-items-center h-100" action="#">
+                                <div class="input-group-s" style="border-radius:5px;">
+                                    <input type="text" class="form-control-s" value="{{isset($_GET['search'])?$_GET['search']:""}}" placeholder="Nhập mã giao dịch..." style="margin:17px 30px 16px 0;color: rgba(86, 86, 86, 0.50);font-family: Lato;font-size: 14px;font-style: normal;font-weight: 400;line-height: normal;padding:0 0.75rem;">
+                                    <div style="position: relative;border-left: 1px solid #3333;align-items: center;justify-content: center;display: flex;width: 20%;margin-left: auto;" class="input-group-prepend-s bg-transparent">
+                                        <img src="{{ asset('icon/search.svg') }}" alt="logo">
+                                    </div>
+
+                                </div>
+                            </form>
+                        </div>
                         <div style="height: 29px;width:100%;margin-left:28.5px;display: inline-flex;align-items: flex-start;gap:35px;">
                             <li style="height:29px;display: flex;justify-content: center;align-items: center;" class="active">
                                 <a href="#">Lịch sử giao dịch</a>
@@ -248,28 +260,31 @@
                         </div>
                     </div>
                     <div style="height: 100%;">
-                    @php
+                        @php
                         // Lấy thông tin người dùng hiện tại từ dòng 252 đến dòng 257
-                        $currentUser = Auth::user(); 
+                        $currentUser = Auth::user();
                         // Khởi tạo TransactionRepository và lấy lịch sử giao dịch của người dùng hiện tại
                         $transactionRepository = new \App\Repositories\Transactions\TransactionRepository();
                         $transactions = $transactionRepository->getQueryBuilderWithRelations()->where('user_id', $currentUser->id)->get();
                         @endphp
 
                         @foreach($transactions as $transaction)
-                        <div style="margin-bottom:32px;width:88.52%;background:#fff;height: 150px;margin-left:40px;border-radius: 8px;border: 1px solid #D2D2CD;box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.15);display:flex;justify-content: space-between;padding-left:24px;padding-right:34px;padding-top:18px;">
+                        <div style="margin-bottom:32px;width:88.52%;background:#fff;height: 133px;margin-left:40px;border-radius: 8px;border: 1px solid #D2D2CD;box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.15);display:flex;justify-content: space-between;padding-left:24px;padding-right:34px;padding-top:18px;">
                             <div class="content-bank" style="display:block;">
                                 <span style="display:flex;justify-content: flex-start;align-items: baseline;color: #000;font-family: 'Lato' sans-serif;font-size: 16px;font-style: normal;font-weight: 700;line-height: normal;letter-spacing: 2.88px;">{{ $transaction->code }}</span>
-                                <span style="margin-top:10px;gap:10px;display:flex;justify-content: flex-start;align-items: baseline;">Loại giao dịch: <p>{{ $transaction->type->description()  }}</p></span>
+                                <span style="margin-top:10px;gap:10px;display:flex;justify-content: flex-start;align-items: baseline;">Loại giao dịch: <p style="margin-top: 5px;">{{ $transaction->type->description()  }}</p></span>
                                 <span style="gap:10px;display:flex;justify-content: flex-start;align-items: baseline;">Trạng thái: <p style="color: #269300;font-weight: 700;">{{ $transaction->status->description() }}</p></span>
                                 <!-- <span class="d-lg-flex d-block">Mã giao dịch VNPAY: <b class="text-dark">{{ $transaction->code_vnpay }}</b></span>
                                     <span class="d-lg-flex d-block">Mã ngân hàng: <b class="text-dark">{{ $transaction->bank }}</b></span> -->
-                                <span style="gap:10px;display:flex;justify-content: flex-start;align-items: baseline;color: #A6A4A4;font-size: 12px;font-weight: 500;letter-spacing: 1.2px;">{{ format_datetime($transaction->created_at) }}</span>
                             </div>
                             <div class="content-money" style="display: inline-flex;flex-direction: column;align-items: flex-end;gap: 14px;">
-                                <span style="display:flex;justify-content: flex-end;align-items: baseline;color: #269300;font-family: 'Lato' sans-serif;font-size: 16px;font-style: normal;font-weight: 700;line-height: normal;letter-spacing: 1.6px;color:#EB3131;">{{$transaction->type->value == 2 ? "-" : ""}}{{ format_price($transaction->amount) }}</span>
-                                <span style="gap:10px;display:flex;justify-content: flex-end;align-items: baseline;">Phí giao dịch: <p style="color:#EB3131;">-{{ format_price($transaction->fee) }}</p></span>
-                                <span style="gap:10px;display:flex;justify-content: flex-end;align-items: baseline;">Ví tiền: <p>{{ format_price(auth()->user()->wallet()->value('amount')) }}</p></span>
+                                @php
+                                $color = $transaction->amount > 0 ? '#EB3131' : '#269300';
+                                @endphp
+                                <span style="display:flex;justify-content: flex-end;align-items: baseline;font-family: 'Lato' sans-serif;font-size: 16px;font-style: normal;font-weight: 700;line-height: normal;letter-spacing: 1.6px;color:{!! $color !!}">
+                                    {{ $transaction->type->value == 2 ? "-" : "" }}{{ format_price($transaction->amount) }}</span>
+                                <span style="gap:10px;display:flex;justify-content: flex-end;align-items: baseline;">Phí giao dịch: <p style="color:#EB3131;margin-bottom:0;">{{ format_price($transaction->fee) }}</p></span>
+                                <span style="gap:10px;display:flex;justify-content: flex-start;align-items: baseline;color: #A6A4A4;font-size: 12px;font-weight: 500;letter-spacing: 1.2px;">{{ format_datetime($transaction->created_at) }}</span>
                             </div>
                         </div>
                         @endforeach
@@ -279,7 +294,7 @@
                     </div>
                 </div>
             </div>
-                
+
             <div style="width: 34.46%;border-radius: 10px;margin-top: 220px;">
 
                 <div style="background: #fff;width:100%;border-radius: 10px;">
@@ -378,20 +393,19 @@
                                 <span>Shop uy tín. Chất lượng tốt! Shop uy tín. Chất lượng tốt! Shop uy tín. Chất lượng tốt! Shop uy tín. Chất lượng tốt!</span>
                             </div>
                         </div>
-                                
+
                     </div>
                     <div style="text-align: center;">
                         <span>Xem thêm <i style="margin-left:auto;font-size:20px;" class="ri-arrow-down-s-line"></i></span>
                     </div>
                 </div>
-                
+
             </div>
 
         </div>
     </x-form>
 </div>
 <style>
-
     li a {
         color: #303030;
         font-family: 'Lato' sans-serif;
@@ -537,6 +551,15 @@
     #edit:hover {
         opacity: 0.8;
     }
+
+    .search-field-x {
+        width: 370px;
+        margin-bottom: 23px;
+        height: 50px;
+        flex-shrink: 0;
+        background: #FFF;
+        backdrop-filter: blur(20px);
+    }
 </style>
 
 <script>
@@ -566,45 +589,6 @@
             cover_img.style.backgroundImage = `url("${base64Image}")`;
         };
     })
-
-    //Validate reset password
-    let newPassword = document.querySelector('#new-password')
-    let rePassword = document.querySelector('#re-password')
-    let newPassword_err = document.querySelector('#new-password-err')
-    let rePassword_err = document.querySelector('#re-password-err')
-    let form_resetPassword = document.querySelector('#form-resetpass')
-    let btnResetpass = document.querySelector('#btn-resetpass')
-
-    newPassword.addEventListener('input', (e) => {
-        let passwordRegex = /^(?=.*[a-zA-Z]).{8,}$/;
-        if (!passwordRegex.test(e.target.value)) {
-            newPassword_err.textContent = 'Mật khẩu tối thiểu phải có 8 kí tự và ít nhất một chữ cái.';
-        } else {
-            newPassword_err.textContent = '';
-        }
-    })
-
-
-    rePassword.addEventListener('input', (e) => {
-
-        if (e.target.value === newPassword.value) {
-
-            rePassword_err.textContent = '';
-        } else if (e.target.value == '') {
-            rePassword_err.textContent = '';
-        } else {
-            rePassword_err.textContent = 'Mật khẩu chưa khớp với mật khẩu ở trên.';
-        }
-    })
-
-    form_resetPassword.addEventListener('input', () => {
-        // Check if all fields are valid
-        if (newPassword_err.textContent === '' && rePassword_err.textContent === '' && rePassword.value !== '') {
-            btnResetpass.disabled = false;
-        } else {
-            btnResetpass.disabled = true;
-        }
-    });
 </script>
 <script src="/public/viewsCustom/assets/js/cropper.min.js"></script>
 @endsection
