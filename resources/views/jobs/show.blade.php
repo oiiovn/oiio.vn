@@ -107,9 +107,9 @@
         <div style="width: 22.58%;height:auto;display: block;margin-left:17px;">
             <div style="background:#fff;width:100%;height: 186px;margin-bottom: 20px;border-radius: 10px;">
                 <div style="display: inline-flex;justify-content: center;align-items: center;gap: 5px;margin-top:23px;padding-left:24px;">
-                    <a href="#"><img style="border-radius: 45px;" src="{{ asset('viewsCustom/assets/images/hinh2.png') }}" width="45px" height="45px"></a>
+                    <a href="#"><img style="border-radius: 45px;" src="{{ asset('viewsCustom/assets/images/hinh1.png') }}" width="45px" height="45px"></a>
                     <div style="display: flex;flex-direction: column;justify-content: center;align-items: flex-start;gap: 5px;">
-                        <span style="color: #000;text-align: center;font-family:'Lato'sans-serif;font-size: 14px;font-style: normal;font-weight: 400;line-height: normal;">Shop Sakura</span>
+                        <span style="color: #000;text-align: center;font-family:'Lato'sans-serif;font-size: 14px;font-style: normal;font-weight: 400;line-height: normal;">Korina<i class="fa-regular fa-circle-check text-primary"></i></span>
                         <span style="color: #000;text-align: center;font-family:'Lato'sans-serif;font-size: 14px;font-style: normal;font-weight: 400;line-height: normal;letter-spacing: 1.12px;">09012345678</span>
                     </div>
                 </div>
