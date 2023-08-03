@@ -118,7 +118,7 @@
                             
                                
                         </div>
-                        <div class="col-12 col-md-3 sidebar-left-right d-mobi-none " id="sidebarRight" style="width:28.28% !important;border-radius: 10px;">
+                        <div class="col-12 col-md-3 sidebar-left-right d-mobi-none " id="sidebarRight" style="width:28.28% !important;border-radius: 10px;background: #fff;height: 1000px;">
                             <div @class([
                                     'd-none' => Route::is('login.index', 'register.index'),
                                     'sidebar-right-child' => !Route::is('homepage')

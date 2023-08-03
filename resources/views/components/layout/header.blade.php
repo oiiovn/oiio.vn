@@ -104,7 +104,14 @@
                             <div class="dropdown-divider"></div>
                             <a id="item-menu" class="dropdown-item" href="{{ route('user.bank.index') }}"> Tài khoản ngân hàng </a>
                             <div class="dropdown-divider"></div>
-                            
+                            @if(auth()->user()->isMember())
+                            <a id="item-menu"class="dropdown-item"  href="{{ route('user.create_shop') }}">Tạo shop bán hàng</a>
+                            <div class="dropdown-divider"></div>
+                            @endif
+                            @if(auth()->user()->isShop())
+                            <a id="item-menu"class="dropdown-item"  href="{{ route('user.update_shop') }}">Sửa tên cửa hàng</a>
+                            <div class="dropdown-divider"></div>
+                            @endif
                             <button type="button" id="item-menu" class="dropdown-item " data-toggle="modal" data-target="#exampleModalLong">Đổi mật khẩu </button>
                             <div class="dropdown-divider"></div>
                             <x-form class="" :action="route('logout')" type="post">

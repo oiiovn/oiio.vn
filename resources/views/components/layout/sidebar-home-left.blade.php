@@ -35,38 +35,6 @@
             </div>
         </x-slot>
     </x-card>
-        <x-card>
-        <x-slot name="header">
-            <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic4" aria-expanded="true" aria-controls="ui-basic4">
-                <img width="20px"height="20px"src="{{ asset('viewsCustom/assets/images/ic9.svg') }}" alt="">
-                <span class="menu-title" style="margin-left:10px;"> Cài đặt</span>
-                <i style="margin-left:auto;font-size:20px;" class="ri-arrow-down-s-line"></i>
-            </a>
-        </x-slot>
-        <x-slot name="footer">
-            <div class="collapse show" id="ui-basic4">
-                <a href="{{ route('transaction.index') }}">
-                    <div class="nav-item">
-                        Lịch sử giao dịch
-                    </div>
-                </a>
-                @if(auth()->user()->isMember())
-                    <a href="{{ route('user.create_shop') }}">
-                        <div class="nav-item">
-                            Tạo shop bán hàng
-                        </div>
-                    </a>
-                @endif
-                @if(auth()->user()->isShop())
-                    <a href="{{ route('user.update_shop') }}">
-                        <div class="nav-item">
-                            Sửa tên cửa hàng
-                        </div>
-                    </a>
-                @endif
-            </div>
-        </x-slot>
-    </x-card>
     @if(auth()->user()->isShop())
     <x-card>
         <x-slot name="header">
@@ -155,7 +123,7 @@
             </div>
         </x-slot>
     </x-card>
-    <x-card style="width: 100%;height: 100%;background-color:#FFF;">
+    <x-card style="width: 100%;height: 100px;background-color:#FFF;">
             <div style="height: 68px;"></div>
     </x-card>
     @else

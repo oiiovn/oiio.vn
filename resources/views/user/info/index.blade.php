@@ -254,9 +254,44 @@
                                 <a href="#">Lịch sử rút tiền</a>
                             </li>
                             <li style="height:29px;display: flex;justify-content: center;align-items: center;">
-                                <a href="#">Tháng</a>
+                                <a href="#" id="showModal">Tháng</a>
                                 <i style="margin-left:auto;font-size:20px;" class="ri-arrow-down-s-line"></i>
-                            </li>
+                            </li> <!-- Modal -->
+                            <div class="modal-overlay hidden" id="myModalOverlay"></div>
+                            <div class="modal hidden" id="myModal" tabindex="-1" role="dialog">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content-info">
+                                        <div class="modal-header" style="background: #E0793F;color:#FFF;">
+                                            <h5 class="modal-title">
+                                                <div class="pagination" style="margin-left:40px;">
+                                                    <a href="#">&laquo;</a>
+                                                    <a class="active" href="#">2023</a>
+                                                    <a href="#">&raquo;</a>
+                                                </div>
+                                            </h5>
+                                        </div>
+                                        <div class="modal-body">
+                                            <!-- Nội dung modal -->
+                                                <div class="body-list-date" style="display: inline-flex;flex-direction: column;align-items: center;gap: 24px;justify-content: center;margin-left:95px;">
+                                                    <a href="#">Tháng 1</a>
+                                                    <a href="#">Tháng 2</a>
+                                                    <a href="#">Tháng 3</a>
+                                                    <a href="#">Tháng 4</a>
+                                                    <a href="#">Tháng 5</a>
+                                                    <a href="#">Tháng 6</a>
+                                                    <a href="#">Tháng 7</a>
+                                                </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button style="background:transparent;border:none;" type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">Hủy</span>
+                                            </button>
+                                            <button type="button" class="btn" style="color:#E0793F;">Xác nhận</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                     <div style="height: 100%;">
@@ -406,6 +441,28 @@
     </x-form>
 </div>
 <style>
+    /* Pagination links */
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color .3s;
+  color: #FFF;
+font-family: 'Lato' sans-serif;
+font-size: 18px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}
+
+/* Style the active/current link */
+.pagination a.active {
+  color: white;
+}
+
+/* Add a grey background color on mouse-over */
+.pagination a:hover:not(.active) {background-color: #fff;color:#000;}
     li a {
         color: #303030;
         font-family: 'Lato' sans-serif;
@@ -560,7 +617,79 @@
         background: #FFF;
         backdrop-filter: blur(20px);
     }
+
+    /* Lớp phủ */
+    .modal-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        /* Màu nền và độ mờ */
+        z-index: 9999;
+        /* Đảm bảo lớp phủ hiển thị trên tất cả các phần tử khác */
+        display: none;
+        /* Ẩn lớp phủ mặc định */
+    }
+
+    /* Định dạng modal */
+    .modal {
+        /* Màu nền modal */
+        border-radius: 5px;
+        /* Đổ bóng cho modal */
+        position: fixed;
+        top: 70%;
+        left: 55%;
+        transform: translate(-50%, -50%);
+        z-index: 10000;
+        /* Đảm bảo modal hiển thị trên lớp phủ */
+        display: none;
+        /* Ẩn modal mặc định */
+    }
+
+    .modal-content-info {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        /* width: 100%; */
+        width: 283px;
+        height: 452px;
+        color: var(--bs-modal-color);
+        pointer-events: auto;
+        background-color: var(--bs-modal-bg);
+        background-clip: padding-box;
+        border: var(--bs-modal-border-width) solid var(--bs-modal-border-color);
+        border-radius: var(--bs-modal-border-radius);
+        outline: 0;
+    }
+    .body-list-date a{
+        color: #000;
+        font-family: 'Lato' sans-serif ;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+    .body-list-date a:hover{
+        font-weight: 700;
+        color: #FB6815;
+    }
 </style>
+<!-- Đảm bảo rằng bạn đã bao gồm thư viện jQuery trong trang web của bạn -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+    $(document).ready(function() {
+        $('#showModal').click(function() {
+            $('#myModalOverlay, #myModal').fadeIn(); /* Hiển thị lớp phủ và modal */
+        });
+
+        $('.modal .close, .modal-overlay').click(function() {
+            $('#myModalOverlay, #myModal').fadeOut(); /* Ẩn lớp phủ và modal */
+        });
+    });
+</script>
 
 <script>
     // --> Xử lí cập nhật avartar và cover-photo
@@ -590,5 +719,6 @@
         };
     })
 </script>
+
 <script src="/public/viewsCustom/assets/js/cropper.min.js"></script>
 @endsection
