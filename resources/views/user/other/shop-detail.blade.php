@@ -844,7 +844,7 @@
             </div>
         </div>
     </div>
-    <!-- đánh giá -->
+    <!-- reviews -->
     <div class="all-reviews-shop reviews" style="background: #fff;border-radius: 10px;padding-bottom: 10px">
         <div style="width:100%;height:55px;display: flex;align-items: center;padding-left:40px;">
             <div
