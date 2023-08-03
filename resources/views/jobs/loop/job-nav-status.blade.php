@@ -1,11 +1,10 @@
-
 <div class="card-body p-0" style="background: #E9E9E9;">
     <div style="color: black; font-size: 22px; font-family: 'Lato' sans-serif; font-weight: 700; word-wrap: break-word">Đơn hàng cần xử lý</div>
     <div class="wrap-control-tab pb-2 pt-3">
         <div class="job-status-nav-tabs d-flex border-b">
             <div class="nav-item">
                 <span>Tất cả đơn</span>
-                <span class="job-status-number-test">10000</span>
+                <span class="job-status-number-test">0</span> <!--chỗ này chưa đổ dữ liệu-->
             </div>
             @foreach ($job_status[$type] as $key => $value)
             <div @class([ 'nav-item' , 'position-relative' , 'active'=> $key == $current_status
@@ -14,12 +13,12 @@
                 data-route="{{ route($route_name, $key) }}">
                 {{ $value['text'] }}
                 <span class="job-status-number-test">{{ $value['number'] }}</span>
-                <!-- @if($value['number'])
-                        <span class="job-status-number position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                            {{ $value['number'] }}
-                            <span class="visually-hidden">unread messages</span>
-                        </span>
-                    @endif -->
+                @if($value['number'])
+                <span class="job-status-number position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                    {{ $value['number'] }}
+                    <span class="visually-hidden">unread messages</span>
+                </span>
+                @endif
             </div>
             @endforeach
         </div>
@@ -62,7 +61,7 @@
 
 
 </div>
-<div class="d-flex flex-column" style="width:139%;max-width:1150px; height: 100%; background: #FFF; border-radius: 10px;flex-shrink: 0;margin-top:25px;">
+<!-- <div class="d-flex flex-column" style="width:139%;max-width:1150px; height: 100%; background: #FFF; border-radius: 10px;flex-shrink: 0;margin-top:25px;">
     <div class="job-list" style="display: block;padding:28px 38px;">
         <div class="label-list" style="margin-bottom:25px;color: #000;font-family: 'Lato' sans-serif;font-size: 22px;font-style: normal;font-weight: 700;line-height: normal;word-wrap: break-word">
             <span>Tất cả đơn</span>
@@ -309,8 +308,14 @@
     <div style="width: 100%;height: 100%;background-color:#fff;">
             <div style="height: 68px;"></div>
     </div>
-</div>
+</div> -->
+
+
 <style>
+    body {
+        padding-bottom: 68px;
+    }
+
     .col-grid {
         max-width: 1073px;
         width: 100%;
@@ -358,9 +363,10 @@
     }
 </style>
 <style>
-    .nav-item{
-        padding:10px;
+    .nav-item {
+        padding: 10px;
     }
+
     /* @media (min-width: 768px){
     .col-md-9 {
         flex: 0 0 auto;
@@ -368,19 +374,22 @@
         }
     } */
     input::-webkit-calendar-picker-indicator {
-    color: #696969;
-    width: 18.333px;
-    height: 18.333px;
-    cursor: pointer;
-    flex-shrink: 0;
+        color: #696969;
+        width: 18.333px;
+        height: 18.333px;
+        cursor: pointer;
+        flex-shrink: 0;
     }
-    #sidebarRight{
-        display:none;
+
+    #sidebarRight {
+        display: none;
     }
-    .card{
+
+    .card {
         background: none !important;
     }
-    .date-content label{
+
+    .date-content label {
         color: #000;
         font-family: 'Lato' sans-serif;
         font-size: 16px;
@@ -388,20 +397,27 @@
         font-weight: 500;
         line-height: normal;
     }
-    .date-input input[type='date']{
+
+    .date-input input[type='date'] {
         width: 184px;
         height: 50px;
         flex-shrink: 0;
         border-radius: 5px;
         border: 1px solid #A6A4A4;
-        padding-left:10px;
+        padding-left: 10px;
         padding-right: 10px;
     }
+
     .search-field-r {
         width: 475px;
         height: 50px;
         flex-shrink: 0;
         background: #FFF;
         backdrop-filter: blur(20px);
+    }
+
+    #sidebar-left {
+        background-color: #FFF;
+        height: 1500px;
     }
 </style>
