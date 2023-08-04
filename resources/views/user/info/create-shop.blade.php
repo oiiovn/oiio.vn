@@ -1,28 +1,3 @@
-{{--@extends('layout')
-
-@section('content')
-
-@section('content')
-<x-card >
-    <x-slot name="header">
-    <div style="display:flex;">
-        <span class="header__create-shop" style="color: #000;font-size: 22px;font-style: normal;font-weight: 700;line-height: normal;padding-left:18px;padding-top:4px;">Thông tin Shop</span>
-        <img src="{{ asset('viewsCustom/assets/images/icon-edit.svg') }}" style="width:38px; height:38px;position:
-absolute;right: 40px;top: 22px;"/>
-</div>
-</x-slot>
-<div class="card-body">
-    <x-form type="post" :validate="true" action="{{ route('user.post_shop') }}">
-        <div class="mb-3">
-            <label class="form-label">{{ __('Tên cửa hàng') }}</label>
-            <x-input class="w-100" name="name_shop" placeholder="Nhập tên cửa hàng" :required="true" />
-        </div>
-        <x-button type="submit" class="btn-orange w-100">Tạo ngay</x-button>
-    </x-form>
-</div>
-</x-card>
-
-@endsection--}}
 <!-- phần làm -->
 @extends('layout')
 
@@ -32,38 +7,43 @@ absolute;right: 40px;top: 22px;"/>
 <!-- Thông tin shop -->
 <!-- check lại back-end -->
 <div class="form-create-shop" style="width:100%;">
-    <x-card style="">
-        <x-slot name="header">
-            <div style="display:flex;">
-                <span class="header__create-shop"
-                    style="color: #E0793F;font-size: 22px;font-style: normal;font-weight: 500;line-height: normal;">Thông
-                    tin Shop</span>
-                <img src="{{ asset('viewsCustom/assets/images/icon-edit.svg') }}"
-                    style="width:38px; height:38px;position: absolute;right: 40px;top: 22px;" />
-            </div>
-        </x-slot>
-        <div class="card-body" style="padding-top:16px;display:flex;padding-bottom:0px;">
-
-            <x-form type="post" :validate="true" action="{{ route('user.post_shop') }}" class=""
-                style="display:flex;width:100%;">
-                <label
-                    style="color: #000;font-size: 16px;font-style: normal;font-weight: 500;line-height: normal;width:150px;"
-                    class="form-label">{{ __('Tên cửa hàng') }}</label>
-                <div style="display:block;width:100%;" class="">
-                    <div class="mb-3 w-form pd-form" style="">
-                        <x-input class="w-100" name="name_shop" placeholder="VD: Làn Sóng Xanh" :required="true"
-                            style="margin-top: -10px;color: rgba(48, 48, 48, 0.20);font-size: 16px;font-style: normal;font-weight: 500;line-height: normal;height:46px;" />
-                    </div>
-                    <x-button type="submit" class=""
-                        style="float: right;margin-right: 40px;margin-top: 18px;margin-bottom: 20px;border-radius: 5px;background: #E0793F;color: #FFF;font-size: 16px;font-style: normal;font-weight: 400;line-height: normal;">
-                        Tạo ngay</x-button>
+    <div style="height:250px;margin-bottom:20px;background:#fff;">
+        <x-card style="">
+            <x-slot name="header">
+                <div style="display:flex;">
+                    <span class="header__create-shop"
+                        style="color: #E0793F;font-size: 22px;font-style: normal;font-weight: 500;line-height: normal;">Thông
+                        tin Shop</span>
+                    <img src="{{ asset('viewsCustom/assets/images/icon-edit.svg') }}"
+                        style="width:38px; height:38px;position: absolute;right: 40px;top: 22px;" />
                 </div>
-            </x-form>
-        </div>
-    </x-card>
+            </x-slot>
+            <div class="card-body" style="padding-top:16px;display:flex;padding-bottom:0px;">
+
+                <x-form type="post" :validate="true" action="{{ route('user.post_shop') }}" class=""
+                    style="display:flex;width:100%;height:150px;">
+                    <div class="dl-f">
+                        <label
+                            style="color: #000;font-size: 16px;font-style: normal;font-weight: 500;line-height: normal;width:150px;"
+                            class="form-label">{{ __('Tên cửa hàng') }}</label>
+                        <div style="display:block;width:100%;" class="">
+                            <div class="mb-3 w-form pd-form f-create-shop" style="">
+                                <x-input class="w-100" name="name_shop" placeholder="VD: Làn Sóng Xanh" :required="true"
+                                    style="margin-top: -10px;color: rgba(48, 48, 48, 0.20);font-size: 16px;font-style: normal;font-weight: 500;line-height: normal;height:46px;" />
+                            </div>
+                        </div>
+                        <x-button type="submit" class="btn-create-shop"
+                            style="border-radius: 5px;background: #E0793F;color: #FFF;font-size: 16px;font-style: normal;font-weight: 400;line-height: normal;">
+                            Tạo ngay</x-button>
+                    </div>
+                </x-form>
+            </div>
+        </x-card>
+    </div>
     <!-- Thông tin liên hệ -->
     <!-- cần đổ lại back-end -->
-    <x-card style="">
+    <x-card>
+
         <x-slot name="header">
             <div style="display:flex;">
                 <span class="header__create__info-shop"
@@ -75,13 +55,13 @@ absolute;right: 40px;top: 22px;"/>
         </x-slot>
         <div class="card-body" style="padding-top:16px;display:flex;padding-bottom:0px;">
 
-            <x-form type="post" :validate="true" action="{{ route('user.post_shop') }}" class=""
-                style="display:flex;width:100%;">
+            <x-form type="post" :validate="true" action="{{ route('user.post_shop') }}" class="create-shop-items"
+                style="width:100%;">
                 <label
                     style="color: #000;font-size: 16px;font-style: normal;font-weight: 500;line-height: normal;width:150px;"
                     class="form-label">{{ __('Địa chỉ') }}</label>
                 <div style="display:block;width:100%;" class="">
-                    <div class="mb-3 w-form pd-form" style="">
+                    <div class="mb-3 w-form pd-form f-create-shop" style="">
                         <x-input class="w-100" name="name_shop" placeholder="VD: 124 đường kênh 19/5 Tây Thạnh, Tân Phú"
                             :required="true"
                             style="margin-top: -10px;color: rgba(48, 48, 48, 0.20);font-size: 16px;font-style: normal;font-weight: 500;line-height: normal;height:46px;" />
@@ -91,13 +71,13 @@ absolute;right: 40px;top: 22px;"/>
         </div>
         <div class="card-body" style="padding-top:16px;display:flex;padding-bottom:0px;">
 
-            <x-form type="post" :validate="true" action="{{ route('user.post_shop') }}" class=""
-                style="display:flex;width:100%;">
+            <x-form type="post" :validate="true" action="{{ route('user.post_shop') }}" class="create-shop-items"
+                style="width:100%;">
                 <label
                     style="color: #000;font-size: 16px;font-style: normal;font-weight: 500;line-height: normal;width:150px;"
                     class="form-label">{{ __('Nhập Facebook') }}</label>
                 <div style="display:block;width:100%;" class="">
-                    <div class="mb-3 w-form pd-form" style="">
+                    <div class="mb-3 w-form pd-form f-create-shop" style="">
                         <x-input class="w-100" name="name_shop" placeholder="VD: Shop Online Seeding" :required="true"
                             style="margin-top: -10px;color: rgba(48, 48, 48, 0.20);font-size: 16px;font-style: normal;font-weight: 500;line-height: normal;height:46px;" />
                     </div>
@@ -106,22 +86,23 @@ absolute;right: 40px;top: 22px;"/>
         </div>
         <div class="card-body" style="padding-top:16px;display:flex;padding-bottom:0px;">
 
-            <x-form type="post" :validate="true" action="{{ route('user.post_shop') }}" class=""
-                style="display:flex;width:100%;">
+            <x-form type="post" :validate="true" action="{{ route('user.post_shop') }}" class="create-shop-items"
+                style="width:100%;margin-bottom:50px;">
                 <label
                     style="color: #000;font-size: 16px;font-style: normal;font-weight: 500;line-height: normal;width:150px;"
                     class="form-label">{{ __('Nhập Zalo') }}</label>
                 <div style="display:block;width:100%;" class="">
-                    <div class="mb-3 w-form pd-form" style="">
+                    <div class="mb-3 w-form pd-form f-create-shop" style="">
                         <x-input class="w-100" name="name_shop" placeholder="VD: 0123456789" :required="true"
                             style="margin-top: -10px;color: rgba(48, 48, 48, 0.20);font-size: 16px;font-style: normal;font-weight: 500;line-height: normal;height:46px;" />
                     </div>
                 </div>
             </x-form>
         </div>
-        <x-button type="submit" class=""
-            style="float: right;margin-right: 40px;margin-top: 18px;margin-bottom: 20px;border-radius: 5px;background: #E0793F;color: #FFF;font-size: 16px;font-style: normal;font-weight: 400;line-height: normal;height:39px;">
+        <x-button type="submit" class="btn-create-shop-2"
+            style="border-radius: 5px;background: #E0793F;color: #FFF;font-size: 16px;font-style: normal;font-weight: 400;line-height: normal;height:39px;">
             Lưu thông tin liên hệ</x-button>
+
     </x-card>
 
 </div>
@@ -132,8 +113,32 @@ absolute;right: 40px;top: 22px;"/>
 }
 
 @media (max-width:2440px) {
+    .create-shop-items {
+        display: flex;
+    }
+
+    .card-body {
+        padding: 0px;
+    }
+
     .w-form {
         width: 410px;
+    }
+
+    .btn-create-shop {
+        position: absolute;
+        right: 15px;
+        bottom: 15px;
+    }
+
+    .btn-create-shop-2 {
+        position: absolute;
+        right: 35px;
+        bottom: 15px;
+    }
+
+    .dl-f {
+        display: flex;
     }
 
     .row {
@@ -156,11 +161,44 @@ absolute;right: 40px;top: 22px;"/>
         border-radius: 5px !important;
     }
 
+
+    .btn-create-shop {
+        position: absolute;
+        width: 100%;
+        margin: auto;
+        right: 0px;
+        bottom: 0px;
+    }
+
+    .btn-create-shop-2 {
+        position: absolute;
+        width: 90%;
+        right: 0px;
+        bottom: 5px;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
 }
 
 @media (max-width:767px) {
     .w-form {
         width: 300px;
+    }
+
+    .f-create-shop {
+        margin-top: 20px;
+    }
+
+    .dl-f {
+        display: block;
+    }
+
+    .create-shop-items {
+        display: block;
+    }
+
+    .pd-form {
+        margin-left: 0%;
     }
 
 }
@@ -171,7 +209,7 @@ absolute;right: 40px;top: 22px;"/>
     }
 
     .pd-form {
-        margin-left: 10%;
+        margin-left: 0%;
     }
 }
 </style>

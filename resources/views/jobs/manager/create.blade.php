@@ -11,8 +11,7 @@
             Seeding</span>
     </div>
     <div class="content-create-order">
-        <div class="content-left_create-order"
-            style="width:87.5%;background:#fff;border-radius:8px;margin-bottom:20px;">
+        <div class="content-left_create-order" style="width:87.5%;background:#fff;margin-bottom:20px;">
             <div class="items-1" style="display: flex;">
                 <div class="chon-san">
                     <div style="width:170px;">
@@ -47,7 +46,7 @@
                     <form>
                         <div class="dropdown">
                             <input
-                                style="width: 300px;border-radius:5px;height:45px;padding-left:10px;border: 1px solid;"
+                                style="width: 300px;border-radius:5px;height:45px;padding-left:10px;border: 1px solid rgba(48, 48, 48, 0.21);"
                                 type="text" name="myInput6" placeholder="Vui lòng chọn" readonly>
                             <a class="dropdown-icon" alt="Dropdown Icon"><i class="gg-chevron-down"></i></a>
                             <ul class="dropdown-list">
@@ -70,7 +69,7 @@
                     <form>
                         <div class="dropdown">
                             <input
-                                style="width: 300px;border-radius:5px;height:45px;padding-left:10px;border: 1px solid;"
+                                style="width: 300px;border-radius:5px;height:45px;padding-left:10px;border: 1px solid rgba(48, 48, 48, 0.21);"
                                 type="text" name="myInput2" placeholder="Vui lòng chọn" readonly>
                             <a class="dropdown-icon" alt="Dropdown Icon"><i class="gg-chevron-down"></i></a>
                             <ul class="dropdown-list">
@@ -93,7 +92,7 @@
                     <form>
                         <div class="dropdown">
                             <input
-                                style="width: 300px;border-radius:5px;height:45px;padding-left:10px;border: 1px solid;"
+                                style="width: 300px;border-radius:5px;height:45px;padding-left:10px;border: 1px solid rgba(48, 48, 48, 0.21);"
                                 type="text" name="myInput3" placeholder="Vui lòng chọn" readonly>
                             <a class="dropdown-icon" alt="Dropdown Icon"><i class="gg-chevron-down"></i></a>
                             <ul class="dropdown-list">
@@ -115,7 +114,7 @@
                     <form>
                         <div class="dropdown">
                             <input
-                                style="width: 300px;border-radius:5px;height:45px;padding-left:10px;border: 1px solid;"
+                                style="width: 300px;border-radius:5px;height:45px;padding-left:10px;border: 1px solid rgba(48, 48, 48, 0.21);"
                                 type="text" name="myInput4" placeholder="Vui lòng chọn" readonly>
                             <a class="dropdown-icon" alt="Dropdown Icon"><i class="gg-chevron-down"></i></a>
                             <ul class="dropdown-list">
@@ -138,7 +137,7 @@
                     <form>
                         <div class="dropdown">
                             <input
-                                style="width: 300px;border-radius:5px;height:45px;padding-left:10px;border: 1px solid;"
+                                style="width: 300px;border-radius:5px;height:45px;padding-left:10px;border: 1px solid rgba(48, 48, 48, 0.21);"
                                 type="text" name="myInput5" placeholder="Vui lòng chọn" readonly>
                             <a class="dropdown-icon" alt="Dropdown Icon"><i class="gg-chevron-down"></i></a>
                             <ul class="dropdown-list">
@@ -151,40 +150,39 @@
         </div>
         <div class="content-right_create-order" style=" width:412px; height:auto;">
             <div class="vt-order-shop">
-                <div class="items-1"
-                    style="padding-top: 20px;padding-left: 16px;margin-right: 8px;background: #fff;border-radius:8px;">
+                <div class="items-1" style="padding-top: 20px;padding-left: 16px;background: #fff;border-radius:8px;">
                     <div style="width:170px;">
                         <span
                             style="color: #000;font-size: 16px;font-style: normal;font-weight: 500;line-height: normal;">Vận
                             chuyển</span>
                     </div>
-                    <div class="radio-1" style="">
+                    <div class="radio-1">
                         <input class="" type="radio" name="check-box-vt" checked="checked-vt">
                         <span style="padding-left:15px;">Đơn giao nhanh</span>
                     </div>
-                    <div class="radio-2" style="">
+                    <div class="radio-2">
                         <input class="" type="radio" name="check-box-vt">
                         <span style="padding-left:15px;">Hoả tốc</span>
                     </div>
                 </div>
                 <div class="items-2"
-                    style="padding-top: 20px;margin-left: 8pxpx;background: #fff;padding-left: 16px;position: relative;border-radius:8px;">
+                    style="padding-top: 20px;background: #fff;padding-left: 16px;position: relative;border-radius:8px;">
                     <div style="width:170px;">
                         <span
                             style="color: #000;font-size: 16px;font-style: normal;font-weight: 500;line-height: normal;">Hình
                             thức giao nhận</span>
                     </div>
-                    <div class="radio-1" style="">
+                    <div class="radio-1">
                         <input class="" type="radio" name="check-box-gh" checked="checked-gh">
                         <span style="padding-left:15px;">Nhận hàng</span>
                     </div>
-                    <div class="radio-2" style="">
-                        <input class="" type="radio" name="check-box-gh">
+                    <div class="radio-2">
+                        <input type="radio" name="check-box-gh">
                         <span style="padding-left:15px;">Không nhận hàng</span>
                     </div>
                 </div>
             </div>
-            <div
+            <div class="service-charge"
                 style="padding-top:20px;padding-left:16px;background:#fff;position:relative;margin-top:16px;;height:240px;border-radius:8px;">
                 <div style="display:flex;">
                     <div>
@@ -274,7 +272,7 @@
 
     .items-2 {
         display: flex;
-        padding-top: 30px;
+        padding-top: 60px;
     }
 
     .items-3 {
@@ -370,7 +368,8 @@
 
     .vt-order-shop {
         display: grid !important;
-        grid-template-columns: 50% 50%;
+        grid-template-columns: 45% 45%;
+        justify-content: space-evenly;
     }
 
     .vt-order-shop .items-1 {
@@ -449,6 +448,12 @@
     .pdl {
         margin-right: 25px;
     }
+
+    .service-charge {
+        width: 95%;
+        margin-left: 7px;
+    }
+
 }
 
 @media (min-width:451px) {
@@ -503,6 +508,10 @@
 
 /* Các kiểu dáng cho màn hình 1440px */
 @media (min-width: 1440px) {
+    .content-left_create-order {
+        border-radius: 8px;
+    }
+
     .row {
         margin-left: 16px !important;
     }
@@ -549,8 +558,8 @@
     }
 
     .content-right_create-order {
-        position: absolute;
-        right: 18px;
+        flex: 1;
+        margin-left: 16px;
     }
 }
 
