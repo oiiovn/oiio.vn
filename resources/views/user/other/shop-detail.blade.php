@@ -164,7 +164,7 @@
 </x-card>--}}
 <div class="all__info-shop" style=" width:100%;">
     <div style="display:block;margin-bottom:20px;width:100%;">
-        <div class="info-shop" style="background:#fff;margin-bottom:20px;border-radius:10px;width:100%;">
+        <div class="info-shop" style="background:#fff;margin-bottom:20px;width:100%;">
             <div class="all-header-info-shop" style="">
                 <div class="header-left-pp__img-info-shop">
                     <img class="images-header-info-shop" src="{{ asset('viewsCustom/assets/images/hinh1.svg') }}"
@@ -267,13 +267,7 @@
                                 style="color: #D0011B;font-style: normal;font-weight: 400;line-height: normal;width: 140px;padding-left:3px;">
                                 (25,5k đánh giá)</div>
                         </div>
-                        <div class="see-more" style="display:flex;" data-toggle="modal"
-                            data-target="#exampleModalCenter">
-                            <h3 class="fs13"
-                                style="color: #A6A4A4;font-style: normal;font-weight: 400;line-height: normal;width:60px;">
-                                xem thêm</h3><img src="{{ asset('viewsCustom/assets/images/popout.svg') }}"
-                                style="padding-left:5px;width:20px;height:20px;margin-top:-2px;" />
-                        </div>
+
                     </div>
                     <div class="content__body-content" style="display:flex;padding-top:4.93%;padding-left:4.1%;">
                         <div class="content__body-content__title fs15"
@@ -852,7 +846,7 @@
                 Đánh giá cộng đồng</div>
         </div>
         <div style="height: 100%;">
-            <div style="margin-left:40px;margin-top:20px;">
+            <div style="margin-left:20px;margin-top:20px;">
                 <div style="width:100%;">
                     <div style="justify-content: space-between;display: flex;align-items: center;">
                         <div style="display: inline-flex;align-items: center;gap: 10px;">
@@ -883,7 +877,7 @@
                 </div>
             </div>
 
-            <div style="margin-left:40px;margin-top:20px;">
+            <div style="margin-left:20px;margin-top:20px;">
                 <div style="width:100%;">
                     <div style="justify-content: space-between;display: flex;align-items: center;">
                         <div style="display: inline-flex;align-items: center;gap: 10px;">
@@ -914,7 +908,7 @@
                 </div>
             </div>
 
-            <div style="margin-left:40px;margin-top:20px;">
+            <div style="margin-left:20px;margin-top:20px;">
                 <div style="width:100%;">
                     <div style="justify-content: space-between;display: flex;align-items: center;">
                         <div style="display: inline-flex;align-items: center;gap: 10px;">
@@ -945,7 +939,7 @@
                 </div>
             </div>
 
-            <div style="margin-left:40px;margin-top:20px;">
+            <div style="margin-left:20px;margin-top:20px;">
                 <div style="width:100%;">
                     <div style="justify-content: space-between;display: flex;align-items: center;">
                         <div style="display: inline-flex;align-items: center;gap: 10px;">
@@ -1053,6 +1047,7 @@ ul .items li {
     .info-shop {
         display: flex;
         height: 200px;
+        border-radius: 10px;
     }
 
     .header-right-info-shop {
@@ -1316,6 +1311,7 @@ ul .items li {
     .info-shop {
         display: block;
         height: 300px;
+        border-radius: 0px;
     }
 }
 
