@@ -18,7 +18,7 @@
                                 <img style="padding-left:4px;" src="{{ asset('viewsCustom/assets/images/tick.svg') }}"
                                     width:8.7px height:8.7px />
                             </div>
-                            <div class="header-left-pp__text__bottom fs13"
+                            <div class="header-left-pp__text__bottom fs12"
                                 style="color: #A6A4A4;font-style: normal;font-weight: 400;line-height: normal;">22 giờ
                                 trước
                             </div>
@@ -61,12 +61,12 @@
                 </div>
                 <div class="content__body-content__btn" style="text-align: right; margin-left:13.14%;">
                     <div class="wage" style="width:193px;">
-                        <p class="font-lato fs16"
+                        <p class=" fs16"
                             style="color: #269300;font-style: normal;font-weight: 600;line-height: normal;border-radius: 5px;border: 1px solid #269300;height: 44px;text-align:center;padding:12px;align-item:center;">
                             Tiền công: 14. 500 đ</p>
                     </div>
                     <div class="btn-receive-application" style="width:105px;">
-                        <a href="#nhan-don"><button type="button" class="btn fs14 font-lato" data-toggle="modal"
+                        <a href="#nhan-don"><button type="button" class="btn fs14" data-toggle="modal"
                                 data-target="#exampleModalCenter"
                                 style="border-radius: 5px;border-radius: 5px;background: #F5AE5D;color: #FFF;font-style: normal;font-weight: 700;line-height: normal;width:105px;height:43px;padding:12px;">Nhận
                                 Đơn</button></a>
@@ -116,7 +116,7 @@
             </div>
         </div>
         <div class="mobile-wage" style="padding-top:12px;">
-            <p class="fs13 font-lato"
+            <p class="fs13"
                 style="color: #269300;font-style: normal;font-weight: 800;line-height: normal;border-radius: 5px;border: 1px solid #269300;height: 40px;text-align:center;padding:12px;align-item:center;width:168px;">
                 Tiền công: 14. 500 đ</p>
         </div>
@@ -153,8 +153,7 @@
             </div>
         </div>
         <div class=btn-receive-application-mobile>
-            <button type="button" class="btn btn-primary fs14 font-lato" data-toggle="modal"
-                data-target="#exampleModalMobile"
+            <button type="button" class="btn btn-primary fs14" data-toggle="modal" data-target="#exampleModalMobile"
                 style="border-radius: 5px;border: 1.5px solid #E0793F;background: #E0793F;color: #FFF;font-style: normal;font-weight: 700;line-height: normal;padding:10px 18px;margin-bottom: 18px;">Nhận
                 đơn</button>
         </div>
@@ -227,7 +226,7 @@
                                 <img style="padding-left:2.8px;" src="{{ asset('viewsCustom/assets/images/tick.svg') }}"
                                     width:8.7px height:8.7px />
                             </div>
-                            <div class="header-left-pp__text__bottom fs13"
+                            <div class="header-left-pp__text__bottom fs12"
                                 style="color: #A6A4A4;font-style: normal;font-weight: 400;line-height: normal;">22 giờ
                                 trước</div>
                         </div>
@@ -284,7 +283,7 @@
                         <div class="items" style="display:flex; padding-top: 21px;">
                             <img src="{{ asset('viewsCustom/assets/images/warning.svg') }}" width:18.3px height:15.8px
                                 style="margin-bottom:20px;" />
-                            <p class="fs16 font-lato"
+                            <p class="fs16 "
                                 style="color: #EB3131;font-style: normal;font-weight: 600;line-height: normal;padding-left:10px;">
                                 Lưu ý đơn hàng</p>
                         </div>
@@ -302,10 +301,9 @@
 
                         </div>
                         <div class="items" style="padding-top:50px;display:flex;">
-                            <a href="#"><button type="button" class="btn btn-secondary fs14 font-lato"
-                                    data-dismiss="modal"
+                            <a href="#"><button type="button" class="btn btn-secondary fs14 " data-dismiss="modal"
                                     style="border-radius: 5px;border: 1.5px solid #A6A4A4;background:none;color: #A6A4A4;font-style: normal;font-weight: 700;line-height: normal;">Hủy</button></a>
-                            <button type="button" class="btn btn-primary fs14 font-lato"
+                            <button type="button" class="btn btn-primary fs14 "
                                 style="margin-left:30px;border-radius: 5px;border: 1.5px solid #E0793F;background: #E0793F;color: #FFF;font-style: normal;font-weight: 700;line-height: normal;padding:10px 25px;">Nhận
                                 đơn</button>
                         </div>
@@ -330,10 +328,10 @@
                 Áo thun nam freesize Unisex</div>
             <div class="ads-content" style="display:left !important;">
                 <div
-                    style="border-radius: 3px 0px 0px 3px;border: 1px solid rgba(0, 0, 0, 0.50);border-right:none;width:31px;height:23px;margin-left:10px;color: #000;font-family: Inter;font-size: 12px;font-style: normal;font-weight: 400;line-height: normal;text-align:center;padding:3px;">
+                    style="border-radius: 3px 0px 0px 3px;border: 1px solid rgba(0, 0, 0, 0.50);border-right:none;width:31px;height:23px;margin-left:10px;color: #000;font-size: 11px;font-style: normal;font-weight: 400;line-height: normal;text-align:center;padding:3px;">
                     30%</div>
                 <div
-                    style="border-radius: 0px 3px 3px 0px;border: 1px solid rgba(0, 0, 0, 0.50);width:56px;height:23px;color: rgba(0, 0, 0, 0.90);font-family: Inter;font-size: 12px;font-style: normal;font-weight: 700;line-height: normal;text-align:center;padding:3px;">
+                    style="border-radius: 0px 3px 3px 0px;border: 1px solid rgba(0, 0, 0, 0.50);width:56px;height:23px;color: rgba(0, 0, 0, 0.90);font-size: 12px;font-style: normal;font-weight: 700;line-height: normal;text-align:center;padding:3px;">
                     AC5F</div>
                 <div
                     style="color: #FFF;font-size: 13px;font-style: normal;font-weight: 400;line-height: normal;letter-spacing: 1.235px;border-radius: 3px;background: #E0793F;width:90px;height:23px;margin-left:9px;padding:4px;text-align:center;">
@@ -370,9 +368,7 @@
     padding-bottom: 20%;
 }
 
-.items {
-    font-family: "lato", sans-serif;
-}
+
 
 .fs16 {
     font-size: 16px !important;
@@ -394,8 +390,12 @@
     font-size: 12px;
 }
 
-.font-lato {
-    font-family: "lato", sans-serif !important;
+.fs11 {
+    font-size: 11px;
+}
+
+* {
+    font-family: 'Helvetica', sans-serif !important;
 }
 
 ul .items li {
@@ -404,7 +404,6 @@ ul .items li {
 
 .body-text p {
     color: #303030;
-    font-family: "lato", sans-serif;
     font-size: 12px;
     font-style: normal;
     font-weight: 400;
@@ -425,7 +424,6 @@ ul .items li {
 
     .body-title .items {
         color: #303030;
-        font-family: "lato", sans-serif;
         font-size: 13px;
         font-style: normal;
         font-weight: 400;
@@ -435,7 +433,6 @@ ul .items li {
 
     .body-content .items {
         color: #303030;
-        font-family: "lato", sans-serif;
         font-size: 13px;
         font-style: normal;
         font-weight: 300;
@@ -496,7 +493,6 @@ ul .items li {
 
     .body-title .items {
         color: #303030;
-        font-family: "lato", sans-serif;
         font-size: 13px;
         font-style: normal;
         font-weight: 400;
@@ -506,7 +502,6 @@ ul .items li {
 
     .body-content .items {
         color: #303030;
-        font-family: "lato", sans-serif;
         font-size: 13px;
         font-style: normal;
         font-weight: 300;
@@ -1010,3 +1005,4 @@ ul .items li {
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
 </script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Helvetica&display=swap">
