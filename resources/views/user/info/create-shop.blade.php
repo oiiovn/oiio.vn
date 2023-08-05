@@ -40,7 +40,7 @@
             </div>
         </x-card>
     </div>
-    <!-- Thông tin liên hệ-->
+    <!--  Thông tin liên hệ -->
     <!-- cần đổ lại back-end -->
     <x-card>
 
