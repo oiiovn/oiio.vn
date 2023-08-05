@@ -298,7 +298,79 @@
             <a href="#">&raquo;</a>
         </div>
     </div>
-    <div style="width: 100%;height: 100%;background-color:#fff;">
+    <div class="job-list-mobile" style="width:88%;padding-top:20px;height:450px;display:none;margin-left: 15px;">
+        <div class="label-list" style="margin-bottom:25px;color: #000;font-family: 'Lato' sans-serif;font-size: 22px;font-style: normal;font-weight: 700;line-height: normal;word-wrap: break-word">
+            <span style="margin-left:20px;">1051 Tất cả đơn</span>
+        </div>
+        <div class="list-item-mb">
+            <div class="job-item-mb"style="background:#fff;width:100%;height:133px;display:flex;justify-content:center;align-items:center;border-radius: 8px;border: 1px solid #D2D2CD;box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.15);">
+                <div class="job-col-mb"style="width:100%;display:block;">
+                    <div style="height:50px;display:flex;align-items:center;gap:5px;margin-left:10px;">
+                        <img src="{{ asset('viewsCustom/assets/images/hinh1.png') }}" alt="">
+                        <div>
+                            <div>
+                                <span>Korina</span>
+                                <i class="fa-regular fa-circle-check text-primary"></i>
+                            </div>
+                            <span style="color: #565656;font-family:'Lato'sans-serif;font-size: 11px;font-style: normal;font-weight: 400;line-height: normal;letter-spacing: 1.1px;">26/06/2023</span>
+                        </div>
+                    </div>
+                    <div style="height:50px;display: flex;justify-content: space-between;width:88%;margin-left:10px;padding-top:10px;gap:10px;">
+                        <div style="height:33px;display: inline-flex;padding: 8px 22px;justify-content: center;align-items: center;border-radius: 5px;background: #FB6815;color: #FFF;font-family:'Lato'sans-serif;font-size: 14px;font-style: normal;font-weight: 700;line-height: normal;">Shopee</div>
+                        <div style="height:33px;display: flex;padding: 12px 20px;justify-content: center;align-items: center;flex-shrink: 0;border-radius: 5px;border: 1px solid #269300;color: #269300;font-family:'Lato'sans-serif;font-size: 12px;font-style: normal;font-weight: 800;line-height: normal;letter-spacing: 0.66px;">1.000.000 đ</div>
+                    </div>
+                </div>
+                <div class="job-col-mb"style="width:135px;">
+                    <div style="text-align:right;display: block;height:100px;float:right;padding-top:27px;margin-right:10px;">
+                        <span style="color: #565656;font-family:'Lato'sans-serif;font-size: 12px;font-style: normal;font-weight: 500;line-height: normal;">230725VXU7WUJC</span>
+                        <span style="max-width:100px;color: #565656;font-family:'Lato'sans-serif;font-size: 12px;font-style: normal;font-weight: 700;line-height: normal;">Đã nhận</span>
+                        <span style="max-width:100px;color: #000;font-family:'Lato'sans-serif;font-size: 12px;font-style: normal;font-weight: 500;line-height: normal;letter-spacing: 0.72px;">09012345678</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="list-item-mb">
+            <div class="job-item-mb"style="background:#fff;width:100%;height:133px;display:flex;justify-content:center;align-items:center;border-radius: 8px;border: 1px solid #D2D2CD;box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.15);">
+                <div class="job-col-mb"style="width:100%;display:block;">
+                    <div style="height:50px;display:flex;align-items:center;gap:5px;margin-left:10px;">
+                        <img src="{{ asset('viewsCustom/assets/images/hinh1.png') }}" alt="">
+                        <div>
+                            <div>
+                                <span>Korina</span>
+                                <i class="fa-regular fa-circle-check text-primary"></i>
+                            </div>
+                            <span style="color: #565656;font-family:'Lato'sans-serif;font-size: 11px;font-style: normal;font-weight: 400;line-height: normal;letter-spacing: 1.1px;">26/06/2023</span>
+                        </div>
+                    </div>
+                    <div style="height:50px;display: flex;justify-content: space-between;width:88%;margin-left:10px;padding-top:10px;gap:10px;">
+                        <div style="height:33px;display: inline-flex;padding: 8px 22px;justify-content: center;align-items: center;border-radius: 5px;background: #FB6815;color: #FFF;font-family:'Lato'sans-serif;font-size: 14px;font-style: normal;font-weight: 700;line-height: normal;">Shopee</div>
+                        <div style="height:33px;display: flex;padding: 12px 20px;justify-content: center;align-items: center;flex-shrink: 0;border-radius: 5px;border: 1px solid #269300;color: #269300;font-family:'Lato'sans-serif;font-size: 12px;font-style: normal;font-weight: 800;line-height: normal;letter-spacing: 0.66px;">1.000.000 đ</div>
+                    </div>
+                </div>
+                <div class="job-col-mb"style="width:135px;">
+                    <div style="text-align:right;display: block;height:100px;float:right;padding-top:27px;margin-right:10px;">
+                        <span style="color: #565656;font-family:'Lato'sans-serif;font-size: 12px;font-style: normal;font-weight: 500;line-height: normal;">230725VXU7WUJC</span>
+                        <span style="max-width:100px;color: #565656;font-family:'Lato'sans-serif;font-size: 12px;font-style: normal;font-weight: 700;line-height: normal;">Đã nhận</span>
+                        <span style="max-width:100px;color: #000;font-family:'Lato'sans-serif;font-size: 12px;font-style: normal;font-weight: 500;line-height: normal;letter-spacing: 0.72px;">09012345678</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pagination-s d-flex align-items-center">
+            <a href="#">&laquo;</a>
+            <a href="#"class="active">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">4</a>
+            <a href="#">5</a>
+            <a href="#">6</a>
+            <a href="#">&raquo;</a>
+        </div>
+        
+    </div>
+    
+    <div style="width: 100%;height:100%;background-color:#fff;">
             <div style="height: 68px;"></div>
     </div>
 </div>
@@ -307,15 +379,44 @@
 
 <style>
     @media (max-width:768px) {
+        #row{
+            margin-left: 11px !important;
+        }
         .job-list{
+            display: none !important;
         }
         .container-job-list{
+            width: 100% !important;
         }
         .container-job-list::-webkit-scrollbar{
             height: 5px;
         }
         .label-list{
             font-size: 16px !important;
+        }
+        .job-list-mobile{
+            display:block !important;
+        }
+        .list-item-mb{
+            margin-bottom:20px;
+        }
+            .pagination-s a {
+            color: black;
+            margin-top: 20px;
+            padding: 8px 16px;
+            text-decoration: none;
+            transition: background-color .3s;
+        }
+
+        .pagination-s a.active {
+            background-color: #E0793F;
+            color: white;
+            border-radius: 5px;
+        }
+
+        .pagination-s a:hover:not(.active) {
+            background-color: #ddd;
+            border-radius: 5px;
         }
     }
     body {
