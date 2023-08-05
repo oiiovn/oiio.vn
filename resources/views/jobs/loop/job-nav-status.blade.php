@@ -54,7 +54,7 @@
 
 </div>
 
-<div class="container-job-list d-flex flex-column" style="width:139%;max-width:1150px; height: 100%; background: #FFF; border-radius: 10px;flex-shrink: 0;">
+<div class="container-job-list d-flex flex-column" style="width:139%;max-width:1150px; height: 100%; background: #FFF; border-radius: 10px;flex-shrink: 0;margin-top:25px;">
     <div class="job-list" style="display: block;padding:28px 38px;">
         <div class="label-list" style="margin-bottom:25px;color: #000;font-family: 'Lato' sans-serif;font-size: 22px;font-style: normal;font-weight: 700;line-height: normal;word-wrap: break-word">
             <span>1051 Tất cả đơn</span>
@@ -405,6 +405,7 @@
         }
         .container-job-list{
             width: 100% !important;
+            margin-top:0 !important;
         }
         .container-job-list::-webkit-scrollbar{
             height: 5px;
