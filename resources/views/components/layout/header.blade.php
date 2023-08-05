@@ -1,4 +1,3 @@
-
 <nav class="navbar navbar-expand-lg" style="width: 100%; height: 80px; border-bottom: 1px solid rgba(233, 233, 233, 0.95);"> <!-- Đã sửa -->
     <div class="container" style="width:100%;">
         <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
@@ -42,7 +41,7 @@
                                                     flex-shrink: 0;">
                             <span class="count-symbol bg-danger"></span>
                         </a>
-                        <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="notificationDropdown"style="width: fit-content;"><!-- ãã sửa-->
+                        <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="notificationDropdown" style="width: fit-content;"><!-- ãã sửa-->
                             <h6 class="p-3 mb-0">Notifications</h6>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item preview-item">
@@ -88,7 +87,7 @@
                     <li class="nav-item nav-profile dropdown" style="border: none;width: 70%;">
                         @if (auth()->check())
 
-                        <a class="nav-link dropdown-toggle" id="profileDropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false"style="width: fit-content;">
+                        <a class="nav-link dropdown-toggle" id="profileDropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false" style="width: fit-content;">
                             @if (auth()->check())
                             <div class="nav-profile-img">
                                 <img src="{{asset(auth()->user()->getAvatar())}}" width="35px" height="35px" style="display: flex;align-items: flex-end;gap: 10px;" alt="image">
@@ -105,11 +104,11 @@
                             <a id="item-menu" class="dropdown-item" href="{{ route('user.bank.index') }}"> Tài khoản ngân hàng </a>
                             <div class="dropdown-divider"></div>
                             @if(auth()->user()->isMember())
-                            <a id="item-menu"class="dropdown-item"  href="{{ route('user.create_shop') }}">Tạo shop bán hàng</a>
+                            <a id="item-menu" class="dropdown-item" href="{{ route('user.create_shop') }}">Tạo shop bán hàng</a>
                             <div class="dropdown-divider"></div>
                             @endif
                             @if(auth()->user()->isShop())
-                            <a id="item-menu"class="dropdown-item"  href="{{ route('user.update_shop') }}">Sửa tên cửa hàng</a>
+                            <a id="item-menu" class="dropdown-item" href="{{ route('user.update_shop') }}">Sửa tên cửa hàng</a>
                             <div class="dropdown-divider"></div>
                             @endif
                             <button type="button" id="item-menu" class="dropdown-item " data-toggle="modal" data-target="#exampleModalLong">Đổi mật khẩu </button>
@@ -120,27 +119,27 @@
                                 </button>
                             </x-form>
                         </div>
-                        
+
                     </li>
-                    
+
                     @endif
                 </ul>
             </div>
-        <!-- Side bar on mobile devices -->
-        @include('components.layout.nav-mobile')
-        <!-- End Side bar on mobile devices -->
+            <!-- Side bar on mobile devices -->
+            @include('components.layout.nav-mobile')
+            <!-- End Side bar on mobile devices -->
 
         </div>
         @else
-    <div class="nav-item-grid" style="display:flex; margin-left: auto;">
-        <li class="nav-item" style="border:none;">
-            <a class="nav-link active" aria-current="page" href="{{ route('login.index') }}">Đăng nhập</a>
-        </li>
-        <li class="nav-item" style="border:none;margin-left:16px;">
-            <a class="nav-link" href="{{ route('register.index') }}">Đăng ký</a>
-        </li>
-    </div>
-@endif
+        <div class="nav-item-grid" style="display:flex; margin-left: auto;">
+            <li class="nav-item" style="border:none;">
+                <a class="nav-link active" aria-current="page" href="{{ route('login.index') }}">Đăng nhập</a>
+            </li>
+            <li class="nav-item" style="border:none;margin-left:16px;">
+                <a class="nav-link" href="{{ route('register.index') }}">Đăng ký</a>
+            </li>
+        </div>
+        @endif
 
     </div>
 </nav>
@@ -600,13 +599,14 @@
             width: auto;
         }
     } */
+    .navbar .navbar-menu-wrapper .navbar-nav .nav-item.nav-profile .nav-link .nav-profile-img img {
+        border: 1px solid rgba(0, 0, 0, 0.20) !important;
+    }
 
     /* Đã sửa */
     .navbar .navbar-menu-wrapper .navbar-nav .nav-item .nav-link {
         color: inherit;
         font-size: 0.875rem;
-        margin-left: 1rem;
-        margin-right: 1rem;
         height: 70px;
         display: -webkit-box;
         display: -ms-flexbox;
@@ -657,183 +657,206 @@
     .content-news .btn-date-news a:hover{
         color:#E0793F;
     }*/
-    @media (max-width: 991px) {
+    @media (max-width: 678px) {
         .navbar .navbar-menu-wrapper .navbar-nav .nav-item.dropdown {
             position: static !important;
         }
-        #navbarNavDropdown{
-            display:flex;
-            position:absolute;
+
+        #navbarNavDropdown {
+            display: flex;
+            position: absolute;
             margin-left: 20%;
             padding-right: 0;
             padding-left: 0;
         }
+
         .navbar-collapse {
             display: -webkit-box;
             display: -ms-flexbox;
             display: flex;
             margin-top: 0;
         }
-        .navbar-nav{
-            margin-left: 50px;
+
+        .navbar-nav {
+            margin-left: 50%;
         }
-        .search-field-s{
-        display: none !important;
-    }
+
+        .nav-item {
+            margin-right: 20px;
+        }
+
+        .navbar .navbar-menu-wrapper .navbar-nav .nav-item.dropdown .dropdown-menu.navbar-dropdown {
+            left: 0;
+        }
+
+        .search-field-s {
+            display: none !important;
+        }
     }
 </style>
 <!-- Modal đổi mật khẩu -->
 <!-- Modal -->
 <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="content-dmk" style="margin-left: auto; margin-right: auto;background:#fff;">
-      <div class="modal-header" style="border: none;">
-        <h5 class="modal-title" id="exampleModalLongTitle" style="color: #000; font-size: 20px; font-style: normal; font-weight: 600; line-height: normal;">Cập nhật mật khẩu của bạn</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="border: none; background: none;">
-          <span aria-hidden="true"><img src="{{ asset('viewsCustom/assets/images/clone.svg') }}"></span>
-        </button>
-      </div>
-      <div class="modal-body" style="padding-top: 9px;">
-        <div>
-          <div>
-            Nhập mật khẩu mới
-          </div>
-          <div>
-            <input id="new-password" class="form-control form-control-flush h55 w100" type="password" name="password" placeholder="Mật khẩu" style="flex-shrink: 0; border-radius: 5px; border: 1px solid #C7C6C1; font-family: 'Lato', sans-serif;" />
-            <span id="new-password-err" class="text-danger"></span>
-          </div>
+    <div class="modal-dialog" role="document">
+        <div class="content-dmk" style="margin-left: auto; margin-right: auto;background:#fff;">
+            <div class="modal-header" style="border: none;">
+                <h5 class="modal-title" id="exampleModalLongTitle" style="color: #000; font-size: 20px; font-style: normal; font-weight: 600; line-height: normal;">Cập nhật mật khẩu của bạn</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="border: none; background: none;">
+                    <span aria-hidden="true"><img src="{{ asset('viewsCustom/assets/images/clone.svg') }}"></span>
+                </button>
+            </div>
+            <div class="modal-body" style="padding-top: 9px;">
+                <div>
+                    <div>
+                        Nhập mật khẩu mới
+                    </div>
+                    <div>
+                        <input id="new-password" class="form-control form-control-flush h55 w100" type="password" name="password" placeholder="Mật khẩu" style="flex-shrink: 0; border-radius: 5px; border: 1px solid #C7C6C1; font-family: 'Lato', sans-serif;" />
+                        <span id="new-password-err" class="text-danger"></span>
+                    </div>
+                </div>
+                <div style="padding-top: 24px;">
+                    <div>
+                        Nhập lại mật khẩu mới
+                    </div>
+                    <div>
+                        <input id="re-password" class="form-control form-control-flush h55 w100" type="password" name="re_password" placeholder="Nhập lại mật khẩu" style="flex-shrink: 0; border-radius: 5px; border: 1px solid #C7C6C1; font-family: 'Lato', sans-serif;" />
+                        <span id="re-password-err" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer" style="border: none;">
+                <button type="button" id="btn-resetpass" class="" style="border-radius: 5px; background: #E0793F; width: 90%; margin-left: 5%; margin-right: 5%; border: none; height: 40px;">
+                    Cập nhật
+                </button>
+            </div>
         </div>
-        <div style="padding-top: 24px;">
-          <div>
-            Nhập lại mật khẩu mới
-          </div>
-          <div>
-            <input id="re-password" class="form-control form-control-flush h55 w100" type="password" name="re_password" placeholder="Nhập lại mật khẩu" style="flex-shrink: 0; border-radius: 5px; border: 1px solid #C7C6C1; font-family: 'Lato', sans-serif;" />
-            <span id="re-password-err" class="text-danger"></span>
-          </div>
-        </div>
-      </div>
-      <div class="modal-footer" style="border: none;">
-        <button type="button" id="btn-resetpass" class="" style="border-radius: 5px; background: #E0793F; width: 90%; margin-left: 5%; margin-right: 5%; border: none; height: 40px;">
-        Cập nhật
-        </button>
-      </div>
     </div>
-  </div>
 </div>
 
 <script>
-  //Validate reset password
-  let newPassword = document.querySelector('#new-password');
-  let rePassword = document.querySelector('#re-password');
-  let newPassword_err = document.querySelector('#new-password-err');
-  let rePassword_err = document.querySelector('#re-password-err');
-  let btnResetpass = document.querySelector('#btn-resetpass');
+    //Validate reset password
+    let newPassword = document.querySelector('#new-password');
+    let rePassword = document.querySelector('#re-password');
+    let newPassword_err = document.querySelector('#new-password-err');
+    let rePassword_err = document.querySelector('#re-password-err');
+    let btnResetpass = document.querySelector('#btn-resetpass');
 
-  function checkFieldsValidity() {
-    return newPassword_err.textContent === '' && rePassword_err.textContent === '' && rePassword.value !== '';
-  }
-
-  function toggleUpdateButton() {
-    btnResetpass.disabled = !checkFieldsValidity();
-  }
-
-  newPassword.addEventListener('input', (e) => {
-    let passwordRegex = /^(?=.*[a-zA-Z]).{8,}$/;
-    if (!passwordRegex.test(e.target.value)) {
-      newPassword_err.textContent = 'Mật khẩu tối thiểu phải có 8 kí tự và ít nhất một chữ cái.';
-    } else {
-      newPassword_err.textContent = '';
+    function checkFieldsValidity() {
+        return newPassword_err.textContent === '' && rePassword_err.textContent === '' && rePassword.value !== '';
     }
-    toggleUpdateButton();
-  });
 
-  rePassword.addEventListener('input', (e) => {
-    if (e.target.value === newPassword.value) {
-      rePassword_err.textContent = '';
-    } else if (e.target.value == '') {
-      rePassword_err.textContent = '';
-    } else {
-      rePassword_err.textContent = 'Mật khẩu chưa khớp với mật khẩu ở trên.';
+    function toggleUpdateButton() {
+        btnResetpass.disabled = !checkFieldsValidity();
     }
-    toggleUpdateButton();
-  });
 
-  btnResetpass.addEventListener('click', () => {
-    console.log('Button clicked!');
-    if (checkFieldsValidity()) {
-      // Xử lý các hành động tùy thuộc vào yêu cầu của ứng dụng của bạn
-      // Ví dụ: gửi form bằng cách sử dụng AJAX hoặc thông báo thành công, v.v.
-      // Sau khi xử lý thành công, bạn có thể đóng modal bằng cách gọi hàm
-      // tương ứng để ẩn modal, ví dụ: (giả sử bạn đang sử dụng Bootstrap)
-      $('#exampleModalLong').modal('hide');
-    }
-  });
+    newPassword.addEventListener('input', (e) => {
+        let passwordRegex = /^(?=.*[a-zA-Z]).{8,}$/;
+        if (!passwordRegex.test(e.target.value)) {
+            newPassword_err.textContent = 'Mật khẩu tối thiểu phải có 8 kí tự và ít nhất một chữ cái.';
+        } else {
+            newPassword_err.textContent = '';
+        }
+        toggleUpdateButton();
+    });
+
+    rePassword.addEventListener('input', (e) => {
+        if (e.target.value === newPassword.value) {
+            rePassword_err.textContent = '';
+        } else if (e.target.value == '') {
+            rePassword_err.textContent = '';
+        } else {
+            rePassword_err.textContent = 'Mật khẩu chưa khớp với mật khẩu ở trên.';
+        }
+        toggleUpdateButton();
+    });
+
+    btnResetpass.addEventListener('click', () => {
+        console.log('Button clicked!');
+        if (checkFieldsValidity()) {
+            // Xử lý các hành động tùy thuộc vào yêu cầu của ứng dụng của bạn
+            // Ví dụ: gửi form bằng cách sử dụng AJAX hoặc thông báo thành công, v.v.
+            // Sau khi xử lý thành công, bạn có thể đóng modal bằng cách gọi hàm
+            // tương ứng để ẩn modal, ví dụ: (giả sử bạn đang sử dụng Bootstrap)
+            $('#exampleModalLong').modal('hide');
+        }
+    });
 </script>
 
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <style>
-        .modal-backdrop{
-            display:none;
-        }
-    .content-dmk{
-    position: relative;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    width: 100%;
-    pointer-events: auto;
-    background-color: #FFF;
-    background-clip: padding-box;
-    border: 1px solid #ebedf2;
-    border-radius: 0.3rem;
-    outline: 0;
-}
-    .fs16{
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<style>
+    .modal-backdrop {
+        display: none;
+    }
+
+    .content-dmk {
+        position: relative;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        width: 100%;
+        pointer-events: auto;
+        background-color: #FFF;
+        background-clip: padding-box;
+        border: 1px solid #ebedf2;
+        border-radius: 0.3rem;
+        outline: 0;
+    }
+
+    .fs16 {
         font-size: 16px !important;
     }
-    .fs15{
+
+    .fs15 {
         font-size: 15px;
     }
-    .fs14{
+
+    .fs14 {
         font-size: 14px;
     }
-    .fs13{
+
+    .fs13 {
         font-size: 13px;
     }
-    .fs12{
+
+    .fs12 {
         font-size: 12px;
     }
-    .font-lato{
+
+    .font-lato {
         font-family: "lato", sans-serif !important;
     }
-    @media (max-width: 2400px){
-        .content-dmk{
-        width: 500px !important;
-        
-     }  
+
+    @media (max-width: 2400px) {
+        .content-dmk {
+            width: 500px !important;
+
+        }
     }
-    @media (max-width: 1000px){
-        .content-dmk{
-        left:0%;
-     }
+
+    @media (max-width: 1000px) {
+        .content-dmk {
+            left: 0%;
+        }
     }
-    @media (max-width: 768px){
-        .content-dmk{
-        width: 400px !important;
-     }
+
+    @media (max-width: 768px) {
+        .content-dmk {
+            width: 400px !important;
+        }
     }
-    @media (max-width: 460px){
-.content-dmk{
-        width: 300px !important;
-        left:0%;
-     }
-}
+
+    @media (max-width: 460px) {
+        .content-dmk {
+            width: 300px !important;
+            left: 0%;
+        }
+    }
 </style>
