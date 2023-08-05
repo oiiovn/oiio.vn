@@ -1,33 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Web đặt đơn</title>
-    <!-- plugins:css -->
-    <link rel="stylesheet" href="{{ asset('viewsCustom/assets/vendors/mdi/css/materialdesignicons.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('viewsCustom/assets/vendors/css/vendor.bundle.base.css') }}">
-    <!-- endinject -->
-    <!-- Plugin css for this page -->
-    <!-- End plugin css for this page -->
-    <!-- inject:css -->
-    <!-- endinject -->
-    <!-- Layout styles -->
-    <link rel="stylesheet" href="{{ asset('viewsCustom/assets/css/style.css') }}">
-    <!-- End layout styles -->
-    <link rel="shortcut icon" href="{{ asset('assets/images/logo.png') }}" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap">
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet">
-<head>
-    <x-layout.head />
-</head>
+<title>Web đặt đơn</title>
+<!-- plugins:css -->
+<link rel="stylesheet" href="{{ asset('viewsCustom/assets/vendors/mdi/css/materialdesignicons.min.css') }}">
+<link rel="stylesheet" href="{{ asset('viewsCustom/assets/vendors/css/vendor.bundle.base.css') }}">
+<link rel="stylesheet" href="{{ asset('viewsCustom/assets/css/style.css') }}">
+<link rel="shortcut icon" href="{{ asset('assets/images/logo.png') }}"/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet">
+
 <style>
-     .ads-content{
-        display:flex;
+    .ads-content {
+        display: flex;
     }
-        
+
     /* width */
     ::-webkit-scrollbar {
-        width:5px;
+        width: 5px;
     }
+
     /* Track */
     ::-webkit-scrollbar-track {
         border-radius: 10px;
@@ -44,98 +36,117 @@
     ::-webkit-scrollbar-thumb:hover {
         opacity: 0.8;
     }
+
     /* @media (min-width:1500px) {
         #sidebar-left-child{
             max-width:11.01%;
         }
     } */
-    @media (max-width: 991px){
-        #sidebar-left-child{
+    @media (max-width: 991px) {
+        #sidebar-left-child {
             position: relative !important;
             width: 100% !important;
             margin-bottom: 10px !important;
             height: auto !important;
             overflow-x: hidden;
         }
-        #sidebar-right-child{
-            position:fixed !important ; 
+
+        #sidebar-right-child {
+            position: fixed !important;
             width: 50%;
             overflow-y: scroll !important;
         }
+
         .navbar .navbar-menu-wrapper {
             width: auto;
             padding-left: 15px;
             padding-right: 15px;
-            display:flex;
+            display: flex;
         }
-        .navbar-brand-wrapper{
+
+        .navbar-brand-wrapper {
             margin-left: 10px;
         }
-        .offcanvas-body{
-            margin-left:0 !important;
+
+        .offcanvas-body {
+            margin-left: 0 !important;
             padding-left: 0 !important;
         }
-        .card-list{
+
+        .card-list {
             grid-template-columns: 50% 50% !important;
             padding: 0 !important;
         }
-        .card-list span{
+
+        .card-list span {
             font-size: 20px;
         }
     }
 </style>
+
+<head>
+    <x-layout.head/>
+</head>
+
+
 <body>
-    <header>
-        <x-layout.header />
-    </header>
-    <main>
-        <div class="container pt-3">
-            <div class="row">
-                <div class="col-12 col-md-3 sidebar-left-right d-mobi-none position-relative" id="sidebar-left" style="background: #fff;padding-top:65px;padding-right:2px;">
-                    <div style="position: fixed;overflow-y:scroll;height: 95%;width:16.88%;max-width:243px;" @class([
+
+<header>
+    <x-layout.header/>
+</header>
+
+<main>
+    <div class="container pt-3">
+        <div class="row">
+            <div class="col-12 col-md-3 sidebar-left-right d-mobi-none position-relative" id="sidebar-left"
+                 style="background: #fff;padding-top:65px;padding-right:2px;">
+                <div style="position: fixed;overflow-y:scroll;height: 95%;width:16.88%;max-width:243px;" @class([
                             'd-none' => Route::is('login.index', 'register.index')
                         ]) id="sidebar-left-child">
-                        <x-sidebar_home_left />
-                    </div>
+                    <x-sidebar_home_left/>
                 </div>
-                <div class="col-12 col-md-9 main-sec-content" style="margin-top:70px;" id="content">
+            </div>
+            <div class="col-12 col-md-9 main-sec-content" style="margin-top:70px;" id="content">
 
-                    <div class="row"style="width: 100%;margin-left: 16px;margin-top:11px;">
-                        <div class="col-12 col-md-9 main-content" style="width:71.72%;display:flex; ">
-                            
-                                <div style="width:98.11%;"> @yield('content')</div>
-                                <!-- <div class=" content-ads index-web shadow-sm" style="margin-left:22px;width:200px;height:290px;background:#FFF;border-radius:10px;">
+                <div class="row" style="width: 100%;margin-left: 16px;margin-top:11px;">
+                    <div class="col-12 col-md-9 main-content" style="width:71.72%;display:flex; ">
+
+                        <div style="width:98.11%;"> @yield('content')</div>
+                        <!-- <div class=" content-ads index-web shadow-sm" style="margin-left:22px;width:200px;height:290px;background:#FFF;border-radius:10px;">
                                         <a href="https://shopee.vn/%C3%81o-thun-Unisex-m%C3%A1c-RealLife-cao-su-FKZ-Unisex-ph%C3%B4ng-tr%C6%A1n-nam-n%E1%BB%AF-tay-l%E1%BB%A1-oversize-form-r%E1%BB%99ng-i.183840366.23825993719?sp_atk=af391579-fcac-4eb1-b2ce-358e20fcc785&xptdk=af391579-fcac-4eb1-b2ce-358e20fcc785" style="display:block;">
                                     <div><img src="{{ asset('viewsCustom/assets/images/product-demo.svg') }}" style="width:200px;height:200px;border-bottom: 1px #888888 !important;border-radius:10px 10px 0px 0px" /></div>
                                     <div style="color: #000;font-size: 16px;font-style: normal;font-weight: 400;line-height: normal;width:169px;height:auto;padding-top:6px;margin-left:10px;text-align:left;">Áo thun nam freesize Unisex</div>
                                     <div class="ads-content"  style="display:left !important;">
                                         <div style="border-radius: 3px 0px 0px 3px;border: 1px solid rgba(0, 0, 0, 0.50);border-right:none;width:31px;height:23px;margin-left:10px;color: #000;font-family: Inter;font-size: 12px;font-style: normal;font-weight: 400;line-height: normal;text-align:center;padding:3px;">30%</div>
-                                        <div style="border-radius: 0px 3px 3px 0px;border: 1px solid rgba(0, 0, 0, 0.50);width:56px;height:23px;color: rgba(0, 0, 0, 0.90);font-family: Inter;font-size: 12px;font-style: normal;font-weight: 700;line-height: normal;text-align:center;padding:3px;">AC5F</div>                                     
+                                        <div style="border-radius: 0px 3px 3px 0px;border: 1px solid rgba(0, 0, 0, 0.50);width:56px;height:23px;color: rgba(0, 0, 0, 0.90);font-family: Inter;font-size: 12px;font-style: normal;font-weight: 700;line-height: normal;text-align:center;padding:3px;">AC5F</div>
                                         <div style="color: #FFF;font-size: 13px;font-style: normal;font-weight: 400;line-height: normal;letter-spacing: 1.235px;border-radius: 3px;background: #E0793F;width:90px;height:23px;margin-left:9px;padding:4px;text-align:center;">659.000 đ</div>
                                     </div>
                                 </a>
                                 </div>  -->
-                            
-                               
-                        </div>
-                        <div class="col-12 col-md-3 sidebar-left-right d-mobi-none " id="sidebarRight" style="width:28.28% !important;border-radius: 10px;background: #fff;height: 1000px;">
-                            <div @class([
+
+
+                    </div>
+                    <div class="col-12 col-md-3 sidebar-left-right d-mobi-none " id="sidebarRight"
+                         style="width:28.28% !important;border-radius: 10px;background: #fff;height: 1000px;">
+                        <div @class([
                                     'd-none' => Route::is('login.index', 'register.index'),
                                     'sidebar-right-child' => !Route::is('homepage')
                                 ])>
-                                <x-sidebar_home_right />
-                            </div>
+                            <x-sidebar_home_right/>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </main>
-    <footer class="footer fixed-bottom">
-            @include('components.layout.footer')
-    </footer>
-    <x-layout.script />
-    <x-alert />
+    </div>
+</main>
+
+<footer class="footer fixed-bottom">
+    @include('components.layout.footer')
+</footer>
+
+<x-layout.script/>
+<x-alert/>
 </body>
 
 </html>

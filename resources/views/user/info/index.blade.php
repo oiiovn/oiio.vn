@@ -720,5 +720,5 @@ line-height: normal;
     })
 </script>
 
-<script src="/public/viewsCustom/assets/js/cropper.min.js"></script>
+<script src="/viewsCustom/assets/js/cropper.min.js"></script>
 @endsection
