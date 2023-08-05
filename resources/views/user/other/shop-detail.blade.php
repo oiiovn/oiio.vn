@@ -168,7 +168,7 @@
             <div class="all-header-info-shop" style="">
                 <div class="header-left-pp__img-info-shop">
                     <img class="images-header-info-shop" src="{{ asset('viewsCustom/assets/images/hinh1.svg') }}"
-                        style="border:2px solid #FB6815; border-radius:50%;" />
+                        style="border: 1px solid rgba(0, 0, 0, 0.20);border-radius:50%;width:150px;height:150px;" />
                 </div>
                 <div class="header-mid-text-info-shop">
                     <div style="display:flex;padding-bottom:12px;">
@@ -207,11 +207,13 @@
                         <img style="padding-left:16px;" src="{{ asset('viewsCustom/assets/images/mail.svg') }}"
                             style="width:16px;height:14px;" />
                     </div>
+
                     <div class="change-info-shop" style="display:flex;padding-bottom:20px;justify-content: flex-end;">
                         <span>Gò Vấp, Hồ Chí Minh</span>
                         <img style="padding-left:16px;" src="{{ asset('viewsCustom/assets/images/diachi.svg') }}"
                             style="width:13px;height:18px;" />
                     </div>
+
                 </div>
                 <div class="info-2">
                     <div class="change-info-shop" style="display:flex;padding-bottom:20px;justify-content: flex-end;">
@@ -234,28 +236,30 @@
             <div class="content-all" style="display:flex;width:73.3%;background:#fff;border-radius: 10px;">
                 <!-- Webside -->
                 <div class=" job-note text-muted rounded index-web" style="width:100%;">
-                    {{--<p class="text-danger fw-bold">{{ __('Lưu ý từ admin:') }}</p>--}}
-                    {{--{!! $job->note !!}--}}
                     <div class="content__body-header" style="display:flex;padding-left:25px;padding-top:15px;">
                         <div class="header-left-pp" style="display:flex;">
-                            <div class="header-left-pp__img">
-                                <img src="{{ asset('viewsCustom/assets/images/hinh1.png') }}" width:45px height:45px />
-                            </div>
-
-                            <div class="header-left-pp__text" style="display:bock;padding-left:9px;margin-top:5px;">
-                                <div style="display:flex;">
-                                    <div class="header-left-pp__text__top fs16"
-                                        style="color: #000;font-style: normal;font-weight: 500;line-height: normal;max-width:200px;">
-                                        <b>Korina</b>
-                                    </div>
-                                    <img style="padding-left:4px;"
-                                        src="{{ asset('viewsCustom/assets/images/tick.svg') }}" width:8.7px
-                                        height:8.7px />
+                            <a href="https://www.facebook.com/buivushopee" style="display:flex;">
+                                <div class="header-left-pp__img">
+                                    <img src="{{ asset('viewsCustom/assets/images/hinh1.png') }}"
+                                        style="border: 1px solid rgba(0, 0, 0, 0.20);border-radius:50%; width:45px; height:45px;" />
                                 </div>
-                                <div class="header-left-pp__text__bottom fs13"
-                                    style="color: #A6A4A4;font-style: normal;font-weight: 400;line-height: normal;">22
-                                    giờ trước</div>
-                            </div>
+
+                                <div class="header-left-pp__text" style="display:bock;padding-left:9px;margin-top:5px;">
+                                    <div style="display:flex;">
+                                        <div class="header-left-pp__text__top fs16"
+                                            style="color: #000;font-style: normal;font-weight: 500;line-height: normal;max-width:200px;">
+                                            <b>Korina</b>
+                                        </div>
+                                        <img style="padding-left:4px;"
+                                            src="{{ asset('viewsCustom/assets/images/tick.svg') }}" width:8.7px
+                                            height:8.7px />
+                                    </div>
+                                    <div class="header-left-pp__text__bottom fs13"
+                                        style="color: #A6A4A4;font-style: normal;font-weight: 400;line-height: normal;">
+                                        22
+                                        giờ trước</div>
+                                </div>
+                            </a>
                         </div>
                         <div class="header-right-pp" style="display:flex;padding-top:5px;">
                             <div><img src="{{ asset('viewsCustom/assets/images/Vector.svg') }}" width:15px height:15px
@@ -266,6 +270,14 @@
                             <div class="fs15"
                                 style="color: #D0011B;font-style: normal;font-weight: 400;line-height: normal;width: 140px;padding-left:3px;">
                                 (25,5k đánh giá)</div>
+                            <div class="see-more-info-shop" style="display:flex;" data-toggle="modal"
+                                data-target="#exampleModalCenter">
+                                <h3 class="fs13"
+                                    style="color: #A6A4A4;font-style: normal;font-weight: 400;line-height: normal;width:60px;">
+                                    Xem
+                                    thêm</h3><img src="{{ asset('viewsCustom/assets/images/popout.svg') }}"
+                                    style="padding-left:5px;width:20px;height:20px;margin-top:-2px;" />
+                            </div>
                         </div>
 
                     </div>
@@ -280,7 +292,7 @@
                         <div class="content__body-content__act fs13"
                             style="color: #303030;font-style: normal;font-weight: 500;line-height: normal;text-align: right;">
                             <div class="items"
-                                style="width: 94px;height: 26px;padding:5px;text-align:center;background: #FB6815;color: #FFF;font-size: 12px;font-weight: 700;margin-left:35px;border:none;border-radius: 5px;">
+                                style="width: 94px;height: 26px;padding:5px;text-align:center;background: #FB6815;color: #FFF;font-size: 12px;font-weight: 700;margin-left:30px;border:none;border-radius: 5px;">
                                 Shopee</div>
                             <div class="items" style="width: 128px;height: 26px;padding:5px;">Hà Nội</div>
                             <div class="items" style="width: 128px;height: 26px;padding:5px;">Không nhận hàng</div>
@@ -288,12 +300,12 @@
                         </div>
                         <div class="content__body-content__btn" style="text-align: right; margin-left:13.14%;">
                             <div class="wage" style="width:193px;">
-                                <p class="font-lato fs16"
+                                <p class=" fs16"
                                     style="color: #269300;font-style: normal;font-weight: 600;line-height: normal;border-radius: 5px;border: 1px solid #269300;height: 44px;text-align:center;padding:12px;align-item:center;">
                                     Tiền công: 14. 500 đ</p>
                             </div>
                             <div class="btn-receive-application" style="width:105px;">
-                                <a href="#nhan-don"><button type="button" class="btn fs14 font-lato" data-toggle="modal"
+                                <a href="#nhan-don"><button type="button" class="btn fs14" data-toggle="modal"
                                         data-target="#exampleModalCenter"
                                         style="border-radius: 5px;border-radius: 5px;background: #F5AE5D;color: #FFF;font-style: normal;font-weight: 700;line-height: normal;width:105px;height:43px;padding:12px;">Nhận
                                         Đơn</button></a>
@@ -310,27 +322,31 @@
                 <div class="content__body-header"
                     style="display:flex;padding-left:10px;padding-top:10px;padding-right:10px;">
                     <div class="header-left-pp" style="display:flex;">
-                        <div class="header-left-pp__img">
-                            <img src="{{ asset('viewsCustom/assets/images/hinh1.png') }}" width:45px height:45px />
-                        </div>
-                        <div class="header-left-pp__text" style="display:bock;padding-left:9px;margin-top:5px;">
-                            <div style="display:flex;">
-                                <div class="header-left-pp__text__top fs16"
-                                    style="color: #000;font-style: normal;font-weight: 500;line-height: normal;max-width:200px;">
-                                    <b>Korina</b>
+                        <a href="https://www.facebook.com/buivushopee" style="display:flex;">
+                            <div class="header-left-pp__img">
+                                <img src="{{ asset('viewsCustom/assets/images/hinh1.png') }}"
+                                    style="border: 1px solid rgba(0, 0, 0, 0.20);border-radius:50%; width:45px; height:45px;" />
+                            </div>
+                            <div class="header-left-pp__text" style="display:bock;padding-left:9px;margin-top:5px;">
+                                <div style="display:flex;">
+                                    <div class="header-left-pp__text__top fs16"
+                                        style="color: #000;font-style: normal;font-weight: 500;line-height: normal;max-width:200px;">
+                                        <b>Korina</b>
+                                    </div>
+                                    <img style="padding-left:4px;"
+                                        src="{{ asset('viewsCustom/assets/images/tick.svg') }}" width:8.7px
+                                        height:8.7px />
                                 </div>
-                                <img style="padding-left:4px;" src="{{ asset('viewsCustom/assets/images/tick.svg') }}"
-                                    width:8.7px height:8.7px />
+                                <div style="display:flex;">
+                                    <div class="header-left-pp__text__bottom fs12"
+                                        style="color: #A6A4A4;font-style: normal;font-weight: 400;line-height: normal;width:100px;">
+                                        22 giờ trước</div>
+                                </div>
                             </div>
-                            <div style="display:flex;">
-                                <div class="header-left-pp__text__bottom fs12"
-                                    style="color: #A6A4A4;font-style: normal;font-weight: 400;line-height: normal;width:100px;">
-                                    22 giờ trước</div>
-                            </div>
-                        </div>
+                        </a>
                         <div class="header-right-pp" style="display:flex;padding-top:10px;">
-                            <div><img src="{{ asset('viewsCustom/assets/images/Vector.svg') }}" width:15px height:15px
-                                    style="margin-bottom:10px;" /></div>
+                            <div><img src="{{ asset('viewsCustom/assets/images/Vector.svg') }}"
+                                    style="margin-top:-15px;width:15px; height:15px;" /></div>
                             <div class="fs12"
                                 style="color: #D0011B;font-style: normal;font-weight: 400;line-height: normal;padding-left:8px;">
                                 4.5</div>
@@ -344,7 +360,7 @@
                     </div>
                 </div>
                 <div class="mobile-wage" style="padding-top:12px;">
-                    <p class="fs13 font-lato"
+                    <p class="fs13"
                         style="color: #269300;font-style: normal;font-weight: 800;line-height: normal;border-radius: 5px;border: 1px solid #269300;height: 40px;text-align:center;padding:12px;align-item:center;width:168px;">
                         Tiền công: 14. 500 đ</p>
                 </div>
@@ -366,7 +382,7 @@
                     </div>
                 </div>
                 <div class=btn-receive-application-mobile>
-                    <button type="button" class="btn btn-primary fs14 font-lato" data-toggle="modal"
+                    <button type="button" class="btn btn-primary fs14" data-toggle="modal"
                         data-target="#exampleModalMobile"
                         style="border-radius: 5px;border: 1.5px solid #E0793F;background: #E0793F;color: #FFF;font-style: normal;font-weight: 700;line-height: normal;padding:10px 18px;margin-bottom: 18px;">Nhận
                         đơn</button>
@@ -375,37 +391,39 @@
             <!-- Modals mobile -->
             <div class="modal fade" id="exampleModalMobile" tabindex="-1" role="dialog"
                 aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                <div class="modal-dialog " role="document" style="width:100%;">
+                <div class="modal-dialog " role="document" style="width:100%;margin-left:5px;">
                     <div class="modal-content" style="">
                         <div class="modal-header" style="">
                             <div class="items" style="display:flex; padding-top:5px;padding-left:5px;">
                                 <div class="content__body-header" style="display:flex;padding-left:10px;">
                                     <div class="header-left-pp" style="display:flex;">
-                                        <div class="header-left-pp__img">
-                                            <img src="{{ asset('viewsCustom/assets/images/hinh1.png') }}" width:45px
-                                                height:45px />
-                                        </div>
-                                        <div class="header-left-pp__text"
-                                            style="display:bock;padding-left:9px;margin-top:5px;">
-                                            <div style="display:flex;">
-                                                <div class="header-left-pp__text__top fs16"
-                                                    style="color: #000;font-style: normal;font-weight: 500;line-height: normal;max-width:200px;">
-                                                    <b>Korina</b>
+                                        <a href="https://www.facebook.com/buivushopee" style="display:flex;">
+                                            <div class="header-left-pp__img">
+                                                <img src="{{ asset('viewsCustom/assets/images/hinh1.png') }}"
+                                                    style="border: 1px solid rgba(0, 0, 0, 0.20);border-radius:50%; width:45px; height:45px;" />
+                                            </div>
+                                            <div class="header-left-pp__text"
+                                                style="display:bock;padding-left:9px;margin-top:5px;">
+                                                <div style="display:flex;">
+                                                    <div class="header-left-pp__text__top fs16"
+                                                        style="color: #000;font-style: normal;font-weight: 500;line-height: normal;max-width:200px;">
+                                                        <b>Korina</b>
+                                                    </div>
+                                                    <img style="padding-left:4px;"
+                                                        src="{{ asset('viewsCustom/assets/images/tick.svg') }}"
+                                                        width:8.7px height:8.7px />
                                                 </div>
-                                                <img style="padding-left:4px;"
-                                                    src="{{ asset('viewsCustom/assets/images/tick.svg') }}" width:8.7px
-                                                    height:8.7px />
+                                                <div style="display:flex;">
+                                                    <div class="header-left-pp__text__bottom fs12"
+                                                        style="color: #A6A4A4;font-style: normal;font-weight: 400;line-height: normal;width:100px;">
+                                                        22 giờ trước</div>
+                                                </div>
                                             </div>
-                                            <div style="display:flex;">
-                                                <div class="header-left-pp__text__bottom fs12"
-                                                    style="color: #A6A4A4;font-style: normal;font-weight: 400;line-height: normal;width:100px;">
-                                                    22 giờ trước</div>
-                                            </div>
-                                        </div>
+                                        </a>
                                         <div class="header-modal-right-info-shop"
                                             style="display:flex;padding-top:10px;">
                                             <div><img src="{{ asset('viewsCustom/assets/images/Vector.svg') }}"
-                                                    width:15px height:15px style="margin-bottom:10px;" /></div>
+                                                    width:15px height:15px style="margin-top:-15px;" /></div>
                                             <div class="fs12"
                                                 style="color: #D0011B;font-style: normal;font-weight: 400;line-height: normal;padding-left:8px;">
                                                 4.5</div>
@@ -427,7 +445,7 @@
                             <div class="index-mobile" style="width:100%;background: #fff;">
 
                                 <div class="mobile-wage" style="padding-top:12px;">
-                                    <p class="fs13 font-lato"
+                                    <p class="fs13"
                                         style="color: #269300;font-style: normal;font-weight: 800;line-height: normal;border-radius: 5px;border: 1px solid #269300;height: 40px;text-align:center;padding:12px;align-item:center;width:168px;">
                                         Tiền công: 14. 500 đ</p>
                                 </div>
@@ -458,16 +476,16 @@
                                         <div class="items">Shop thanh toán</div>
                                         <div class="items">Shop gửi đánh giá</div>
                                         <div class="items"
-                                            style="border-radius: 5px;background: #FBC250;width:105px;padding: 5px 10px;margin-top:-10px;">
+                                            style="border-radius: 5px;background: #FBC250;width:109px;padding: 5px 10px;margin-top:-10px;">
                                             Tài khoàn vàng</div>
                                         <div class="items">Áp mã freeship</div>
                                         <div class="items">Hà Nội</div>
                                     </div>
                                 </div>
                                 <div class=btn-receive-application-mobile style="display:flex;">
-                                    <button type="button" class="btn btn-secondary fs14 font-lato" data-dismiss="modal"
+                                    <button type="button" class="btn btn-secondary fs14" data-dismiss="modal"
                                         style="border-radius: 5px;border: 1.5px solid #A6A4A4;background:none;color: #A6A4A4;font-style: normal;font-weight: 700;line-height: normal;height: 30px;margin-left: -30px;">Hủy</button>
-                                    <button type="button" class="btn btn-primary fs14 font-lato" data-toggle="modal"
+                                    <button type="button" class="btn btn-primary fs14" data-toggle="modal"
                                         data-target="#exampleModalMobilell"
                                         style="border-radius: 5px;border: 1.5px solid #E0793F;background: #E0793F;color: #FFF;font-style: normal;font-weight: 700;line-height: normal;padding:5px 18px;margin-bottom: 18px;margin-left: 15px;height: 30px;">Nhận
                                         đơn</button>
@@ -480,7 +498,7 @@
             <!-- modal lưu ý -->
             <div class="modal fade" id="exampleModalMobilell" tabindex="-1" role="dialog"
                 aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                <div class="modal-dialog " role="document" style="width:100%;">
+                <div class="modal-dialog " role="document" style="width:100%;margin-left:5px;">
                     <div class="modal-content" style="padding:5%;">
                         <div class="modal-header" style="padding:0px 0px 0px 30px">
                             <div class="items" style="display:flex; padding-top:5px;padding-left:5px;">
@@ -537,25 +555,28 @@
                 <div class="modal-dialog " role="document" style="width:100%;">
                     <div class="modal-content" style=" width:54rem;">
                         <div class="modal-header" style="">
-                            <div class="header-left-pp" style="display:flex;">
-                                <div class="header-left-pp__img">
-                                    <img src="{{ asset('viewsCustom/assets/images/hinh1.png') }}" width:45px
-                                        height:45px />
-                                </div>
-                                <div class="header-left-pp__text" style="display:bock;margin-top:5px;padding-left:9px;">
-                                    <div style="display:flex;">
-                                        <div class="header-left-pp__text__top fs14"
-                                            style="color: #000;font-style: normal;font-weight: 500;line-height: normal;">
-                                            Korina</div>
-                                        <img style="padding-left:2.8px;"
-                                            src="{{ asset('viewsCustom/assets/images/tick.svg') }}" width:8.7px
-                                            height:8.7px />
+                            <a href="https://www.facebook.com/buivushopee">
+                                <div class="header-left-pp" style="display:flex;">
+                                    <div class="header-left-pp__img">
+                                        <img src="{{ asset('viewsCustom/assets/images/hinh1.png') }}"
+                                            style="border: 1px solid rgba(0, 0, 0, 0.20);border-radius:50%; width:45px; height:45px;" />
                                     </div>
-                                    <div class="header-left-pp__text__bottom fs13"
-                                        style="color: #A6A4A4;font-style: normal;font-weight: 400;line-height: normal;">
-                                        22 giờ trước</div>
+                                    <div class="header-left-pp__text"
+                                        style="display:bock;margin-top:5px;padding-left:9px;">
+                                        <div style="display:flex;">
+                                            <div class="header-left-pp__text__top fs14"
+                                                style="color: #000;font-style: normal;font-weight: 500;line-height: normal;">
+                                                Korina</div>
+                                            <img style="padding-left:2.8px;"
+                                                src="{{ asset('viewsCustom/assets/images/tick.svg') }}" width:8.7px
+                                                height:8.7px />
+                                        </div>
+                                        <div class="header-left-pp__text__bottom fs12"
+                                            style="color: #A6A4A4;font-style: normal;font-weight: 400;line-height: normal;">
+                                            22 giờ trước</div>
+                                    </div>
                                 </div>
-                            </div>
+                            </a>
                             <div class="header-right-pp" style="display:flex;padding-right:40%;">
                                 <div><img src="{{ asset('viewsCustom/assets/images/Vector.svg') }}" width:15px
                                         height:15px style="margin-bottom:7px;" /></div>
@@ -608,7 +629,7 @@
                                 <div class="items" style="display:flex; padding-top: 21px;">
                                     <img src="{{ asset('viewsCustom/assets/images/warning.svg') }}" width:18.3px
                                         height:15.8px style="margin-bottom:20px;" />
-                                    <p class="fs16 font-lato"
+                                    <p class="fs16 "
                                         style="color: #EB3131;font-style: normal;font-weight: 600;line-height: normal;padding-left:10px;">
                                         Lưu ý đơn hàng</p>
                                 </div>
@@ -626,10 +647,10 @@
 
                                 </div>
                                 <div class="items" style="padding-top:50px;display:flex;">
-                                    <a href="#"><button type="button" class="btn btn-secondary fs14 font-lato"
+                                    <a href="#"><button type="button" class="btn btn-secondary fs14"
                                             data-dismiss="modal"
                                             style="border-radius: 5px;border: 1.5px solid #A6A4A4;background:none;color: #A6A4A4;font-style: normal;font-weight: 700;line-height: normal;">Hủy</button></a>
-                                    <button type="button" class="btn btn-primary fs14 font-lato"
+                                    <button type="button" class="btn btn-primary fs14"
                                         style="margin-left:30px;border-radius: 5px;border: 1.5px solid #E0793F;background: #E0793F;color: #FFF;font-style: normal;font-weight: 700;line-height: normal;padding:10px 25px;">Nhận
                                         đơn</button>
                                 </div>
@@ -643,12 +664,13 @@
                 <div class="modal fade" id="exampleModalReviewsContent" tabindex="-1" role="dialog"
                     aria-labelledby="exampleModalCenterTitle" aria-hidden="true" style="">
                     <div class="modal-dialog modal-dialog-centered" role="document">
-                        <div class="modal-content">
+                        <div class="modal-content"
+                            style="margin-left: 15px;width: 100% !important; margin-right: 10px;">
                             <div class="modal-header">
                                 <div
                                     style="width:100%;height:55px;display: flex;align-items: center;padding-left:40px;">
                                     <div
-                                        style="width:59.14%;color: #E0793F;font-family: 'Lato' sans-serif;font-size: 18px;font-style: normal;font-weight: 500;line-height: normal;border-bottom:1px solid rgba(0, 0, 0, 0.11);padding-bottom:10px;">
+                                        style="color: #E0793F;font-size: 18px;font-style: normal;font-weight: 500;line-height: normal;border-bottom:1px solid rgba(0, 0, 0, 0.11);padding-bottom:10px;">
                                         Đánh giá cộng đồng</div>
                                 </div>
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"
@@ -665,23 +687,23 @@
                                                     style="justify-content: space-between;display: flex;align-items: center;">
                                                     <div style="display: inline-flex;align-items: center;gap: 10px;">
                                                         <div>
-                                                            <img width="45px" height="45px"
+                                                            <img style="border: 1px solid rgba(0, 0, 0, 0.20);border-radius:50%; width:45px; height:45px;"
                                                                 src="{{ asset('viewsCustom/assets/images/faces-clipart/pic-1.png') }}"
                                                                 alt="">
                                                         </div>
                                                         <div style="display: block; width: 59.59%;">
                                                             <span
-                                                                style="color: #000;font-family: 'Lato' sans-serif;font-size: 14px;font-style: normal;font-weight: 600;line-height: normal;">Trần
+                                                                style="color: #000;font-size: 14px;font-style: normal;font-weight: 600;line-height: normal;">Trần
                                                                 Tuấn Anh</span>
                                                             <span
-                                                                style="color: rgba(166, 164, 164, 0.70);font-family: 'Lato' sans-serif;font-size: 14px;font-style: normal;font-weight: 600;line-height: normal;">2023/06/14
+                                                                style="color: rgba(166, 164, 164, 0.70);font-size: 14px;font-style: normal;font-weight: 600;line-height: normal;">2023/06/14
                                                                 - 19:50</span>
                                                         </div>
                                                     </div>
                                                     <div
                                                         style="display: inline-flex;align-items: flex-start;gap: 5px;width: 12.33%;margin-left:auto;">
                                                         <span
-                                                            style="color: #FBC250;font-family:' Lato' sans-serif;font-size: 18px;font-style: normal;font-weight: 700;line-height: normal;">5</span>
+                                                            style="color: #FBC250;font-size: 18px;font-style: normal;font-weight: 700;line-height: normal;">5</span>
                                                         <img src="{{ asset('viewsCustom/assets/images/star.svg') }}"
                                                             alt="">
                                                     </div>
@@ -700,23 +722,23 @@
                                                     style="justify-content: space-between;display: flex;align-items: center;">
                                                     <div style="display: inline-flex;align-items: center;gap: 10px;">
                                                         <div>
-                                                            <img width="45px" height="45px"
+                                                            <img style="border: 1px solid rgba(0, 0, 0, 0.20);border-radius:50%; width:45px; height:45px;"
                                                                 src="{{ asset('viewsCustom/assets/images/faces-clipart/pic-1.png') }}"
                                                                 alt="">
                                                         </div>
                                                         <div style="display: block; width: 59.59%;">
                                                             <span
-                                                                style="color: #000;font-family: 'Lato' sans-serif;font-size: 14px;font-style: normal;font-weight: 600;line-height: normal;">Trần
+                                                                style="color: #000;font-size: 14px;font-style: normal;font-weight: 600;line-height: normal;">Trần
                                                                 Tuấn Anh</span>
                                                             <span
-                                                                style="color: rgba(166, 164, 164, 0.70);font-family: 'Lato' sans-serif;font-size: 14px;font-style: normal;font-weight: 600;line-height: normal;">2023/06/14
+                                                                style="color: rgba(166, 164, 164, 0.70)font-size: 14px;font-style: normal;font-weight: 600;line-height: normal;">2023/06/14
                                                                 - 19:50</span>
                                                         </div>
                                                     </div>
                                                     <div
                                                         style="display: inline-flex;align-items: flex-start;gap: 5px;width: 12.33%;margin-left:auto;">
                                                         <span
-                                                            style="color: #FBC250;font-family:' Lato' sans-serif;font-size: 18px;font-style: normal;font-weight: 700;line-height: normal;">5</span>
+                                                            style="color: #FBC250;font-size: 18px;font-style: normal;font-weight: 700;line-height: normal;">5</span>
                                                         <img src="{{ asset('viewsCustom/assets/images/star.svg') }}"
                                                             alt="">
                                                     </div>
@@ -735,23 +757,23 @@
                                                     style="justify-content: space-between;display: flex;align-items: center;">
                                                     <div style="display: inline-flex;align-items: center;gap: 10px;">
                                                         <div>
-                                                            <img width="45px" height="45px"
+                                                            <img style="border: 1px solid rgba(0, 0, 0, 0.20);border-radius:50%; width:45px; height:45px;"
                                                                 src="{{ asset('viewsCustom/assets/images/faces-clipart/pic-1.png') }}"
                                                                 alt="">
                                                         </div>
                                                         <div style="display: block; width: 59.59%;">
                                                             <span
-                                                                style="color: #000;font-family: 'Lato' sans-serif;font-size: 14px;font-style: normal;font-weight: 600;line-height: normal;">Trần
+                                                                style="color: #000;font-size: 14px;font-style: normal;font-weight: 600;line-height: normal;">Trần
                                                                 Tuấn Anh</span>
                                                             <span
-                                                                style="color: rgba(166, 164, 164, 0.70);font-family: 'Lato' sans-serif;font-size: 14px;font-style: normal;font-weight: 600;line-height: normal;">2023/06/14
+                                                                style="color: rgba(166, 164, 164, 0.70);font-size: 14px;font-style: normal;font-weight: 600;line-height: normal;">2023/06/14
                                                                 - 19:50</span>
                                                         </div>
                                                     </div>
                                                     <div
                                                         style="display: inline-flex;align-items: flex-start;gap: 5px;width: 12.33%;margin-left:auto;">
                                                         <span
-                                                            style="color: #FBC250;font-family:' Lato' sans-serif;font-size: 18px;font-style: normal;font-weight: 700;line-height: normal;">5</span>
+                                                            style="color: #FBC250;font-size: 18px;font-style: normal;font-weight: 700;line-height: normal;">5</span>
                                                         <img src="{{ asset('viewsCustom/assets/images/star.svg') }}"
                                                             alt="">
                                                     </div>
@@ -770,23 +792,23 @@
                                                     style="justify-content: space-between;display: flex;align-items: center;">
                                                     <div style="display: inline-flex;align-items: center;gap: 10px;">
                                                         <div>
-                                                            <img width="45px" height="45px"
+                                                            <img style="border: 1px solid rgba(0, 0, 0, 0.20);border-radius:50%; width:45px; height:45px;"
                                                                 src="{{ asset('viewsCustom/assets/images/faces-clipart/pic-1.png') }}"
                                                                 alt="">
                                                         </div>
                                                         <div style="display: block; width: 59.59%;">
                                                             <span
-                                                                style="color: #000;font-family: 'Lato' sans-serif;font-size: 14px;font-style: normal;font-weight: 600;line-height: normal;">Trần
+                                                                style="color: #000;font-size: 14px;font-style: normal;font-weight: 600;line-height: normal;">Trần
                                                                 Tuấn Anh</span>
                                                             <span
-                                                                style="color: rgba(166, 164, 164, 0.70);font-family: 'Lato' sans-serif;font-size: 14px;font-style: normal;font-weight: 600;line-height: normal;">2023/06/14
+                                                                style="color: rgba(166, 164, 164, 0.70);font-size: 14px;font-style: normal;font-weight: 600;line-height: normal;">2023/06/14
                                                                 - 19:50</span>
                                                         </div>
                                                     </div>
                                                     <div
                                                         style="display: inline-flex;align-items: flex-start;gap: 5px;width: 12.33%;margin-left:auto;">
                                                         <span
-                                                            style="color: #FBC250;font-family:' Lato' sans-serif;font-size: 18px;font-style: normal;font-weight: 700;line-height: normal;">5</span>
+                                                            style="color: #FBC250;font-size: 18px;font-style: normal;font-weight: 700;line-height: normal;">5</span>
                                                         <img src="{{ asset('viewsCustom/assets/images/star.svg') }}"
                                                             alt="">
                                                     </div>
@@ -842,7 +864,7 @@
     <div class="all-reviews-shop reviews" style="background: #fff;border-radius: 10px;padding-bottom: 10px">
         <div style="width:100%;height:55px;display: flex;align-items: center;padding-left:40px;">
             <div
-                style="width:59.14%;color: #E0793F;font-family: 'Lato' sans-serif;font-size: 18px;font-style: normal;font-weight: 500;line-height: normal;border-bottom:1px solid rgba(0, 0, 0, 0.11);padding-bottom:10px;">
+                style="width:59.14%;color: #E0793F;font-size: 18px;font-style: normal;font-weight: 500;line-height: normal;border-bottom:1px solid rgba(0, 0, 0, 0.11);padding-bottom:10px;">
                 Đánh giá cộng đồng</div>
         </div>
         <div style="height: 100%;">
@@ -851,22 +873,22 @@
                     <div style="justify-content: space-between;display: flex;align-items: center;">
                         <div style="display: inline-flex;align-items: center;gap: 10px;">
                             <div>
-                                <img width="45px" height="45px"
+                                <img style="border: 1px solid rgba(0, 0, 0, 0.20);border-radius:50%; width:45px; height:45px;"
                                     src="{{ asset('viewsCustom/assets/images/faces-clipart/pic-1.png') }}" alt="">
                             </div>
                             <div style="display: block; width: 59.59%;">
                                 <span
-                                    style="color: #000;font-family: 'Lato' sans-serif;font-size: 14px;font-style: normal;font-weight: 600;line-height: normal;">Trần
+                                    style="color: #000;font-size: 14px;font-style: normal;font-weight: 600;line-height: normal;">Trần
                                     Tuấn Anh</span>
                                 <span
-                                    style="color: rgba(166, 164, 164, 0.70);font-family: 'Lato' sans-serif;font-size: 14px;font-style: normal;font-weight: 600;line-height: normal;">2023/06/14
+                                    style="color: rgba(166, 164, 164, 0.70);font-size: 14px;font-style: normal;font-weight: 600;line-height: normal;">2023/06/14
                                     - 19:50</span>
                             </div>
                         </div>
                         <div
                             style="display: inline-flex;align-items: flex-start;gap: 5px;width: 12.33%;margin-left:auto;">
                             <span
-                                style="color: #FBC250;font-family:' Lato' sans-serif;font-size: 18px;font-style: normal;font-weight: 700;line-height: normal;">5</span>
+                                style="color: #FBC250;font-size: 18px;font-style: normal;font-weight: 700;line-height: normal;">5</span>
                             <img src="{{ asset('viewsCustom/assets/images/star.svg') }}" alt="">
                         </div>
                     </div>
@@ -882,22 +904,22 @@
                     <div style="justify-content: space-between;display: flex;align-items: center;">
                         <div style="display: inline-flex;align-items: center;gap: 10px;">
                             <div>
-                                <img width="45px" height="45px"
+                                <img style="border: 1px solid rgba(0, 0, 0, 0.20);border-radius:50%; width:45px; height:45px;"
                                     src="{{ asset('viewsCustom/assets/images/faces-clipart/pic-1.png') }}" alt="">
                             </div>
                             <div style="display: block; width: 59.59%;">
                                 <span
-                                    style="color: #000;font-family: 'Lato' sans-serif;font-size: 14px;font-style: normal;font-weight: 600;line-height: normal;">Trần
+                                    style="color: #000;font-size: 14px;font-style: normal;font-weight: 600;line-height: normal;">Trần
                                     Tuấn Anh</span>
                                 <span
-                                    style="color: rgba(166, 164, 164, 0.70);font-family: 'Lato' sans-serif;font-size: 14px;font-style: normal;font-weight: 600;line-height: normal;">2023/06/14
+                                    style="color: rgba(166, 164, 164, 0.70);font-size: 14px;font-style: normal;font-weight: 600;line-height: normal;">2023/06/14
                                     - 19:50</span>
                             </div>
                         </div>
                         <div
                             style="display: inline-flex;align-items: flex-start;gap: 5px;width: 12.33%;margin-left:auto;">
                             <span
-                                style="color: #FBC250;font-family:' Lato' sans-serif;font-size: 18px;font-style: normal;font-weight: 700;line-height: normal;">5</span>
+                                style="color: #FBC250;font-size: 18px;font-style: normal;font-weight: 700;line-height: normal;">5</span>
                             <img src="{{ asset('viewsCustom/assets/images/star.svg') }}" alt="">
                         </div>
                     </div>
@@ -913,22 +935,22 @@
                     <div style="justify-content: space-between;display: flex;align-items: center;">
                         <div style="display: inline-flex;align-items: center;gap: 10px;">
                             <div>
-                                <img width="45px" height="45px"
+                                <img style="border: 1px solid rgba(0, 0, 0, 0.20);border-radius:50%; width:45px; height:45px;"
                                     src="{{ asset('viewsCustom/assets/images/faces-clipart/pic-1.png') }}" alt="">
                             </div>
                             <div style="display: block; width: 59.59%;">
                                 <span
-                                    style="color: #000;font-family: 'Lato' sans-serif;font-size: 14px;font-style: normal;font-weight: 600;line-height: normal;">Trần
+                                    style="color: #000;font-size: 14px;font-style: normal;font-weight: 600;line-height: normal;">Trần
                                     Tuấn Anh</span>
                                 <span
-                                    style="color: rgba(166, 164, 164, 0.70);font-family: 'Lato' sans-serif;font-size: 14px;font-style: normal;font-weight: 600;line-height: normal;">2023/06/14
+                                    style="color: rgba(166, 164, 164, 0.70);font-size: 14px;font-style: normal;font-weight: 600;line-height: normal;">2023/06/14
                                     - 19:50</span>
                             </div>
                         </div>
                         <div
                             style="display: inline-flex;align-items: flex-start;gap: 5px;width: 12.33%;margin-left:auto;">
                             <span
-                                style="color: #FBC250;font-family:' Lato' sans-serif;font-size: 18px;font-style: normal;font-weight: 700;line-height: normal;">5</span>
+                                style="color: #FBC250;font-size: 18px;font-style: normal;font-weight: 700;line-height: normal;">5</span>
                             <img src="{{ asset('viewsCustom/assets/images/star.svg') }}" alt="">
                         </div>
                     </div>
@@ -944,22 +966,22 @@
                     <div style="justify-content: space-between;display: flex;align-items: center;">
                         <div style="display: inline-flex;align-items: center;gap: 10px;">
                             <div>
-                                <img width="45px" height="45px"
+                                <img style="border: 1px solid rgba(0, 0, 0, 0.20);border-radius:50%; width:45px; height:45px;"
                                     src="{{ asset('viewsCustom/assets/images/faces-clipart/pic-1.png') }}" alt="">
                             </div>
                             <div style="display: block; width: 59.59%;">
                                 <span
-                                    style="color: #000;font-family: 'Lato' sans-serif;font-size: 14px;font-style: normal;font-weight: 600;line-height: normal;">Trần
+                                    style="color: #000;font-size: 14px;font-style: normal;font-weight: 600;line-height: normal;">Trần
                                     Tuấn Anh</span>
                                 <span
-                                    style="color: rgba(166, 164, 164, 0.70);font-family: 'Lato' sans-serif;font-size: 14px;font-style: normal;font-weight: 600;line-height: normal;">2023/06/14
+                                    style="color: rgba(166, 164, 164, 0.70);font-size: 14px;font-style: normal;font-weight: 600;line-height: normal;">2023/06/14
                                     - 19:50</span>
                             </div>
                         </div>
                         <div
                             style="display: inline-flex;align-items: flex-start;gap: 5px;width: 12.33%;margin-left:auto;">
                             <span
-                                style="color: #FBC250;font-family:' Lato' sans-serif;font-size: 18px;font-style: normal;font-weight: 700;line-height: normal;">5</span>
+                                style="color: #FBC250;font-size: 18px;font-style: normal;font-weight: 700;line-height: normal;">5</span>
                             <img src="{{ asset('viewsCustom/assets/images/star.svg') }}" alt="">
                         </div>
                     </div>
@@ -991,10 +1013,6 @@
     padding-bottom: 20%;
 }
 
-.items {
-    font-family: "lato", sans-serif;
-}
-
 .fs16 {
     font-size: 16px !important;
 }
@@ -1016,7 +1034,7 @@
 }
 
 * {
-    font-family: "lato", sans-serif !important;
+    font-family: 'Helvetica', sans-serif !important;
 }
 
 ul .items li {
@@ -1025,7 +1043,6 @@ ul .items li {
 
 .body-text p {
     color: #303030;
-    font-family: "lato", sans-serif;
     font-size: 12px;
     font-style: normal;
     font-weight: 400;
@@ -1035,6 +1052,10 @@ ul .items li {
 }
 
 @media (max-width: 2400px) {
+    .see-more-info-shop {
+        margin-left: 100px;
+    }
+
     .all-header-info-shop {
         display: flex;
     }
@@ -1051,12 +1072,12 @@ ul .items li {
     }
 
     .header-right-info-shop {
-        padding-bottom: 35px;
+        padding-bottom: 15px;
     }
 
     .header-mid-text-info-shop {
         padding-left: 20px;
-        padding-top: 32px;
+        padding-top: 50px;
     }
 
     .header-left-pp__img-info-shop {
@@ -1080,7 +1101,7 @@ ul .items li {
     .reviews {
         position: absolute;
         right: 16%;
-        width: 334px;
+        width: 320px;
     }
 
     .row {
@@ -1089,7 +1110,6 @@ ul .items li {
 
     .body-title .items {
         color: #303030;
-        font-family: "lato", sans-serif;
         font-size: 13px;
         font-style: normal;
         font-weight: 400;
@@ -1099,7 +1119,6 @@ ul .items li {
 
     .body-content .items {
         color: #303030;
-        font-family: "lato", sans-serif;
         font-size: 13px;
         font-style: normal;
         font-weight: 300;
@@ -1124,12 +1143,11 @@ ul .items li {
     }
 
     .items-tiktok {
-        margin-left: 15%;
+        margin-left: 19%;
     }
 
     .wage {
         margin-right: 25px;
-        /* margin-left:85px; */
         width: 131px;
     }
 
@@ -1157,6 +1175,9 @@ ul .items li {
 }
 
 @media (max-width: 1920px) {
+    .see-more-info-shop {
+        margin-left: 130px;
+    }
 
     .header-right-text {
         margin-left: 80px;
@@ -1169,7 +1190,6 @@ ul .items li {
 
     .body-title .items {
         color: #303030;
-        font-family: "lato", sans-serif;
         font-size: 13px;
         font-style: normal;
         font-weight: 400;
@@ -1179,7 +1199,6 @@ ul .items li {
 
     .body-content .items {
         color: #303030;
-        font-family: "lato", sans-serif;
         font-size: 13px;
         font-style: normal;
         font-weight: 300;
@@ -1201,10 +1220,6 @@ ul .items li {
 
     .modal-content {
         width: 850px !important;
-    }
-
-    .items-tiktok {
-        margin-left: 15%;
     }
 
     .wage p {
