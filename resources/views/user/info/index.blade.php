@@ -142,22 +142,22 @@
         </div>
     </x-card>
 </x-form> -->
-<div style="width: 134.42%; background:transparent; margin-left: 24px; margin-right: 40px; position: relative;border-radius: 10px;">
+<div class="container-content" style="width: 134.42%; background:transparent; margin-left: 24px; margin-right: 40px; position: relative;border-radius: 10px;">
     <x-form type="post" :validate="true" enctype="multipart/form-data">
         <input name="id" type="hidden" value="{{ $user->id }}" />
-        <div style="width:100%;">
+        <div class="container-content-avatar" style="width:100%;">
             <div class="img-info" style="border-radius: 10px;">
                 <div class="cover-img" onclick="document.getElementById('file-cover_img').click();" @if(auth()->user()->getBackground()) style="background-image: url({{ asset($user->cover_photo) }})" @endif>
                     <input id="file-cover_img" type="file" name="cover_photo" class="d-none"></input>
                     <img id="edit" src="{{ asset('viewsCustom/assets/images/edit-ic-tron.svg') }}" alt="" style="position: absolute; top: 0; right: 0; background-color: rgba(255, 255, 255, 0.5); border-radius:10px; padding: 5px;margin-right: 15px;margin-top:15px; filter: drop-shadow(0px 7px 8px rgba(0, 0, 0, 0.24));" />
                 </div>
             </div>
-            <div style="background: #fff;width: 34%;height:336px;border-radius: 10px;position:absolute;top:154px;right:19px;">
+            <div class="profile" style="background: #fff;width: 34%;height:336px;border-radius: 10px;position:absolute;top:154px;right:19px; filter: drop-shadow(0px 7px 8px rgba(0, 0, 0, 0.24));">
                 <div style="display: block;width: 100%;text-align:center;padding-top:20px;">
                     <div class="profile-img">
                         <div style="display: block; position: relative;">
                             <img onclick="document.getElementById('file-avatar').click();" id="avatar-img" src="{{ asset(auth()->user()->getAvatar()) }}" class="img-fluid" />
-                            <img id="edit" onclick="document.getElementById('file-avatar').click();" src="{{ asset('viewsCustom/assets/images/edit-ic-tron.svg') }}" alt="" style="position: absolute; bottom: 0; right:110px; background-color: rgba(255, 255, 255, 0.5); border-radius: 100%; padding: 5px; margin-bottom: 8px; margin-right: 8px; filter: drop-shadow(0px 7px 8px rgba(0, 0, 0, 0.24));" />
+                            <img id="edit" onclick="document.getElementById('file-avatar').click();" src="{{ asset('viewsCustom/assets/images/edit-ic-tron.svg') }}" alt="" style="position: absolute; bottom: 0; right:100px; background-color: rgba(255, 255, 255, 0.5); border-radius: 100%; padding: 5px; margin-bottom: 8px; margin-right: 8px; filter: drop-shadow(0px 7px 8px rgba(0, 0, 0, 0.24));" />
                         </div>
                         <input id="file-avatar" name="avatar" type="file" class="d-none"></input>
 
@@ -176,16 +176,26 @@
                         <p class="">{{ $user->phone }}</p>
                     </div>
                 </div>
-                <div class="btn-profile">
-                    <!-- <button type="submit">Nhắn tin</button> -->
-                </div>
+                <div class="box-us-rt" style="display:none;">
+                    <div style="display: flex;">
+                        <!-- Đoạn mã HTML -->
+                        <div class="box-us" id="box-us" style="font-family:'Lato'sans-serif;font-size: 16px;font-style: normal;font-weight: 400;line-height: normal;margin-right: 24px;border-radius:10px;background: #E0793F;width: 135px;padding:15px;border:none;color:#fff;display:flex;justify-content: center;align-items: center;gap:5px;">
+                            <img src="{{ asset('viewsCustom/assets/images/edit-info-ic.svg') }}" alt="">
+                            <span>Chỉnh sửa</span>             
+                        </div>
+
+                        <div  class="box-rt" id="box-rt" style="font-family:'Lato'sans-serif;font-size: 16px;font-style: normal;font-weight: 400;line-height: normal;border-radius:10px;background: #FBC250;width: 135px;padding:15px;border:none;color:#fff;display:flex;justify-content: center;align-items: center;gap:5px;">
+                            <span>Đánh giá</span>
+                            <img src="{{ asset('viewsCustom/assets/images/rating.svg') }}" alt="">
+                        </div>
+                    </div>
+                </div>   
             </div>
         </div>
 
-
-        <div style=" background:transparent;margin-right: 20px;display: flex;justify-content: space-between;border-radius: 10px;margin-bottom:68px;height: 100%;margin-top:24px;">
-            <div style="background:transparent;width:63.54%;border-radius: 10px;">
-                <div style="background: #fff;width:100%;height:391px;margin-bottom:20px;border-radius: 10px;">
+        <div class="container-box" style=" background:transparent;margin-right: 20px;display: flex;justify-content: space-between;border-radius: 10px;margin-bottom:68px;height: 100%;margin-top:24px;">
+            <div class="container-tr-rt" style="background:transparent;width:63.54%;border-radius: 10px;">
+                <div class="container-info" style="background: #fff;width:100%;height:391px;margin-bottom:20px;border-radius: 10px;">
                     <div style="width:100%;height:55px;display: flex;align-items: center;padding-left:40px;">
                         <div style="width:29.41%;color: #E0793F;font-family: 'Lato' sans-serif;font-size: 18px;font-style: normal;font-weight: 800;line-height: normal;border-bottom:1px solid rgba(0, 0, 0, 0.11);padding-bottom:10px;">Thông tin cá nhân</div>
                         <div style="display: flex;align-items: center;justify-content: center; margin-left:auto;margin-right:10px;margin-top:20px;">
@@ -228,9 +238,9 @@
                     </div>
 
                 </div>
-                <div style="background: #fff;width:100%;border-radius: 10px;">
-                    <div style="height: 200px;padding-left:40px;margin-bottom:20px;">
-                        <div style="width:29.41%;color: #E0793F;font-family: 'Lato' sans-serif;font-size: 18px;font-style: normal;font-weight: 800;line-height: normal;border-bottom:1px solid rgba(0, 0, 0, 0.11);padding-bottom:10px;margin-bottom:28px;padding-top:20px;">Giao dịch cá nhân</div>
+                <div class="container-transaction" style="background: #fff;width:100%;border-radius: 10px;">
+                    <div class="container-title" style="height: 200px;padding-left:40px;margin-bottom:20px;">
+                        <div class="title-tr" style="width:29.41%;color: #E0793F;font-family: 'Lato' sans-serif;font-size: 18px;font-style: normal;font-weight: 800;line-height: normal;border-bottom:1px solid rgba(0, 0, 0, 0.11);padding-bottom:10px;margin-bottom:28px;padding-top:20px;">Giao dịch cá nhân</div>
                         {{-- Tìm kiếm --}}
                         <div class="search-field-x d-none d-md-block" style="border-radius: 10px;margin-bottom:20px;">
                             <form class="d-flex align-items-center h-100" action="#">
@@ -243,7 +253,7 @@
                                 </div>
                             </form>
                         </div>
-                        <div style="height: 29px;width:100%;margin-left:28.5px;display: inline-flex;align-items: flex-start;gap:35px;">
+                        <div class="list-tr" style="height:auto;width:100%;margin-left:28.5px;display: inline-flex;align-items: flex-start;gap:35px;">
                             <li style="height:29px;display: flex;justify-content: center;align-items: center;" class="active">
                                 <a href="#">Lịch sử giao dịch</a>
                             </li>
@@ -254,8 +264,7 @@
                                 <a href="#">Lịch sử rút tiền</a>
                             </li>
                             <li style="height:29px;display: flex;justify-content: center;align-items: center;">
-                                <a href="#" id="showModal">Tháng</a>
-                                <i style="margin-left:auto;font-size:20px;" class="ri-arrow-down-s-line"></i>
+                                <a href="#" id="showModal">Tháng<i style="margin-left:5px;font-size:20px;" class="ri-arrow-down-s-line"></i></a>
                             </li> <!-- Modal -->
                             <div class="modal-overlay hidden" id="myModalOverlay"></div>
                             <div class="modal hidden" id="myModal" tabindex="-1" role="dialog">
@@ -272,15 +281,15 @@
                                         </div>
                                         <div class="modal-body">
                                             <!-- Nội dung modal -->
-                                                <div class="body-list-date" style="display: inline-flex;flex-direction: column;align-items: center;gap: 24px;justify-content: center;margin-left:95px;">
-                                                    <a href="#">Tháng 1</a>
-                                                    <a href="#">Tháng 2</a>
-                                                    <a href="#">Tháng 3</a>
-                                                    <a href="#">Tháng 4</a>
-                                                    <a href="#">Tháng 5</a>
-                                                    <a href="#">Tháng 6</a>
-                                                    <a href="#">Tháng 7</a>
-                                                </div>
+                                            <div class="body-list-date" style="display: inline-flex;flex-direction: column;align-items: center;gap: 24px;justify-content: center;margin-left:95px;">
+                                                <a href="#">Tháng 1</a>
+                                                <a href="#">Tháng 2</a>
+                                                <a href="#">Tháng 3</a>
+                                                <a href="#">Tháng 4</a>
+                                                <a href="#">Tháng 5</a>
+                                                <a href="#">Tháng 6</a>
+                                                <a href="#">Tháng 7</a>
+                                            </div>
                                         </div>
                                         <div class="modal-footer">
                                             <button style="background:transparent;border:none;" type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -304,7 +313,7 @@
                         @endphp
 
                         @foreach($transactions as $transaction)
-                        <div style="margin-bottom:32px;width:88.52%;background:#fff;height: 133px;margin-left:40px;border-radius: 8px;border: 1px solid #D2D2CD;box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.15);display:flex;justify-content: space-between;padding-left:24px;padding-right:34px;padding-top:18px;">
+                        <div class="item-tr" style="margin-bottom:32px;width:88.52%;background:#fff;height: 133px;margin-left:40px;border-radius: 8px;border: 1px solid #D2D2CD;box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.15);display:flex;justify-content: space-between;padding-left:24px;padding-right:34px;padding-top:18px;">
                             <div class="content-bank" style="display:block;">
                                 <span style="display:flex;justify-content: flex-start;align-items: baseline;color: #000;font-family: 'Lato' sans-serif;font-size: 16px;font-style: normal;font-weight: 700;line-height: normal;letter-spacing: 2.88px;">{{ $transaction->code }}</span>
                                 <span style="margin-top:10px;gap:10px;display:flex;justify-content: flex-start;align-items: baseline;">Loại giao dịch: <p style="margin-top: 5px;">{{ $transaction->type->description()  }}</p></span>
@@ -332,7 +341,7 @@
 
             <div style="width: 34.46%;border-radius: 10px;margin-top: 220px;">
 
-                <div style="background: #fff;width:100%;border-radius: 10px;">
+                <div class="container-rating" style="background: #fff;width:100%;border-radius: 10px;">
                     <div style="width:100%;height:55px;display: flex;align-items: center;padding-left:40px;">
                         <div style="width:59.14%;color: #E0793F;font-family: 'Lato' sans-serif;font-size: 18px;font-style: normal;font-weight: 800;line-height: normal;border-bottom:1px solid rgba(0, 0, 0, 0.11);padding-bottom:10px;">Đánh giá cộng đồng</div>
                     </div>
@@ -438,31 +447,393 @@
             </div>
 
         </div>
+
     </x-form>
 </div>
+         
+            <!-- Modal 1 -->
+            <div class="modal-box" id="modal-us">
+                <div class="modal-content-box">
+                    <!-- Nội dung của modal 1 ở đây -->
+                    <div style="display: flex;justify-content: space-between;align-items: baseline;">
+                        <div class="title-tr" style="padding-top:0;width:29.41%;color: #E0793F;font-family: 'Lato' sans-serif;font-size: 18px;font-style: normal;font-weight: 800;line-height: normal;border-bottom:1px solid rgba(0, 0, 0, 0.11);padding-bottom:10px;margin-bottom:28px;">Thông tin cá nhân</div>
+                        <span class="close-box" id="closeModalUS">&times</span>
+                    </div>
+                    <div class="content-edit-info">
+                    <x-form type="post" :validate="true" enctype="multipart/form-data">
+                        <input name="user_id" type="hidden" value="{{ $user->id }}" hidden />
+                        <div style="margin-bottom:29px;">
+                            <div style="height: 51.3333px;display: flex;align-items:center;">
+                                <label>{{ __('Họ và tên') }}</label>
+                                <input type="text" name="fullname" value="{{ $user->fullname }}" style="width: 65%;margin-left:auto;">
+                            </div>
+                        </div>
+                        <div style="margin-bottom:29px;">
+                            <div style="height: 51.3333px;display: flex;align-items:center;">
+                                <label>{{ __('Tên tài khoản') }}</label>
+                                <input type="text" name="username" value="{{ $user->username }}" style="width: 65%;margin-left:auto;">
+                            </div>
+                        </div>
+                        <div style="margin-bottom:29px;">
+                            <div style="height: 51.3333px;display: flex;align-items:center;">
+                                <label>{{ __('Email') }}</label>
+                                <input type="text" name="email" value="{{ $user->email }}" style="width: 65%;margin-left:auto;">
+                            </div>
+                        </div>
+                        <div style="margin-bottom:29px;">
+                            @if(auth()->user()->hasBankAccount())
+                            @foreach($user->bankAccount as $value)
+                            <div style="height: 51.3333px;display: flex;align-items:center;">
+                                <label>{{ __('Tài khoản ngân hàng') }}</label>
+                                <input type="text" name="namebank" value="{{ $value->account_number }} - {{ $value->bank_name }}" style="width: 65%;margin-left:auto;">
+                            </div>
+                            @endforeach
+                            @endif
+                            <div style="margin-bottom:29px;">
+                                <div style="height: 51.3333px;display: flex;align-items:center;">
+                                    <label>{{ __('Tên shop') }}</label>
+                                    <input type="text" name="nameshop" value="{{ $user->name_shop }}" style="width: 65%;margin-left:auto;"><!--cần đổ dữ liệu-->
+                                </div>
+                            </div>
+                            <div>
+
+                            </div>
+                            <button type="submit" style="background:#E0793F;border:none;color:#fff;border-radius:5px;width:100%;padding: 15px 129px;">Lưu</button>
+                        </div>
+                    </x-form>
+                    </div>
+                </div>
+
+              
+            </div>
+            
+                <!-- Modal 2 -->
+                <div class="modal-box" id="modal-rt">
+                    <div class="modal-content-box">
+                        <!-- Nội dung của modal 2 ở đây -->
+                        <div style="display: flex;justify-content: space-between;align-items: baseline;">
+                            <div class="title-tr" style="padding-top:0;width:29.41%;color: #E0793F;font-family: 'Lato' sans-serif;font-size: 18px;font-style: normal;font-weight: 800;line-height: normal;border-bottom:1px solid rgba(0, 0, 0, 0.11);padding-bottom:10px;margin-bottom:28px;">Đánh giá cộng đồng</div>
+                            <span class="close-box" id="closeModalRT">&times</span>
+                        </div>
+                        <div style="width: 100%;height:100%;">
+                            <div style="width:100%;padding-left:20px;margin-top:20px;">
+                                <div style="width:100%;">
+                                    <div style="justify-content: space-between;display: flex;align-items: center;">
+                                        <div style="display: inline-flex;align-items: center;gap: 10px;">
+                                            <div>
+                                                <img width="45px" height="45px" src="{{ asset('viewsCustom/assets/images/faces-clipart/pic-1.png') }}" alt="">
+                                            </div>
+                                            <div style="display: block; width: 59.59%;">
+                                                <span style="color: #000;font-family: 'Lato' sans-serif;font-size: 14px;font-style: normal;font-weight: 600;line-height: normal;">Trần Tuấn Anh</span>
+                                                <span style="color: rgba(166, 164, 164, 0.70);font-family: 'Lato' sans-serif;font-size: 14px;font-style: normal;font-weight: 600;line-height: normal;">2023/06/14 - 19:50</span>
+                                            </div>
+                                        </div>
+                                        <div style="display: inline-flex;align-items: flex-start;gap: 5px;width: 12.33%;margin-left:auto;">
+                                            <span style="color: #FBC250;font-family:' Lato' sans-serif;font-size: 18px;font-style: normal;font-weight: 700;line-height: normal;">5</span>
+                                            <img src="{{ asset('viewsCustom/assets/images/star.svg') }}" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div style="width:100%;border-bottom:1px solid #D2D2CD;margin-top:10px;padding-bottom:20px;">
+                                    <span>Shop uy tín. Chất lượng tốt! Shop uy tín. Chất lượng tốt! Shop uy tín. Chất lượng tốt! Shop uy tín. Chất lượng tốt!</span>
+                                </div>
+                            </div>
+                            <div style="width:100%;padding-left:20px;margin-top:20px;">
+                                <div style="width:100%;">
+                                    <div style="justify-content: space-between;display: flex;align-items: center;">
+                                        <div style="display: inline-flex;align-items: center;gap: 10px;">
+                                            <div>
+                                                <img width="45px" height="45px" src="{{ asset('viewsCustom/assets/images/faces-clipart/pic-1.png') }}" alt="">
+                                            </div>
+                                            <div style="display: block; width: 59.59%;">
+                                                <span style="color: #000;font-family: 'Lato' sans-serif;font-size: 14px;font-style: normal;font-weight: 600;line-height: normal;">Trần Tuấn Anh</span>
+                                                <span style="color: rgba(166, 164, 164, 0.70);font-family: 'Lato' sans-serif;font-size: 14px;font-style: normal;font-weight: 600;line-height: normal;">2023/06/14 - 19:50</span>
+                                            </div>
+                                        </div>
+                                        <div style="display: inline-flex;align-items: flex-start;gap: 5px;width: 12.33%;margin-left:auto;">
+                                            <span style="color: #FBC250;font-family:' Lato' sans-serif;font-size: 18px;font-style: normal;font-weight: 700;line-height: normal;">5</span>
+                                            <img src="{{ asset('viewsCustom/assets/images/star.svg') }}" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div style="width:100%;border-bottom:1px solid #D2D2CD;margin-top:10px;padding-bottom:20px;">
+                                    <span>Shop uy tín. Chất lượng tốt! Shop uy tín. Chất lượng tốt! Shop uy tín. Chất lượng tốt! Shop uy tín. Chất lượng tốt!</span>
+                                </div>
+                            </div>
+                            <div style="width:100%;padding-left:20px;margin-top:20px;">
+                                <div style="width:100%;">
+                                    <div style="justify-content: space-between;display: flex;align-items: center;">
+                                        <div style="display: inline-flex;align-items: center;gap: 10px;">
+                                            <div>
+                                                <img width="45px" height="45px" src="{{ asset('viewsCustom/assets/images/faces-clipart/pic-1.png') }}" alt="">
+                                            </div>
+                                            <div style="display: block; width: 59.59%;">
+                                                <span style="color: #000;font-family: 'Lato' sans-serif;font-size: 14px;font-style: normal;font-weight: 600;line-height: normal;">Trần Tuấn Anh</span>
+                                                <span style="color: rgba(166, 164, 164, 0.70);font-family: 'Lato' sans-serif;font-size: 14px;font-style: normal;font-weight: 600;line-height: normal;">2023/06/14 - 19:50</span>
+                                            </div>
+                                        </div>
+                                        <div style="display: inline-flex;align-items: flex-start;gap: 5px;width: 12.33%;margin-left:auto;">
+                                            <span style="color: #FBC250;font-family:' Lato' sans-serif;font-size: 18px;font-style: normal;font-weight: 700;line-height: normal;">5</span>
+                                            <img src="{{ asset('viewsCustom/assets/images/star.svg') }}" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div style="width:100%;border-bottom:1px solid #D2D2CD;margin-top:10px;padding-bottom:20px;">
+                                    <span>Shop uy tín. Chất lượng tốt! Shop uy tín. Chất lượng tốt! Shop uy tín. Chất lượng tốt! Shop uy tín. Chất lượng tốt!</span>
+                                </div>
+                                <div style="text-align: center;">
+                                    <span>Xem thêm <i style="margin-left:auto;font-size:20px;" class="ri-arrow-down-s-line"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-backdrop" id="modalBackdrop"></div>
+<!-- Đoạn mã JavaScript -->
+<script>
+    // Lấy thẻ div box-us và box-rt bằng cách sử dụng id
+    const boxUS = document.getElementById('box-us');
+    const boxRT = document.getElementById('box-rt');
+
+    // Lấy thẻ modal-us và modal-rt bằng cách sử dụng id
+    const modalUS = document.getElementById('modal-us');
+    const modalRT = document.getElementById('modal-rt');
+
+    // Lấy lớp phủ bằng cách sử dụng id
+    const modalBackdrop = document.getElementById('modalBackdrop');
+
+    // Lấy nút đóng modal cho modal-us và modal-rt
+    const closeModalUS = document.getElementById('closeModalUS');
+    const closeModalRT = document.getElementById('closeModalRT');
+
+    // Gán sự kiện click cho box-us
+    boxUS.addEventListener('click', function() {
+        modalUS.classList.add('show');
+        modalBackdrop.classList.add('show');
+    });
+
+    // Gán sự kiện click cho box-rt
+    boxRT.addEventListener('click', function() {
+        modalRT.classList.add('show');
+        modalBackdrop.classList.add('show');
+    });
+
+    // Gán sự kiện click cho nút đóng modal-us
+    closeModalUS.addEventListener('click', function() {
+        modalUS.classList.remove('show');
+        modalBackdrop.classList.remove('show');
+    });
+
+    // Gán sự kiện click cho nút đóng modal-rt
+    closeModalRT.addEventListener('click', function() {
+        modalRT.classList.remove('show');
+        modalBackdrop.classList.remove('show');
+    });
+
+    // Đóng modal khi người dùng nhấp chuột bên ngoài nội dung modal-us
+    window.addEventListener('click', function(event) {
+        if (event.target == modalBackdrop) {
+            modalUS.classList.remove('show');
+            modalRT.classList.remove('show');
+            modalBackdrop.classList.remove('show');
+        }
+    });
+</script>
+
+
 <style>
+    .content-edit-info button {
+        color: #000;
+        font-family: 'Lato'sans-serif;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+    .content-edit-info label{
+        color: #000;
+        font-family: 'Lato' sans-serif;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+    /* Đoạn mã CSS */
+    /* Ẩn modal và lớp phủ mặc định */
+    .modal-box,
+    .modal-backdrop {
+        display: none;
+    }
+
+    /* Hiển thị lớp phủ mờ khi modal được hiển thị */
+    .modal-box.show,
+    .modal-backdrop.show {
+        display: block;
+    }
+
+    /* Hiển thị nội dung modal giữa màn hình */
+    .modal-content-box {
+        position: absolute;
+        top: 5%;
+        margin-left: 20px;
+        width: 370px;
+        background-color: white;
+        padding: 20px;
+        z-index: 9999;
+        border-radius: 10px;
+        /* Đặt z-index lớn hơn lớp phủ để modal nằm trên cùng */
+    }
+
+    /* Nút đóng modal */
+    .close-box {
+        font-size: 50px;
+        cursor: pointer;
+    }
+
+    /* Thiết lập lớp phủ */
+    .modal-backdrop {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 9998;
+        /* Đặt z-index thấp hơn modal để lớp phủ nằm dưới cùng */
+    }
+
+    @media (max-width:768px) {
+        .container-content {
+            width: 100% !important;
+            margin: 0 !important;
+
+        }
+
+        .img-info {
+            width: 100%;
+        }
+
+        .cover-img {
+            width: 100%;
+            height: 183px;
+            flex-shrink: 0;
+        }
+
+        .container-info {
+            display: none;
+        }
+
+        .search-field-x {
+            display: block !important;
+            width: 87.91% !important;
+        }
+
+        .container-box {
+            display: block !important;
+            margin-top: 300px !important;
+            margin-right: 0 !important;
+        }
+
+        .container-tr-rt {
+            width: 100% !important;
+        }
+
+        .list-tr {
+            margin-left: 0 !important;
+            overflow-x: scroll;
+            overflow-y: hidden;
+            width: 450px !important;
+            gap: 20px !important;
+        }
+
+        .title-tr {
+            width: 55% !important;
+            margin-bottom: 20px !important;
+        }
+
+        .list-tr li a {
+            width: 150px !important;
+        }
+
+        ::-webkit-scrollbar {
+            height: 8px;
+        }
+
+        .container-rating {
+            display: none;
+        }
+
+        .item-tr {
+            padding-left: 9px !important;
+            padding-right: 9px !important;
+            margin-left: 25px !important;
+        }
+
+        .modal {
+            top: 60% !important;
+            left: 62% !important;
+        }
+
+        .container-title {
+            padding-left: 28px !important;
+        }
+
+        .profile {
+            width: 350px !important;
+            height: 350px !important;
+            top: 10% !important;
+            right: 6% !important;
+        }
+        .box-us-rt{
+            display: block !important;
+            padding-left:27px;
+        }
+        #avatar-img {
+            width: 130px;
+            height: 130px;
+        }
+
+        .profile p {
+            margin-top: 0 !important;
+            font-size: 18px !important;
+        }
+
+        .content-item-profile p {
+            font-size: 16px !important;
+        }
+
+        #row {
+            margin-left: 0 !important;
+            margin-top: 0 !important;
+        }
+    }
+
     /* Pagination links */
-.pagination a {
-  color: black;
-  float: left;
-  padding: 8px 16px;
-  text-decoration: none;
-  transition: background-color .3s;
-  color: #FFF;
-font-family: 'Lato' sans-serif;
-font-size: 18px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;
-}
+    .pagination a {
+        color: black;
+        float: left;
+        padding: 8px 16px;
+        text-decoration: none;
+        transition: background-color .3s;
+        color: #FFF;
+        font-family: 'Lato' sans-serif;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
 
-/* Style the active/current link */
-.pagination a.active {
-  color: white;
-}
+    /* Style the active/current link */
+    .pagination a.active {
+        color: white;
+    }
 
-/* Add a grey background color on mouse-over */
-.pagination a:hover:not(.active) {background-color: #fff;color:#000;}
+    /* Add a grey background color on mouse-over */
+    .pagination a:hover:not(.active) {
+        background-color: #fff;
+        color: #000;
+    }
+
     li a {
         color: #303030;
         font-family: 'Lato' sans-serif;
@@ -579,6 +950,7 @@ line-height: normal;
         border-left: none;
         border-right: none;
     }
+    
 
     .profile-img {
         z-index: 1;
@@ -594,7 +966,7 @@ line-height: normal;
     #avatar-img {
         text-align: center;
         filter: drop-shadow(0px 7px 8px rgba(0, 0, 0, 0.24));
-        border: none !important;
+        border: 1px solid rgba(0, 0, 0, 0.20) !important;
     }
 
     .cover-img {
@@ -663,15 +1035,17 @@ line-height: normal;
         border-radius: var(--bs-modal-border-radius);
         outline: 0;
     }
-    .body-list-date a{
+
+    .body-list-date a {
         color: #000;
-        font-family: 'Lato' sans-serif ;
+        font-family: 'Lato' sans-serif;
         font-size: 16px;
         font-style: normal;
         font-weight: 400;
         line-height: normal;
     }
-    .body-list-date a:hover{
+
+    .body-list-date a:hover {
         font-weight: 700;
         color: #FB6815;
     }
@@ -720,5 +1094,4 @@ line-height: normal;
     })
 </script>
 
-<script src="/public/viewsCustom/assets/js/cropper.min.js"></script>
 @endsection

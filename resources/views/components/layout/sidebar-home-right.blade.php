@@ -89,7 +89,7 @@
                 <a href="{{ route('info.shop_detail', $user->slug) }}">
                     {{--Render hình ảnh--}}
                     {{--Đọc rồi xoá nha: Do ở lúc đẩy hình ảnh lên bên mevivu có thể cấu hình sai ấy nên là lúc đưa lên ở localhost nó kh lên hình nhưng thật sự là có hình rồi nha--}}
-                    <img style="width: 45px; height: 45px; border-radius: 9999px; border: 0.50px black solid" src="{{ $user->avatar }}" alt=""/>
+                    <img style="width: 45px; height: 45px; border-radius: 9999px; border: 1px solid rgba(0, 0, 0, 0.20)!important;" src="{{ $user->avatar }}" alt=""/>
                     <div @class([ ""=> !$loop->last ])>
                         <p>
                             {{ $user->getNameShop() }}
