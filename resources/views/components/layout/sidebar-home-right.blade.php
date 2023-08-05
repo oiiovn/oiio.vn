@@ -89,6 +89,7 @@
         <div class="nav text-center"
             style="width:100%;height: 200px;flex-direction: column;justify-content: flex-start;align-items: center;gap: 10px;display: inline-flex;">
             @foreach($users as $user)
+
             <a href="{{ route('info.shop_detail', $user->slug) }}">
                 {{--Render hình ảnh--}}
                 {{--Đọc rồi xoá nha: Do ở lúc đẩy hình ảnh lên bên mevivu có thể cấu hình sai ấy nên là lúc đưa lên ở localhost nó kh lên hình nhưng thật sự là có hình rồi nha--}}
@@ -104,6 +105,7 @@
                     </p>
                 </div>
             </a>
+
             @endforeach
         </div>
     </x-card>
