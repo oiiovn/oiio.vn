@@ -48,7 +48,8 @@
                             <input
                                 style="width: 300px;border-radius:5px;height:45px;padding-left:10px;border: 1px solid rgba(48, 48, 48, 0.21);"
                                 type="text" name="myInput6" placeholder="Vui lòng chọn" readonly>
-                            <a class="dropdown-icon" alt="Dropdown Icon"><i class="gg-chevron-down"></i></a>
+                            <a class="dropdown-icon" alt="Dropdown Icon"> <img
+                                    src="{{ asset('viewsCustom/assets/images/down-small.svg') }}" /></a>
                             <ul class="dropdown-list">
                                 <li>Tỉnh lẻ</li>
                                 <li>Hồ Chí Minh</li>
@@ -71,7 +72,8 @@
                             <input
                                 style="width: 300px;border-radius:5px;height:45px;padding-left:10px;border: 1px solid rgba(48, 48, 48, 0.21);"
                                 type="text" name="myInput2" placeholder="Vui lòng chọn" readonly>
-                            <a class="dropdown-icon" alt="Dropdown Icon"><i class="gg-chevron-down"></i></a>
+                            <a class="dropdown-icon" alt="Dropdown Icon"><img
+                                    src="{{ asset('viewsCustom/assets/images/down-small.svg') }}" /></a>
                             <ul class="dropdown-list">
                                 <li>Tài khoản thường</li>
                                 <li>Tài khoản bạc</li>
@@ -94,7 +96,8 @@
                             <input
                                 style="width: 300px;border-radius:5px;height:45px;padding-left:10px;border: 1px solid rgba(48, 48, 48, 0.21);"
                                 type="text" name="myInput3" placeholder="Vui lòng chọn" readonly>
-                            <a class="dropdown-icon" alt="Dropdown Icon"><i class="gg-chevron-down"></i></a>
+                            <a class="dropdown-icon" alt="Dropdown Icon"><img
+                                    src="{{ asset('viewsCustom/assets/images/down-small.svg') }}" /></a>
                             <ul class="dropdown-list">
                                 <li>Shop gửi đánh giá</li>
                                 <li>Tự đánh giá</li>
@@ -116,7 +119,8 @@
                             <input
                                 style="width: 300px;border-radius:5px;height:45px;padding-left:10px;border: 1px solid rgba(48, 48, 48, 0.21);"
                                 type="text" name="myInput4" placeholder="Vui lòng chọn" readonly>
-                            <a class="dropdown-icon" alt="Dropdown Icon"><i class="gg-chevron-down"></i></a>
+                            <a class="dropdown-icon" alt="Dropdown Icon"><img
+                                    src="{{ asset('viewsCustom/assets/images/down-small.svg') }}" /></a>
                             <ul class="dropdown-list">
                                 <li>Không áp mã</li>
                                 <li>Áp mã freeship</li>
@@ -139,7 +143,8 @@
                             <input
                                 style="width: 300px;border-radius:5px;height:45px;padding-left:10px;border: 1px solid rgba(48, 48, 48, 0.21);"
                                 type="text" name="myInput5" placeholder="Vui lòng chọn" readonly>
-                            <a class="dropdown-icon" alt="Dropdown Icon"><i class="gg-chevron-down"></i></a>
+                            <a class="dropdown-icon" alt="Dropdown Icon"><img
+                                    src="{{ asset('viewsCustom/assets/images/down-small.svg') }}" /></a>
                             <ul class="dropdown-list">
                                 <li>Shop thanh toán</li>
                             </ul>
@@ -183,7 +188,7 @@
                 </div>
             </div>
             <div class="service-charge"
-                style="padding-top:20px;padding-left:16px;background:#fff;position:relative;margin-top:16px;;height:240px;border-radius:8px;">
+                style="padding-top:20px;padding-left:16px;background:#fff;position:relative;margin-top:16px;;height:262px;border-radius:8px;">
                 <div style="display:flex;">
                     <div>
                         Phí dịch vụ:
@@ -226,7 +231,7 @@
 @endpush
 <style>
 * {
-    font-family: "lato", sans-serif !important;
+    font-family: 'Helvetica', sans-serif !important;
 }
 
 #sidebarRight {
@@ -259,6 +264,8 @@
 
 .dropdown-list li {
     cursor: pointer;
+    width: 200px;
+    padding-left: 15px;
 }
 
 .dropdown-list li:hover {
@@ -272,27 +279,27 @@
 
     .items-2 {
         display: flex;
-        padding-top: 60px;
+        padding-top: 30px;
     }
 
     .items-3 {
         display: flex;
-        padding-top: 30px;
+        padding-top: 10px;
     }
 
     .items-4 {
         display: flex;
-        padding-top: 30px;
+        padding-top: 10px;
     }
 
     .items-5 {
         display: flex;
-        padding-top: 30px;
+        padding-top: 10px;
     }
 
     .items-6 {
         display: flex;
-        padding-top: 30px;
+        padding-top: 10px;
     }
 
     .items-sp {

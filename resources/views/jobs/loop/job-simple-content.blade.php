@@ -6,7 +6,8 @@
                 <div>
                     <a class="header-left-pp" style="display:flex;" href="https://www.facebook.com/buivushopee">
                         <div class="header-left-pp__img">
-                            <img src="{{ asset('viewsCustom/assets/images/hinh1.png') }}" width:45px height:45px />
+                            <img src="{{ asset('viewsCustom/assets/images/hinh1.png') }}"
+                                style="width:45px; height:45px;border: 1px solid rgba(0, 0, 0, 0.20);border-radius:50%;" />
                         </div>
 
                         <div class="header-left-pp__text" style="display:bock;padding-left:9px;margin-top:5px;">
@@ -26,8 +27,8 @@
                     </a>
                 </div>
                 <div class="header-right-pp" style="display:flex;padding-top:5px;">
-                    <div><img src="{{ asset('viewsCustom/assets/images/Vector.svg') }}" width:15px height:15px
-                            style="margin-bottom:7px;" /></div>
+                    <div><img src="{{ asset('viewsCustom/assets/images/Vector.svg') }}"
+                            style="margin-bottom:7px;width:15px; height:15px;" /></div>
                     <div class="fs15"
                         style="color: #D0011B;font-style: normal;font-weight: 400;line-height: normal;padding-left:8px;">
                         4.5</div>
@@ -37,7 +38,7 @@
                 </div>
                 <div class="see-more" style="display:flex;" data-toggle="modal" data-target="#exampleModalCenter">
                     <h3 class="fs13"
-                        style="color: #A6A4A4;font-style: normal;font-weight: 400;line-height: normal;width:60px;">xem
+                        style="color: #A6A4A4;font-style: normal;font-weight: 400;line-height: normal;width:60px;">Xem
                         thêm</h3><img src="{{ asset('viewsCustom/assets/images/popout.svg') }}"
                         style="padding-left:5px;width:20px;height:20px;margin-top:-2px;" />
                 </div>
@@ -53,7 +54,7 @@
                 <div class="content__body-content__act fs13"
                     style="color: #303030;font-style: normal;font-weight: 500;line-height: normal;text-align: right;">
                     <div class="items"
-                        style="width: 94px;height: 26px;padding:5px;text-align:center;background: #FB6815;color: #FFF;font-size: 12px;font-weight: 700;margin-left:35px;border:none;border-radius: 5px;">
+                        style="width: 94px;height: 26px;padding:5px;text-align:center;background: #FB6815;color: #FFF;font-size: 12px;font-weight: 700;margin-left:30px;border:none;border-radius: 5px;">
                         Shopee</div>
                     <div class="items" style="width: 128px;height: 26px;padding:5px;">Hà Nội</div>
                     <div class="items" style="width: 128px;height: 26px;padding:5px;">Không nhận hàng</div>
@@ -82,27 +83,30 @@
     <div class="index-mobile" style="width:100%;background: #fff;">
         <div class="content__body-header" style="display:flex;padding-left:10px;padding-top:10px;padding-right:10px;">
             <div class="header-left-pp" style="display:flex;">
-                <div class="header-left-pp__img">
-                    <img src="{{ asset('viewsCustom/assets/images/hinh1.png') }}" width:45px height:45px />
-                </div>
-                <div class="header-left-pp__text" style="display:bock;padding-left:9px;margin-top:5px;">
-                    <div style="display:flex;">
-                        <div class="header-left-pp__text__top fs16"
-                            style="color: #000;font-style: normal;font-weight: 500;line-height: normal;max-width:200px;">
-                            <b>Korina</b>
+                <a href="https://www.facebook.com/buivushopee" style="display:flex;">
+                    <div class="header-left-pp__img">
+                        <img src="{{ asset('viewsCustom/assets/images/hinh1.png') }}"
+                            style="border: 1px solid rgba(0, 0, 0, 0.20);border-radius:50%;width:45px; height:45px ;" />
+                    </div>
+                    <div class="header-left-pp__text" style="display:bock;padding-left:9px;margin-top:5px;">
+                        <div style="display:flex;">
+                            <div class="header-left-pp__text__top fs16"
+                                style="color: #000;font-style: normal;font-weight: 500;line-height: normal;max-width:200px;">
+                                <b>Korina</b>
+                            </div>
+                            <img style="padding-left:4px;" src="{{ asset('viewsCustom/assets/images/tick.svg') }}"
+                                width:8.7px height:8.7px />
                         </div>
-                        <img style="padding-left:4px;" src="{{ asset('viewsCustom/assets/images/tick.svg') }}"
-                            width:8.7px height:8.7px />
+                        <div style="display:flex;">
+                            <div class="header-left-pp__text__bottom fs12"
+                                style="color: #A6A4A4;font-style: normal;font-weight: 400;line-height: normal;width:100px;">
+                                22 giờ trước</div>
+                        </div>
                     </div>
-                    <div style="display:flex;">
-                        <div class="header-left-pp__text__bottom fs12"
-                            style="color: #A6A4A4;font-style: normal;font-weight: 400;line-height: normal;width:100px;">
-                            22 giờ trước</div>
-                    </div>
-                </div>
+                </a>
                 <div class="header-right-pp" style="display:flex;padding-top:10px;">
-                    <div><img src="{{ asset('viewsCustom/assets/images/Vector.svg') }}" width:15px height:15px
-                            style="margin-bottom:10px;" /></div>
+                    <div><img src="{{ asset('viewsCustom/assets/images/Vector.svg') }}"
+                            style="margin-top:-15px;width:15px; height:15px;" /></div>
                     <div class="fs12"
                         style="color: #D0011B;font-style: normal;font-weight: 400;line-height: normal;padding-left:8px;">
                         4.5</div>
@@ -146,7 +150,7 @@
                 <div class="items">Shop thanh toán</div>
                 <div class="items">Shop gửi đánh giá</div>
                 <div class="items"
-                    style="border-radius: 5px;background: #FBC250;width:105px;padding: 5px 10px;margin-top:-10px;">Tài
+                    style="border-radius: 5px;background: #FBC250;width:109px;padding: 5px 10px;margin-top:-10px;">Tài
                     khoàn vàng</div>
                 <div class="items">Áp mã freeship</div>
                 <div class="items">Hà Nội</div>
@@ -165,8 +169,8 @@
             <div class="modal-content" style="padding:5%;">
                 <div class="modal-header" style="padding:0px 0px 0px 30px">
                     <div class="items" style="display:flex; padding-top:5px;padding-left:5px;">
-                        <img src="{{ asset('viewsCustom/assets/images/warning.svg') }}" width:18.3px height:15.8px
-                            style="margin-bottom:25px;" />
+                        <img src="{{ asset('viewsCustom/assets/images/warning.svg') }}"
+                            style="margin-bottom:25px; width:18.3px;height:15.8px;border: 1px solid rgba(0, 0, 0, 0.20);border-radius:50%;" />
                         <p class="fs16"
                             style="color: #EB3131;font-style: normal;font-weight: 600;line-height: normal;padding-left:10px;">
                             Lưu ý đơn hàng</p>
@@ -214,26 +218,32 @@
         <div class="modal-dialog " role="document" style="width:100%;">
             <div class="modal-content" style=" width:54rem;">
                 <div class="modal-header" style="">
-                    <div class="header-left-pp" style="display:flex;">
-                        <div class="header-left-pp__img">
-                            <img src="{{ asset('viewsCustom/assets/images/hinh1.png') }}" width:45px height:45px />
-                        </div>
-                        <div class="header-left-pp__text" style="display:bock;margin-top:5px;padding-left:9px;">
-                            <div style="display:flex;">
-                                <div class="header-left-pp__text__top fs14"
-                                    style="color: #000;font-style: normal;font-weight: 500;line-height: normal;">Korina
-                                </div>
-                                <img style="padding-left:2.8px;" src="{{ asset('viewsCustom/assets/images/tick.svg') }}"
-                                    width:8.7px height:8.7px />
+                    <a href="https://www.facebook.com/buivushopee">
+                        <div class="header-left-pp" style="display:flex;">
+                            <div class="header-left-pp__img">
+                                <img src="{{ asset('viewsCustom/assets/images/hinh1.png') }}"
+                                    style="border: 1px solid rgba(0, 0, 0, 0.20);border-radius:50%;width:45px; height:45px ;" />
                             </div>
-                            <div class="header-left-pp__text__bottom fs12"
-                                style="color: #A6A4A4;font-style: normal;font-weight: 400;line-height: normal;">22 giờ
-                                trước</div>
+                            <div class="header-left-pp__text" style="display:bock;margin-top:5px;padding-left:9px;">
+                                <div style="display:flex;">
+                                    <div class="header-left-pp__text__top fs14"
+                                        style="color: #000;font-style: normal;font-weight: 500;line-height: normal;">
+                                        Korina
+                                    </div>
+                                    <img style="padding-left:2.8px;"
+                                        src="{{ asset('viewsCustom/assets/images/tick.svg') }}"
+                                        style="width:8.7px;height:8.7px;" />
+                                </div>
+                                <div class="header-left-pp__text__bottom fs12"
+                                    style="color: #A6A4A4;font-style: normal;font-weight: 400;line-height: normal;">22
+                                    giờ
+                                    trước</div>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                     <div class="header-right-pp" style="display:flex;padding-right:40%;">
-                        <div><img src="{{ asset('viewsCustom/assets/images/Vector.svg') }}" width:15px height:15px
-                                style="margin-bottom:7px;" /></div>
+                        <div><img src="{{ asset('viewsCustom/assets/images/Vector.svg') }}"
+                                style="margin-top:-15px; width:15px; height:15px;" /></div>
                         <div class="fs15"
                             style="color: #D0011B;font-style: normal;font-weight: 400;line-height: normal;padding-left:8px;">
                             4.5</div>
@@ -368,8 +378,6 @@
     padding-bottom: 20%;
 }
 
-
-
 .fs16 {
     font-size: 16px !important;
 }
@@ -418,7 +426,9 @@ ul .items li {
         left: 30%;
     }
 
-    .row {
+
+
+    .main-sec-content .row {
         margin-left: 16px !important;
     }
 
@@ -457,7 +467,7 @@ ul .items li {
     }
 
     .items-tiktok {
-        margin-left: 15%;
+        margin-left: 19%;
     }
 
     .wage {
@@ -525,9 +535,7 @@ ul .items li {
         width: 850px !important;
     }
 
-    .items-tiktok {
-        margin-left: 15%;
-    }
+
 
     .wage p {
         width: 193px;
@@ -713,7 +721,7 @@ ul .items li {
     }
 
     .row {
-        margin-left: 8px !important;
+        margin-left: 0px !important;
     }
 
     .index-web {
