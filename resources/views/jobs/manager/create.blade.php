@@ -231,7 +231,7 @@
 @endpush
 <style>
 * {
-    font-family: 'Helvetica', sans-serif !important;
+    font-family: 'Lato'sans-serif !important;
 }
 
 #sidebarRight {

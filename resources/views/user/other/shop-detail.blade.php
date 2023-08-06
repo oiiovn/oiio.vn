@@ -1034,7 +1034,7 @@
 }
 
 * {
-    font-family: 'Helvetica', sans-serif !important;
+    font-family: 'Lato'sans-serif !important;
 }
 
 ul .items li {

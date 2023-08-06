@@ -115,7 +115,7 @@ style="width:38px; height:38px;position: absolute;right: 40px;top: 22px;" />
                         style="color: #E0793F;font-size: 22px;font-style: normal;font-weight: 500;line-height: normal;">Thông
                         tin Shop</span>
                     <img src="{{ asset('viewsCustom/assets/images/icon-edit.svg') }}"
-                        style="width:38px; height:38px;position: absolute;right: 40px;top: 22px;" />
+                        style="width:38px; height:38px;position: absolute;right: 20px;top: 20px;" />
                 </div>
             </x-slot>
             <div class="card-body" style="padding-top:16px;display:flex;padding-bottom:0px; border-radius:10px;">
@@ -128,8 +128,9 @@ style="width:38px; height:38px;position: absolute;right: 40px;top: 22px;" />
                             class="form-label">{{ __('Tên cửa hàng') }}</label>
                         <div style="display:block;width:100%;" class="">
                             <div class="mb-3 w-form pd-form f-create-shop" style="">
-                                <x-input class="w-100" name="name_shop" placeholder="VD:Nhập tên shop" :required="true"
-                                    style="color: rgba(48, 48, 48, 0.20);display: flex;width: 600px;height: 64px;width: 100% !important;align-items: center;flex-shrink: 0;" />
+                                <x-input class="w-100 height-ip" name="name_shop" placeholder="VD:Nhập tên shop"
+                                    :required="true"
+                                    style="color: rgba(48, 48, 48, 0.20);display: flex;width: 600px;width: 100% !important;align-items: center;flex-shrink: 0;" />
                             </div>
                         </div>
                         <x-button type="submit" class="btn-create-shop"
@@ -151,12 +152,22 @@ style="width:38px; height:38px;position: absolute;right: 40px;top: 22px;" />
 }
 
 * {
-    font-family: 'Helvetica', sans-serif !important;
+    font-family: 'Lato'sans-serif !important;
 }
 
 @media (max-width:768px) {
     .row {
         margin-left: 0px !important;
+    }
+
+    .height-ip {
+        height: 45px;
+    }
+}
+
+@media (min-width:769px) {
+    .height-ip {
+        height: 55px;
     }
 }
 
