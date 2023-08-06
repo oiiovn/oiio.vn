@@ -38,7 +38,7 @@
                 </th>
                 <th class="see-more" style="display:flex;" data-toggle="modal" data-target="#exampleModalCenter">
                     <h3 class="fs13"
-                        style="color: #A6A4A4;font-style: normal;font-weight: 400;line-height: normal;width:60px;">Xem
+                        style="color: #A6A4A4;font-style: normal;font-weight: 400;line-height: normal;width:62px;">Xem
                         thêm</h3><img src="{{ asset('viewsCustom/assets/images/popout.svg') }}"
                         style="padding-left:5px;width:20px;height:20px;margin-top:-2px;" />
                 </th>
@@ -120,9 +120,11 @@
             </th>
         </tr>
         <tr class="mobile-wage" style="padding-top:12px;">
-            <td class="fs13"
-                style="color: #269300;font-style: normal;font-weight: 800;line-height: normal;border-radius: 5px;border: 1px solid #269300;height: 40px;text-align:center;padding:12px;align-item:center;width:168px;">
-                Tiền công: 14. 500 đ</td>
+            <td>
+                <div class="fs13"
+                    style="    margin-left: auto;margin-right: auto;color: #269300;font-style: normal;font-weight: 800;line-height: normal;border-radius: 5px;border: 1px solid #269300;height: 40px;text-align:center;padding:12px;align-item:center;width:168px;">
+                    Tiền công: 14. 500 đ</div>
+            </td>
         </tr>
         <tr class="mobile-modal-body" style="display:flex;padding-left: 10px;padding-right: 10px;" data-toggle="modal"
             data-target="#exampleModalMobile">
