@@ -1,8 +1,8 @@
 <div class="content__ads" style="display:flex;background:#E9E9E9;">
     <div class="content-all" style="display:flex;width:73.3%;background:#fff;border-radius: 10px;">
         <!-- Webside -->
-        <table class=" job-note text-muted rounded index-web" style="width:100%;background:red;">
-            <tr class="content__body-header" style="display:flex;padding-left:25px;padding-top:15px;background:pick;">
+        <table class=" job-note text-muted rounded index-web" style="width:100%;;">
+            <tr class="content__body-header" style="display:flex;padding-left:25px;padding-top:15px;">
                 <th>
                     <a class="header-left-pp" style="display:flex;" href="https://www.facebook.com/buivushopee">
                         <div class="header-left-pp__img">
@@ -43,18 +43,17 @@
                         style="padding-left:5px;width:20px;height:20px;margin-top:-2px;" />
                 </th>
             </tr>
-            <tr class="content__body-content"
-                style="display:flex;padding-top:4.93%;padding-left:4.1%;background:orange;">
-                <td style="background: #F5AE5D;display:flex;    width: 60%;">
+            <tr class="content__body-content" style="display:flex;padding-top:4.93%;padding-left:4.1%;">
+                <td style="display:flex;    width: 60%;">
                     <div class="content__body-content__title fs15"
-                        style="display:block;color: #303030;font-style: normal;font-weight: 600;line-height: normal;background:red;">
+                        style="display:block;color: #303030;font-style: normal;font-weight: 600;line-height: normal;">
                         <div class="items">Đơn Seeding</div>
                         <div class="items" style="width:120px;">Khu vực lên đơn</div>
                         <div class="items">Giao nhận</div>
                         <div class="items">Thanh toán</div>
                     </div>
                     <div class="content__body-content__act fs13"
-                        style="color: #303030;font-style: normal;font-weight: 500;line-height: normal;text-align: right;background:blue;">
+                        style="color: #303030;font-style: normal;font-weight: 500;line-height: normal;text-align: right;">
                         <div class="items"
                             style="width: 94px;height: 26px;padding:5px;text-align:center;background: #FB6815;color: #FFF;font-size: 12px;font-weight: 700;margin-left:30px;border:none;border-radius: 5px;">
                             Shopee</div>
@@ -63,7 +62,7 @@
                         <div class="items" style="width: 128px;height: 26px;padding:5px;">Shop thanh toán</div>
                     </div>
                 </td>
-                <td class="content__body-content__btn" style="text-align: right; margin-left:13.14%;background:red;">
+                <td class="content__body-content__btn" style="text-align: right; margin-left:13.14%;">
                     <div class="wage" style="width:193px;">
                         <p class=" fs16"
                             style="color: #269300;font-style: normal;font-weight: 600;line-height: normal;border-radius: 5px;border: 1px solid #269300;height: 44px;text-align:center;padding:12px;align-item:center;">
