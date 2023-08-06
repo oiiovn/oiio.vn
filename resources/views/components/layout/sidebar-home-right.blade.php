@@ -137,8 +137,8 @@
                                     <div class="content-news">
                                         <p style="margin-bottom: 20px;">{{ $value->title }}</p>
                                         <div style="display:flex;justify-content:space-between;" class="btn-date-news">
-                                            <span style="color: #A6A4A4;font-size: 10px;font-style: normal;font-weight: 500;line-height: normal;">1 giờ trước</span>
-                                            <a class="text-orange" href="#" style="border-bottom: 1px solid #E0793F;">{{ __('Xem thêm') }}</a>
+                                            <span style="color: #A6A4A4;font-size: 10px;font-style: normal;font-weight: 500;line-height: normal;">{{ format_datetime($value->created_at) }}</span>
+                                            <a class="text-orange" href="#" style="border-bottom: 1px solid #E0793F;display: flex;justify-content: center;">{{ __('Xem thêm') }}</a>
                                         </div>
                                     </div>
                                 </div>

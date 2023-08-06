@@ -140,7 +140,7 @@
     <x-link class="btn btn-orange w-100 mb-3" href="{{ route('login.index') }}">Đăng nhập</x-link>
     <x-link class="btn btn-orange w-100 mb-3" href="{{ route('register.index') }}">Đăng ký</x-link>
 @endif
-    <x-card>
+    <!-- <x-card>
         <x-slot name="header">
             <div class="nav">
                 <ul class="nav-r">
@@ -181,7 +181,7 @@
 {{--                    <img src="{{ asset('viewsCustom/assets/images/down2.png') }}" alt=""></a>--}}
 {{--            </div>--}}
 {{--        </x-slot>--}}
-    </x-card>
+    </x-card> -->
 
 <!-- Đã sửa -->
 <style>
