@@ -289,7 +289,7 @@
                         <div class="items"
                             style="border-radius: 5px;background: #FBC250;width:130px;padding: 8px 20px;">Tài khoàn vàng
                         </div>
-                        <div class="items">Áp mã freeship</div>
+                        <div class="items" style="margin-bottom:15px;">Áp mã freeship</div>
                         <div class="items">Hà Nội</div>
                     </td>
                     <td class="body-text" style="padding-left:10%; width: 50%;">
@@ -409,7 +409,7 @@
 }
 
 * {
-    font-family: 'Helvetica', sans-serif !important;
+    font-family: 'Lato'sans-serif !important;
 }
 
 ul .items li {
