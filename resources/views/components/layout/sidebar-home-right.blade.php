@@ -51,7 +51,8 @@
 {{--        <x-link :href="route('job.show', $job->slug)">--}}
 {{--            <div class="order-list mb-2">--}}
 {{--                <p class="m-0 fw-bold">{{ __('Đơn gần đây') }}</p>--}}
-{{--                    <p class="m-0 text-orange"> {{ __('Xem chi tiết') }} <i class="fa-solid fa-right float-end"></i></p>--}}
+{{--                    <p class="m-0 text-orange"> {{ __('Xem chi tiết') }} <i
+    class="fa-solid fa-right float-end"></i></p>--}}
 {{--                </div>--}}
 {{--            </x-link>--}}
 
@@ -66,7 +67,7 @@
     <x-slot name="header">
         <div class="nav" style="border-bottom: 1px solid #3333;">
             <ul class="nav-r" style="width:100%;">
-                <x-banner/>
+                <x-banner />
             </ul>
         </div>
     </x-slot>
@@ -77,14 +78,16 @@
             <div class="nav">
                 <ul class="nav-r">
                     <li class="nav-item">
-                        <span style="color: #000;font-size: 18px;font-style: normal;font-weight: 700;line-height: normal;">{{ ('Shop có nhiều đơn hàng') }}</span>
+                        <span
+                            style="color: #000;font-size: 18px;font-style: normal;font-weight: 700;line-height: normal;">{{ ('Shop có nhiều đơn hàng') }}</span>
                     </li>
                 </ul>
             </div>
         </x-slot>
 
         {{--Render hình ảnh và tên shop--}}
-        <div class="nav text-center" style="width:100%;height: 200px;flex-direction: column;justify-content: flex-start;align-items: center;gap: 10px;display: inline-flex;">
+        <div class="nav text-center"
+            style="width:100%;height: 200px;flex-direction: column;justify-content: flex-start;align-items: center;gap: 10px;display: inline-flex;">
             @foreach($users as $user)
                 <a href="{{ route('info.shop_detail', $user->slug) }}">
                     {{--Render hình ảnh--}}
@@ -143,7 +146,7 @@
 
             <div class="nav-arrow">
                 <a style="text-align: center;margin:10px 50% 10px 50%" href="#">
-                    <img src="{{ asset('viewsCustom/assets/images/down2.png') }}" alt=""/>
+                    <img src="{{ asset('viewsCustom/assets/images/down2.png') }}" alt="" />
                 </a>
             </div>
         </x-slot>
@@ -151,52 +154,39 @@
 </x-card>
 
 <style>
-    * {
-        list-style: none;
-    }
+* {
+    list-style: none;
+}
 
-    ol,
-    ul {
-        padding-left: 0 !important;
-    }
+ol,
+ul {
+    padding-left: 0 !important;
+}
 
-    .nav a {
-        width: 100px;
-    }
+.nav a {
+    width: 100px;
+}
 
-    .nav .nav-item .nav-link {
-        display: flex;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        white-space: nowrap;
-        padding: 1.125rem 0 1.125rem 0;
-        color: #3e4b5b;
-        -webkit-transition-duration: 0.45s;
-        transition-duration: 0.45s;
-        transition-property: color;
-        -webkit-transition-property: color;
-    }
+.nav .nav-item .nav-link {
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    white-space: nowrap;
+    padding: 1.125rem 0 1.125rem 0;
+    color: #3e4b5b;
+    -webkit-transition-duration: 0.45s;
+    transition-duration: 0.45s;
+    transition-property: color;
+    -webkit-transition-property: color;
+}
 
-    .card-body {
-        background: #FFF;
-    }
+.card-body {
+    background: #FFF;
+}
 
-    .nav a:hover {
-        color: #E0793F !important;
-    }
+.nav a:hover {
+    color: #E0793F !important;
+}
 
-    @media (max-width: 520px) {
-        .nav-item {
-            border: none !important;
-        }
-
-        .nav {
-            width: 300px !important;
-        }
-
-        .nav-r {
-            width: 250px !important;
-        }
-    }
 </style>
