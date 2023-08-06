@@ -89,6 +89,7 @@
         <div class="nav text-center"
             style="width:100%;height: 200px;flex-direction: column;justify-content: flex-start;align-items: center;gap: 10px;display: inline-flex;">
             @foreach($users as $user)
+<<<<<<< HEAD
 
             <a href="{{ route('info.shop_detail', $user->slug) }}">
                 {{--Render hình ảnh--}}
@@ -105,7 +106,20 @@
                     </p>
                 </div>
             </a>
-
+=======
+                <a href="{{ route('info.shop_detail', $user->slug) }}">
+                    {{--Render hình ảnh--}}
+                    <img style="width: 45px; height: 45px; border-radius: 9999px; border: 0.50px black solid" src="{{ $user->avatar }}" alt=""/>
+                    <div @class([ ""=> !$loop->last ])>
+                        <p>
+                            {{ $user->getNameShop() }}
+                            @if($user->isReputable())
+                                <i class="fa-regular fa-circle-check text-primary"></i>
+                            @endif
+                        </p>
+                    </div>
+                </a>
+>>>>>>> aa1b47871e2b7958ad6e4ee988b994e8fb5a7740
             @endforeach
         </div>
     </x-card>
@@ -116,35 +130,39 @@
             <div class="nav">
                 <ul class="nav-r">
                     <li class="nav-item">
-                        <span
-                            style="color: #000;font-size: 18px;font-style: normal;font-weight: 700;line-height: normal;">
-                            <a class="" href="{{ route('news.index')}}">{{ ('Tin tức') }}</a></span>
+                        <span style="color: #000;font-size: 18px;font-style: normal;font-weight: 700;line-height: normal;">
+                            <a class="" href="{{ route('news.index')}}">{{ ('Tin tức') }}</a>
+                        </span>
                     </li>
                 </ul>
             </div>
         </x-slot>
+
+        {{--Thông tin tin tức--}}
         <x-slot name="footer">
             <div class="nav">
-                <a href="">
-                    <div>
-                        <div style="display:grid;grid-template-columns:30% 65%;margin-bottom:20px;">
-                            <div class="img-news">
-                                <img src="" />
-                            </div>
-                            <div class="content-news">
-                                <p style="margin-bottom: 20px;"></p>
-                                <div style="display:flex;justify-content:space-between;" class="btn-date-news">
-                                    <span
-                                        style="color: #A6A4A4;font-size: 10px;font-style: normal;font-weight: 500;line-height: normal;">1
-                                        giờ trước</span>
-                                    <a class="text-orange" href="#"
-                                        style="border-bottom: 1px solid #E0793F;">{{ __('Xem thêm') }}</a>
+                @foreach($news as $value)
+                    @if($loop->iteration <= 2)
+                        <a href="{{ route('news.detail', $value->slug) }}">
+                            <div @class([ ""=> !$loop->last ])>
+                                <div style="display:grid;grid-template-columns:30% 65%;margin-bottom:20px;">
+                                    <div class="img-news">
+                                        <img src="{{ asset($value->getavatar) }}"/>
+                                    </div>
+                                    <div class="content-news">
+                                        <p style="margin-bottom: 20px;">{{ $value->title }}</p>
+                                        <div style="display:flex;justify-content:space-between;" class="btn-date-news">
+                                            <span style="color: #A6A4A4;font-size: 10px;font-style: normal;font-weight: 500;line-height: normal;">1 giờ trước</span>
+                                            <a class="text-orange" href="#" style="border-bottom: 1px solid #E0793F;">{{ __('Xem thêm') }}</a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                </a>
+                        </a>
+                    @endif
+                @endforeach
             </div>
+
             <div class="nav-arrow">
                 <a style="text-align: center;margin:10px 50% 10px 50%" href="#">
                     <img src="{{ asset('viewsCustom/assets/images/down2.png') }}" alt="" />
@@ -152,24 +170,6 @@
             </div>
         </x-slot>
     </x-card>
-    {{--    @if (auth()->check())--}}
-    {{--        <x-card>--}}
-    {{--            <x-slot name="header">--}}
-    {{--                <span class="text-white fs-14"> {{ __('Đã nhận gần đây') }}</span>--}}
-    {{--        </x-slot>--}}
-    {{--        <div class="card-body">--}}
-    {{--            @foreach ($jobs as $job)--}}
-    {{--            <x-link :href="route('job.show', $job->slug)">--}}
-    {{--                <div class="order-list mb-2">--}}
-    {{--                    <p class="m-0 fw-bold">{{ __('Đơn gần đây') }}</p>--}}
-    {{--                        <p class="m-0 text-orange"> {{ __('Xem chi tiết') }} <i
-        class="fa-solid fa-right float-end"></i></p>--}}
-    {{--                    </div>--}}
-    {{--                </x-link>--}}
-    {{--        @endforeach--}}
-    {{--        </div>--}}
-    {{--    </x-card>--}}
-    {{--    @endif--}}
 </x-card>
 
 <style>
