@@ -89,18 +89,22 @@
         <div class="nav text-center"
             style="width:100%;height: 200px;flex-direction: column;justify-content: flex-start;align-items: center;gap: 10px;display: inline-flex;">
             @foreach($users as $user)
-                <a href="{{ route('info.shop_detail', $user->slug) }}">
-                    {{--Render hình ảnh--}}
-                    <img style="width: 45px; height: 45px; border-radius: 9999px; border: 0.50px black solid" src="{{ $user->avatar }}" alt=""/>
-                    <div @class([ ""=> !$loop->last ])>
-                        <p>
-                            {{ $user->getNameShop() }}
-                            @if($user->isReputable())
-                                <i class="fa-regular fa-circle-check text-primary"></i>
-                            @endif
-                        </p>
-                    </div>
-                </a>
+
+            <a href="{{ route('info.shop_detail', $user->slug) }}">
+                {{--Render hình ảnh--}}
+                {{--Đọc rồi xoá nha: Do ở lúc đẩy hình ảnh lên bên mevivu có thể cấu hình sai ấy nên là lúc đưa lên ở localhost nó kh lên hình nhưng thật sự là có hình rồi nha--}}
+                <img style="width: 45px; height: 45px; border-radius: 9999px; border: 0.50px #A6A4A4 solid"
+                    src="{{ $user->avatar }}" alt="" />
+                <div @class([ ""=> !$loop->last ])>
+                    <p>
+                        {{ $user->getNameShop() }}
+                        @if($user->isReputable())
+                        <img style="margin-left:2.8px;width:15px ;height:15px;"
+                            src="{{ asset('viewsCustom/assets/images/tick.svg') }}" />
+                        @endif
+                    </p>
+                </div>
+            </a>
             @endforeach
         </div>
     </x-card>
