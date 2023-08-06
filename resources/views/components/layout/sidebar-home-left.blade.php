@@ -22,7 +22,7 @@
                 <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic" aria-expanded="true"
                    aria-controls="ui-basic">
                     <img src="{{ asset('viewsCustom/assets/images/ic1.svg') }}" alt="">
-                    <span class="menu-title" style="margin-left:10px;"> Dịch vụ</span>
+                    <span class="menu-title" style="margin-left:10px;font-weight: 700;"> Dịch vụ</span>
                     <i style="margin-left:auto;font-size:20px;" class="ri-arrow-down-s-line"></i>
                 </a>
             </x-slot>
@@ -44,7 +44,7 @@
                     <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic1" aria-expanded="true"
                        aria-controls="ui-basic1">
                         <img src="{{ asset('viewsCustom/assets/images/ic2.svg') }}" alt="">
-                        <span class="menu-title" style="margin-left:10px;">
+                        <span class="menu-title" style="margin-left:10px;font-weight: 700;">
                             {{ __('Quản lý shop') }}
                         </span>
                         <i style="margin-left:auto;font-size:20px;" class="ri-arrow-down-s-line"></i>
@@ -87,7 +87,7 @@
                 <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic2" aria-expanded="true"
                    aria-controls="ui-basic2">
                     <img src="{{ asset('viewsCustom/assets/images/ic8.svg') }}" alt="">
-                    <span class="menu-title" style="margin-left:10px;">
+                    <span class="menu-title" style="margin-left:10px;font-weight: 700;">
                         {{ __('Quản lý đặt đơn') }}
                     </span>
                     <i style="margin-left:auto;font-size:20px;" class="ri-arrow-down-s-line"></i>
@@ -120,7 +120,7 @@
                    aria-controls="ui-basic3">
                     <a href="https://help.oiio.vn" class="help">
                         <img src="{{ asset('viewsCustom/assets/images/ic5.svg') }}" alt="">
-                        <span class="menu-title" style="margin-left:10px;">Trợ giúp</span></a>
+                        <span class="menu-title" style="margin-left:10px;font-weight: 700;">Trợ giúp</span></a>
                     <i style="margin-left:auto;font-size:20px;" class=""></i>
                 </a>
             </x-slot>
