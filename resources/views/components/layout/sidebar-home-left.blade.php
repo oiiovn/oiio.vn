@@ -152,35 +152,35 @@
                 </ul>
             </div>
         </x-slot>
-        <x-slot name="footer">
-            <div class="nav">
-                @foreach($news as $value)
-                    @if($loop->iteration <= 2)
-                        <a href="{{ route('news.detail', $value->slug) }}">
-                            <div @class([ ""=> !$loop->last ])>
-                                <div style="display:grid;grid-template-columns:30% 65%;margin-bottom:20px;">
-                                    <div class="img-news">
-                                        <img src="{{ asset($value->getavatar) }}"/>
-                                    </div>
-                                    <div class="content-news">
-                                        <p style="margin-bottom: 20px;">{{ $value->title }}</p>
-                                        <div style="display:flex;justify-content:space-between;" class="btn-date-news">
-                                            <span style="color: #A6A4A4;font-size: 10px;font-style: normal;font-weight: 500;line-height: normal;">1 giờ trước</span>
-                                            <a class="text-orange" href="#" style="border-bottom: 1px solid #E0793F;">{{ __('Xem thêm') }}</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    @endif
-                @endforeach
-            </div>
+{{--        <x-slot name="footer">--}}
+{{--            <div class="nav">--}}
+{{--                @foreach($news as $value)--}}
+{{--                    @if($loop->iteration <= 2)--}}
+{{--                        <a href="{{ route('news.detail', $value->slug) }}">--}}
+{{--                            <div @class([ ""=> !$loop->last ])>--}}
+{{--                                <div style="display:grid;grid-template-columns:30% 65%;margin-bottom:20px;">--}}
+{{--                                    <div class="img-news">--}}
+{{--                                        <img src="{{ asset($value->getavatar) }}"/>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="content-news">--}}
+{{--                                        <p style="margin-bottom: 20px;">{{ $value->title }}</p>--}}
+{{--                                        <div style="display:flex;justify-content:space-between;" class="btn-date-news">--}}
+{{--                                            <span style="color: #A6A4A4;font-size: 10px;font-style: normal;font-weight: 500;line-height: normal;">1 giờ trước</span>--}}
+{{--                                            <a class="text-orange" href="#" style="border-bottom: 1px solid #E0793F;">{{ __('Xem thêm') }}</a>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        </a>--}}
+{{--                    @endif--}}
+{{--                @endforeach--}}
+{{--            </div>--}}
 
-            <div class="nav-arrow">
-                <a style="text-align: center;margin:10px 50% 10px 50%" href="#">
-                    <img src="{{ asset('viewsCustom/assets/images/down2.png') }}" alt=""></a>
-            </div>
-        </x-slot>
+{{--            <div class="nav-arrow">--}}
+{{--                <a style="text-align: center;margin:10px 50% 10px 50%" href="#">--}}
+{{--                    <img src="{{ asset('viewsCustom/assets/images/down2.png') }}" alt=""></a>--}}
+{{--            </div>--}}
+{{--        </x-slot>--}}
     </x-card>
 
 <!-- Đã sửa -->

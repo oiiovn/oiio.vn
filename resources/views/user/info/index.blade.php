@@ -744,6 +744,7 @@
             overflow-y: hidden;
             width: 450px !important;
             gap: 20px !important;
+            padding-bottom: 10px !important;
         }
 
         .title-tr {
@@ -1094,4 +1095,5 @@
     })
 </script>
 
+<script src="/viewsCustom/assets/js/cropper.min.js"></script>
 @endsection
