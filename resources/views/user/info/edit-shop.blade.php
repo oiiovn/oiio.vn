@@ -133,7 +133,7 @@ style="width:38px; height:38px;position: absolute;right: 40px;top: 22px;" />
                             <div class="mb-3 w-form pd-form f-create-shop" style="">
                                 <x-input class="w-100" name="name_shop" value="{{ auth()->user()->name_shop }}"
                                     placeholder="Nhập tên shop" :required="true"
-                                    style="color: rgba(48, 48, 48, 0.20);display: flex;width: 600px;height: 64px;width: 100% !important;align-items: center;flex-shrink: 0;" />
+                                    style="color: rgba(0, 0, 0, 0.70);display: flex;width: 600px;height: 64px;width: 100% !important;align-items: center;flex-shrink: 0;" />
                             </div>
                         </div>
                         <x-button type="submit" class="btn-create-shop"
@@ -171,7 +171,7 @@ style="width:38px; height:38px;position: absolute;right: 40px;top: 22px;" />
                         <div style="display:block;width:100%;" class="">
                             <div class="mb-3 w-form pd-form f-create-shop" style="">
                                 <x-input class="w-100" name="name_shop" placeholder="Nhập địa chỉ" :required="true"
-                                    style="color: rgba(48, 48, 48, 0.20);display: flex;width: 600px;height: 64px;width: 100% !important;align-items: center;flex-shrink: 0;" />
+                                    style="color: rgba(0, 0, 0, 0.20);display: flex;width: 600px;height: 64px;width: 100% !important;align-items: center;flex-shrink: 0;" />
                             </div>
                         </div>
                     </div>
@@ -188,7 +188,7 @@ style="width:38px; height:38px;position: absolute;right: 40px;top: 22px;" />
                         <div style="display:block;width:100%;" class="">
                             <div class="mb-3 w-form pd-form f-create-shop" style="">
                                 <x-input class="w-100" name="name_shop" placeholder="Dán link facebook" :required="true"
-                                    style="color: rgba(48, 48, 48, 0.20);display: flex;width: 600px;height: 64px;width: 100% !important;align-items: center;flex-shrink: 0;" />
+                                    style="color: rgba(0, 0, 0, 0.20);display: flex;width: 600px;height: 64px;width: 100% !important;align-items: center;flex-shrink: 0;" />
                             </div>
                         </div>
                     </div>
@@ -206,7 +206,7 @@ style="width:38px; height:38px;position: absolute;right: 40px;top: 22px;" />
                             <div class="mb-3 w-form pd-form f-create-shop" style="">
                                 <x-input class="w-100" name="name_shop" placeholder="Số điện thoại zalo"
                                     :required="true"
-                                    style="color: rgba(48, 48, 48, 0.20);display: flex;width: 600px;height: 64px;width: 100% !important;align-items: center;flex-shrink: 0;" />
+                                    style="color: rgba(0, 0, 0, 0.20);display: flex;width: 600px;height: 64px;width: 100% !important;align-items: center;flex-shrink: 0;" />
                             </div>
                         </div>
                         <x-button type="submit" class="btn-create-shop"
