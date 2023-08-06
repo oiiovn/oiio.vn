@@ -273,7 +273,7 @@
                             <div class="see-more-info-shop" style="display:flex;" data-toggle="modal"
                                 data-target="#exampleModalCenter">
                                 <h3 class="fs13"
-                                    style="color: #A6A4A4;font-style: normal;font-weight: 400;line-height: normal;width:60px;">
+                                    style="color: #A6A4A4;font-style: normal;font-weight: 400;line-height: normal;width:62px;">
                                     Xem
                                     thêm</h3><img src="{{ asset('viewsCustom/assets/images/popout.svg') }}"
                                     style="padding-left:5px;width:20px;height:20px;margin-top:-2px;" />
@@ -619,7 +619,7 @@
                                 <div class="items"
                                     style="border-radius: 5px;background: #FBC250;width:130px;padding: 8px 20px;">Tài
                                     khoàn vàng</div>
-                                <div class="items">Áp mã freeship</div>
+                                <div class="items" style="margin-top:15px;">Áp mã freeship</div>
                                 <div class="items">Hà Nội</div>
                             </div>
                             <div class="body-text" style="padding-left:10%; width: 50%;">
@@ -864,7 +864,7 @@
     <div class="all-reviews-shop reviews" style="background: #fff;border-radius: 10px;padding-bottom: 10px">
         <div style="width:100%;height:55px;display: flex;align-items: center;padding-left:40px;">
             <div
-                style="width:59.14%;color: #E0793F;font-size: 18px;font-style: normal;font-weight: 500;line-height: normal;border-bottom:1px solid rgba(0, 0, 0, 0.11);padding-bottom:10px;">
+                style="color: #E0793F;font-size: 18px;font-style: normal;font-weight: 500;line-height: normal;border-bottom:1px solid rgba(0, 0, 0, 0.11);padding-bottom:10px;">
                 Đánh giá cộng đồng</div>
         </div>
         <div style="height: 100%;">
