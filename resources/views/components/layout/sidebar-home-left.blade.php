@@ -13,8 +13,10 @@
         </x-slot>
         {{--Nút nạp tiền và rút tiền mobile--}}
         <div class="btn-money"style="display:none;">
-            <button style="background:#fff;padding:8px 19px;border-radius:5px;border:1px solid #269300;color:#269300;font-family:'Lato'sans-serif;font-size: 12px;font-style: normal;font-weight: 500;line-height: normal;">Nạp tiền</button>
-            <button style="background:#fff;padding:8px 19px;border-radius:5px;border:1px solid #DE8C49;color:#DE8C49;font-family:'Lato'sans-serif;font-size: 12px;font-style: normal;font-weight: 500;line-height: normal;">Rút tiền</button>
+            <button style="background:#fff;padding:8px 19px;border-radius:5px;border:1px solid #269300;">
+            <a style="font-family:'Lato'sans-serif;font-size: 12px;font-style: normal;font-weight: 500;line-height: normal;color:#269300;"href="{{ route('transaction.deposit.create') }}">Nạp tiền</a></button>
+            <button style="background:#fff;padding:8px 19px;border-radius:5px;border:1px solid #DE8C49;">
+            <a style="color:#DE8C49;font-family:'Lato'sans-serif;font-size: 12px;font-style: normal;font-weight: 500;line-height: normal;"href="{{ route('transaction.withdrawn.create') }}">Rút tiền</a></button>
         </div>
         {{--Dịch vụ--}}
         <x-card>

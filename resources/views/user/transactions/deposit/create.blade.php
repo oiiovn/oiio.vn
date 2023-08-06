@@ -160,6 +160,18 @@
 
             {{-- Style --}}
             <style>
+                @media (max-width:768px) {
+                    .container-withdrawn{
+                        display: none !important;
+                    }
+                    #row{
+                        margin-left:0 !important;
+                        margin-top:0 !important;
+                    }
+                    .card-content{
+                        margin-left:0 !important;
+                    }
+                }
                 .card-list {
                     display: block;
                     align-items: center;
@@ -245,36 +257,36 @@
     </x-card>
 </x-form>
 <x-form type="post" action="{{ route('transaction.withdrawn.store') }}" :validate="true">
-    <x-card>
-        <x-slot name="header">
-            <span class="text-white" style="color: #000;font-family: Lato;font-size: 20px;font-style: normal;font-weight: 700;line-height: normal;"><span class="">Tạo lệnh rút tiền</span></span>
-        </x-slot>
-        <div class="card-body">
-            <x-input type="hidden" name="user_id" value="{{ $user->id }}" />
-            <div class="mb-3">
-                <label class="form-label"><span style="margin-right:210px;color: #000;font-family: 'Lato' sans-serif;font-size: 16px;font-style: normal;font-weight: 500;line-height: normal;">{{ __('Số dư: ') }}</span><b class="price__color">{{ format_price($user->wallet->amount) }}</b></label>
+    <div class="container-withdrawn">
+        <x-card>
+            <x-slot name="header">
+                <span class="text-white" style="color: #000;font-family: Lato;font-size: 20px;font-style: normal;font-weight: 700;line-height: normal;"><span class="">Tạo lệnh rút tiền</span></span>
+            </x-slot>
+            <div class="card-body">
+                <x-input type="hidden" name="user_id" value="{{ $user->id }}" />
+                <div class="mb-3">
+                    <label class="form-label"><span style="margin-right:210px;color: #000;font-family: 'Lato' sans-serif;font-size: 16px;font-style: normal;font-weight: 500;line-height: normal;">{{ __('Số dư: ') }}</span><b class="price__color">{{ format_price($user->wallet->amount) }}</b></label>
+                </div>
+                <div class="mb-3 price_input__form d-flex align-items-center">
+                    <label class="form-label" style="margin-right:109px;color: #000;font-family: 'Lato' sans-serif;font-size: 16px;font-style: normal;font-weight: 500;line-height: normal;">{{ __('Nhập số tiền cần rút') }}</label>
+                    <x-input style="width: 387px;height: 46px;flex-shrink: 0;" name="amount" placeholder="VD: 50.000 đ" min="100000" max="{{ $user->wallet->amount }}" :required="true" onchange="this.value = formatPrice(this.value)" />
+
+                </div>
+                <div class="mb-3 d-flex align-items-center">
+                    <label for="" style="margin-right:67px;color: #000;font-family: 'Lato' sans-serif;font-size: 16px;font-style: normal;font-weight: 500;line-height: normal;">Chọn tài khoản ngân hàng</label>
+                    <select style="width:387px; height: 46px; flex-shrink: 0; border-radius: 5px; border: 1px solid rgba(48, 48, 48, 0.21);">
+                        @foreach ($user->bankAccount as $item)
+                        <option value="{{ $item->id }}">{{ $item->bank_name }} - {{ $item->account_name }}</option>
+                        @endforeach
+                    </select>
+
+                </div>
+                <!-- @each('user.transactions.withdrawn.include.bank-row', $user->bankAccount, 'item')  -->
+                <x-button type="submit" class="btn-orang" style="display: inline-flex;padding: 10px 20px;justify-content:center;align-items: center;border-radius: 5px;background: #E0793F;color:#FFF;margin-left:610px;">
+                    Tạo lệnh rút tiền</x-button>
             </div>
-            <div class="mb-3 price_input__form d-flex align-items-center">
-                <label class="form-label" style="margin-right:109px;color: #000;font-family: 'Lato' sans-serif;font-size: 16px;font-style: normal;font-weight: 500;line-height: normal;">{{ __('Nhập số tiền cần rút') }}</label>
-                <x-input style="width: 387px;height: 46px;flex-shrink: 0;" name="amount" placeholder="VD: 50.000 đ" min="100000" max="{{ $user->wallet->amount }}" :required="true" onchange="this.value = formatPrice(this.value)" />
-
-            </div>
-            <div class="mb-3 d-flex align-items-center">
-                <label for="" style="margin-right:67px;color: #000;font-family: 'Lato' sans-serif;font-size: 16px;font-style: normal;font-weight: 500;line-height: normal;">Chọn tài khoản ngân hàng</label>
-                <select style="width:387px; height: 46px; flex-shrink: 0; border-radius: 5px; border: 1px solid rgba(48, 48, 48, 0.21);">
-                    @foreach ($user->bankAccount as $item)
-                    <option value="{{ $item->id }}">{{ $item->bank_name }} - {{ $item->account_name }}</option>
-                    @endforeach
-                </select>
-
-
-
-            </div>
-            <!-- @each('user.transactions.withdrawn.include.bank-row', $user->bankAccount, 'item')  -->
-            <x-button type="submit" class="btn-orang" style="display: inline-flex;padding: 10px 20px;justify-content:center;align-items: center;border-radius: 5px;background: #E0793F;color:#FFF;margin-left:610px;">
-                Tạo lệnh rút tiền</x-button>
-        </div>
-    </x-card>
+        </x-card>
+    </div>
     <div style="width: 100%;height:68px;background-color:#e9e9e9;">
         <div style="height: 68px;"></div>
     </div>
