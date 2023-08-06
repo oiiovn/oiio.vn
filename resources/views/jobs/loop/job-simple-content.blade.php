@@ -1,9 +1,9 @@
 <div class="content__ads" style="display:flex;background:#E9E9E9;">
     <div class="content-all" style="display:flex;width:73.3%;background:#fff;border-radius: 10px;">
         <!-- Webside -->
-        <div class=" job-note text-muted rounded index-web" style="width:100%;">
-            <div class="content__body-header" style="display:flex;padding-left:25px;padding-top:15px;">
-                <div>
+        <table class=" job-note text-muted rounded index-web" style="width:100%;;">
+            <tr class="content__body-header" style="display:flex;padding-left:25px;padding-top:15px;">
+                <th>
                     <a class="header-left-pp" style="display:flex;" href="https://www.facebook.com/buivushopee">
                         <div class="header-left-pp__img">
                             <img src="{{ asset('viewsCustom/assets/images/hinh1.png') }}"
@@ -25,8 +25,8 @@
                             </div>
                         </div>
                     </a>
-                </div>
-                <div class="header-right-pp" style="display:flex;padding-top:5px;">
+                </th>
+                <th class="header-right-pp" style="display:flex;padding-top:5px;">
                     <div><img src="{{ asset('viewsCustom/assets/images/Vector.svg') }}"
                             style="margin-bottom:7px;width:15px; height:15px;" /></div>
                     <div class="fs15"
@@ -35,32 +35,34 @@
                     <div class="fs15"
                         style="color: #D0011B;font-style: normal;font-weight: 400;line-height: normal;width: 140px;padding-left:3px;">
                         (25,5k đánh giá)</div>
-                </div>
-                <div class="see-more" style="display:flex;" data-toggle="modal" data-target="#exampleModalCenter">
+                </th>
+                <th class="see-more" style="display:flex;" data-toggle="modal" data-target="#exampleModalCenter">
                     <h3 class="fs13"
                         style="color: #A6A4A4;font-style: normal;font-weight: 400;line-height: normal;width:60px;">Xem
                         thêm</h3><img src="{{ asset('viewsCustom/assets/images/popout.svg') }}"
                         style="padding-left:5px;width:20px;height:20px;margin-top:-2px;" />
-                </div>
-            </div>
-            <div class="content__body-content" style="display:flex;padding-top:4.93%;padding-left:4.1%;">
-                <div class="content__body-content__title fs15"
-                    style="display:block;color: #303030;font-style: normal;font-weight: 600;line-height: normal;">
-                    <div class="items">Đơn Seeding</div>
-                    <div class="items" style="width:120px;">Khu vực lên đơn</div>
-                    <div class="items">Giao nhận</div>
-                    <div class="items">Thanh toán</div>
-                </div>
-                <div class="content__body-content__act fs13"
-                    style="color: #303030;font-style: normal;font-weight: 500;line-height: normal;text-align: right;">
-                    <div class="items"
-                        style="width: 94px;height: 26px;padding:5px;text-align:center;background: #FB6815;color: #FFF;font-size: 12px;font-weight: 700;margin-left:30px;border:none;border-radius: 5px;">
-                        Shopee</div>
-                    <div class="items" style="width: 128px;height: 26px;padding:5px;">Hà Nội</div>
-                    <div class="items" style="width: 128px;height: 26px;padding:5px;">Không nhận hàng</div>
-                    <div class="items" style="width: 128px;height: 26px;padding:5px;">Shop thanh toán</div>
-                </div>
-                <div class="content__body-content__btn" style="text-align: right; margin-left:13.14%;">
+                </th>
+            </tr>
+            <tr class="content__body-content" style="display:flex;padding-top:4.93%;padding-left:4.1%;">
+                <td style="display:flex;    width: 60%;">
+                    <div class="content__body-content__title fs15"
+                        style="display:block;color: #303030;font-style: normal;font-weight: 600;line-height: normal;">
+                        <div class="items">Đơn Seeding</div>
+                        <div class="items" style="width:120px;">Khu vực lên đơn</div>
+                        <div class="items">Giao nhận</div>
+                        <div class="items">Thanh toán</div>
+                    </div>
+                    <div class="content__body-content__act fs13"
+                        style="color: #303030;font-style: normal;font-weight: 500;line-height: normal;text-align: right;">
+                        <div class="items"
+                            style="width: 94px;height: 26px;padding:5px;text-align:center;background: #FB6815;color: #FFF;font-size: 12px;font-weight: 700;margin-left:30px;border:none;border-radius: 5px;">
+                            Shopee</div>
+                        <div class="items" style="width: 128px;height: 26px;padding:5px;">Hà Nội</div>
+                        <div class="items" style="width: 128px;height: 26px;padding:5px;">Không nhận hàng</div>
+                        <div class="items" style="width: 128px;height: 26px;padding:5px;">Shop thanh toán</div>
+                    </div>
+                </td>
+                <td class="content__body-content__btn" style="text-align: right; margin-left:13.14%;">
                     <div class="wage" style="width:193px;">
                         <p class=" fs16"
                             style="color: #269300;font-style: normal;font-weight: 600;line-height: normal;border-radius: 5px;border: 1px solid #269300;height: 44px;text-align:center;padding:12px;align-item:center;">
@@ -72,17 +74,17 @@
                                 style="border-radius: 5px;border-radius: 5px;background: #F5AE5D;color: #FFF;font-style: normal;font-weight: 700;line-height: normal;width:105px;height:43px;padding:12px;">Nhận
                                 Đơn</button></a>
                     </div>
-                </div>
-            </div>
-        </div>
+                </td>
+            </tr>
+        </table>
 
 
 
     </div>
     <!-- Mobile -->
-    <div class="index-mobile" style="width:100%;background: #fff;">
-        <div class="content__body-header" style="display:flex;padding-left:10px;padding-top:10px;padding-right:10px;">
-            <div class="header-left-pp" style="display:flex;">
+    <table class="index-mobile" style="width:100%;background: #fff;">
+        <tr class="content__body-header" style="display:flex;padding-left:10px;padding-top:10px;padding-right:10px;">
+            <th class="header-left-pp" style="display:flex;">
                 <a href="https://www.facebook.com/buivushopee" style="display:flex;">
                     <div class="header-left-pp__img">
                         <img src="{{ asset('viewsCustom/assets/images/hinh1.png') }}"
@@ -114,19 +116,17 @@
                         style="color: #D0011B;font-style: normal;font-weight: 400;line-height: normal;padding-left:3px;">
                         (25,5k đánh giá)</div>
                 </div>
-                <!-- <div class="see-more" style="display:flex;"data-toggle="modal" data-target="#exampleModalMobile" >
-                        <h3 class="fs13" style="color: #A6A4A4;font-style: normal;font-weight: 400;line-height: normal;width:60px;"  >xem thêm</h3><img src="{{ asset('viewsCustom/assets/images/popout.svg') }}"  style="padding-left:5px;width:20px;height:20px;margin-top:-2px;"/>                    
-                    </div> -->
-            </div>
-        </div>
-        <div class="mobile-wage" style="padding-top:12px;">
-            <p class="fs13"
+
+            </th>
+        </tr>
+        <tr class="mobile-wage" style="padding-top:12px;">
+            <td class="fs13"
                 style="color: #269300;font-style: normal;font-weight: 800;line-height: normal;border-radius: 5px;border: 1px solid #269300;height: 40px;text-align:center;padding:12px;align-item:center;width:168px;">
-                Tiền công: 14. 500 đ</p>
-        </div>
-        <div class="mobile-modal-body" style="display:flex;padding-left: 10px;padding-right: 10px;" data-toggle="modal"
+                Tiền công: 14. 500 đ</td>
+        </tr>
+        <tr class="mobile-modal-body" style="display:flex;padding-left: 10px;padding-right: 10px;" data-toggle="modal"
             data-target="#exampleModalMobile">
-            <div class="body-title" style="width:150px;">
+            <td class="body-title" style="width:150px;">
                 <div class="items">Đơn Seeding</div>
                 <div class="items">Trạng thái</div>
                 <div class="items" style="width:130px;">Hình thức giao nhận</div>
@@ -136,8 +136,8 @@
                 <div class="items" style="width:130px;">Yêu cầu tài khoản đặt</div>
                 <div class="items">Áp mã</div>
                 <div class="items">Khu vực lên đơn</div>
-            </div>
-            <div class="body-content" style="text-align:right;position: absolute;right: 20px;">
+            </td>
+            <td class="body-content" style="text-align:right;position: absolute;right: 20px;">
                 <div class="items fs14 items-tiktok"
                     style="color: #FFF;font-style: normal;font-weight: 400;line-height: normal;border-radius: 5px;background: #000;padding:5px 25px ;width:90px;">
                     Tiktok</div>
@@ -154,21 +154,22 @@
                     khoàn vàng</div>
                 <div class="items">Áp mã freeship</div>
                 <div class="items">Hà Nội</div>
-            </div>
-        </div>
-        <div class=btn-receive-application-mobile>
-            <button type="button" class="btn btn-primary fs14" data-toggle="modal" data-target="#exampleModalMobile"
-                style="border-radius: 5px;border: 1.5px solid #E0793F;background: #E0793F;color: #FFF;font-style: normal;font-weight: 700;line-height: normal;padding:10px 18px;margin-bottom: 18px;">Nhận
-                đơn</button>
-        </div>
-    </div>
+            </td>
+
+        </tr>
+        <tr class=btn-receive-application-mobile style="text-align: center;">
+            <th><button type="button" class="btn btn-primary fs14" data-toggle="modal" data-target="#exampleModalMobile"
+                    style="border-radius: 5px;border: 1.5px solid #E0793F;background: #E0793F;color: #FFF;font-style: normal;font-weight: 700;line-height: normal;padding:10px 18px;margin-bottom: 18px;">Nhận
+                    đơn</button></th>
+        </tr>
+    </table>
     <!-- Modals mobile -->
     <div class="modal fade" id="exampleModalMobile" tabindex="-1" role="dialog"
         aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
         <div class="modal-dialog " role="document" style="width:100%;">
-            <div class="modal-content" style="padding:5%;">
-                <div class="modal-header" style="padding:0px 0px 0px 30px">
-                    <div class="items" style="display:flex; padding-top:5px;padding-left:5px;">
+            <table class="modal-content" style="padding:5%;">
+                <tr class="modal-header" style="padding:0px 0px 0px 30px">
+                    <th class="items" style="display:flex; padding-top:5px;padding-left:5px;">
                         <img src="{{ asset('viewsCustom/assets/images/warning.svg') }}"
                             style="margin-bottom:25px; width:18.3px;height:15.8px;border: 1px solid rgba(0, 0, 0, 0.20);border-radius:50%;" />
                         <p class="fs16"
@@ -178,11 +179,11 @@
                             style="border: none;background:none; position: absolute;right: 17px;top: 22px;"><span
                                 aria-hidden="true"><img src="{{ asset('viewsCustom/assets/images/clone.svg') }}"></span>
                         </button>
-                    </div>
-                </div>
+                    </th>
+                </tr>
 
-                <div class="modal-body" style="display:flex;">
-                    <div class="body-text" style=" width: 100%;">
+                <tr class="modal-body" style="display:flex;">
+                    <td class="body-text" style=" width: 100%;">
                         <ul class="items fs12" style="list-style-type: disc;z-index:999;">
                             <li style="margin-bottom:0px !important;list-style-type: disc "> • Người đặt không cần phải
                                 nhận hàng</li>
@@ -206,9 +207,9 @@
                                 style="margin-left:15px;border-radius: 5px;border: 1.5px solid #E0793F;background: #E0793F;color: #FFF;font-style: normal;font-weight: 700;line-height: normal;padding:5px 18px;width:110px;height:32px;">Nhận
                                 đơn</button>
                         </div>
-                    </div>
-                </div>
-            </div>
+                    </td>
+                </tr>
+            </table>
         </div>
     </div>
     <!-- Modals webside -->
@@ -216,47 +217,52 @@
     <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
         aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
         <div class="modal-dialog " role="document" style="width:100%;">
-            <div class="modal-content" style=" width:54rem;">
-                <div class="modal-header" style="">
-                    <a href="https://www.facebook.com/buivushopee">
-                        <div class="header-left-pp" style="display:flex;">
-                            <div class="header-left-pp__img">
-                                <img src="{{ asset('viewsCustom/assets/images/hinh1.png') }}"
-                                    style="border: 1px solid rgba(0, 0, 0, 0.20);border-radius:50%;width:45px; height:45px ;" />
-                            </div>
-                            <div class="header-left-pp__text" style="display:bock;margin-top:5px;padding-left:9px;">
-                                <div style="display:flex;">
-                                    <div class="header-left-pp__text__top fs14"
-                                        style="color: #000;font-style: normal;font-weight: 500;line-height: normal;">
-                                        Korina
-                                    </div>
-                                    <img style="padding-left:2.8px;"
-                                        src="{{ asset('viewsCustom/assets/images/tick.svg') }}"
-                                        style="width:8.7px;height:8.7px;" />
+            <table class="modal-content" style=" width:54rem;">
+                <tr class="modal-header" style="">
+                    <th style="display:flex;">
+                        <a href="https://www.facebook.com/buivushopee">
+                            <div class="header-left-pp" style="display:flex;">
+                                <div class="header-left-pp__img">
+                                    <img src="{{ asset('viewsCustom/assets/images/hinh1.png') }}"
+                                        style="border: 1px solid rgba(0, 0, 0, 0.20);border-radius:50%;width:45px; height:45px ;" />
                                 </div>
-                                <div class="header-left-pp__text__bottom fs12"
-                                    style="color: #A6A4A4;font-style: normal;font-weight: 400;line-height: normal;">22
-                                    giờ
-                                    trước</div>
+                                <div class="header-left-pp__text" style="display:bock;margin-top:5px;padding-left:9px;">
+                                    <div style="display:flex;">
+                                        <div class="header-left-pp__text__top fs14"
+                                            style="color: #000;font-style: normal;font-weight: 500;line-height: normal;">
+                                            Korina
+                                        </div>
+                                        <img style="padding-left:2.8px;"
+                                            src="{{ asset('viewsCustom/assets/images/tick.svg') }}"
+                                            style="width:8.7px;height:8.7px;" />
+                                    </div>
+                                    <div class="header-left-pp__text__bottom fs12"
+                                        style="color: #A6A4A4;font-style: normal;font-weight: 400;line-height: normal;width: 100px;">
+                                        22
+                                        giờ
+                                        trước</div>
+                                </div>
                             </div>
+                        </a>
+                        <div class="header-right-pp" style="display:flex;width:200px;margin-top:10px;">
+                            <div><img src="{{ asset('viewsCustom/assets/images/Vector.svg') }}"
+                                    style="margin-top:-15px; width:15px; height:15px;" /></div>
+                            <div class="fs15"
+                                style="color: #D0011B;font-style: normal;font-weight: 400;line-height: normal;padding-left:8px;">
+                                4.5</div>
+                            <div class="fs15"
+                                style="color: #D0011B;font-style: normal;font-weight: 400;line-height: normal;">(25,5k
+                                đánh
+                                giá)</div>
                         </div>
-                    </a>
-                    <div class="header-right-pp" style="display:flex;padding-right:40%;">
-                        <div><img src="{{ asset('viewsCustom/assets/images/Vector.svg') }}"
-                                style="margin-top:-15px; width:15px; height:15px;" /></div>
-                        <div class="fs15"
-                            style="color: #D0011B;font-style: normal;font-weight: 400;line-height: normal;padding-left:8px;">
-                            4.5</div>
-                        <div class="fs15"
-                            style="color: #D0011B;font-style: normal;font-weight: 400;line-height: normal;">(25,5k đánh
-                            giá)</div>
-                    </div>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"
-                        style="border: none;background:none;"><span aria-hidden="true"><img
-                                src="{{ asset('viewsCustom/assets/images/clone.svg') }}"></span> </button>
-                </div>
-                <div class="modal-body" style="display:flex;">
-                    <div class="body-title" style="padding-right:10%;">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"
+                            style="border: none;background:none;position: absolute;right: 20px;"><span
+                                aria-hidden="true"><img src="{{ asset('viewsCustom/assets/images/clone.svg') }}"></span>
+                        </button>
+                    </th>
+                </tr>
+                <tr class="modal-body" style="display:flex;">
+                    <td class="body-title" style="padding-right:10%;">
                         <div class="items">Đơn Seeding</div>
                         <div class="items">Trạng thái</div>
                         <div class="items">Hình thức giao nhận</div>
@@ -266,8 +272,8 @@
                         <div class="items" style="width:130px;">Yêu cầu tài khoản đặt</div>
                         <div class="items">Áp mã</div>
                         <div class="items">Khu vực lên đơn</div>
-                    </div>
-                    <div class="body-content" style="text-align:right;">
+                    </td>
+                    <td class="body-content" style="text-align:right;">
                         <div class="items fs13 items-tiktok-webside"
                             style="color: #FFF;font-style: normal;font-weight: 700;line-height: normal;border-radius: 5px;background: #000;padding:8px 25px ;width:90px;">
                             Tiktok</div>
@@ -285,8 +291,8 @@
                         </div>
                         <div class="items">Áp mã freeship</div>
                         <div class="items">Hà Nội</div>
-                    </div>
-                    <div class="body-text" style="padding-left:10%; width: 50%;">
+                    </td>
+                    <td class="body-text" style="padding-left:10%; width: 50%;">
                         <div class="items fs16"
                             style="color: #269300;font-style: normal;font-weight: 600;line-height: normal;padding:12px 21px;border-radius: 5px;border: 1px solid #269300;width:200px;">
                             Tiền công: 14. 500 đ</div>
@@ -317,9 +323,9 @@
                                 style="margin-left:30px;border-radius: 5px;border: 1.5px solid #E0793F;background: #E0793F;color: #FFF;font-style: normal;font-weight: 700;line-height: normal;padding:10px 25px;">Nhận
                                 đơn</button>
                         </div>
-                    </div>
-                </div>
-            </div>
+                    </td>
+                </tr>
+            </table>
         </div>
     </div>
 
@@ -566,7 +572,7 @@ ul .items li {
 }
 
 .content__body-content__act {
-    margin-left: 5%;
+    margin-left: 25%;
 }
 
 @media (max-width:1440px) {
