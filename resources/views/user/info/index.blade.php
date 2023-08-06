@@ -1094,4 +1094,5 @@
     })
 </script>
 
+<script src="/viewsCustom/assets/js/cropper.min.js"></script>
 @endsection

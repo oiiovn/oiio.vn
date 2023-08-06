@@ -2,13 +2,11 @@
 
 namespace App\View\Components;
 
-use Illuminate\Support\Facades\Cache;
 use Illuminate\View\Component;
-use App\Models\User;
 
 class SidebarHomeRight extends Component
 {
-    public $jobs, $users;
+    public $jobs, $users, $news;
     private $repositoryJob, $repositoryUser;
     /**
      * Create a new component instance.
@@ -24,6 +22,9 @@ class SidebarHomeRight extends Component
             $this->jobs = $this->repositoryJob->getByCurrentAuthLatestReceive();
         }
         $this->users = $this->repositoryUser->getTopJob();
+        $this->news = app()->make(
+            'App\Repositories\News\NewsRepositoryInterface'
+        )->searchAllLimit();
     }
 
     /**
