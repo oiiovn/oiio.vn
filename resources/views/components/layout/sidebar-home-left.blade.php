@@ -244,6 +244,7 @@
     .collapse{
         transition: all ease 1s !important;
     }
+    
     #ui-basic .nav-item {
         padding: 10px 0;
         margin-left: 5px;
