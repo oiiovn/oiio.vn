@@ -40,7 +40,7 @@
             </div>
         </x-card>
     </div>
-    <!-- Thông tin liên hệ -->
+    <!--  Thông tin liên hệ -->
     <!-- cần đổ lại back-end -->
     <x-card>
 
@@ -109,7 +109,7 @@
 @endsection
 <style>
 * {
-    font-family: "lato", sans-serif !important;
+    font-family: 'Helvetica', sans-serif !important;
 }
 
 @media (max-width:2440px) {
