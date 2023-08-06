@@ -107,7 +107,7 @@ style="width:38px; height:38px;position: absolute;right: 40px;top: 22px;" />
 
 </div>--}}
 <div class="form-create-shop" style="width: 90%;height: 225px; margin: auto;">
-    <div style="height:250px;margin-bottom:20px;background:#fff;">
+    <div style="height:250px;margin-bottom:20px;background:#fff;border-radius:10px;">
         <x-card style="">
             <x-slot name="header">
                 <div style="display:flex;">
@@ -118,7 +118,7 @@ style="width:38px; height:38px;position: absolute;right: 40px;top: 22px;" />
                         style="width:38px; height:38px;position: absolute;right: 40px;top: 22px;" />
                 </div>
             </x-slot>
-            <div class="card-body" style="padding-top:16px;display:flex;padding-bottom:0px;">
+            <div class="card-body" style="padding-top:16px;display:flex;padding-bottom:0px; border-radius:10px;">
 
                 <x-form type="post" :validate="true" action="{{ route('user.post_shop') }}" class=""
                     style="display:flex;width:100%;height:150px;">
@@ -128,12 +128,12 @@ style="width:38px; height:38px;position: absolute;right: 40px;top: 22px;" />
                             class="form-label">{{ __('Tên cửa hàng') }}</label>
                         <div style="display:block;width:100%;" class="">
                             <div class="mb-3 w-form pd-form f-create-shop" style="">
-                                <x-input class="w-100" name="name_shop" placeholder="VD: Làn Sóng Xanh" :required="true"
-                                    style="color: rgba(48, 48, 48, 0.20);display: flex;width: 600px;height: 64px;width: 90% !important;align-items: center;flex-shrink: 0;" />
+                                <x-input class="w-100" name="name_shop" placeholder="VD:Nhập tên shop" :required="true"
+                                    style="color: rgba(48, 48, 48, 0.20);display: flex;width: 600px;height: 64px;width: 100% !important;align-items: center;flex-shrink: 0;" />
                             </div>
                         </div>
                         <x-button type="submit" class="btn-create-shop"
-                            style="border-radius: 5px;background: #E0793F;display: flex;width: 212px;justify-content: center;align-items: center;gap: 10px;margin:auto;height: 49px;">
+                            style="border-radius: 5px;background: #E0793F;display: flex;width: 212px;justify-content: center;align-items: center;gap: 10px;margin:auto;height: 49px;margin-top:25px;">
                             <span
                                 style="color: #FFF;font-size: 16px;font-style: normal;font-weight: 500;line-height: normal;">Tạo
                                 shop seeding</span>
@@ -150,10 +150,17 @@ style="width:38px; height:38px;position: absolute;right: 40px;top: 22px;" />
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-/* * {
+* {
     font-family: 'Helvetica', sans-serif !important;
 }
 
+@media (max-width:768px) {
+    .row {
+        margin-left: 0px !important;
+    }
+}
+
+/*
 @media (max-width:2440px) {
     .create-shop-items {
         display: flex;
