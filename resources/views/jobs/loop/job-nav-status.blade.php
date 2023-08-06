@@ -26,8 +26,8 @@
     <div  class="container-job"style="width: 1150px; height: 80px; background: white; border-radius: 10px;display:flex;">
         {{-- Tìm kiếm --}}
         <div class="search-field-r d-none d-md-block" style="border-radius: 10px;">
-            <form class="d-flex align-items-center h-100" action="#">
-                <div class="input-group-s" style="margin-top: 25px;margin-left:32px;border-radius:5px;">
+            <form class="d-flex align-items-center" action="#">
+                <div class="input-group-s" style="margin-top: 14px;margin-left:32px;border-radius:5px;">
                     <input type="text" class="form-control-s" placeholder="Tìm kiếm mã đơn, v.v" style="margin:17px 30px 16px 0;color: rgba(86, 86, 86, 0.50);font-family: Lato;font-size: 14px;font-style: normal;font-weight: 400;line-height: normal;padding:0 0.75rem;">
                     <div style="position: relative;border-left: 1px solid #3333;align-items: center;justify-content: center;display: flex;width: 20%;margin-left: auto;" class="input-group-prepend-s bg-transparent">
                         <img src="{{ asset('icon/search.svg') }}" alt="logo">
@@ -298,7 +298,97 @@
             <a href="#">&raquo;</a>
         </div>
     </div>
-    <div style="width: 100%;height: 100%;background-color:#fff;">
+    <div class="job-list-mobile" style="width:88%;padding-top:20px;height:100%;display:none;margin-left: 15px;">
+        <div class="list-item-mb">
+            <div class="job-item-mb"style="background:#fff;width:100%;height:133px;display:flex;justify-content:center;align-items:center;border-radius: 8px;border: 1px solid #D2D2CD;box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.15);">
+                <div class="job-col-mb"style="width:100%;display:block;">
+                    <div style="height:50px;display:flex;align-items:center;gap:5px;margin-left:10px;">
+                        <img src="{{ asset('viewsCustom/assets/images/hinh1.png') }}" alt="">
+                        <div>
+                            <div>
+                                <span>Korina</span>
+                                <i class="fa-regular fa-circle-check text-primary"></i>
+                            </div>
+                            <span style="color: #565656;font-family:'Lato'sans-serif;font-size: 11px;font-style: normal;font-weight: 400;line-height: normal;letter-spacing: 1.1px;">26/06/2023</span>
+                        </div>
+                    </div>
+                    <div style="height:50px;display: flex;justify-content: space-between;width:88%;margin-left:10px;padding-top:10px;gap:10px;">
+                        <div style="height:33px;display: inline-flex;padding: 8px 22px;justify-content: center;align-items: center;border-radius: 5px;background: #FB6815;color: #FFF;font-family:'Lato'sans-serif;font-size: 14px;font-style: normal;font-weight: 700;line-height: normal;">Shopee</div>
+                        <div style="height:33px;display: flex;padding: 12px 20px;justify-content: center;align-items: center;flex-shrink: 0;border-radius: 5px;border: 1px solid #269300;color: #269300;font-family:'Lato'sans-serif;font-size: 12px;font-style: normal;font-weight: 800;line-height: normal;letter-spacing: 0.66px;">1.000.000 đ</div>
+                    </div>
+                </div>
+                <div class="job-col-mb"style="width:135px;">
+                    <div style="text-align:right;display: block;height:100px;float:right;padding-top:27px;margin-right:10px;">
+                        <span style="color: #565656;font-family:'Lato'sans-serif;font-size: 12px;font-style: normal;font-weight: 500;line-height: normal;">230725VXU7WUJC</span>
+                        <span style="max-width:100px;color: #565656;font-family:'Lato'sans-serif;font-size: 12px;font-style: normal;font-weight: 700;line-height: normal;">Đã nhận</span>
+                        <span style="max-width:100px;color: #000;font-family:'Lato'sans-serif;font-size: 12px;font-style: normal;font-weight: 500;line-height: normal;letter-spacing: 0.72px;">09012345678</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="list-item-mb">
+            <div class="job-item-mb"style="background:#fff;width:100%;height:133px;display:flex;justify-content:center;align-items:center;border-radius: 8px;border: 1px solid #D2D2CD;box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.15);">
+                <div class="job-col-mb"style="width:100%;display:block;">
+                    <div style="height:50px;display:flex;align-items:center;gap:5px;margin-left:10px;">
+                        <img src="{{ asset('viewsCustom/assets/images/hinh1.png') }}" alt="">
+                        <div>
+                            <div>
+                                <span>Korina</span>
+                                <i class="fa-regular fa-circle-check text-primary"></i>
+                            </div>
+                            <span style="color: #565656;font-family:'Lato'sans-serif;font-size: 11px;font-style: normal;font-weight: 400;line-height: normal;letter-spacing: 1.1px;">26/06/2023</span>
+                        </div>
+                    </div>
+                    <div style="height:50px;display: flex;justify-content: space-between;width:88%;margin-left:10px;padding-top:10px;gap:10px;">
+                        <div style="height:33px;display: inline-flex;padding: 8px 22px;justify-content: center;align-items: center;border-radius: 5px;background: #FB6815;color: #FFF;font-family:'Lato'sans-serif;font-size: 14px;font-style: normal;font-weight: 700;line-height: normal;">Shopee</div>
+                        <div style="height:33px;display: flex;padding: 12px 20px;justify-content: center;align-items: center;flex-shrink: 0;border-radius: 5px;border: 1px solid #269300;color: #269300;font-family:'Lato'sans-serif;font-size: 12px;font-style: normal;font-weight: 800;line-height: normal;letter-spacing: 0.66px;">1.000.000 đ</div>
+                    </div>
+                </div>
+                <div class="job-col-mb"style="width:135px;">
+                    <div style="text-align:right;display: block;height:100px;float:right;padding-top:27px;margin-right:10px;">
+                        <span style="color: #565656;font-family:'Lato'sans-serif;font-size: 12px;font-style: normal;font-weight: 500;line-height: normal;">230725VXU7WUJC</span>
+                        <span style="max-width:100px;color: #565656;font-family:'Lato'sans-serif;font-size: 12px;font-style: normal;font-weight: 700;line-height: normal;">Đã nhận</span>
+                        <span style="max-width:100px;color: #000;font-family:'Lato'sans-serif;font-size: 12px;font-style: normal;font-weight: 500;line-height: normal;letter-spacing: 0.72px;">09012345678</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="list-item-mb">
+            <div class="job-item-mb"style="background:#fff;width:100%;height:133px;display:flex;justify-content:center;align-items:center;border-radius: 8px;border: 1px solid #D2D2CD;box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.15);">
+                <div class="job-col-mb"style="width:100%;display:block;">
+                    <div style="height:50px;display:flex;align-items:center;gap:5px;margin-left:10px;">
+                        <img src="{{ asset('viewsCustom/assets/images/hinh1.png') }}" alt="">
+                        <div>
+                            <div>
+                                <span>Korina</span>
+                                <i class="fa-regular fa-circle-check text-primary"></i>
+                            </div>
+                            <span style="color: #565656;font-family:'Lato'sans-serif;font-size: 11px;font-style: normal;font-weight: 400;line-height: normal;letter-spacing: 1.1px;">26/06/2023</span>
+                        </div>
+                    </div>
+                    <div style="height:50px;display: flex;justify-content: space-between;width:88%;margin-left:10px;padding-top:10px;gap:10px;">
+                        <div style="height:33px;display: inline-flex;padding: 8px 22px;justify-content: center;align-items: center;border-radius: 5px;background: #FB6815;color: #FFF;font-family:'Lato'sans-serif;font-size: 14px;font-style: normal;font-weight: 700;line-height: normal;">Shopee</div>
+                        <div style="height:33px;display: flex;padding: 12px 20px;justify-content: center;align-items: center;flex-shrink: 0;border-radius: 5px;border: 1px solid #269300;color: #269300;font-family:'Lato'sans-serif;font-size: 12px;font-style: normal;font-weight: 800;line-height: normal;letter-spacing: 0.66px;">1.000.000 đ</div>
+                    </div>
+                </div>
+                <div class="job-col-mb"style="width:135px;">
+                    <div style="text-align:right;display: block;height:100px;float:right;padding-top:27px;margin-right:10px;">
+                        <span style="color: #565656;font-family:'Lato'sans-serif;font-size: 12px;font-style: normal;font-weight: 500;line-height: normal;">230725VXU7WUJC</span>
+                        <span style="max-width:100px;color: #565656;font-family:'Lato'sans-serif;font-size: 12px;font-style: normal;font-weight: 700;line-height: normal;">Đã nhận</span>
+                        <span style="max-width:100px;color: #000;font-family:'Lato'sans-serif;font-size: 12px;font-style: normal;font-weight: 500;line-height: normal;letter-spacing: 0.72px;">09012345678</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+                     <div style="text-align: center;">
+                        <span><i style="margin-left:auto;font-size:20px;color:#E0793F;" class="ri-arrow-down-s-line"></i></span>
+                    </div>
+        
+    </div>
+    
+    <div style="width: 100%;height:100%;background-color:#fff;">
             <div style="height: 68px;"></div>
     </div>
 </div>
@@ -307,15 +397,27 @@
 
 <style>
     @media (max-width:768px) {
+        #row{
+            margin-left: 11px !important;
+        }
         .job-list{
+            display: none !important;
         }
         .container-job-list{
+            width: 100% !important;
+            margin-top:0 !important;
         }
         .container-job-list::-webkit-scrollbar{
             height: 5px;
         }
         .label-list{
             font-size: 16px !important;
+        }
+        .job-list-mobile{
+            display:block !important;
+        }
+        .list-item-mb{
+            margin-bottom:20px;
         }
     }
     body {
@@ -390,16 +492,16 @@
             height: auto !important;
             width: 100% !important;
             display: block !important;
-            margin-bottom: 24px !important;
+            margin-bottom: 10px !important;
             padding-bottom:25px !important;
         }
         .date{
             margin-left: 10px !important;
             margin-right: 35px !important;
-            margin-top:35px !important;
+            margin-top:25px !important;
         }
         .input-group-s{
-            width: 65.17% !important;
+            width: 75.17% !important;
             margin-left: 12px !important;
         }
     }
@@ -451,7 +553,9 @@
         background: #FFF;
         backdrop-filter: blur(20px);
     }
-
+    .form-control-s{
+        backdrop-filter:none !important;
+    }
     #sidebar-left {
         background-color: #FFF;
         height: 1500px;
