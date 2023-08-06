@@ -10,7 +10,7 @@ function resetLoadmore() {
 
 const myOffcanvas = document.getElementById('offcanvasMenuMobile')
 myOffcanvas.addEventListener('show.bs.offcanvas', event => {
-    $("#offcanvasMenuMobile .offcanvas-body").html($("#sidebar-left").html() + $("#sidebarRight").html());
+    $("#offcanvasMenuMobile .offcanvas-body").html($("#sidebar-left").html());
 })
 
 var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
