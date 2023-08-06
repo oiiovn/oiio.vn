@@ -89,7 +89,6 @@
         <div class="nav text-center"
             style="width:100%;height: 200px;flex-direction: column;justify-content: flex-start;align-items: center;gap: 10px;display: inline-flex;">
             @foreach($users as $user)
-<<<<<<< HEAD
 
             <a href="{{ route('info.shop_detail', $user->slug) }}">
                 {{--Render hình ảnh--}}
@@ -106,7 +105,6 @@
                     </p>
                 </div>
             </a>
-=======
                 <a href="{{ route('info.shop_detail', $user->slug) }}">
                     {{--Render hình ảnh--}}
                     <img style="width: 45px; height: 45px; border-radius: 9999px; border: 0.50px black solid" src="{{ $user->avatar }}" alt=""/>
@@ -119,7 +117,6 @@
                         </p>
                     </div>
                 </a>
->>>>>>> aa1b47871e2b7958ad6e4ee988b994e8fb5a7740
             @endforeach
         </div>
     </x-card>
