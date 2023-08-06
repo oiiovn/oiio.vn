@@ -208,17 +208,4 @@ ul {
     color: #E0793F !important;
 }
 
-@media (max-width: 520px) {
-    .nav-item {
-        border: none !important;
-    }
-
-    .nav {
-        width: 300px !important;
-    }
-
-    .nav-r {
-        width: 250px !important;
-    }
-}
 </style>

@@ -8,27 +8,27 @@
 
 <x-form type="post" :validate="true">
     <input name="user_id" type="hidden" value="{{ $user->id }}" hidden />
-    <div style="height: 589px;flex-shrink: 0;border-radius: 10px;background: #FFF;">
+    <div class="container-bank" style="height: 589px;flex-shrink: 0;border-radius: 10px;background: #FFF;">
         <div style="width:100%;height:55px;display: flex;align-items: center;padding-left:40px;">
-            <div style="width:59.14%;color: #E0793F;font-family: 'Lato' sans-serif;font-size: 18px;font-style: normal;font-weight: 800;line-height: normal;border-bottom:1px solid rgba(0, 0, 0, 0.11);padding-bottom:10px;padding-top:38px;">Tạo thông tin tài khoản ngân hàng</div>
+            <div class="title-bank" style="width:59.14%;color: #E0793F;font-family: 'Lato' sans-serif;font-size: 18px;font-style: normal;font-weight: 800;line-height: normal;border-bottom:1px solid rgba(0, 0, 0, 0.11);padding-bottom:10px;padding-top:38px;">Tạo thông tin tài khoản ngân hàng</div>
         </div>
         <div style="width:100%;margin-top:20px;">
             <div>
-                <div style="height: 51.3333px;margin-left:40px;display: flex;align-items:center;margin-bottom:21px;">
+                <div class="container-info-bank" style="height: 51.3333px;margin-left:40px;display: flex;align-items:center;margin-bottom:21px;">
                     <label>{{ __('Tên tài khoản') }}</label>
-                    <x-input style="width: 65%;margin-left:auto;width: 387px;margin-right:50px;height: 46px;flex-shrink: 0;border-radius: 5px;border: 1px solid rgba(48, 48, 48, 0.21);" name="account_name" placeholder="VD: NGUYEN VAN A" :required="true" />
+                    <x-input style="width: 45%;margin-left:auto;margin-right:50px;height: 46px;flex-shrink: 0;border-radius: 5px;border: 1px solid rgba(48, 48, 48, 0.21);" name="account_name" placeholder="VD: NGUYEN VAN A" :required="true" />
                 </div>
             </div>
             <div>
-                <div style="height: 51.3333px;margin-left:40px;display: flex;align-items:center;margin-bottom:21px;">
+                <div class="container-info-bank" style="height: 51.3333px;margin-left:40px;display: flex;align-items:center;margin-bottom:21px;">
                     <label>{{ __('Số tài khoản') }}</label>
-                    <x-input style="width: 65%;margin-left:auto;width: 387px;margin-right:50px;height: 46px;flex-shrink: 0;border-radius: 5px;border: 1px solid rgba(48, 48, 48, 0.21);" type="text" name="account_number" placeholder="VD: 0000 0000 0000 0000" :required="true" />
+                    <x-input style="width: 45%;margin-left:auto;margin-right:50px;height: 46px;flex-shrink: 0;border-radius: 5px;border: 1px solid rgba(48, 48, 48, 0.21);" type="text" name="account_number" placeholder="VD: 0000 0000 0000 0000" :required="true" />
                 </div>
             </div>
             <div>
-                <div style="height: 51.3333px;margin-left:40px;display: flex;align-items:center;margin-bottom:21px;">
+                <div class="container-info-bank" style="height: 51.3333px;margin-left:40px;display: flex;align-items:center;margin-bottom:21px;">
                     <label>{{ __('Tên ngân hàng') }}</label>
-                    <div class="custom-select" style="background: #fff;width: 65%;margin-left:auto;width: 387px;margin-right:50px;height: 46px;flex-shrink: 0;border-radius: 5px;border: 1px solid rgba(48, 48, 48, 0.21);">
+                    <div class="custom-select" style="background: #fff;width: 45%;margin-left:auto;margin-right:50px;height: 46px;flex-shrink: 0;border-radius: 5px;border: 1px solid rgba(48, 48, 48, 0.21);">
                         <x-select name="bank_name" :required="true">
                             <!-- <option value="">Chọn ngân hàng</option> -->
                             <option value="Techcombank" data-img-src="{{ asset('viewsCustom/assets/images/techcombank.svg') }}"> Techcombank</option>
@@ -82,6 +82,39 @@
     </div>
 </x-form>
 <style>
+@media (max-width:768px) {
+    .container-bank{
+        height: auto !important;
+    }
+    .title-bank{
+        width: 100% !important;
+    }
+    #row{
+        margin-left:0 !important;
+        margin-top:0 !important;
+    }
+    .container-info-bank{
+        display:block !important;
+        height: auto !important;
+    }
+    .container-info-bank label{
+        margin-bottom:10px !important;
+    }
+    .container-info-bank input[type=text]{
+        margin-left:0 !important;
+        width:90% !important;
+    }
+    .container-info-bank .custom-select{
+        margin-left:0 !important;
+        width:90% !important;
+    }
+    .btn{
+        display: flex !important;
+        justify-content: center !important;
+        margin-left: 0 !important;
+        width:100% !important;
+    }
+}
 .custom-select {
     position: relative;
 }
