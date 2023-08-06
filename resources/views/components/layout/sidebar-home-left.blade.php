@@ -11,7 +11,11 @@
                 </li>
             </div>
         </x-slot>
-
+        {{--Nút nạp tiền và rút tiền mobile--}}
+        <div class="btn-money"style="display:none;">
+            <button style="background:#fff;padding:8px 19px;border-radius:5px;border:1px solid #269300;color:#269300;font-family:'Lato'sans-serif;font-size: 12px;font-style: normal;font-weight: 500;line-height: normal;">Nạp tiền</button>
+            <button style="background:#fff;padding:8px 19px;border-radius:5px;border:1px solid #DE8C49;color:#DE8C49;font-family:'Lato'sans-serif;font-size: 12px;font-style: normal;font-weight: 500;line-height: normal;">Rút tiền</button>
+        </div>
         {{--Dịch vụ--}}
         <x-card>
             <x-slot name="header">
@@ -24,7 +28,7 @@
             </x-slot>
 
             <x-slot name="footer">
-                <div class="collapse" id="ui-basic">
+                <div class="collapse show" id="ui-basic">
                     <li class="nav-item" href="#">Lên Shopee Mall</li>
                     <li class="nav-item" href="#">Lên Lazada Mall</li>
                     <li class="nav-item" href="#">Mở thông tin khách hàng Shopee</li>
@@ -115,7 +119,7 @@
                 <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic3" aria-expanded="false"
                    aria-controls="ui-basic3">
                     <a href="https://help.oiio.vn" class="help">
-                        <img src="{{ asset('viewsCustom/assets/images/ic5.svg') }}" alt="" style="margin-left:5px;">
+                        <img src="{{ asset('viewsCustom/assets/images/ic5.svg') }}" alt="">
                         <span class="menu-title" style="margin-left:10px;">Trợ giúp</span></a>
                     <i style="margin-left:auto;font-size:20px;" class=""></i>
                 </a>
@@ -181,6 +185,18 @@
 
 <!-- Đã sửa -->
 <style>
+   @media (max-width:768px) {
+    .btn-money{
+        display: flex !important;
+        gap:10px;
+        margin-left:8%;
+        margin-bottom:15px;
+    }
+    .card{
+        width: 100% !important;
+    }
+
+   }
     * {
         list-style-type: none !important;
     }
@@ -188,7 +204,10 @@
     .bg-orange {
         background: #FFF;
     }
-
+    .card .card-body{
+        padding-top:15px !important;
+        padding-bottom:15px !important;
+    }
     .text-white,
     .navbar.navbar-primary .navbar-menu-wrapper .nav-profile-text p,
     .navbar.navbar-secondary .navbar-menu-wrapper .nav-profile-text p,
@@ -222,7 +241,9 @@
     .btn-orange:hover {
         background-color: #FFF;
     }
-
+    .collapse{
+        transition: all ease 1s !important;
+    }
     #ui-basic .nav-item {
         padding: 10px 0;
         margin-left: 5px;

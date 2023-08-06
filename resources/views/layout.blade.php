@@ -57,11 +57,6 @@
             height: auto !important;
             overflow-x: hidden;
         }
-        #sidebar-right-child{
-            position:fixed !important ; 
-            width: 50%;
-            overflow-y: scroll !important;
-        }
         .navbar .navbar-menu-wrapper {
             width: auto;
             padding-left: 15px;
