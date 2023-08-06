@@ -108,7 +108,7 @@
             </div>
             <div class="col-12 col-md-9 main-sec-content" style="margin-top:70px;" id="content">
 
-                <div class="row" style="width: 100%;margin-left: 16px;margin-top:11px;">
+                <div class="row" style="width: 100%;margin-left: 16px;margin-top:11px;" id="row">
                     <div class="col-12 col-md-9 main-content" style="width:71.72%;display:flex; ">
 
                         <div style="width:98.11%;"> @yield('content')</div>
