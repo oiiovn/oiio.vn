@@ -87,10 +87,10 @@
 
         {{--Render hình ảnh và tên shop--}}
         <div class="nav text-center"
-            style="width:100%;height: 200px;flex-direction: column;justify-content: flex-start;align-items: center;gap: 10px;display: inline-flex;">
+            style="width:100%;height: 200px;flex-direction: column;justify-content: flex-start;align-items: center;gap: 10px;display: inline-flex;border-bottom: 1px solid #3333;">
             @foreach($users as $user)
 
-            <a href="{{ route('info.shop_detail', $user->slug) }}">
+            <a href="{{ route('info.shop_detail', $user->slug) }}"style="">
                 {{--Render hình ảnh--}}
                 {{--Đọc rồi xoá nha: Do ở lúc đẩy hình ảnh lên bên mevivu có thể cấu hình sai ấy nên là lúc đưa lên ở localhost nó kh lên hình nhưng thật sự là có hình rồi nha--}}
                 <img style="width: 45px; height: 45px; border-radius: 9999px; border: 0.50px #A6A4A4 solid"
