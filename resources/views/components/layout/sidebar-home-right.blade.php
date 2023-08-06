@@ -105,18 +105,6 @@
                     </p>
                 </div>
             </a>
-                <a href="{{ route('info.shop_detail', $user->slug) }}">
-                    {{--Render hình ảnh--}}
-                    <img style="width: 45px; height: 45px; border-radius: 9999px; border: 0.50px black solid" src="{{ $user->avatar }}" alt=""/>
-                    <div @class([ ""=> !$loop->last ])>
-                        <p>
-                            {{ $user->getNameShop() }}
-                            @if($user->isReputable())
-                                <i class="fa-regular fa-circle-check text-primary"></i>
-                            @endif
-                        </p>
-                    </div>
-                </a>
             @endforeach
         </div>
     </x-card>
