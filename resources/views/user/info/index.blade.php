@@ -323,7 +323,7 @@
                             </div>
                             <div class="content-money" style="display: inline-flex;flex-direction: column;align-items: flex-end;gap: 14px;">
                                 @php
-                                $color = $transaction->amount > 0 ? '#EB3131' : '#269300';
+                                $color = $transaction->amount > 0 ? '#269300' : '#EB3131';
                                 @endphp
                                 <span style="display:flex;justify-content: flex-end;align-items: baseline;font-family: 'Lato' sans-serif;font-size: 16px;font-style: normal;font-weight: 700;line-height: normal;letter-spacing: 1.6px;color:{!! $color !!}">
                                     {{ $transaction->type->value == 2 ? "-" : "" }}{{ format_price($transaction->amount) }}</span>
