@@ -8,6 +8,9 @@ Route::get('/', [App\Http\Controllers\Home\HomeController::class, 'index'])->nam
 Route::get('/dashboard', function () {
     return view('viewsCustom.pages.home');
 });
+Route::get('/sim-code', function () {
+    return view('jobs.manager.sim-code');
+})->name('sim-code');
 
 Route::prefix('/thong-tin')->as('info.')->group(function () {
     Route::controller(App\Http\Controllers\User\OtherController::class)->group(function () {

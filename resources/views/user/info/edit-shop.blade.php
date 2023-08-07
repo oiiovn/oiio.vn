@@ -220,7 +220,7 @@
 .form-control:focus {
     border: rgba(0, 0, 0, 0.70);
     box-shadow: none;
-    box-shadow: 0px 0px 12px #d0011b !important;
+    box-shadow: 0px 0px 5px #d0011b !important;
 
 }
 </style>

@@ -130,7 +130,7 @@
                             <div class="dropdown-divider"></div>
                             @endif
                             <button type="button" id="item-menu" class="dropdown-item " data-toggle="modal"
-                                data-target="#exampleModalLong">Đổi mật khẩu </button>
+                                data-target="#exampleModalCenterdmk">Đổi mật khẩu </button>
                             <div class="dropdown-divider"></div>
                             <x-form class="" :action="route('logout')" type="post">
                                 <button id="item-menu" type="submit" class="dropdown-item border-0"
@@ -718,10 +718,10 @@
 <!-- Modal đổi mật khẩu -->
 <!-- Modal -->
 <div class="modal-dmk">
-    <div class="modal fade dmk" id="exampleModalLong" tabindex="-1" role="dialog"
-        aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal fade dmk" id="exampleModalCenterdmk" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
         <div class="modal-dialog" role="document">
-            <div class="content-dmk" style="margin-left: auto; margin-right: auto;background:#fff;">
+            <div class="content-dmk" style="margin-left: auto; margin-right: auto;background:#fff;margin-top:40%;">
                 <div class="modal-header" style="border: none;">
                     <h5 class="modal-title" id="exampleModalLongTitle"
                         style="color: #000; font-size: 20px; font-style: normal; font-weight: 600; line-height: normal;">

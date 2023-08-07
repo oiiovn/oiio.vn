@@ -847,7 +847,7 @@
                         Áo thun nam freesize Unisex</div>
                     <div class="ads-content" style="display:left !important;">
                         <div
-                            style="border-radius: 3px 0px 0px 3px;border: 1px solid rgba(0, 0, 0, 0.50);border-right:none;width:31px;height:23px;margin-left:10px;color: #000;font-family: Inter;font-size: 12px;font-style: normal;font-weight: 400;line-height: normal;text-align:center;padding:3px;">
+                            style="border-radius: 3px 0px 0px 3px;border: 1px solid rgba(0, 0, 0, 0.50);border-right:none;width:36px;height:23px;margin-left:5px;color: #000;font-family: Inter;font-size: 12px;font-style: normal;font-weight: 400;line-height: normal;text-align:center;padding:3px;">
                             30%</div>
                         <div
                             style="border-radius: 0px 3px 3px 0px;border: 1px solid rgba(0, 0, 0, 0.50);width:56px;height:23px;color: rgba(0, 0, 0, 0.90);font-family: Inter;font-size: 12px;font-style: normal;font-weight: 700;line-height: normal;text-align:center;padding:3px;">
