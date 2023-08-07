@@ -164,7 +164,7 @@
                                 src="{{ asset(auth()->user()->getAvatar()) }}" class="img-fluid" />
                             <img id="edit" onclick="document.getElementById('file-avatar').click();"
                                 src="{{ asset('viewsCustom/assets/images/edit-ic-tron.svg') }}" alt=""
-                                style="position: absolute; bottom: 0; right:100px; background-color: rgba(255, 255, 255, 0.5); border-radius: 100%; padding: 5px; margin-bottom: 8px; margin-right: 8px; filter: drop-shadow(0px 7px 8px rgba(0, 0, 0, 0.24));" />
+                                style="position: absolute; bottom: 0; right:30%; background-color: rgba(255, 255, 255, 0.5); border-radius: 100%; padding: 5px; margin-bottom: 8px; margin-right: 8px; filter: drop-shadow(0px 7px 8px rgba(0, 0, 0, 0.24));" />
                         </div>
                         <input id="file-avatar" name="avatar" type="file" class="d-none"></input>
 
