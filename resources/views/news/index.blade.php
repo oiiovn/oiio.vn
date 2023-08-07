@@ -42,6 +42,35 @@
     </div>
 </div>
 <style>
+    @media (max-width:768px) {
+        .container-news{
+            width:100% !important;
+            padding-left: 5% !important;
+        }
+        #row{
+            margin-left:0 !important;
+            margin-top:0 !important;
+        }
+        .list-news{
+            width:100% !important;
+            overflow-x:scroll;
+        }
+        .list-news ul{
+            width: 150% !important;
+        }
+        .body-news{
+            display: block !important;
+        }
+        .col-news{
+            width: 95% !important;
+        }
+        ::-webkit-scrollbar{
+            height:7px;
+        }
+    }
+    body{
+        margin-bottom:68px;
+    }
     #sidebarRight{
         display: none;
     }
