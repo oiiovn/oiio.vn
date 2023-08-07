@@ -23,11 +23,11 @@
 
                 <x-form type="post" :validate="true" action="{{ route('user.post_shop') }}" class=""
                     style="display:flex;width:100%;height:150px;">
-                    <div class="dl-f" style="width: 100%;">
+                    <div class="dl-f" style="width:100%;">
                         <label
                             style="color: rgba(0, 0, 0, 0.70);text-align: center;font-size: 16px;font-style: normal;font-weight: 700;line-height: normal;position: absolute;top:-12px;left: 40px;background: #fff;width: 110px;"
                             class="form-label">{{ __('Tên cửa hàng') }}</label>
-                        <div style="display:block;width:100%;" class="">
+                        <div style="display:block;" class="length-ip">
                             <div class="mb-3 w-form pd-form f-create-shop" style="">
                                 <x-input class="w-100 height-ip" name="name_shop" placeholder="VD:Nhập tên shop"
                                     :required="true"
@@ -49,7 +49,10 @@
 @endsection
 <style>
 .form-control:focus {
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    border: rgba(0, 0, 0, 0.70);
+    box-shadow: none;
+    box-shadow: 2px 2px 10px #E0793F !important;
+
 }
 
 * {
@@ -64,113 +67,20 @@
     .height-ip {
         height: 45px;
     }
+
+    .length-ip {
+        width: 100%;
+    }
 }
 
 @media (min-width:769px) {
     .height-ip {
         height: 55px;
     }
-}
 
-/*
-@media (max-width:2440px) {
-    .create-shop-items {
-        display: flex;
-    }
-
-    .card-body {
-        padding: 0px;
-    }
-
-    .w-form {
-        width: 410px;
-    }
-
-    .btn-create-shop {
-        position: absolute;
-        right: 15px;
-        bottom: 15px;
-    }
-
-    .btn-create-shop-2 {
-        position: absolute;
-        right: 35px;
-        bottom: 15px;
-    }
-
-    .dl-f {
-        display: flex;
-    }
-
-    .row {
-        margin-left: 16px !important;
-    }
-
-    .pd-form {
-        margin-left: 20.3%;
-    }
-}
-
-@media (max-width:1390px) {
-    .row {
-        margin-left: 0px !important;
-    }
-}
-
-@media (max-width:768px) {
-    .card-body.rounded-top.bg-orange {
-        border-radius: 5px !important;
-    }
-
-
-    .btn-create-shop {
-        position: absolute;
-        width: 100%;
-        margin: auto;
-        right: 0px;
-        bottom: 0px;
-    }
-
-    .btn-create-shop-2 {
-        position: absolute;
-        width: 90%;
-        right: 0px;
-        bottom: 5px;
-        margin-left: 5%;
-        margin-right: 5%;
-    }
-}
-
-@media (max-width:767px) {
-    .w-form {
-        width: 300px;
-    }
-
-    .f-create-shop {
-        margin-top: 20px;
-    }
-
-    .dl-f {
-        display: block;
-    }
-
-    .create-shop-items {
-        display: block;
-    }
-
-    .pd-form {
-        margin-left: 0%;
+    .length-ip {
+        width: 80%;
     }
 
 }
-
-@media (max-width:650px) {
-    .w-form {
-        width: 250px;
-    }
-
-    .pd-form {
-        margin-left: 0%;
-    }
-} */
 </style>
