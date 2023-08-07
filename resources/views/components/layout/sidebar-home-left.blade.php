@@ -259,6 +259,7 @@
         transition:linear 0.5s !important;
     }
     
+    
     #ui-basic .nav-item {
         padding: 10px 0;
         margin-left: 5px;
