@@ -171,6 +171,7 @@ ul {
 
 .nav a {
     width: 100px;
+    margin-bottom: 15px;
 }
 
 .nav .nav-item .nav-link {
