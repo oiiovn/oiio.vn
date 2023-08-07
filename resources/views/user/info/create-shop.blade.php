@@ -16,17 +16,17 @@
                         style="color: #E0793F;font-size: 22px;font-style: normal;font-weight: 500;line-height: normal;">Thông
                         tin Shop</span>
                     <img src="{{ asset('viewsCustom/assets/images/icon-edit.svg') }}"
-                        style="width:38px; height:38px;position: absolute;right: 20px;top: 20px;" />
+                        style="width:38px; height:38px;position: absolute;right: 20px;top: 15px;" />
                 </div>
             </x-slot>
             <div class="card-body" style="padding-top:16px;display:flex;padding-bottom:0px; border-radius:10px;">
 
                 <x-form type="post" :validate="true" action="{{ route('user.post_shop') }}" class=""
                     style="display:flex;width:100%;height:150px;">
-                    <div class="dl-f" style="width:100%;">
+                    <div class="dl-f " style="width:100%;">
                         <label
-                            style="color: rgba(0, 0, 0, 0.70);text-align: center;font-size: 16px;font-style: normal;font-weight: 700;line-height: normal;position: absolute;top:-12px;left: 40px;background: #fff;width: 110px;"
-                            class="form-label">{{ __('Tên cửa hàng') }}</label>
+                            style="color: rgba(0, 0, 0, 0.70);text-align: center;font-size: 16px;font-style: normal;font-weight: 700;line-height: normal;"
+                            class="form-label title-ip-1">{{ __('Tên cửa hàng') }}</label>
                         <div style="display:block;" class="length-ip">
                             <div class="mb-3 w-form pd-form f-create-shop" style="">
                                 <x-input class="w-100 height-ip" name="name_shop" placeholder="VD:Nhập tên shop"
@@ -51,7 +51,7 @@
 .form-control:focus {
     border: rgba(0, 0, 0, 0.70);
     box-shadow: none;
-    box-shadow: 2px 2px 10px #E0793F !important;
+    box-shadow: 0px 0px 12px #d0011b !important;
 
 }
 
@@ -70,6 +70,15 @@
 
     .length-ip {
         width: 100%;
+        margin: unset;
+    }
+
+    .title-ip-1 {
+        position: absolute;
+        top: -12px;
+        left: 40px;
+        background: #fff;
+        width: 110px;
     }
 }
 
@@ -80,6 +89,15 @@
 
     .length-ip {
         width: 80%;
+        margin: auto;
+    }
+
+    .title-ip-1 {
+        position: absolute;
+        top: -12px;
+        left: 100px;
+        background: #fff;
+        width: 110px;
     }
 
 }

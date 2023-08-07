@@ -16,17 +16,17 @@
                         style="color: #E0793F;font-size: 22px;font-style: normal;font-weight: 500;line-height: normal;">Thông
                         tin Shop</span>
                     <img src="{{ asset('viewsCustom/assets/images/icon-edit.svg') }}"
-                        style="width:38px; height:38px;position: absolute;right: 20px;top: 22px;" />
+                        style="width:38px; height:38px;position: absolute;right: 20px;top: 15px;" />
                 </div>
             </x-slot>
             <div class="card-body" style="padding-top:16px;display:flex;padding-bottom:0px; border-radius:10px;">
 
                 <x-form type="post" :validate="true" action="{{ route('user.post_shop') }}" class=""
                     style="display:flex;width:100%;height:150px;">
-                    <div class="dl-f" style="width: 100%;">
+                    <div class="dl-f " style="width: 100%;">
                         <label
-                            style="color: rgba(0, 0, 0, 0.70);text-align: center;font-size: 16px;font-style: normal;font-weight: 700;line-height: normal;position: absolute;top:-12px;left: 40px;background: #fff;    width: 110px;"
-                            class="form-label">{{ __('Tên cửa hàng') }}</label>
+                            style="color: rgba(0, 0, 0, 0.70);text-align: center;font-size: 16px;font-style: normal;font-weight: 700;line-height: normal;"
+                            class="form-label title-ip-1">{{ __('Tên cửa hàng') }}</label>
                         <div style="display:block;" class="length-ip">
                             <div class="mb-3 w-form pd-form f-create-shop">
                                 <x-input class="w-100 height-ip" name="name_shop"
@@ -55,7 +55,7 @@
                         style="color: #E0793F;font-size: 22px;font-style: normal;font-weight: 500;line-height: normal;">Thông
                         tin Shop</span>
                     <img src="{{ asset('viewsCustom/assets/images/icon-edit.svg') }}"
-                        style="width:38px; height:38px;position: absolute;right: 20px;top: 22px;" />
+                        style="width:38px; height:38px;position: absolute;right: 20px;top: 15px;" />
                 </div>
             </x-slot>
             <div class="card-body" style="padding-top:16px;display:flex;padding-bottom:0px; border-radius:10px;">
@@ -64,8 +64,8 @@
                     style="display:flex;width:100%;">
                     <div class="dl-f" style="width: 100%;">
                         <label
-                            style="color: rgba(0, 0, 0, 0.70);text-align: center;font-size: 16px;font-style: normal;font-weight: 700;line-height: normal;position: absolute;top:-11px;left: 40px;background: #fff;width: 60px;"
-                            class="form-label">{{ __('Địa chỉ') }}</label>
+                            style="color: rgba(0, 0, 0, 0.70);text-align: center;font-size: 16px;font-style: normal;font-weight: 700;line-height: normal;"
+                            class="form-label title-ip-2">{{ __('Địa chỉ') }}</label>
                         <div style="display:block;" class="length-ip">
                             <div class="mb-3 w-form pd-form f-create-shop">
                                 <x-input class="w-100 height-ip" name="name_shop" placeholder="Nhập địa chỉ"
@@ -82,8 +82,8 @@
                     style="display:flex;width:100%;">
                     <div class="dl-f" style="width: 100%;">
                         <label
-                            style="color: rgba(0, 0, 0, 0.70);text-align: center;font-size: 16px;font-style: normal;font-weight: 700;line-height: normal;position: absolute;top:-11px;left: 40px;background: #fff;width: 80px;"
-                            class="form-label">{{ __('Facebook') }}</label>
+                            style="color: rgba(0, 0, 0, 0.70);text-align: center;font-size: 16px;font-style: normal;font-weight: 700;line-height: normal;"
+                            class="form-label title-ip-3">{{ __('Facebook') }}</label>
                         <div style="display:block;" class="length-ip">
                             <div class="mb-3 w-form pd-form f-create-shop">
                                 <x-input class="w-100 height-ip" name="name_shop" placeholder="Dán link facebook"
@@ -100,8 +100,8 @@
                     style="display:flex;width:100%;height:150px;">
                     <div class="dl-f" style="width: 100%;">
                         <label
-                            style="color: rgba(0, 0, 0, 0.70);text-align: center;font-size: 16px;font-style: normal;font-weight: 700;line-height: normal;position: absolute;top:-11px;left: 40px;background: #fff; width: 40px;"
-                            class="form-label">{{ __('Zalo') }}</label>
+                            style="color: rgba(0, 0, 0, 0.70);text-align: center;font-size: 16px;font-style: normal;font-weight: 700;line-height: normal;"
+                            class="form-label title-ip-4">{{ __('Zalo') }}</label>
                         <div style="display:block;" class="length-ip">
                             <div class="mb-3 w-form pd-form f-create-shop">
                                 <x-input class="w-100 height-ip" name="name_shop" placeholder="Số điện thoại zalo"
@@ -138,6 +138,39 @@
 
     .length-ip {
         width: 100%;
+        margin: unset;
+    }
+
+    .title-ip-1 {
+        position: absolute;
+        top: -12px;
+        left: 40px;
+        background: #fff;
+        width: 110px;
+    }
+
+    .title-ip-2 {
+        position: absolute;
+        top: -11px;
+        left: 40px;
+        background: #fff;
+        width: 60px;
+    }
+
+    .title-ip-3 {
+        position: absolute;
+        top: -11px;
+        left: 40px;
+        background: #fff;
+        width: 80px;
+    }
+
+    .title-ip-4 {
+        position: absolute;
+        top: -11px;
+        left: 40px;
+        background: #fff;
+        width: 40px;
     }
 }
 
@@ -148,13 +181,46 @@
 
     .length-ip {
         width: 80%;
+        margin: auto;
+    }
+
+    .title-ip-1 {
+        position: absolute;
+        top: -12px;
+        left: 100px;
+        background: #fff;
+        width: 110px
+    }
+
+    .title-ip-2 {
+        position: absolute;
+        top: -11px;
+        left: 100px;
+        background: #fff;
+        width: 60px;
+    }
+
+    .title-ip-3 {
+        position: absolute;
+        top: -11px;
+        left: 100px;
+        background: #fff;
+        width: 80px;
+    }
+
+    .title-ip-4 {
+        position: absolute;
+        top: -11px;
+        left: 100px;
+        background: #fff;
+        width: 40px;
     }
 }
 
 .form-control:focus {
     border: rgba(0, 0, 0, 0.70);
     box-shadow: none;
-    box-shadow: 2px 2px 10px #E0793F !important;
+    box-shadow: 0px 0px 12px #d0011b !important;
 
 }
 </style>
