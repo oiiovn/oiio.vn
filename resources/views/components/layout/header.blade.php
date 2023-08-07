@@ -165,7 +165,6 @@
     </div>
 </nav>
 <style>
-<<<<<<< HEAD
     .rounded-circle {
         border-radius: 50% !important;
         border: 2px solid #ed6237;
@@ -177,7 +176,6 @@
         width: 16.88%;
         height: 70px;
     }
-=======
 .rounded-circle {
     border-radius: 50% !important;
     border: 2px solid #ed6237;
@@ -191,7 +189,6 @@
     width: 16.88%;
     height: 70px;
 }
->>>>>>> 9fa2b935ca5e735f8edc16c17c8204c5c5b2e043
 
 .navbar .navbar-brand-wrapper .navbar-brand {
     margin-right: 0;
@@ -554,7 +551,6 @@
     height: 50px;
     flex-shrink: 0;
     background: #FFF;
-    backdrop-filter: blur(20px);
 }
 
 .input-group-s {
@@ -562,7 +558,6 @@
     background-color: rgba(var(--bs-tertiary-bg-rgb), var(--bs-bg-opacity)) !important;
     border: 1px solid #D8D8D8;
     border-radius: 15px;
-    backdrop-filter: blur(20px);
 
 }
 
@@ -583,7 +578,6 @@
     font-style: normal;
     font-weight: 400;
     line-height: 22.4px;
-    backdrop-filter: blur(20px);
 }
 
 .input-group-prepend-s img {
@@ -598,7 +592,6 @@
     justify-content: center;
     align-items: center;
     flex-shrink: 0;
-    backdrop-filter: blur(20px);
     cursor: pointer;
 }
 
