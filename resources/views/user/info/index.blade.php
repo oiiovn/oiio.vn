@@ -914,7 +914,7 @@ window.addEventListener('click', function(event) {
         width: 350px !important;
         height: 350px !important;
         top: 80px !important;
-        right: 6% !important;
+        right:25px !important;
     }
 
     .box-us-rt {
