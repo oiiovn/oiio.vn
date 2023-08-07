@@ -73,41 +73,43 @@
     </x-slot>
 
     {{--Shop có nhiều đơn hàng--}}
-    <x-card>
-        <x-slot name="header">
-            <div class="nav">
-                <ul class="nav-r">
-                    <li class="nav-item">
-                        <span
-                            style="color: #000;font-size: 18px;font-style: normal;font-weight: 700;line-height: normal;">{{ ('Shop có nhiều đơn hàng') }}</span>
-                    </li>
-                </ul>
-            </div>
-        </x-slot>
-
-        {{--Render hình ảnh và tên shop--}}
-        <div class="nav text-center"
-            style="width:100%;height: 200px;flex-direction: column;justify-content: flex-start;align-items: center;gap: 10px;display: inline-flex;border-bottom: 1px solid #3333;">
-            @foreach($users as $user)
-
-            <a href="{{ route('info.shop_detail', $user->slug) }}"style="">
-                {{--Render hình ảnh--}}
-                {{--Đọc rồi xoá nha: Do ở lúc đẩy hình ảnh lên bên mevivu có thể cấu hình sai ấy nên là lúc đưa lên ở localhost nó kh lên hình nhưng thật sự là có hình rồi nha--}}
-                <img style="width: 45px; height: 45px; border-radius: 9999px; border: 0.50px #A6A4A4 solid"
-                    src="{{ $user->avatar }}" alt="" />
-                <div @class([ ""=> !$loop->last ])>
-                    <p>
-                        {{ $user->getNameShop() }}
-                        @if($user->isReputable())
-                        <img style="margin-left:2.8px;width:15px ;height:15px;"
-                            src="{{ asset('viewsCustom/assets/images/tick.svg') }}" />
-                        @endif
-                    </p>
+    <div style="padding-left:20px;padding-right:20px;">
+        <x-card>
+            <x-slot name="header">
+                <div class="nav">
+                    <ul class="nav-r">
+                        <li class="nav-item">
+                            <span
+                                style="color: #000;font-size: 18px;font-style: normal;font-weight: 700;line-height: normal;">{{ ('Shop có nhiều đơn hàng') }}</span>
+                        </li>
+                    </ul>
                 </div>
-            </a>
-            @endforeach
-        </div>
-    </x-card>
+            </x-slot>
+
+            {{--Render hình ảnh và tên shop--}}
+            <div class="nav text-center"
+                style="width:100%;height: 200px;flex-direction: column;justify-content: flex-start;align-items: center;display: inline-flex;border-bottom: 1px solid #3333;">
+                @foreach($users as $user)
+
+                <a href="{{ route('info.shop_detail', $user->slug) }}"style="">
+                    {{--Render hình ảnh--}}
+                    {{--Đọc rồi xoá nha: Do ở lúc đẩy hình ảnh lên bên mevivu có thể cấu hình sai ấy nên là lúc đưa lên ở localhost nó kh lên hình nhưng thật sự là có hình rồi nha--}}
+                    <img style="width: 45px; height: 45px; border-radius: 9999px; border: 0.50px #A6A4A4 solid"
+                        src="{{ $user->avatar }}" alt="" />
+                    <div @class([ ""=> !$loop->last ])>
+                        <p>
+                            {{ $user->getNameShop() }}
+                            @if($user->isReputable())
+                            <img style="margin-left:2.8px;width:15px ;height:15px;"
+                                src="{{ asset('viewsCustom/assets/images/tick.svg') }}" />
+                            @endif
+                        </p>
+                    </div>
+                </a>
+                @endforeach
+            </div>
+        </x-card>
+    </div>
 
     {{--Sidebar Tin Tức--}}
     <x-card>
@@ -169,6 +171,7 @@ ul {
 
 .nav a {
     width: 100px;
+    margin-bottom: 15px;
 }
 
 .nav .nav-item .nav-link {

@@ -192,7 +192,7 @@
                         </div>
                     </div>
                     <button class="header-left-pp__text__bottom "
-                        style="border:none;width: 99px;height: 33px;background: #0D6EFD;text-align:center;padding;7px;border-radius:5px;">
+                        style="border:none;width: 99px;height: 33px;background: #0D6EFD;text-align:center;padding:7px;border-radius:5px;">
                         <span
                             style="color: #FFF;font-size: 16px;font-style: normal;font-weight: 700;line-height: normal;">Nhắn
                             tin</span>
@@ -731,7 +731,7 @@
                                                                 style="color: #000;font-size: 14px;font-style: normal;font-weight: 600;line-height: normal;">Trần
                                                                 Tuấn Anh</span>
                                                             <span
-                                                                style="color: rgba(166, 164, 164, 0.70)font-size: 14px;font-style: normal;font-weight: 600;line-height: normal;">2023/06/14
+                                                                style="color: rgba(166, 164, 164, 0.70);font-size: 14px;font-style: normal;font-weight: 600;line-height: normal;">2023/06/14
                                                                 - 19:50</span>
                                                         </div>
                                                     </div>

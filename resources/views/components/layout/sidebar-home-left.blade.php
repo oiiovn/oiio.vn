@@ -230,12 +230,45 @@
     color: #454545 !important;
 }
 
+
 ul li,
 ol li,
 dl li {
     line-height: 1.8;
     display: flex;
 }
+
+.btn-orange:hover {
+    background-color: #FFF;
+}
+
+#ui-basic {
+    transition: linear 0.5s !important;
+}
+
+#ui-basic1 {
+    transition: linear 0.5s !important;
+}
+
+#ui-basic2 {
+    transition: linear 0.5s !important;
+}
+
+#ui-basic3 {
+    transition: linear 0.5s !important;
+}
+
+#ui-basic4 {
+    transition: linear 0.5s !important;
+}
+
+
+#ui-basic .nav-item {
+    padding: 10px 0;
+    margin-left: 5px;
+    font-size: 13px;
+}
+
 
 .nav-link {
     color: #454545;
