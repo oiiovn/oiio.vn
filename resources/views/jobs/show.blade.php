@@ -103,7 +103,63 @@
             </div>
                 <ul style="height:257px;margin-bottom: 0px;"> <!--đổ backend quá trình xử lí thẻ <ul> tại đây--></ul>
             <div style="float:right;">
-                <button style="width:142px;height:33px;border-radius: 5px;background: #E0793F;display:inline-flex;padding: 7px 20px;justify-content: center;align-items: center;border:none;"><a style="color: #FFF;font-family:'Lato'sans-serif;font-size: 14px;font-style: normal;font-weight: 700;line-height: normal;" href="#">Đánh giá shop</a></button>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter"style="width:142px;height:33px;border-radius: 5px;background: #E0793F;display:inline-flex;padding: 7px 20px;justify-content: center;align-items: center;border:none;"><a style="color: #FFF;font-family:'Lato'sans-serif;font-size: 14px;font-style: normal;font-weight: 700;line-height: normal;" href="#">Đánh giá shop</a></button>
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                <div class="modal-header" style="border:none;padding-bottom:0;">
+                    <h5 class="modal-title" id="exampleModalLongTitle" style="color: #000;font-family: 'Lato' sans-serif;font-size: 20px;font-style: normal;font-weight: 600;line-height: normal;">Đánh giá shop</h5>
+                    <button style="border:none;background: transparent;"type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span style="font-size:30px;flex-shrink: 0;color:#A6A4A4;" aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" style="padding-top:0;padding-bottom:0;">
+                    <div style="display:flex;align-items: center;margin-bottom:10px;">
+                        <div class="label-rating" style="width:100px;">
+                            <label style="color: #000;text-align: center;font-family: 'Lato'sans-serif;font-size: 16px;font-style: normal;font-weight: 500;line-height: normal;" class="control-label">{{ __('Vote sao') }}:</label>
+                        </div>
+                        <div class="rating">
+                            <input type="radio" name="rating" id="rating-5" value="5">
+                            <label for="rating-5"></label>
+                            <input type="radio" name="rating" id="rating-4" value="4">
+                            <label for="rating-4"></label>
+                            <input type="radio" name="rating" id="rating-3" value="3">
+                            <label for="rating-3"></label>
+                            <input type="radio" name="rating" id="rating-2" value="2">
+                            <label for="rating-2"></label>
+                            <input type="radio" name="rating" id="rating-1" value="1">
+                            <label for="rating-1"></label>
+                        </div>
+                    </div>
+                    <div class="modal-comment" style="width: 100%;margin-bottom:10px;">
+                        <textarea style="padding:15px 18px;width: 100%;height: 103px;flex-shrink: 0;border-radius: 8px;border: 1px solid rgba(48, 48, 48, 0.20);" placeholder="Đánh giá Shop Korina"></textarea>
+                    </div>
+                    <div class="modal-tag" style="width:100%;">
+                        <ul class="tags" style="display:block;gap: 10px;width: 100%;">
+                            <li style="border-radius: 15px;display: inline-flex;padding: 10px 15px;justify-content: center;align-items: center;border: 1.5px solid #D9D9D9;">
+                            <a style="color: #000;text-align: center;font-family:'Lato'sans-serif;font-size: 13px;font-style: normal;font-weight: 400;line-height: normal;" href="#" class="tag">Shop uy tín.</a></li>
+                            <li style="border-radius: 15px;display: inline-flex;padding: 10px 15px;justify-content: center;align-items: center;border: 1.5px solid #D9D9D9;">
+                            <a style="color: #000;text-align: center;font-family:'Lato'sans-serif;font-size: 13px;font-style: normal;font-weight: 400;line-height: normal;" href="#" class="tag">Shop trả lời nhanh.</a></li>
+                            <li style="border-radius: 15px;display: inline-flex;padding: 10px 15px;justify-content: center;align-items: center;border: 1.5px solid #D9D9D9;">
+                            <a style="color: #000;text-align: center;font-family:'Lato'sans-serif;font-size: 13px;font-style: normal;font-weight: 400;line-height: normal;" href="#" class="tag">Hướng dẫn tận tình.</a></li>
+                            <li style="border-radius: 15px;display: inline-flex;padding: 10px 15px;justify-content: center;align-items: center;border: 1.5px solid #D9D9D9;">
+                            <a style="color: #000;text-align: center;font-family:'Lato'sans-serif;font-size: 13px;font-style: normal;font-weight: 400;line-height: normal;" href="#" class="tag">Đơn hàng giao nhanh.</a></li>
+                            <li style="border-radius: 15px;display: inline-flex;padding: 10px 15px;justify-content: center;align-items: center;border: 1.5px solid #D9D9D9;">
+                            <a style="color: #000;text-align: center;font-family:'Lato'sans-serif;font-size: 13px;font-style: normal;font-weight: 400;line-height: normal;" href="#" class="tag">Hướng dẫn tận tình.</a></li>
+                            <li style="border-radius: 15px;display: inline-flex;padding: 10px 15px;justify-content: center;align-items: center;border: 1.5px solid #D9D9D9;">
+                            <a style="color: #000;text-align: center;font-family:'Lato'sans-serif;font-size: 13px;font-style: normal;font-weight: 400;line-height: normal;" href="#" class="tag">Shop uy tín.</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="modal-footer"style="border:none;">
+                    <button style="width: 100%;background:#E0793F;border:none;border-radius:5px;"type="button" class="btn btn-primary"id="button-addon2">Đánh giá shop</button>
+                </div>
+                
+                </div>
+            </div>
             </div>
         </div>
         <div style="width: 22.58%;height:auto;display: block;margin-left:17px;">

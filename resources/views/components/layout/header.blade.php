@@ -165,6 +165,19 @@
     </div>
 </nav>
 <style>
+<<<<<<< HEAD
+    .rounded-circle {
+        border-radius: 50% !important;
+        border: 2px solid #ed6237;
+    }
+    .navbar{
+        transition:none !important;
+    }
+    .navbar .navbar-brand-wrapper {
+        width: 16.88%;
+        height: 70px;
+    }
+=======
 .rounded-circle {
     border-radius: 50% !important;
     border: 2px solid #ed6237;
@@ -178,6 +191,7 @@
     width: 16.88%;
     height: 70px;
 }
+>>>>>>> 9fa2b935ca5e735f8edc16c17c8204c5c5b2e043
 
 .navbar .navbar-brand-wrapper .navbar-brand {
     margin-right: 0;
