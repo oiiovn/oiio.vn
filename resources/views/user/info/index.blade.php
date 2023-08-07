@@ -913,7 +913,7 @@ window.addEventListener('click', function(event) {
     .profile {
         width: 350px !important;
         height: 350px !important;
-        top: 10% !important;
+        top: 80px !important;
         right: 6% !important;
     }
 
