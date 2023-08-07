@@ -148,12 +148,10 @@
         border-radius: 50% !important;
         border: 2px solid #ed6237;
     }
-
+    .navbar{
+        transition:none !important;
+    }
     .navbar .navbar-brand-wrapper {
-        transition: width 0.25s ease, background 0.25s ease;
-        -webkit-transition: width 0.25s ease, background 0.25s ease;
-        -moz-transition: width 0.25s ease, background 0.25s ease;
-        -ms-transition: width 0.25s ease, background 0.25s ease;
         width: 16.88%;
         height: 70px;
     }

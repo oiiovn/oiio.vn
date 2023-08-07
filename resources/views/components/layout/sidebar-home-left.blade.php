@@ -243,8 +243,20 @@
     .btn-orange:hover {
         background-color: #FFF;
     }
-    .collapse{
-        transition: all ease 1s !important;
+    #ui-basic{
+        transition: linear 0.5s !important;
+    }
+    #ui-basic1{
+        transition: linear 0.5s !important;
+    }
+    #ui-basic2{
+        transition:linear 0.5s !important;
+    }
+    #ui-basic3{
+        transition:linear 0.5s !important;
+    }
+    #ui-basic4{
+        transition:linear 0.5s !important;
     }
     
     #ui-basic .nav-item {
