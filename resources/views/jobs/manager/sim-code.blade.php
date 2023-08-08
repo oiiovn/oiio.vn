@@ -2,9 +2,14 @@
 
 @section('content')
 <div style="width:150%;">
-    <div style="margin-bottom:20px;"><a
-            style="color: #000;font-size: 22px;font-style: normal;font-weight: 700;line-height: normal;"
-            href="{{ route('history-sim-code') }}">Mua
+    <div style="margin-bottom:20px;display:flex;"><a
+            style="color: #000;font-size: 22px;font-style: normal;font-weight: 700;line-height: normal;">Mua
+            code</a>
+        <span
+            style="color: #000;font-size: 22px;font-style: normal;font-weight: 500;line-height: normal;padding-left:5px;padding-right:5px;">
+            > </span>
+        <a style="color: #000;font-size: 20px;font-style: normal;font-weight: 300;line-height: normal;"
+            href="{{ route('history-sim-code') }}">Lịch sử mua
             code</a>
     </div>
     <div style="display:flex;">
@@ -39,7 +44,7 @@
                             style="color: #000;text-align: right;font-size: 14px;font-style: normal;font-weight: 500;line-height: normal;">
                             Facebook</div>
                         <div
-                            style="color: #000;text-align: right;font-size: 14px;font-style: normal;font-weight: 500;line-height: normal;margin-top:4px;">
+                            style="color: #000;text-align: right;font-size: 14px;font-style: normal;font-weight: 500;line-height: normal;">
                             1.5/sim</div>
                     </div>
                 </div>
@@ -54,7 +59,7 @@
                             style="color: #000;text-align: right;font-size: 14px;font-style: normal;font-weight: 500;line-height: normal;">
                             Shopee/shopee pay</div>
                         <div
-                            style="color: #000;text-align: right;font-size: 14px;font-style: normal;font-weight: 500;line-height: normal;margin-top:4px;">
+                            style="color: #000;text-align: right;font-size: 14px;font-style: normal;font-weight: 500;line-height: normal;">
                             1.3/sim</div>
                     </div>
                 </div>
@@ -69,7 +74,7 @@
                             style="color: #000;text-align: right;font-size: 14px;font-style: normal;font-weight: 500;line-height: normal;">
                             Tinder</div>
                         <div
-                            style="color: #000;text-align: right;font-size: 14px;font-style: normal;font-weight: 500;line-height: normal;margin-top:4px;">
+                            style="color: #000;text-align: right;font-size: 14px;font-style: normal;font-weight: 500;line-height: normal;">
                             1/sim</div>
                     </div>
                 </div>
@@ -84,7 +89,7 @@
                             style="color: #000;text-align: right;font-size: 14px;font-style: normal;font-weight: 500;line-height: normal;">
                             KakaoTalk</div>
                         <div
-                            style="color: #000;text-align: right;font-size: 14px;font-style: normal;font-weight: 500;line-height: normal;margin-top:4px;">
+                            style="color: #000;text-align: right;font-size: 14px;font-style: normal;font-weight: 500;line-height: normal;">
                             1/sim</div>
                     </div>
                 </div>
@@ -99,7 +104,7 @@
                             style="color: #000;text-align: right;font-size: 14px;font-style: normal;font-weight: 500;line-height: normal;">
                             Gmail/Google/Youtube</div>
                         <div
-                            style="color: #000;text-align: right;font-size: 14px;font-style: normal;font-weight: 500;line-height: normal;margin-top:4px;">
+                            style="color: #000;text-align: right;font-size: 14px;font-style: normal;font-weight: 500;line-height: normal;">
                             1.3/sim</div>
                     </div>
                 </div>
@@ -114,7 +119,7 @@
                             style="color: #000;text-align: right;font-size: 14px;font-style: normal;font-weight: 500;line-height: normal;">
                             Telegram</div>
                         <div
-                            style="color: #000;text-align: right;font-size: 14px;font-style: normal;font-weight: 500;line-height: normal;margin-top:4px;">
+                            style="color: #000;text-align: right;font-size: 14px;font-style: normal;font-weight: 500;line-height: normal;">
                             4/sim</div>
                     </div>
                 </div>
@@ -129,7 +134,7 @@
                             style="color: #000;text-align: right;font-size: 14px;font-style: normal;font-weight: 500;line-height: normal;">
                             Lazada</div>
                         <div
-                            style="color: #000;text-align: right;font-size: 14px;font-style: normal;font-weight: 500;line-height: normal;margin-top:4px;">
+                            style="color: #000;text-align: right;font-size: 14px;font-style: normal;font-weight: 500;line-height: normal;">
                             1/sim</div>
                     </div>
                 </div>
@@ -144,7 +149,7 @@
                             style="color: #000;text-align: right;font-size: 14px;font-style: normal;font-weight: 500;line-height: normal;">
                             Go88/Nn88</div>
                         <div
-                            style="color: #000;text-align: right;font-size: 14px;font-style: normal;font-weight: 500;line-height: normal;margin-top:4px;">
+                            style="color: #000;text-align: right;font-size: 14px;font-style: normal;font-weight: 500;line-height: normal;">
                             1.3/sim</div>
                     </div>
                 </div>
@@ -159,7 +164,7 @@
                             style="color: #000;text-align: right;font-size: 14px;font-style: normal;font-weight: 500;line-height: normal;">
                             Yahoo</div>
                         <div
-                            style="color: #000;text-align: right;font-size: 14px;font-style: normal;font-weight: 500;line-height: normal;margin-top:4px;">
+                            style="color: #000;text-align: right;font-size: 14px;font-style: normal;font-weight: 500;line-height: normal;">
                             4/sim</div>
                     </div>
                 </div>
@@ -174,7 +179,7 @@
                             style="color: #000;text-align: right;font-size: 14px;font-style: normal;font-weight: 500;line-height: normal;">
                             Instagram</div>
                         <div
-                            style="color: #000;text-align: right;font-size: 14px;font-style: normal;font-weight: 500;line-height: normal;margin-top:4px;">
+                            style="color: #000;text-align: right;font-size: 14px;font-style: normal;font-weight: 500;line-height: normal;">
                             1/sim</div>
                     </div>
                 </div>
@@ -189,7 +194,7 @@
                             style="color: #000;text-align: right;font-size: 14px;font-style: normal;font-weight: 500;line-height: normal;">
                             Zalo</div>
                         <div
-                            style="color: #000;text-align: right;font-size: 14px;font-style: normal;font-weight: 500;line-height: normal;margin-top:4px;">
+                            style="color: #000;text-align: right;font-size: 14px;font-style: normal;font-weight: 500;line-height: normal;">
                             1.3/sim</div>
                     </div>
                 </div>
@@ -204,7 +209,7 @@
                             style="color: #000;text-align: right;font-size: 14px;font-style: normal;font-weight: 500;line-height: normal;">
                             Microsoft/hotmail</div>
                         <div
-                            style="color: #000;text-align: right;font-size: 14px;font-style: normal;font-weight: 500;line-height: normal;margin-top:4px;">
+                            style="color: #000;text-align: right;font-size: 14px;font-style: normal;font-weight: 500;line-height: normal;">
                             4/sim</div>
                     </div>
                 </div>
@@ -219,7 +224,7 @@
                             style="color: #000;text-align: right;font-size: 14px;font-style: normal;font-weight: 500;line-height: normal;">
                             Taobao/1688</div>
                         <div
-                            style="color: #000;text-align: right;font-size: 14px;font-style: normal;font-weight: 500;line-height: normal;margin-top:4px;">
+                            style="color: #000;text-align: right;font-size: 14px;font-style: normal;font-weight: 500;line-height: normal;;">
                             1/sim</div>
                     </div>
                 </div>
@@ -234,7 +239,7 @@
                             style="color: #000;text-align: right;font-size: 14px;font-style: normal;font-weight: 500;line-height: normal;">
                             Tiktok</div>
                         <div
-                            style="color: #000;text-align: right;font-size: 14px;font-style: normal;font-weight: 500;line-height: normal;margin-top:4px;">
+                            style="color: #000;text-align: right;font-size: 14px;font-style: normal;font-weight: 500;line-height: normal;">
                             1.3/sim</div>
                     </div>
                 </div>
@@ -249,7 +254,7 @@
                             style="color: #000;text-align: right;font-size: 14px;font-style: normal;font-weight: 500;line-height: normal;">
                             Texas Poker</div>
                         <div
-                            style="color: #000;text-align: right;font-size: 14px;font-style: normal;font-weight: 500;line-height: normal;margin-top:4px;">
+                            style="color: #000;text-align: right;font-size: 14px;font-style: normal;font-weight: 500;line-height: normal;">
                             4/sim</div>
                     </div>
                 </div>
@@ -264,7 +269,7 @@
                             style="color: #000;text-align: right;font-size: 14px;font-style: normal;font-weight: 500;line-height: normal;">
                             B52/Win79/PQ88</div>
                         <div
-                            style="color: #000;text-align: right;font-size: 14px;font-style: normal;font-weight: 500;line-height: normal;margin-top:4px;">
+                            style="color: #000;text-align: right;font-size: 14px;font-style: normal;font-weight: 500;line-height: normal;">
                             1/sim</div>
                     </div>
                 </div>
@@ -279,7 +284,7 @@
                             style="color: #000;text-align: right;font-size: 14px;font-style: normal;font-weight: 500;line-height: normal;">
                             Escape from Tark</div>
                         <div
-                            style="color: #000;text-align: right;font-size: 14px;font-style: normal;font-weight: 500;line-height: normal;margin-top:4px;">
+                            style="color: #000;text-align: right;font-size: 14px;font-style: normal;font-weight: 500;line-height: normal;">
                             1.3/sim</div>
                     </div>
                 </div>
@@ -294,7 +299,7 @@
                             style="color: #000;text-align: right;font-size: 14px;font-style: normal;font-weight: 500;line-height: normal;">
                             Ku Casino/KUBETO</div>
                         <div
-                            style="color: #000;text-align: right;font-size: 14px;font-style: normal;font-weight: 500;line-height: normal;margin-top:4px;">
+                            style="color: #000;text-align: right;font-size: 14px;font-style: normal;font-weight: 500;line-height: normal;">
                             4/sim</div>
                     </div>
                 </div>
@@ -318,7 +323,8 @@
                                         placeholder="Chọn nhà mạng để lấy số" required
                                         style="color: rgba(0, 0, 0, 0.70);display: flex;width: 600px;width: 100% !important;align-items: center;flex-shrink: 0;" />
                                     <a class="dropdown-icon" alt="Dropdown Icon"><img
-                                            src="{{ asset('viewsCustom/assets/images/down-small.svg') }}" /></a>
+                                            src="{{ asset('viewsCustom/assets/images/down-small.svg') }}"
+                                            style="width:25px;height:25px;" /></a>
                                     <ul class="dropdown-list">
                                         <li>Mobi</li>
                                         <li>Vina</li>

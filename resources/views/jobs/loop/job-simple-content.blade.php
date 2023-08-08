@@ -253,7 +253,8 @@
                                 style="color: #D0011B;font-style: normal;font-weight: 400;line-height: normal;padding-left:8px;">
                                 4.5</div>
                             <div class="fs15"
-                                style="color: #D0011B;font-style: normal;font-weight: 400;line-height: normal;">(25,5k
+                                style="color: #D0011B;font-style: normal;font-weight: 400;line-height: normal;width:150px;">
+                                (25,5k
                                 đánh
                                 giá)</div>
                         </div>
