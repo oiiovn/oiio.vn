@@ -914,7 +914,7 @@ window.addEventListener('click', function(event) {
         width: 350px !important;
         height: 350px !important;
         top: 80px !important;
-        right: 6% !important;
+        right: auto !important;
     }
 
     .box-us-rt {
@@ -939,6 +939,10 @@ window.addEventListener('click', function(event) {
     #row {
         margin-left: 0 !important;
         margin-top: 0 !important;
+    }
+    .container-content-avatar{
+        display: flex !important;
+        justify-content: center !important;
     }
 }
 
@@ -973,7 +977,6 @@ li a {
     font-family: 'Lato'sans-serif;
     font-size: 16px;
     font-style: normal;
-    font-weight: 700;
     line-height: normal;
 }
 

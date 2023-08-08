@@ -127,12 +127,12 @@
 
         {{--Thông tin tin tức--}}
         <x-slot name="footer">
-            <div class="nav">
+            <div class="news"style="padding: 0 20px;">
                 @foreach($news as $value)
                     @if($loop->iteration <= 2)
-                        <a href="{{ route('news.detail', $value->slug) }}">
+                        <a class="news-slug"href="{{ route('news.detail', $value->slug) }}">
                             <div @class([ ""=> !$loop->last ])>
-                                <div style="display:grid;grid-template-columns:30% 65%;margin-bottom:20px;">
+                                <div style="display:grid;grid-template-columns:30% 65%;margin-bottom:20px;gap: 10px;">
                                     <div class="img-news">
                                         <img src="{{ asset($value->getavatar) }}"/>
                                     </div>
@@ -191,8 +191,8 @@ ul {
 .card-body {
     background: #FFF;
 }
-
-.nav a:hover {
+.nav a:hover{color:#E0793F !important;}
+.news a:hover {
     color: #E0793F !important;
 }
 

@@ -2,8 +2,9 @@
 
 @section('content')
 
-<div class="container-slug" style="width:136%;display:flex;justify-content: center;align-items: center;">
-        <div class="slug-header" style="width:60.43%;padding:15px 20px;">
+<div class="container-slug" style="width:136%;display:flex;justify-content: space-between;align-items: center;">
+    <div class="container-news-slug"style="width: 100%;display:flex;">
+        <div class="slug-header" style="width:68.43%;padding:15px 20px;margin-left:15px;">
             <div style="display:block;margin-bottom:25px;">
                 <div class="title" style="display:flex;gap:5px;">
                     <a href="{{ route('news.index')}}"><span style="width:100%;color: #848484;font-family: 'Lato'sans-serif;font-size: 18px;font-style: normal;font-weight: 600;line-height: normal;">Tin tức</span>
@@ -17,7 +18,7 @@
             </div>
             <div class="slug-title-date" style="display: flex;justify-content: space-between;margin-bottom:25px;width: 95%;">
                     <span style="color: #E0793F;font-family: 'Lato'sans-serif;font-size: 14px;font-style: normal;font-weight: 800;line-height: normal;">Xu hướng</span>
-                    <span style="color: #A6A4A4;font-family: 'Lato'sans-serif;font-size: 14px;font-style: normal;font-weight: 500;line-height: normal;">1 giờ trước</span>
+                    <span style="color: #A6A4A4;font-family: 'Lato'sans-serif;font-size: 14px;font-style: normal;font-weight: 500;line-height: normal;">{{ format_datetime($news->created_at) }}</span>
                 </div>
             <!-- <div class="img-slug">
                 <img src="{{ asset($news->avatar) }}" width="100%"/>
@@ -39,6 +40,25 @@
                     </div>
             </div>
         </div>
+        <div class="news-more" style="width: 23.65%;margin-left:auto;margin-top:137px;">
+                @foreach($news as $value)
+                <div class="col-news" style="width:100%;background: #fff;border-radius:5px;box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);border:none;margin-bottom:15px;">
+                    <a href="{{ route('news.detail', $news->slug) }}">
+                    <img class="img-news" style="border:none;" src="{{ asset($news->avatar) }}" width="100%" height="159px" />
+                        <div style="display: block;padding-left:12px; padding-right:12px;padding-bottom:10px;">
+                            <div style="color: #E0793F;font-family: 'Lato' sans-serif;font-size: 12px;font-style: normal;font-weight: 700;line-height: 22px;">Chủ đề</div>
+                            <div class="content-news"style="border:none;margin-bottom:10px;color: #000;font-family: 'Lato' sans-serif;font-size: 16px;font-style: normal;font-weight: 400;line-height: 22px;">
+                                {{ $news->title }}
+                            </div>
+                            <div class="date-news">
+                                <span style="color: #A6A4A4;font-family: 'Lato'sans-serif;font-size: 12px;font-style: normal;font-weight: 500;line-height: normal;">{{ format_datetime($news->created_at) }}</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                @endforeach
+        </div>
+    </div>
 
 </div>
 <style>
@@ -65,6 +85,23 @@
         }
         .slug-body h3 strong{
             font-size: 18px !important;
+        }
+        .container-news-slug{
+            display: block !important;
+        }
+        .news-more{
+            margin:0 !important;
+            display:grid !important;
+            width: 100% !important;
+            justify-content: center !important;
+            grid-template-columns: auto auto;
+            padding-left:25px !important;
+        }
+        .col-news{
+            width: 90% !important;
+        }
+        .img-news{
+            height: 109 !important;
         }
     }
     body{
@@ -111,6 +148,12 @@
     }
     .vote-slug:hover{
         color:#E0793F;
+    }
+    .col-news{
+        transition:.3s;
+    }
+    .col-news:hover{
+       border:1.5px solid #E0793F !important;
     }
 </style>
 @endsection
