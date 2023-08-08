@@ -44,7 +44,7 @@
                 @foreach($news as $value)
                 <div class="col-news" style="width:100%;background: #fff;border-radius:5px;box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);border:none;margin-bottom:15px;">
                     <a href="{{ route('news.detail', $news->slug) }}">
-                    <img class="img-news" style="border:none;" src="{{ asset($news->avatar) }}" width="100%" height="160px" />
+                    <img class="img-news" style="border:none;" src="{{ asset($news->avatar) }}" width="100%" height="159px" />
                         <div style="display: block;padding-left:12px; padding-right:12px;padding-bottom:10px;">
                             <div style="color: #E0793F;font-family: 'Lato' sans-serif;font-size: 12px;font-style: normal;font-weight: 700;line-height: 22px;">Chủ đề</div>
                             <div class="content-news"style="border:none;margin-bottom:10px;color: #000;font-family: 'Lato' sans-serif;font-size: 16px;font-style: normal;font-weight: 400;line-height: 22px;">
@@ -88,6 +88,20 @@
         }
         .container-news-slug{
             display: block !important;
+        }
+        .news-more{
+            margin:0 !important;
+            display:grid !important;
+            width: 100% !important;
+            justify-content: center !important;
+            grid-template-columns: auto auto;
+            padding-left:25px !important;
+        }
+        .col-news{
+            width: 90% !important;
+        }
+        .img-news{
+            height: 109 !important;
         }
     }
     body{

@@ -131,7 +131,54 @@
             </div>
         </x-slot>
     </x-card>
+        {{--Sidebar Tin Tức--}}
+    <div class="news-sidebar-left" style="display:none;">
+        <x-card>
+            <x-slot name="header">
+                <div class="nav">
+                    <ul class="nav-r">
+                        <li class="nav-item">
+                            <span style="color: #000;font-size: 18px;font-style: normal;font-weight: 700;line-height: normal;">
+                                <a class="" href="{{ route('news.index')}}">{{ ('Tin tức') }}</a>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </x-slot>
 
+            {{--Thông tin tin tức--}}
+            <x-slot name="footer">
+                <div class="news"style="padding: 0 20px;">
+                    @foreach($news as $value)
+                        @if($loop->iteration <= 2)
+                            <a class="news-slug"href="{{ route('news.detail', $value->slug) }}">
+                                <div @class([ ""=> !$loop->last ])>
+                                    <div style="display:grid;grid-template-columns:30% 65%;margin-bottom:20px;gap: 10px;">
+                                        <div class="img-news">
+                                            <img src="{{ asset($value->getavatar) }}"/>
+                                        </div>
+                                        <div class="content-news">
+                                            <p style="margin-bottom: 20px;">{{ $value->title }}</p>
+                                            <div style="display:flex;justify-content:space-between;" class="btn-date-news">
+                                                <span style="color: #A6A4A4;font-size: 10px;font-style: normal;font-weight: 500;line-height: normal;">{{ format_datetime($value->created_at) }}</span>
+                                                <a class="text-orange" href="#" style="border-bottom: 1px solid #E0793F;display: flex;justify-content: center;">{{ __('Xem thêm') }}</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        @endif
+                    @endforeach
+                </div>
+
+                <div class="nav-arrow">
+                    <a style="text-align: center;margin:10px 50% 10px 50%" href="#">
+                        <img src="{{ asset('viewsCustom/assets/images/down2.png') }}" alt="" />
+                    </a>
+                </div>
+            </x-slot>
+        </x-card>
+    </div>
     <x-card style="width: 100%;height: 100px;background-color:#FFF;">
         <div style="height: 68px;"></div>
     </x-card>
@@ -196,7 +243,9 @@
     .card {
         width: 100% !important;
     }
-
+    .news-sidebar-left{
+        display:block !important;
+    }
 }
 
 * {
