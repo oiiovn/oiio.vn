@@ -23,7 +23,7 @@
             </div>
             <div class="body-news" style="display: flex;gap:21px;">
                 @foreach($news as $value)
-                <div class="col-news" style="width:23.65%;background: #fff;border-radius:5px;box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);border:none;">
+                <div class="col-news" style="width:23.65%;background: #fff;border-radius:5px;box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);border:none;margin-bottom:15px;">
                     <a href="{{ route('news.detail', $value->slug) }}">
                     <img class="img-news" style="border:none;" src="{{ asset($value->avatar) }}" width="100%" height="160px" />
                         <div style="display: block;padding-left:12px; padding-right:12px;padding-bottom:10px;">
@@ -63,6 +63,7 @@
         }
         .col-news{
             width: 95% !important;
+            margin-bottom:15px !important;
         }
         ::-webkit-scrollbar{
             height:7px;
