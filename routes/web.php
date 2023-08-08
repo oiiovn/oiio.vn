@@ -11,7 +11,9 @@ Route::get('/dashboard', function () {
 Route::get('/sim-code', function () {
     return view('jobs.manager.sim-code');
 })->name('sim-code');
-
+Route::get('/history-sim-code', function () {
+    return view('jobs.manager.history-sim-code');
+})->name('history-sim-code');
 Route::prefix('/thong-tin')->as('info.')->group(function () {
     Route::controller(App\Http\Controllers\User\OtherController::class)->group(function () {
         Route::get('/nguoi-dung', 'userSearch')->name('search_user');

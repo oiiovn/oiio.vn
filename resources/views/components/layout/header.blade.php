@@ -165,27 +165,26 @@
     </div>
 </nav>
 <style>
-    .rounded-circle {
-        border-radius: 50% !important;
-        border: 2px solid #ed6237;
-    }
-    .navbar{
-        transition:none !important;
-    }
-    .navbar .navbar-brand-wrapper {
-        width: 16.88%;
-        height: 70px;
-    }
+.rounded-circle {
+    border-radius: 50% !important;
+    border: 2px solid #ed6237;
+}
+
+.navbar {
+    transition: none !important;
+}
+
+.navbar .navbar-brand-wrapper {
+    width: 16.88%;
+    height: 70px;
+}
+
 .rounded-circle {
     border-radius: 50% !important;
     border: 2px solid #ed6237;
 }
 
 .navbar .navbar-brand-wrapper {
-    transition: width 0.25s ease, background 0.25s ease;
-    -webkit-transition: width 0.25s ease, background 0.25s ease;
-    -moz-transition: width 0.25s ease, background 0.25s ease;
-    -ms-transition: width 0.25s ease, background 0.25s ease;
     width: 16.88%;
     height: 70px;
 }
@@ -561,6 +560,11 @@
 
 }
 
+.form-control:focus {
+    border: 2px solid #d0011b !important;
+    box-shadow: none !important;
+}
+
 .form-control-s {
     background: transparent;
     position: absolute;
@@ -741,23 +745,27 @@
                 </div>
                 <div class="modal-body" style="padding-top: 9px;">
                     <div>
+
                         <div>
-                            Nhập mật khẩu mới
-                        </div>
-                        <div>
+                            <div
+                                style="position: absolute; left: 40px; top: -3px; background: #fff; text-align: center; width: 160px;">
+                                Nhập mật khẩu mới
+                            </div>
                             <input id="new-password" class="form-control form-control-flush h55 w100" type="password"
-                                name="password" placeholder="Mật khẩu"
+                                name="password" placeholder=""
                                 style="flex-shrink: 0; border-radius: 5px; border: 1px solid #C7C6C1; font-family: 'Lato', sans-serif;" />
                             <span id="new-password-err" class="text-danger"></span>
                         </div>
                     </div>
                     <div style="padding-top: 24px;">
+
                         <div>
-                            Nhập lại mật khẩu mới
-                        </div>
-                        <div>
+                            <div
+                                style="position: absolute; left: 40px; bottom: 42px;width: 180px;background: #fff;text-align: center;">
+                                Nhập lại mật khẩu mới
+                            </div>
                             <input id="re-password" class="form-control form-control-flush h55 w100" type="password"
-                                name="re_password" placeholder="Nhập lại mật khẩu"
+                                name="re_password" placeholder=""
                                 style="flex-shrink: 0; border-radius: 5px; border: 1px solid #C7C6C1; font-family: 'Lato', sans-serif;" />
                             <span id="re-password-err" class="text-danger"></span>
                         </div>

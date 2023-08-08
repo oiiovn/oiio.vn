@@ -35,7 +35,8 @@
             <div class="collapse show" id="ui-basic">
                 <li class="nav-item" href="#">Lên Shopee Mall</li>
                 <li class="nav-item" href="#">Lên Lazada Mall</li>
-                <li class="nav-item" href=""><a href="{{ route('sim-code') }}">Cho thuê sim code</a></li>
+                <li href="#"><a class="nav-item" href="{{ route('sim-code') }}">Cho thuê sim code</a>
+                </li>
                 <li class="nav-item" href="#">Mở thông tin khách hàng Shopee</li>
                 <li class="nav-item" href="#">Setup gian hàng chuẩn SEO</li>
             </div>
@@ -282,10 +283,6 @@ dl li {
 
 .btn-orange:hover {
     background-color: #FFF;
-}
-
-.collapse {
-    transition: all ease 1s !important;
 }
 
 #ui-basic .nav-item {
