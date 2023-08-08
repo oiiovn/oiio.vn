@@ -291,9 +291,12 @@ dl li {
 #ui-basic .nav-item {
     padding: 10px 0;
     margin-left: 5px;
-    font-size: 13px;
-}
 
+}
+#ui-basic a{
+    font-size: 13px;
+    font-weight: 400;
+}
 #ui-basic li a:hover {
     color: #E0793F;
 }
