@@ -49,12 +49,7 @@
             margin-bottom: 10px !important;
             height: auto !important;
             overflow-x: hidden;
-        }
-
-        #sidebar-right-child {
-            position: fixed !important;
-            width: 50%;
-            overflow-y: scroll !important;
+            max-width: 100% !important;
         }
 
         .navbar .navbar-menu-wrapper {
