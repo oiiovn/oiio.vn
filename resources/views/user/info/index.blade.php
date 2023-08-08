@@ -977,7 +977,6 @@ li a {
     font-family: 'Lato'sans-serif;
     font-size: 16px;
     font-style: normal;
-    font-weight: 700;
     line-height: normal;
 }
 

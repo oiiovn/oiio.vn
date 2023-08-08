@@ -57,11 +57,6 @@
         </x-slot>
         <x-slot name="footer">
             <div class="collapse show" id="ui-basic1">
-                <x-link :href="route('user.contact.index')">
-                    <li class="nav-item">
-                        {{ __('Thông tin shop') }}
-                    </li>
-                </x-link>
                 <x-link :href="route('job.manager.create')">
                     <li class="nav-item">
                         {{ __('Tạo đơn') }}
