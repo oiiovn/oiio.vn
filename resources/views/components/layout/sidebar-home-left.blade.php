@@ -33,20 +33,13 @@
 
         <x-slot name="footer">
             <div class="collapse show" id="ui-basic">
-<<<<<<< HEAD
-                <li class="nav-item" href="#">Lên Shopee Mall</li>
-                <li class="nav-item" href="#">Lên Lazada Mall</li>
-                <li href="#"><a class="nav-item" href="{{ route('sim-code') }}">Cho thuê sim code</a>
-                </li>
-                <li class="nav-item" href="#">Mở thông tin khách hàng Shopee</li>
-                <li class="nav-item" href="#">Setup gian hàng chuẩn SEO</li>
-=======
+
                 <li class="nav-item"><a href="">Lên Shopee Mall</a></li>
                 <li class="nav-item"><a href="">Lên Lazada Mall</a></li>
                 <li class="nav-item"><a href="{{ route('sim-code') }}">Cho thuê sim code</a></li>
                 <li class="nav-item"><a href="">Mở thông tin khách hàng Shopee</a></li>
                 <li class="nav-item"><a href="">Setup gian hàng chuẩn SEO</a></li>
->>>>>>> 4a1bffb4d44c2bd51042dc8899c2e05a2ef93420
+
             </div>
         </x-slot>
     </x-card>
@@ -140,14 +133,15 @@
             </div>
         </x-slot>
     </x-card>
-        {{--Sidebar Tin Tức--}}
+    {{--Sidebar Tin Tức--}}
     <div class="news-sidebar-left" style="display:none;">
         <x-card>
             <x-slot name="header">
                 <div class="nav">
                     <ul class="nav-r">
                         <li class="nav-item">
-                            <span style="color: #000;font-size: 18px;font-style: normal;font-weight: 700;line-height: normal;">
+                            <span
+                                style="color: #000;font-size: 18px;font-style: normal;font-weight: 700;line-height: normal;">
                                 <a class="" href="{{ route('news.index')}}">{{ ('Tin tức') }}</a>
                             </span>
                         </li>
@@ -157,27 +151,28 @@
 
             {{--Thông tin tin tức--}}
             <x-slot name="footer">
-                <div class="news"style="padding: 0 20px;">
+                <div class="news" style="padding: 0 20px;">
                     @foreach($news as $value)
-                        @if($loop->iteration <= 2)
-                            <a class="news-slug"href="{{ route('news.detail', $value->slug) }}">
-                                <div @class([ ""=> !$loop->last ])>
-                                    <div style="display:grid;grid-template-columns:30% 65%;margin-bottom:20px;gap: 10px;">
-                                        <div class="img-news">
-                                            <img src="{{ asset($value->getavatar) }}"/>
-                                        </div>
-                                        <div class="content-news">
-                                            <p style="margin-bottom: 20px;">{{ $value->title }}</p>
-                                            <div style="display:flex;justify-content:space-between;" class="btn-date-news">
-                                                <span style="color: #A6A4A4;font-size: 10px;font-style: normal;font-weight: 500;line-height: normal;">{{ format_datetime($value->created_at) }}</span>
-                                                <a class="text-orange" href="#" style="border-bottom: 1px solid #E0793F;display: flex;justify-content: center;">{{ __('Xem thêm') }}</a>
-                                            </div>
-                                        </div>
+                    @if($loop->iteration <= 2) <a class="news-slug" href="{{ route('news.detail', $value->slug) }}">
+                        <div @class([ ""=> !$loop->last ])>
+                            <div style="display:grid;grid-template-columns:30% 65%;margin-bottom:20px;gap: 10px;">
+                                <div class="img-news">
+                                    <img src="{{ asset($value->getavatar) }}" />
+                                </div>
+                                <div class="content-news">
+                                    <p style="margin-bottom: 20px;">{{ $value->title }}</p>
+                                    <div style="display:flex;justify-content:space-between;" class="btn-date-news">
+                                        <span
+                                            style="color: #A6A4A4;font-size: 10px;font-style: normal;font-weight: 500;line-height: normal;">{{ format_datetime($value->created_at) }}</span>
+                                        <a class="text-orange" href="#"
+                                            style="border-bottom: 1px solid #E0793F;display: flex;justify-content: center;">{{ __('Xem thêm') }}</a>
                                     </div>
                                 </div>
-                            </a>
+                            </div>
+                        </div>
+                        </a>
                         @endif
-                    @endforeach
+                        @endforeach
                 </div>
 
                 <div class="nav-arrow">
@@ -252,8 +247,9 @@
     .card {
         width: 100% !important;
     }
-    .news-sidebar-left{
-        display:block !important;
+
+    .news-sidebar-left {
+        display: block !important;
     }
 }
 
@@ -342,10 +338,12 @@ dl li {
     margin-left: 5px;
 
 }
-#ui-basic a{
+
+#ui-basic a {
     font-size: 13px;
     font-weight: 400;
 }
+
 #ui-basic li a:hover {
     color: #E0793F;
 }
