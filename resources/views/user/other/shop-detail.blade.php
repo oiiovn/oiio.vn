@@ -187,7 +187,7 @@
                                 style="font-size:18px;color: #D0011B;font-style: normal;font-weight: 400;line-height: normal;padding-left:8px;">
                                 4.5</div>
                             <div class=""
-                                style="font-size:18px;color: #D0011B;font-style: normal;font-weight: 400;line-height: normal;width: 150px;padding-left:3px;">
+                                style="font-size:18px;color: #D0011B;font-style: normal;font-weight: 400;line-height: normal;width: 170px;padding-left:3px;">
                                 (25,5k đánh giá)</div>
                         </div>
                     </div>
@@ -268,12 +268,12 @@
                                 style="color: #D0011B;font-style: normal;font-weight: 400;line-height: normal;padding-left:8px;">
                                 4.5</div>
                             <div class="fs15"
-                                style="color: #D0011B;font-style: normal;font-weight: 400;line-height: normal;width: 140px;padding-left:3px;">
+                                style="color: #D0011B;font-style: normal;font-weight: 400;line-height: normal;width: 150px;padding-left:3px;">
                                 (25,5k đánh giá)</div>
                             <div class="see-more-info-shop" style="display:flex;" data-toggle="modal"
                                 data-target="#exampleModalCenter">
                                 <h3 class="fs13"
-                                    style="color: #A6A4A4;font-style: normal;font-weight: 400;line-height: normal;width:62px;">
+                                    style="color: #A6A4A4;font-style: normal;font-weight: 400;line-height: normal;width:65px;">
                                     Xem
                                     thêm</h3><img src="{{ asset('viewsCustom/assets/images/popout.svg') }}"
                                     style="padding-left:5px;width:20px;height:20px;margin-top:-2px;" />
@@ -354,9 +354,7 @@
                                 style="color: #D0011B;font-style: normal;font-weight: 400;line-height: normal;padding-left:3px;">
                                 (25,5k đánh giá)</div>
                         </div>
-                        <!-- <div class="see-more" style="display:flex;"data-toggle="modal" data-target="#exampleModalMobile" >
-                            <h3 class="fs13" style="color: #A6A4A4;font-style: normal;font-weight: 400;line-height: normal;width:60px;"  >xem thêm</h3><img src="{{ asset('viewsCustom/assets/images/popout.svg') }}"  style="padding-left:5px;width:20px;height:20px;margin-top:-2px;"/>                    
-                        </div> -->
+
                     </div>
                 </div>
                 <div class="mobile-wage" style="padding-top:12px;">
@@ -476,7 +474,7 @@
                                         <div class="items">Shop thanh toán</div>
                                         <div class="items">Shop gửi đánh giá</div>
                                         <div class="items"
-                                            style="border-radius: 5px;background: #FBC250;width:109px;padding: 5px 10px;margin-top:-10px;">
+                                            style="border-radius: 5px;background: #FBC250;width:120px;padding: 5px 10px;margin-top:-10px;">
                                             Tài khoàn vàng</div>
                                         <div class="items">Áp mã freeship</div>
                                         <div class="items">Hà Nội</div>
@@ -1039,6 +1037,10 @@
 
 ul .items li {
     list-style-type: square !important;
+}
+
+#sidebar-left {
+    height: 1500px !important;
 }
 
 .body-text p {

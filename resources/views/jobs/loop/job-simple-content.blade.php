@@ -141,7 +141,7 @@
             </td>
             <td class="body-content" style="text-align:right;position: absolute;right: 20px;">
                 <div class="items fs14 items-tiktok"
-                    style="color: #FFF;font-style: normal;font-weight: 400;line-height: normal;border-radius: 5px;background: #000;padding:5px 25px ;width:90px;">
+                    style="color: #FFF;font-style: normal;font-weight: 400;line-height: normal;border-radius: 5px;background: #000;padding:5px 25px ;width:100px;">
                     Tiktok</div>
                 <div class="items fs13"
                     style="color: rgba(38, 147, 0, 0.80);font-style: normal;font-weight: 400;line-height: normal;">Hoàn
@@ -152,8 +152,8 @@
                 <div class="items">Shop thanh toán</div>
                 <div class="items">Shop gửi đánh giá</div>
                 <div class="items"
-                    style="border-radius: 5px;background: #FBC250;width:109px;padding: 5px 10px;margin-top:-10px;">Tài
-                    khoàn vàng</div>
+                    style="border-radius: 5px;background: #FBC250;width:130px;padding: 5px 10px;margin-top:-10px;">Tài
+                    khoản vàng</div>
                 <div class="items">Áp mã freeship</div>
                 <div class="items">Hà Nội</div>
             </td>
@@ -277,7 +277,7 @@
                     </td>
                     <td class="body-content" style="text-align:right;">
                         <div class="items fs13 items-tiktok-webside"
-                            style="color: #FFF;font-style: normal;font-weight: 700;line-height: normal;border-radius: 5px;background: #000;padding:8px 25px ;width:90px;">
+                            style="color: #FFF;font-style: normal;font-weight: 700;line-height: normal;border-radius: 5px;background: #000;padding:8px 25px ;width:100px;">
                             Tiktok</div>
                         <div class="items fs13"
                             style="color: rgba(38, 147, 0, 0.80);font-style: normal;font-weight: 700;line-height: normal;">
@@ -289,7 +289,7 @@
                         <div class="items">Shop thanh toán</div>
                         <div class="items">Shop gửi đánh giá</div>
                         <div class="items"
-                            style="border-radius: 5px;background: #FBC250;width:130px;padding: 8px 20px;">Tài khoàn vàng
+                            style="border-radius: 5px;background: #FBC250;width:140px;padding: 8px 20px;">Tài khoản vàng
                         </div>
                         <div class="items" style="margin-bottom:15px;">Áp mã freeship</div>
                         <div class="items">Hà Nội</div>
@@ -475,12 +475,11 @@ ul .items li {
     }
 
     .items-tiktok {
-        margin-left: 19%;
+        margin-left: 25%;
     }
 
     .wage {
         margin-right: 25px;
-        /* margin-left:85px; */
         width: 131px;
     }
 

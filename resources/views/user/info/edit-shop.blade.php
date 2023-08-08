@@ -127,6 +127,10 @@
     font-family: 'Lato'sans-serif !important;
 }
 
+#sidebar-Left {
+    height: 1150px !important;
+}
+
 @media (max-width:768px) {
     .row {
         margin-left: 0px !important;
@@ -146,7 +150,7 @@
         top: -12px;
         left: 40px;
         background: #fff;
-        width: 110px;
+        width: 120px;
     }
 
     .title-ip-2 {
@@ -154,7 +158,7 @@
         top: -11px;
         left: 40px;
         background: #fff;
-        width: 60px;
+        width: 70px;
     }
 
     .title-ip-3 {
@@ -162,7 +166,7 @@
         top: -11px;
         left: 40px;
         background: #fff;
-        width: 80px;
+        width: 90px;
     }
 
     .title-ip-4 {
@@ -170,7 +174,7 @@
         top: -11px;
         left: 40px;
         background: #fff;
-        width: 40px;
+        width: 50px;
     }
 }
 
@@ -189,7 +193,7 @@
         top: -12px;
         left: 100px;
         background: #fff;
-        width: 110px
+        width: 120px
     }
 
     .title-ip-2 {
@@ -197,7 +201,7 @@
         top: -11px;
         left: 100px;
         background: #fff;
-        width: 60px;
+        width: 70px;
     }
 
     .title-ip-3 {
@@ -205,7 +209,7 @@
         top: -11px;
         left: 100px;
         background: #fff;
-        width: 80px;
+        width: 90px;
     }
 
     .title-ip-4 {
@@ -213,14 +217,12 @@
         top: -11px;
         left: 100px;
         background: #fff;
-        width: 40px;
+        width: 50px;
     }
 }
 
 .form-control:focus {
-    border: rgba(0, 0, 0, 0.70);
-    box-shadow: none;
-    box-shadow: 0px 0px 5px #d0011b !important;
-
+    border: 2px solid #d0011b !important;
+    box-shadow: none !important;
 }
 </style>

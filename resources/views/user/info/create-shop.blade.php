@@ -49,14 +49,17 @@
 @endsection
 <style>
 .form-control:focus {
-    border: rgba(0, 0, 0, 0.70);
-    box-shadow: none;
-    box-shadow: 0px 0px 5px #d0011b !important;
+    border: 2px solid #d0011b !important;
+    box-shadow: none !important;
 
 }
 
 * {
     font-family: 'Lato'sans-serif !important;
+}
+
+#sidebar-Left {
+    height: 1150px !important;
 }
 
 @media (max-width:768px) {
@@ -78,7 +81,7 @@
         top: -12px;
         left: 40px;
         background: #fff;
-        width: 110px;
+        width: 120px;
     }
 }
 
@@ -97,7 +100,7 @@
         top: -12px;
         left: 100px;
         background: #fff;
-        width: 110px;
+        width: 120px;
     }
 
 }
