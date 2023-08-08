@@ -761,7 +761,7 @@
 
                         <div>
                             <div
-                                style="position: absolute; left: 40px; bottom: 42px;width: 180px;background: #fff;text-align: center;">
+                                style="position: absolute; left: 40px; bottom: 62px;width: 180px;background: #fff;text-align: center;">
                                 Nhập lại mật khẩu mới
                             </div>
                             <input id="re-password" class="form-control form-control-flush h55 w100" type="password"
@@ -847,6 +847,10 @@ btnResetpass.addEventListener('click', () => {
 
 .modal-dmk .show {
     display: block !important;
+}
+
+.h55 {
+    height: 55px;
 }
 
 .content-dmk {
