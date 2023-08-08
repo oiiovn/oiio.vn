@@ -18,7 +18,7 @@
             </div>
             <div class="slug-title-date" style="display: flex;justify-content: space-between;margin-bottom:25px;width: 95%;">
                     <span style="color: #E0793F;font-family: 'Lato'sans-serif;font-size: 14px;font-style: normal;font-weight: 800;line-height: normal;">Xu hướng</span>
-                    <span style="color: #A6A4A4;font-family: 'Lato'sans-serif;font-size: 14px;font-style: normal;font-weight: 500;line-height: normal;">1 giờ trước</span>
+                    <span style="color: #A6A4A4;font-family: 'Lato'sans-serif;font-size: 14px;font-style: normal;font-weight: 500;line-height: normal;">{{ format_datetime($news->created_at) }}</span>
                 </div>
             <!-- <div class="img-slug">
                 <img src="{{ asset($news->avatar) }}" width="100%"/>

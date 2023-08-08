@@ -27,7 +27,7 @@
                     <a href="{{ route('news.detail', $value->slug) }}">
                     <img class="img-news" style="border:none;" src="{{ asset($value->avatar) }}" width="100%" height="160px" />
                         <div style="display: block;padding-left:12px; padding-right:12px;padding-bottom:10px;">
-                            <div style="color: #E0793F;font-family: 'Lato' sans-serif;font-size: 12px;font-style: normal;font-weight: 700;line-height: 22px;">Chủ đề</div>
+                            <div style="color: #E0793F;font-family: 'Lato' sans-serif;font-size: 12px;font-style: normal;font-weight: 700;line-height: 22px;">Xu hướng</div>
                             <div class="content-news"style="border:none;margin-bottom:10px;color: #000;font-family: 'Lato' sans-serif;font-size: 16px;font-style: normal;font-weight: 400;line-height: 22px;">
                                 {{ $value->title }}
                             </div>
