@@ -33,11 +33,11 @@
 
         <x-slot name="footer">
             <div class="collapse show" id="ui-basic">
-                <li class="nav-item" href="#">Lên Shopee Mall</li>
-                <li class="nav-item" href="#">Lên Lazada Mall</li>
-                <li class="nav-item" href=""><a href="{{ route('sim-code') }}">Cho thuê sim code</a></li>
-                <li class="nav-item" href="#">Mở thông tin khách hàng Shopee</li>
-                <li class="nav-item" href="#">Setup gian hàng chuẩn SEO</li>
+                <li class="nav-item"><a href="">Lên Shopee Mall</a></li>
+                <li class="nav-item"><a href="">Lên Lazada Mall</a></li>
+                <li class="nav-item"><a href="{{ route('sim-code') }}">Cho thuê sim code</a></li>
+                <li class="nav-item"><a href="">Mở thông tin khách hàng Shopee</a></li>
+                <li class="nav-item"><a href="">Setup gian hàng chuẩn SEO</a></li>
             </div>
         </x-slot>
     </x-card>
@@ -294,7 +294,7 @@ dl li {
     font-size: 13px;
 }
 
-#ui-basic .nav-item:hover {
+#ui-basic li a:hover {
     color: #E0793F;
 }
 
