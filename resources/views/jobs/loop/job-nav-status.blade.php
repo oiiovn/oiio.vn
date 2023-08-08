@@ -559,7 +559,6 @@
         backdrop-filter:none !important;
     }
     #sidebar-left {
-        background-color: #FFF;
-        height: 1500px;
+        height: 1600px;
     }
 </style>

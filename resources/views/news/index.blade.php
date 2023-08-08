@@ -25,7 +25,7 @@
                 @foreach($news as $value)
                 <div class="col-news" style="width:23.65%;background: #fff;border-radius:5px;box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);border:none;margin-bottom:15px;">
                     <a href="{{ route('news.detail', $value->slug) }}">
-                    <img class="img-news" style="border:none;" src="{{ asset($value->avatar) }}" width="100%" height="159px" />
+                    <img class="img-news" style="border:none;max-width:272px;max-height:159px;" src="{{ asset($value->avatar) }}" />
                         <div style="display: block;padding-left:12px; padding-right:12px;padding-bottom:10px;">
                             <div style="color: #E0793F;font-family: 'Lato' sans-serif;font-size: 12px;font-style: normal;font-weight: 700;line-height: 22px;">Xu hướng</div>
                             <div class="content-news"style="border:none;margin-bottom:10px;color: #000;font-family: 'Lato' sans-serif;font-size: 16px;font-style: normal;font-weight: 400;line-height: 22px;">
