@@ -33,13 +33,11 @@
 
         <x-slot name="footer">
             <div class="collapse show" id="ui-basic">
-
                 <li class="nav-item"><a href="">Lên Shopee Mall</a></li>
                 <li class="nav-item"><a href="">Lên Lazada Mall</a></li>
                 <li class="nav-item"><a href="{{ route('sim-code') }}">Cho thuê sim code</a></li>
                 <li class="nav-item"><a href="">Mở thông tin khách hàng Shopee</a></li>
                 <li class="nav-item"><a href="">Setup gian hàng chuẩn SEO</a></li>
-
             </div>
         </x-slot>
     </x-card>
