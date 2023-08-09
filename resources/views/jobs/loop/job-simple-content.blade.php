@@ -26,9 +26,9 @@
                         </div>
                     </a>
                 </th>
-                <th class="header-right-pp" style="display:flex;padding-top:5px;">
+                <th class="header-right-pp" style="display:flex;padding-top:8px;">
                     <div><img src="{{ asset('viewsCustom/assets/images/Vector.svg') }}"
-                            style="margin-bottom:7px;width:15px; height:15px;" /></div>
+                            style="margin-bottom:3px;width:15px; height:15px;" /></div>
                     <div class="fs15"
                         style="color: #D0011B;font-style: normal;font-weight: 400;line-height: normal;padding-left:8px;">
                         4.5</div>
@@ -246,17 +246,16 @@
                                 </div>
                             </div>
                         </a>
-                        <div class="header-right-pp" style="display:flex;width:200px;margin-top:10px;">
-                            <div><img src="{{ asset('viewsCustom/assets/images/Vector.svg') }}"
+                        <div class="header-right-pp" style="display:flex;width:220px;margin-top:5px;">
+                            <div style="margin-top:3px;"><img src="{{ asset('viewsCustom/assets/images/Vector.svg') }}"
                                     style="margin-top:-15px; width:15px; height:15px;" /></div>
                             <div class="fs15"
                                 style="color: #D0011B;font-style: normal;font-weight: 400;line-height: normal;padding-left:8px;">
                                 4.5</div>
                             <div class="fs15"
                                 style="color: #D0011B;font-style: normal;font-weight: 400;line-height: normal;width:150px;">
-                                (25,5k
-                                đánh
-                                giá)</div>
+                                (25,5k đánh giá)
+                            </div>
                         </div>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"
                             style="border: none;background:none;position: absolute;right: 20px;"><span
