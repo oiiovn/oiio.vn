@@ -208,7 +208,7 @@
             style=" background:transparent;margin-right: 20px;display: flex;justify-content: space-between;border-radius: 10px;margin-bottom:68px;height: 100%;margin-top:24px;">
             <div class="container-tr-rt" style="background:transparent;width:63.54%;border-radius: 10px;">
                 <div class="container-info"
-                    style="background: #fff;width:100%;height:391px;margin-bottom:20px;border-radius: 10px;">
+                    style="background: #fff;width:100%;margin-bottom:20px;border-radius: 10px;">
                     <div style="width:100%;height:55px;display: flex;align-items: center;padding-left:40px;">
                         <div
                             style="width:29.41%;color: #E0793F;font-family: 'Lato' sans-serif;font-size: 18px;font-style: normal;font-weight: 800;line-height: normal;border-bottom:1px solid rgba(0, 0, 0, 0.11);padding-bottom:10px;">
@@ -222,7 +222,7 @@
                             </x-button>
                         </div>
                     </div>
-                    <div class="content-edit-info" style="width:100%;height: 336px;display:block;">
+                    <div class="content-edit-info" style="width:100%;height:auto;display:block;padding-bottom:20px;">
                         <input name="user_id" type="hidden" value="{{ $user->id }}" hidden />
                         <div style="height: 51.3333px;margin-left:40px;display: flex;align-items:center;">
                             <label>{{ __('Họ và tên') }}</label>
@@ -243,22 +243,6 @@
                             <label>{{ __('Số điện thoại') }}</label>
                             <input type="text" name="phone" value="{{ $user->phone }}"
                                 style="width: 65%;margin-left:auto;">
-                        </div>
-                        @if(auth()->user()->hasBankAccount())
-                        @foreach($user->bankAccount as $value)
-                        <div style="height: 51.3333px;margin-left:40px;display: flex;align-items:center;">
-                            <label>{{ __('Tài khoản ngân hàng') }}</label>
-                            <input type="text" name="namebank"
-                                value="{{ $value->account_number }} - {{ $value->bank_name }}"
-                                style="width: 65%;margin-left:auto;">
-                        </div>
-                        @endforeach
-                        @endif
-                        <div style="height: 51.3333px;margin-left:40px;display: flex;align-items:center;">
-                            <label>{{ __('Tên shop') }}</label>
-                            <input type="text" name="nameshop" value="{{ $user->name_shop }}"
-                                style="width: 65%;margin-left:auto;">
-                            <!--cần đổ dữ liệu-->
                         </div>
                     </div>
 
@@ -544,7 +528,7 @@
 
     </x-form>
 </div>
-
+<div class="modal-backdrop1" id="modalBackdrop1"></div>
 <!-- Modal 1 -->
 <div class="modal-box" id="modal-us">
     <div class="modal-content-box">
@@ -579,27 +563,6 @@
                     </div>
                 </div>
                 <div style="margin-bottom:29px;">
-                    @if(auth()->user()->hasBankAccount())
-                    @foreach($user->bankAccount as $value)
-                    <div style="height: 51.3333px;display: flex;align-items:center;">
-                        <label>{{ __('Tài khoản ngân hàng') }}</label>
-                        <input type="text" name="namebank"
-                            value="{{ $value->account_number }} - {{ $value->bank_name }}"
-                            style="width: 65%;margin-left:auto;">
-                    </div>
-                    @endforeach
-                    @endif
-                    <div style="margin-bottom:29px;">
-                        <div style="height: 51.3333px;display: flex;align-items:center;">
-                            <label>{{ __('Tên shop') }}</label>
-                            <input type="text" name="nameshop" value="{{ $user->name_shop }}"
-                                style="width: 65%;margin-left:auto;">
-                            <!--cần đổ dữ liệu-->
-                        </div>
-                    </div>
-                    <div>
-
-                    </div>
                     <button type="submit"
                         style="background:#E0793F;border:none;color:#fff;border-radius:5px;width:100%;padding: 15px 129px;">Lưu</button>
                 </div>
@@ -717,7 +680,7 @@
         </div>
     </div>
 </div>
-<div class="modal-backdrop" id="modalBackdrop"></div>
+
 <!-- Đoạn mã JavaScript -->
 <script>
 // Lấy thẻ div box-us và box-rt bằng cách sử dụng id
@@ -729,7 +692,7 @@ const modalUS = document.getElementById('modal-us');
 const modalRT = document.getElementById('modal-rt');
 
 // Lấy lớp phủ bằng cách sử dụng id
-const modalBackdrop = document.getElementById('modalBackdrop');
+const modalBackdrop = document.getElementById('modalBackdrop1');
 
 // Lấy nút đóng modal cho modal-us và modal-rt
 const closeModalUS = document.getElementById('closeModalUS');
@@ -792,13 +755,13 @@ window.addEventListener('click', function(event) {
 /* Đoạn mã CSS */
 /* Ẩn modal và lớp phủ mặc định */
 .modal-box,
-.modal-backdrop {
+.modal-backdrop1 {
     display: none;
 }
 
 /* Hiển thị lớp phủ mờ khi modal được hiển thị */
 .modal-box.show,
-.modal-backdrop.show {
+.modal-backdrop1.show {
     display: block;
 }
 
@@ -822,7 +785,7 @@ window.addEventListener('click', function(event) {
 }
 
 /* Thiết lập lớp phủ */
-.modal-backdrop {
+.modal-backdrop1 {
     position: fixed;
     top: 0;
     left: 0;
@@ -861,7 +824,7 @@ window.addEventListener('click', function(event) {
 
     .container-box {
         display: block !important;
-        margin-top: 300px !important;
+        margin-top: 280px !important;
         margin-right: 0 !important;
     }
 
