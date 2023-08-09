@@ -19803,22 +19803,7 @@ dl li {
         height: 40px !important;
         padding-bottom: 5px;
     }
-    .card-list {
-        padding: 0 !important;
-        width: 100% !important;
-    }
-    .card-content {
-        margin-left: 2rem !important;
-    }
-    .card-warning {
-        display: block !important;
-    }
-    .card-item button {
-        width: 250px !important;
-    }
-    .card-item .item-logo {
-        margin-left: -4rem !important;
-    }
+
     #content {
         margin-top: 3rem !important;
     }
@@ -19837,24 +19822,6 @@ dl li {
         .nav-item.dropdown
         .dropdown-menu.navbar-dropdown {
         left: -45px;
-    }
-    .card-item button {
-        width: 195px !important;
-    }
-    .card-warning p {
-        font-size: 12px !important;
-    }
-}
-@media (max-width: 520px) {
-    .card-item button {
-        width: 140px !important;
-    }
-    .card-item button span {
-        font-size: 16px;
-    }
-    .card-item .item-logo {
-        width: 65px !important;
-        margin-left: -3rem !important;
     }
 }
 /*# sourceMappingURL=style.css.map */

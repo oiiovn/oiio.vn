@@ -7,11 +7,11 @@
     }
 </style>
 <x-form type="post" action="{{ route('transaction.deposit.store') }}" :validate="true">
-    <x-card>
-        <x-slot name="header">
-            <span class="text-white" style="color: #000;font-family: Lato;font-size: 20px;font-style: normal;font-weight: 700;line-height: normal;"><span class="">Tạo lệnh nạp tiền</span></span>
-        </x-slot>
-        <div class="card-body" style="border-radius:10px;">
+    <div class="container-wallet" style="background: #fff;border-radius:5px;padding:15px 20px;">
+        <div class="title-deposit">
+            <span style="color: #000;font-family: 'Lato' sans-serif;font-size: 20px;font-style: normal;font-weight: 700;line-height: normal;"><span class="">Tạo lệnh nạp tiền</span></span>
+        </div>
+        <div class="wallet-body" style="border-radius:10px;">
             {{-- <x-input type="hidden" name="user_id" value="{{ $user->id }}" />--}}
             {{-- <div class="mb-3 price_input__form">--}}
             {{-- <label class="form-label">{{ __('Nhập số tiền cần nạp') }}</label>--}}
@@ -168,26 +168,37 @@
                         margin-left:0 !important;
                         margin-top:0 !important;
                     }
-                    .card-content{
+                    .card-item button span {
+                        font-size: 16px;
+                    }
+                    .card-item button{
+                        width: 80% !important;
+                        height:50px !important;
+                    }
+                    .card-item .item-logo {
+                        width: 65px !important;
+                        margin-left: -3rem !important;
+                    }
+                    .card-warning {
+                        display: block !important;
                         margin-left:0 !important;
                     }
+                    .card-content{
+                        padding-left:0 !important;
+                    }
+                    .card-grid{
+                        padding-left:20px !important;
+                    }
                 }
-                .card-list {
-                    display: block;
-                    align-items: center;
-                    justify-content: center;
-                    width: 807px;
-                    height: 495px;
-                    flex-shrink: 0;
+                .card-grid{
+                    width: 100%;
                 }
-
                 .card-content {
+                    width: 100%;
                     display: grid;
                     grid-template-columns: 50% 50%;
                     justify-content: center;
-                    align-items: center;
-                    margin-bottom: 35px;
-                    margin-left: 75px;
+                    padding-left: 4rem;
                 }
 
                 .card-item {
@@ -199,7 +210,7 @@
                 .card-item button {
                     cursor: pointer;
                     color: #E0793F;
-                    font-family: Lato;
+                    font-family: 'Lato' sans-serif;
                     font-size: 32px;
                     font-style: normal;
                     font-weight: 700;
@@ -254,13 +265,13 @@
                 }
             </style>
         </div>
-    </x-card>
+    </div>
 </x-form>
 <x-form type="post" action="{{ route('transaction.withdrawn.store') }}" :validate="true">
     <div class="container-withdrawn">
         <x-card>
             <x-slot name="header">
-                <span class="text-white" style="color: #000;font-family: Lato;font-size: 20px;font-style: normal;font-weight: 700;line-height: normal;"><span class="">Tạo lệnh rút tiền</span></span>
+                <span class="text-white" style="color: #000;font-family:' Lato' sans-serif;font-size: 20px;font-style: normal;font-weight: 700;line-height: normal;"><span class="">Tạo lệnh rút tiền</span></span>
             </x-slot>
             <div class="card-body">
                 <x-input type="hidden" name="user_id" value="{{ $user->id }}" />
