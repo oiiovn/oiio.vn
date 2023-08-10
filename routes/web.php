@@ -58,6 +58,7 @@ Route::group(['middleware' => 'guest'], function () {
 
 // User
 Route::group(['middleware' => 'auth'], function () {
+    Route::post('/create-bank',[App\Http\Controllers\User\BankController::class,'createBankAccount'])->name('bank.account');
     Route::post('/dang-xuat', [App\Http\Controllers\Auth\LogoutController::class, 'logout'])->name('logout');
 
     Route::prefix('/thong-tin-tai-khoan')->as('user.')->group(function () {
@@ -83,6 +84,7 @@ Route::group(['middleware' => 'auth'], function () {
                 Route::get('/', 'index')->name('index');
                 Route::post('/', 'create')->name('create');
                 Route::get('/xoa/{id}', 'delete')->name('delete');
+
             });
         });
 

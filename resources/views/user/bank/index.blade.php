@@ -6,7 +6,7 @@
 
 @endif
 
-<x-form type="post" :validate="true">
+<x-form type="post" :validate="true" :action="route('bank.account')">
     <input name="user_id" type="hidden" value="{{ $user->id }}" hidden />
     <div class="container-bank" style="height: 589px;flex-shrink: 0;border-radius: 10px;background: #FFF;">
         <div style="width:100%;height:55px;display: flex;align-items: center;padding-left:40px;">
@@ -22,7 +22,7 @@
             <div>
                 <div class="container-info-bank" style="height: 51.3333px;margin-left:40px;display: flex;align-items:center;margin-bottom:21px;">
                     <label>{{ __('Số tài khoản') }}</label>
-                    <x-input style="width: 45%;margin-left:auto;margin-right:50px;height: 46px;flex-shrink: 0;border-radius: 5px;border: 1px solid rgba(48, 48, 48, 0.21);" type="text" name="account_number" placeholder="VD: 0000 0000 0000 0000" :required="true" />
+                    <x-input style="width: 45%;margin-left:auto;margin-right:50px;height: 46px;flex-shrink: 0;border-radius: 5px;border: 1px solid rgba(48, 48, 48, 0.21);" type="text" name="account_number" placeholder="VD: 0000 0000 0000 0000"  />
                 </div>
             </div>
             <div>
@@ -33,14 +33,15 @@
                             $data = $response->json();
                             $breeds = $data['data'];
                     @endphp
-                        
-                    <div class="custom-select" style="background: #fff;width: 45%;margin-left:auto;margin-right:50px;height: 46px;flex-shrink: 0;border-radius: 5px;border: 1px solid rgba(48, 48, 48, 0.21);">
-                        <select id="bankSelect" name="bank_name" required>
-                            @foreach ($breeds as $breed)
-                            <option value="" data-img-src="{{$breed['logo']}}">{{ $breed['shortName'] }} </option>
-                             @endforeach
-                        </select>
-                    </div>
+                    <select class="custom-select" id="inputGroupSelect01" name="bank_name" required style="height: 51.3333px;margin-left:40px;display: flex;align-items:center;margin-bottom:21px;">
+                    <option selected style="height: 51.3333px;margin-left:40px;display: flex;align-items:center;margin-bottom:21px;">Choose...</option>
+                    @foreach ($breeds as $breed)
+                        <option value="{{ $breed['shortName'] }}" data-img-src="{{ $breed['logo'] }}">
+                            {{ $breed['shortName'] }}
+                        </option>
+                    @endforeach
+                </select>
+
                 </div>
             </div>
             <div style="display: flex;align-items: flex-start;gap: 20px;padding-left:38px;overflow-x:auto;margin-bottom:20px;margin-top:36px;">
@@ -75,133 +76,30 @@
         </div>
     </div>
 </x-form>
+
 <style>
-@media (max-width:768px) {
-    .container-bank{
-        height: auto !important;
-    }
-    .title-bank{
-        width: 100% !important;
-    }
-    #row{
-        margin-left:0 !important;
-        margin-top:0 !important;
-    }
-    .container-info-bank{
-        display:block !important;
-        height: auto !important;
-    }
-    .container-info-bank label{
-        margin-bottom:10px !important;
-    }
-    .container-info-bank input[type=text]{
-        margin-left:0 !important;
-        width:90% !important;
-    }
-    .container-info-bank .custom-select{
-        margin-left:0 !important;
-        width:90% !important;
-    }
-    .btn{
-        display: flex !important;
-        justify-content: center !important;
-        margin-left: 0 !important;
-        width:100% !important;
-    }
-}
-.custom-select {
-    position: relative;
-}
-
-.custom-select select {
-    display: none; /* Hide original SELECT element */
-}
-
-.select-selected {
-    background-color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 8px 16px;
-    cursor: pointer;
-    user-select: none;
-    border-radius: 5px;
-}
-
-.select-selected img {
-    margin-left: 10px; /* Set spacing between the image and the text */
-}
-
-.select-selected:after {
-    position: absolute;
-    content: "";
-    top: 20px;
-    right: 20px;
-    width: 0;
-    height: 0;
-    border: 6px solid transparent;
-    border-color: #454545 transparent transparent transparent;
-}
-
-.select-selected.select-arrow-active:after {
-    top: 20px;
-    right: 20px;
-    border: 6px solid transparent;
-    border-color: #454545 transparent transparent transparent;
-}
-
-.select-items div {
-    overflow-y: scroll;
-    color: #000;
-    padding: 8px 16px;
-    cursor: pointer;
-    user-select: none;
-    border-radius: 5px;
-    border-bottom: 1px dashed rgba(0, 0, 0, 0.20);
-    color: #303030;
-    font-family: Lato;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    justify-content: space-between;
-}
-
-.select-items {
-    position: absolute;
-    background-color: #fff;
-    top: 100%;
-    left: 0;
-    height: 200px;
-    right: 0;
-    overflow-y: auto;
-    z-index: 99;
-    border: 1px solid #E0793F;
-    border-radius: 5px;
-}
-
-.select-hide {
-    display: none;
-}
-
-.select-items div:hover,
-.same-as-selected {
-    background-color: rgba(0, 0, 0, 0.1);
-}
-
-::-webkit-scrollbar {
-    height: 8px;
-    /* Scrollbar height */
-}
-
-    
 </style>
 <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var selectElement = document.getElementById("inputGroupSelect01");
+        var imageElement = document.getElementById("bankImage"); // ID của thẻ hình ảnh
+
+        selectElement.addEventListener("change", function() {
+            var selectedOption = selectElement.options[selectElement.selectedIndex];
+            var imgUrl = selectedOption.getAttribute("data-img-src");
+
+            if (imgUrl) {
+                imageElement.src = imgUrl;
+            } else {
+                // Nếu không có đường dẫn hình ảnh, có thể ẩn hình ảnh hoặc thực hiện thao tác khác
+                imageElement.src = ""; // Hoặc gán cho hình ảnh trống
+            }
+        });
+    });
+</script>
+
+<script>
+    
     var x, i, j, l, ll, selElmnt, a, b, c;
     /*look for any elements with the class "custom-select":*/
     x = document.getElementsByClassName("custom-select");
