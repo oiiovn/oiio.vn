@@ -7,7 +7,7 @@ use App\Services\Bank\BankServiceInterface;
 use App\Repositories\Bank\BankRepositoryInterface;
 use App\Http\Request\Bank\BankRequest;
 use App\Repositories\User\UserRepositoryInterface;
-
+use Illuminate\Support\Facades\Http;
 class BankController extends Controller
 {
     protected $repositoryUser;
@@ -28,9 +28,13 @@ class BankController extends Controller
 
     public function getView()
     {
+        $response = Http::get('https://api.vietqr.io/v2/banks');
+        $data = $response->json();
+        $breeds = $data['data'];
         return [
             'index' => 'user.bank.index',
             'createStore' => 'user.info.createStore',
+            'breeds' => $breeds,
         ];
     }
 

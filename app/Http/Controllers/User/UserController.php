@@ -88,4 +88,3 @@ class UserController extends Controller
         $this->service->update($request);
         return redirect()->route('user.index')->with('success', __('Đổi mật khẩu thành công'));
     }
-}
