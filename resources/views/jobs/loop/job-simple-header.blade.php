@@ -26,12 +26,15 @@
         </div>
     </div>
     <div class="col-4 col-md-4 fs-12">
-        <p class="count-reviews text-orange">
+        <p class="count-reviews text-review">
             @if ($job->shop->reviews_avg_rating)
+            <img src="{{ asset('viewsCustom/assets/images/Vector.svg') }}"
+                style="width:15px; height:15px;margin-bottom:5px;" />
             <span class="fw-bold">{{ number_format($job->shop->reviews_avg_rating, 1) }}</span>
             @endif
-            <span class="text-warning"><i class="fa-solid fa-star"></i></span>
+
             <span class="fw-bold">{{ __('/ :count', ['count' => $job->shop->reviews_count]) }}</span>
+            <span class=" fw-bold text-review">đánh giá</span>
         </p>
     </div>
 </div>
@@ -43,3 +46,16 @@
     </div>
 </div>
 @endif
+<style>
+.text-review {
+    color: #D0011B;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.count-reviews {
+    background: none;
+}
+</style>
