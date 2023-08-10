@@ -27,26 +27,20 @@
             </div>
             <div>
                 <div class="container-info-bank" style="height: 51.3333px;margin-left:40px;display: flex;align-items:center;margin-bottom:21px;">
-                    <label>{{ __('Tên ngân hàng') }}</label>
+                    <label>{{ __('Tên ngân hàng') }} </label>
+                    @php
+                            $response = Http::get('https://api.vietqr.io/v2/banks');
+                            $data = $response->json();
+                            $breeds = $data['data'];
+                    @endphp
+                        
                     <div class="custom-select" style="background: #fff;width: 45%;margin-left:auto;margin-right:50px;height: 46px;flex-shrink: 0;border-radius: 5px;border: 1px solid rgba(48, 48, 48, 0.21);">
-                        <x-select name="bank_name" :required="true">
-                            <!-- <option value="">Chọn ngân hàng</option> -->
-                            <option value="Techcombank" data-img-src="{{ asset('viewsCustom/assets/images/techcombank.svg') }}"> Techcombank</option>
-                            <option value="Vietcombank" data-img-src="{{ asset('viewsCustom/assets/images/vietcombank.svg') }}"> Vietcombank</option>
-                            <option value="MB" data-img-src="{{ asset('viewsCustom/assets/images/mb.svg') }}">MB</option>
-                            <option value="Sacombank" data-img-src="{{ asset('viewsCustom/assets/images/sacombank.svg') }}"> Sacombank</option>
-                            <option value="VietinBank" data-img-src="{{ asset('viewsCustom/assets/images/vietinbank.svg') }}"> VietinBank</option>
-                            <option value="Agribank" data-img-src="{{ asset('viewsCustom/assets/images/agribank.svg') }}"> Agribank</option>
-                            <option value="BIDV" data-img-src="{{ asset('viewsCustom/assets/images/bidv.svg') }}"> BIDV</option>
-                            <option value="VPBank" data-img-src="{{ asset('viewsCustom/assets/images/vpbank.svg') }}"> VPBank</option>
-                            <option value="SHB" data-img-src="{{ asset('viewsCustom/assets/images/shb.svg') }}"> SHB</option>
-                            <option value="ACB" data-img-src="{{ asset('viewsCustom/assets/images/acb.svg') }}"> ACB</option>
-                            <option value="HDBank" data-img-src="{{ asset('viewsCustom/assets/images/hdbank.svg') }}"> HDBank</option>
-                            <option value="VIB" data-img-src="{{ asset('viewsCustom/assets/images/vib.svg') }}"> VIB</option>
-                            <!-- Thêm các tùy chọn cho các ngân hàng khác -->
-                        </x-select>
+                        <select id="bankSelect" name="bank_name" required>
+                            @foreach ($breeds as $breed)
+                            <option value="" data-img-src="{{$breed['logo']}}">{{ $breed['shortName'] }} </option>
+                             @endforeach
+                        </select>
                     </div>
-
                 </div>
             </div>
             <div style="display: flex;align-items: flex-start;gap: 20px;padding-left:38px;overflow-x:auto;margin-bottom:20px;margin-top:36px;">
