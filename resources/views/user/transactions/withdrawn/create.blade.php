@@ -5,7 +5,7 @@
 <x-form type="post" action="{{ route('transaction.withdrawn.store') }}" :validate="true">
     <div class="container-widthdrawn"style="background:#fff;border-radius:5px;padding:1.5rem 20px;">
         <div style="margin-bottom:20px;">
-            <span class="title-widthdrawn" style="color: #000;font-family: Lato;font-size: 20px;font-style: normal;font-weight: 700;line-height: normal;"><span class="">Tạo lệnh rút tiền</span></span>
+            <span class="title-widthdrawn" style="color: #000;font-family: 'Lato' sans-serif;font-size: 20px;font-style: normal;font-weight: 700;line-height: normal;"><span class="">Tạo lệnh rút tiền</span></span>
         </div>
         <div class="">
             <input type="hidden" name="user_id" value="{{ $user->id }}" />

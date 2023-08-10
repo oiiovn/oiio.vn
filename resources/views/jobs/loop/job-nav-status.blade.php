@@ -400,6 +400,7 @@
 </div>
 <style>
     @media (max-width:768px) {
+
         #row {
             margin-left: 11px !important;
         }
@@ -493,7 +494,9 @@
             margin-bottom:5px !important;
         }
     }
-
+    #main-content{
+            display:block !important;
+        }
     body {
         padding-bottom: 68px;
     }
