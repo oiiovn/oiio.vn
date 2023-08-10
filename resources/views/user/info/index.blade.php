@@ -281,45 +281,9 @@
                                 <a href="#">Lịch sử rút tiền</a>
                             </li>
                             <li style="height:29px;display: flex;justify-content: center;align-items: center;">
-                                <a href="#" id="showModal">Tháng<i style="margin-left:5px;font-size:20px;"
+                                <a href="#" >Tháng<i style="margin-left:5px;font-size:20px;"
                                         class="ri-arrow-down-s-line"></i></a>
-                            </li> <!-- Modal -->
-                            <div class="modal-overlay hidden" id="myModalOverlay"></div>
-                            <div class="modal hidden modal-distance" id="myModal" tabindex="-1" role="dialog">
-                                <div class="modal-dialog" role="document">
-                                    <div class="modal-content-info">
-                                        <div class="modal-header" style="background: #E0793F;color:#FFF;">
-                                            <h5 class="modal-title">
-                                                <div class="pagination" style="margin-left:40px;">
-                                                    <a href="#">&laquo;</a>
-                                                    <a class="active" href="#">2023</a>
-                                                    <a href="#">&raquo;</a>
-                                                </div>
-                                            </h5>
-                                        </div>
-                                        <div class="modal-body">
-                                            <!-- Nội dung modal -->
-                                            <div class="body-list-date"
-                                                style="display: inline-flex;flex-direction: column;align-items: center;gap: 24px;justify-content: center;margin-left:95px;">
-                                                <a href="#">Tháng 1</a>
-                                                <a href="#">Tháng 2</a>
-                                                <a href="#">Tháng 3</a>
-                                                <a href="#">Tháng 4</a>
-                                                <a href="#">Tháng 5</a>
-                                                <a href="#">Tháng 6</a>
-                                                <a href="#">Tháng 7</a>
-                                            </div>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button style="background:transparent;border:none;" type="button"
-                                                class="close" data-dismiss="modal" aria-label="Close">
-                                                <span aria-hidden="true">Hủy</span>
-                                            </button>
-                                            <button type="button" class="btn" style="color:#E0793F;">Xác nhận</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            </li>
 
                         </div>
                     </div>

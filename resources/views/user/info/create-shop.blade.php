@@ -9,7 +9,7 @@
 
 <div class="form-create-shop" style="width: 90%;height: 225px; margin: auto;">
     <div style="height:250px;margin-bottom:20px;background:#fff;border-radius:10px;">
-        <x-card style="">
+        <x-card>
             <x-slot name="header">
                 <div style="display:flex;">
                     <span class="header__create-shop"
@@ -28,7 +28,7 @@
                             style="color: rgba(0, 0, 0, 0.70);text-align: center;font-size: 16px;font-style: normal;font-weight: 700;line-height: normal;"
                             class="form-label title-ip-1">{{ __('Tên cửa hàng') }}</label>
                         <div style="display:block;" class="length-ip">
-                            <div class="mb-3 w-form pd-form f-create-shop" style="">
+                            <div class="mb-3 w-form pd-form f-create-shop">
                                 <x-input class="w-100 height-ip" name="name_shop" placeholder="VD:Nhập tên shop"
                                     :required="true"
                                     style="color: rgba(0, 0, 0, 0.70);display: flex;width: 600px;width: 100% !important;align-items: center;flex-shrink: 0;" />
