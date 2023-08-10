@@ -3,7 +3,7 @@
     <div class="wrap-control-tab pb-2 pt-3">
         <div class="job-status-nav-tabs d-flex border-b">
             <div class="nav-item">
-            <span class="job-status-number-test">0</span> <!--chỗ này chưa đổ dữ liệu-->
+                <span class="job-status-number-test">0</span> <!--chỗ này chưa đổ dữ liệu-->
                 <span>Tất cả đơn</span>
             </div>
             @foreach ($job_status[$type] as $key => $value)
@@ -23,7 +23,7 @@
             @endforeach
         </div>
     </div>
-    <div  class="container-job"style="width: 1150px; height: 80px; background: white; border-radius: 10px;display:flex;">
+    <div class="container-job" style="width: 1150px; height: 80px; background: white; border-radius: 10px;display:flex;">
         {{-- Tìm kiếm --}}
         <div class="search-field-r d-none d-md-block" style="border-radius: 10px;">
             <form class="d-flex align-items-center" action="#">
@@ -55,7 +55,7 @@
 </div>
 
 <!-- mô phỏng frontend chưa đổ dữ liệuƯ-->
-<div class="container-job-list d-flex flex-column" style="width:139%;max-width:1150px; height: 100%; background: #FFF; border-radius: 10px;flex-shrink: 0;margin-top:25px;">
+<!-- <div class="container-job-list d-flex flex-column" style="width:139%;max-width:1150px; height: 100%; background: #FFF; border-radius: 10px;flex-shrink: 0;margin-top:25px;">
     <div class="job-list" style="display: block;padding:28px 38px;">
         <div class="label-list" style="margin-bottom:25px;color: #000;font-family: 'Lato' sans-serif;font-size: 22px;font-style: normal;font-weight: 700;line-height: normal;word-wrap: break-word">
             <span>1051 Tất cả đơn</span>
@@ -392,36 +392,108 @@
     <div style="width: 100%;height:100%;background-color:#fff;">
             <div style="height: 68px;"></div>
     </div>
-</div>
+</div> -->
+
 
 
 
 </div>
 <style>
     @media (max-width:768px) {
-        #row{
+        #row {
             margin-left: 11px !important;
         }
-        .job-list{
+
+        .job-list {
             display: none !important;
         }
-        .container-job-list{
+
+        .container-job-list {
             width: 100% !important;
-            margin-top:0 !important;
+            margin-top: 0 !important;
         }
-        .container-job-list::-webkit-scrollbar{
+
+        .container-job-list::-webkit-scrollbar {
             height: 5px;
         }
-        .label-list{
+
+        .label-list {
             font-size: 16px !important;
         }
-        .job-list-mobile{
+
+        .job-list-mobile {
+            display: block !important;
+        }
+
+        .list-item-mb {
+            margin-bottom: 20px;
+        }
+
+        .title-step {
+            display: none !important;
+        }
+        .list-step{
+            height: 100px !important;;
+        }
+        .step-info {
+            display: none !important;
+        }
+
+        .container-list {
+            display: none !important;
+        }
+
+        .process-title span {
+            display: none !important;
+        }
+
+        .process-title img {
+            display: none !important;
+        }
+
+        .step-process {
+            padding-left: 15px !important;
+            padding-top: 0 !important;
+            width: 73% !important;
+            height: 250px !important;
+            border-radius: 0 !important;
+        }
+
+        .process-title {
+            font-size: 16px !important;
+        }
+
+        .vote-step {
+            float: none !important;
+        }
+
+        .step-info-mb {
+            display: flex !important;
+            background: #fff;
+        }
+
+        .info-mb {
+            border-radius: 0 !important;
+        }
+
+        .money-mb {
+            border-radius: 0 !important;
+        }
+
+        .btn-info-mb {
+            padding-left: 0 !important;
+        }
+        .content-list-step{
+            width: 73% !important;
+        }
+        .index-mobile{
             display:block !important;
         }
-        .list-item-mb{
-            margin-bottom:20px;
+        .items-col2{
+            margin-bottom:5px !important;
         }
     }
+
     body {
         padding-bottom: 68px;
     }
@@ -473,40 +545,49 @@
     }
 </style>
 <style>
-        @media (max-width:768px) {
-        .wrap-control-tab{
-            width:100%;
+    @media (max-width:768px) {
+        .wrap-control-tab {
+            width: 100%;
         }
-        .job-status-nav-tabs{
-            gap: 0 !important;;
+
+        .job-status-nav-tabs {
+            gap: 0 !important;
+            ;
         }
-        .job-title{
-            display:none !important;
+
+        .job-title {
+            display: none !important;
         }
+
         .wrap-control-tab::-webkit-scrollbar {
             height: 5px;
             /* Chiều cao của thanh cuộn */
         }
-        .search-field-r{
+
+        .search-field-r {
             display: block !important;
         }
-        .container-job{
+
+        .container-job {
             height: auto !important;
             width: 100% !important;
             display: block !important;
             margin-bottom: 10px !important;
-            padding-bottom:25px !important;
+            padding-bottom: 25px !important;
         }
-        .date{
+
+        .date {
             margin-left: 10px !important;
             margin-right: 35px !important;
-            margin-top:25px !important;
+            margin-top: 25px !important;
         }
-        .input-group-s{
+
+        .input-group-s {
             width: 75.17% !important;
             margin-left: 12px !important;
         }
     }
+
     .nav-item {
         padding: 10px;
     }
@@ -543,7 +624,7 @@
     }
 
     .date-input input[type='date'] {
-        height:43px;
+        height: 43px;
         border-radius: 10px;
 
     }
@@ -555,9 +636,11 @@
         background: #FFF;
         backdrop-filter: blur(20px);
     }
-    .form-control-s{
-        backdrop-filter:none !important;
+
+    .form-control-s {
+        backdrop-filter: none !important;
     }
+
     #sidebar-left {
         height: 1600px;
     }
