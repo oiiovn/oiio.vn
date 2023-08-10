@@ -104,9 +104,9 @@
             <div class="col-12 col-md-9 main-sec-content" style="margin-top:70px;" id="content">
 
                 <div class="row" style="width: 100%;margin-left: 16px;margin-top:11px;" id="row">
-                    <div class="col-12 col-md-9 main-content" style="width:71.72%;display:flex; ">
+                    <div class="col-12 col-md-9 main-content" style="width:71.72%;display:flex; "id="main-content">
 
-                        <div style="width:98.11%;"> @yield('content')</div>
+                        <div class="content-jr"style="width:98.11%;"> @yield('content')</div>
 
                     </div>
                     <div class="col-12 col-md-3 sidebar-left-right d-mobi-none " id="sidebarRight"

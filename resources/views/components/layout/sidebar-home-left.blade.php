@@ -186,8 +186,6 @@
     </x-card>
 </x-card>
 @else
-<x-link class="btn btn-orange w-100 mb-3" href="{{ route('login.index') }}">Đăng nhập</x-link>
-<x-link class="btn btn-orange w-100 mb-3" href="{{ route('register.index') }}">Đăng ký</x-link>
 @endif
 <!-- <x-card>
         <x-slot name="header">

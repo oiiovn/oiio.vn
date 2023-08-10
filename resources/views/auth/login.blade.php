@@ -27,7 +27,7 @@
         .btn-warning{
           
             margin-left:10%;
-            margin-right:auto%;
+            margin-right:auto;
             
         }
         }
