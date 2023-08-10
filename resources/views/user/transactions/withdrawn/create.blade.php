@@ -35,7 +35,7 @@
                     </select>
                 </div>
             </div>
-            <!-- @each('user.transactions.withdrawn.include.bank-row', $user->bankAccount, 'item')  -->
+             @each('user.transactions.withdrawn.include.bank-row', $user->bankAccount, 'item') 
             <x-button type="submit" class="btn-widthdrawn btn-orang" style="display: inline-flex;padding: 10px 20px;justify-content:center;align-items: center;border-radius: 5px;background: #E0793F;color:#FFF;margin-left:610px;">
                 Tạo lệnh rút tiền</x-button>
         </div>
