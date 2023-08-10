@@ -231,18 +231,18 @@
                         </div>
                         <div style="height: 51.3333px;margin-left:40px;display: flex;align-items:center;">
                             <label>{{ __('Tên tài khoản') }}</label>
-                            <input type="text" name="username" value="{{ $user->username }}"
-                                style="width: 65%;margin-left:auto;">
+                            <input type="text" name="username" value="{{ $user->username }}"readonly
+                                style="width: 65%;margin-left:auto; color:#3333;">
                         </div>
                         <div style="height: 51.3333px;margin-left:40px;display: flex;align-items:center;">
                             <label>{{ __('Email') }}</label>
-                            <input type="text" name="email" value="{{ $user->email }}"
-                                style="width: 65%;margin-left:auto;">
+                            <input type="text" name="email" value="{{ $user->email }}"readonly
+                                style="width: 65%;margin-left:auto; color:#3333;">
                         </div>
                         <div style="height: 51.3333px;margin-left:40px;display: flex;align-items:center;">
                             <label>{{ __('Số điện thoại') }}</label>
-                            <input type="text" name="phone" value="{{ $user->phone }}"
-                                style="width: 65%;margin-left:auto;">
+                            <input type="text" name="phone" value="{{ $user->phone }}"readonly
+                                style="width: 65%;margin-left:auto; color:#3333;">
                         </div>
                     </div>
 
