@@ -27,20 +27,22 @@
             </div>
             <div>
                 <div class="container-info-bank" style="height: 51.3333px;margin-left:40px;display: flex;align-items:center;margin-bottom:21px;">
-                    <label>{{ __('Tên ngân hàng') }} </label>
+                    <label>{{ __('Chọn ngân hàng') }} </label>
                     @php
                             $response = Http::get('https://api.vietqr.io/v2/banks');
                             $data = $response->json();
                             $breeds = $data['data'];
                     @endphp
-                    <select class="custom-select" id="inputGroupSelect01" name="bank_name" required style="height: 51.3333px;margin-left:40px;display: flex;align-items:center;margin-bottom:21px;">
-                    <option selected style="height: 51.3333px;margin-left:40px;display: flex;align-items:center;margin-bottom:21px;">Choose...</option>
-                    @foreach ($breeds as $breed)
-                        <option value="{{ $breed['shortName'] }}" data-img-src="{{ $breed['logo'] }}">
-                            {{ $breed['shortName'] }}
-                        </option>
-                    @endforeach
-                </select>
+                        <select class="custom-select" id="inputGroupSelect01" name="bank_name" required style="padding:10px;margin-right:50px;width:45%;margin-left:auto;height: 46px;border-radius: 5px;border: 1px solid rgba(48, 48, 48, 0.21);">
+                            <option selected>Tài khoản ngân hàng</option>
+                            @foreach ($breeds as $breed)
+                                <option value="{{ $breed['shortName'] }}" data-img-src="{{ $breed['logo'] }}">
+                                    {{ $breed['shortName'] }}
+                                    <img src="{{ $breed['logo'] }}">
+                                </option>
+                            @endforeach
+                        </select>
+
 
                 </div>
             </div>
@@ -78,6 +80,119 @@
 </x-form>
 
 <style>
+    @media (max-width:768px) {
+    .container-bank{
+        height: auto !important;
+    }
+    .title-bank{
+        width: 100% !important;
+    }
+    #row{
+        margin-left:0 !important;
+        margin-top:0 !important;
+    }
+    .container-info-bank{
+        display:block !important;
+        height: auto !important;
+    }
+    .container-info-bank label{
+        margin-bottom:10px !important;
+    }
+    .container-info-bank input[type=text]{
+        margin-left:0 !important;
+        width:90% !important;
+    }
+    .container-info-bank .custom-select{
+        margin-left:0 !important;
+        width:90% !important;
+    }
+    .btn{
+        display: flex !important;
+        justify-content: center !important;
+        margin-left: 0 !important;
+        width:100% !important;
+    }
+}
+.custom-select {
+    position: relative;
+}
+.custom-select select {
+    display: none; /* Hide original SELECT element */
+}
+.select-selected {
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 16px;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 5px;
+}
+.select-selected img {
+    margin-left: 10px; /* Set spacing between the image and the text */
+}
+
+.select-selected:after {
+    position: absolute;
+    content: "";
+    top: 20px;
+    right: 20px;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-color: #454545 transparent transparent transparent;
+}
+.select-selected.select-arrow-active:after {
+    top: 20px;
+    right: 20px;
+    border: 6px solid transparent;
+    border-color: #454545 transparent transparent transparent;
+}
+.select-items div {
+    overflow-y: scroll;
+    color: #000;
+    padding: 8px 16px;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 5px;
+    border-bottom: 1px dashed rgba(0, 0, 0, 0.20);
+    color: #303030;
+    font-family: Lato;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: space-between;
+}
+.select-items {
+    position: absolute;
+    background-color: #fff;
+    top: 100%;
+    left: 0;
+    height: 200px;
+    right: 0;
+    overflow-y: auto;
+    z-index: 99;
+    border: 1px solid #E0793F;
+    border-radius: 5px;
+}
+.select-hide {
+    display: none;
+}
+.select-items div:hover,
+.same-as-selected {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+::-webkit-scrollbar {
+    height: 8px;
+    /* Scrollbar height */
+}
 </style>
 <script>
     document.addEventListener("DOMContentLoaded", function() {
@@ -96,6 +211,7 @@
             }
         });
     });
+   
 </script>
 
 <script>
@@ -149,7 +265,7 @@
             // Tạo thẻ img và gắn vào phần tử DIV (c)
             var img = document.createElement("img");
             img.src = imgSrc;
-            img.style.width = "70px"; // Định dạng kích thước ảnh
+            img.style.width = "50px"; // Định dạng kích thước ảnh
             img.style.height = "20px";
 
             // Gắn thẻ img vào phần tử DIV (c) - Trước hoặc sau văn bản, tùy vào yêu cầu hiển thị của bạn
