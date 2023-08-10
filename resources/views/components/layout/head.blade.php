@@ -4,7 +4,6 @@
 <meta name="X-TOKEN" content="{{ csrf_token() }}">
 <meta name="currency" content="{{ config('custom.currency.unit') }}">
 <meta name="position_currency" content="{{ config('custom.currency.position') }}">
-<title>@yield('title', $settings['site_name'])</title>
 <link rel="shortcut icon" type="image/x-icon" href="{{ asset('assets/images/logo.png') }}" />
 <link rel="stylesheet" href="{{ asset('libs/bootstrap/css/bootstrap.min.css') }}"/>
 <link href="{{ asset('libs/jquery-toast-plugin/jquery.toast.min.css') }}" rel="stylesheet"type="text/css">
