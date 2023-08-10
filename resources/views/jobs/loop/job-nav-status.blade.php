@@ -407,6 +407,7 @@
 
 </div>
 <style>
+<<<<<<< HEAD
 @media (max-width:768px) {
     #row {
         margin-left: 11px !important;
@@ -414,6 +415,108 @@
 
     .job-list {
         display: none !important;
+=======
+    @media (max-width:768px) {
+
+        #row {
+            margin-left: 11px !important;
+        }
+
+        .job-list {
+            display: none !important;
+        }
+
+        .container-job-list {
+            width: 100% !important;
+            margin-top: 0 !important;
+        }
+
+        .container-job-list::-webkit-scrollbar {
+            height: 5px;
+        }
+
+        .label-list {
+            font-size: 16px !important;
+        }
+
+        .job-list-mobile {
+            display: block !important;
+        }
+
+        .list-item-mb {
+            margin-bottom: 20px;
+        }
+
+        .title-step {
+            display: none !important;
+        }
+        .list-step{
+            height: 100px !important;;
+        }
+        .step-info {
+            display: none !important;
+        }
+
+        .container-list {
+            display: none !important;
+        }
+
+        .process-title span {
+            display: none !important;
+        }
+
+        .process-title img {
+            display: none !important;
+        }
+
+        .step-process {
+            padding-left: 15px !important;
+            padding-top: 0 !important;
+            width: 73% !important;
+            height: 250px !important;
+            border-radius: 0 !important;
+        }
+
+        .process-title {
+            font-size: 16px !important;
+        }
+
+        .vote-step {
+            float: none !important;
+        }
+
+        .step-info-mb {
+            display: flex !important;
+            background: #fff;
+        }
+
+        .info-mb {
+            border-radius: 0 !important;
+        }
+
+        .money-mb {
+            border-radius: 0 !important;
+        }
+
+        .btn-info-mb {
+            padding-left: 0 !important;
+        }
+        .content-list-step{
+            width: 73% !important;
+        }
+        .index-mobile{
+            display:block !important;
+        }
+        .items-col2{
+            margin-bottom:5px !important;
+        }
+    }
+    #main-content{
+            display:block !important;
+        }
+    body {
+        padding-bottom: 68px;
+>>>>>>> ee23e2f9cf0ca6c62931ef22bfce28f3bd35fa24
     }
 
     .container-job-list {
