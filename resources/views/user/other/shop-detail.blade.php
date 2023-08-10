@@ -208,7 +208,8 @@
                             style="width:16px;height:14px;" />
                     </div>
 
-                    <div class="change-info-shop" style="display:flex;padding-bottom:20px;justify-content: flex-end;">
+                    <div class="change-info-shop dc-info-shop"
+                        style="display:flex;padding-bottom:20px;justify-content: flex-end;">
                         <span>Gò Vấp, Hồ Chí Minh</span>
                         <img style="padding-left:16px;" src="{{ asset('viewsCustom/assets/images/diachi.svg') }}"
                             style="width:13px;height:18px;" />
@@ -1054,6 +1055,13 @@ ul .items li {
 }
 
 @media (max-width: 2400px) {
+    .dc-info-shop {
+        width: auto;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
     .see-more-info-shop {
         margin-left: 100px;
     }
@@ -1494,6 +1502,13 @@ ul .items li {
 }
 
 @media (max-width: 767px) {
+    .dc-info-shop {
+        width: 200px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
     .header-modal-right-info-shop {
         position: absolute;
         right: 50px;
