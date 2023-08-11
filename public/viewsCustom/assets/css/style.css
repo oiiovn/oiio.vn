@@ -9300,7 +9300,7 @@ fieldset:disabled .btn {
     height: 1rem;
     border-width: 0.2em;
 }
-
+/* 
 @-webkit-keyframes spinner-grow {
     0% {
         -webkit-transform: scale(0);
@@ -9348,7 +9348,7 @@ fieldset:disabled .btn {
         -webkit-animation-duration: 1.5s;
         animation-duration: 1.5s;
     }
-}
+} */
 
 .offcanvas {
     position: fixed;
