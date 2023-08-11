@@ -7,6 +7,10 @@ use App\Services\Bank\BankServiceInterface;
 use App\Repositories\Bank\BankRepositoryInterface;
 use App\Http\Request\Bank\BankRequest;
 use App\Repositories\User\UserRepositoryInterface;
+use Illuminate\Support\Facades\Http;
+use PhpParser\Node\Stmt\TryCatch;
+use App\Models\UserBankAccount;
+
 
 class BankController extends Controller
 {
@@ -28,9 +32,13 @@ class BankController extends Controller
 
     public function getView()
     {
+        $response = Http::get('https://api.vietqr.io/v2/banks');
+        $data = $response->json();
+        $breeds = $data['data'];
         return [
             'index' => 'user.bank.index',
             'createStore' => 'user.info.createStore',
+            'breeds' => $breeds,
         ];
     }
 
@@ -51,5 +59,24 @@ class BankController extends Controller
     {
         $this->service->delete($id);
         return redirect()->route('user.bank.index')->with('success', __('Xóa tài khoản thành công'));
+    }
+    public function createBankAccount(BankRequest $request){
+        $userBankAccount = new UserBankAccount();
+        $user_id =$request->input('user_id');
+        $checkBankAccount =  UserBankAccount::where('user_id',$user_id)
+                            ->where('bank_name', $request->input('bank_name'))
+                            ->get();
+        // if(!empty($checkBankAccount)){
+        //     return back() -> with('error' ,'Hệ thống tồn tại ngân hàng này của bạn , bạn muốn chỉnh sửa !!!');
+        // }
+        $userBankAccount->user_id = $request->input('user_id'); 
+        $userBankAccount->account_name = $request->input('account_name');
+        $userBankAccount->account_number = $request->input('account_number');
+        $userBankAccount->bank_name = $request->input('bank_name');
+
+        $userBankAccount->save();
+
+        return back()
+            ->with('success', 'Thông tin tài khoản ngân hàng đã được thêm thành công.');
     }
 }

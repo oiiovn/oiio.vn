@@ -10,7 +10,8 @@ use App\Models\Province;
 use App\Repositories\User\UserRepositoryInterface;
 use App\Services\User\UserServiceInterface;
 use Illuminate\Http\Request;
-
+use PhpOffice\PhpSpreadsheet\Writer\Xlsx\Rels;
+use App\Models\UserBankAccount;
 class UserController extends Controller
 {
 
@@ -88,4 +89,5 @@ class UserController extends Controller
         $this->service->update($request);
         return redirect()->route('user.index')->with('success', __('Đổi mật khẩu thành công'));
     }
+    
 }
