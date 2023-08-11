@@ -65,7 +65,7 @@
 
 <!-- mô phỏng frontend chưa đổ dữ liệuƯ-->
 <div class="container-job-list d-flex flex-column"
-    style="width:139%;max-width:1150px; height: 100%; background: #FFF; border-radius: 10px;flex-shrink: 0;margin-top:25px;">
+    style="width:139% !important;max-width:1150px; height: 100%; background: #FFF; border-radius: 10px;flex-shrink: 0;margin-top:25px;">
     <div class="job-list" style="display: block;padding:28px 38px;">
         <div class="label-list"
             style="margin-bottom:25px;color: #000;font-family: 'Lato' sans-serif;font-size: 22px;font-style: normal;font-weight: 700;line-height: normal;word-wrap: break-word">
