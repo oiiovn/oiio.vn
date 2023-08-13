@@ -111,15 +111,14 @@
                 <span style="margin-top:15px;margin-left: 90px;">Thời gian</span>
             </div>
             <div
-                style="padding-top:20px;display:flex;width: 90%;margin: auto;height: 70px;border-bottom: 1px solid gray;">
-                <div
-                    style="display:flex;width: 200px;max-width: 200px;overflow: hidden; white-space: nowrap;text-overflow: ellipsis;">
+                style="padding-top:20px;display:flex;width: 90%;margin: auto;justify-content: space-around;height: 70px;border-bottom: 1px solid gray;">
+                <div style="display:flex;width:150px;">
                     <img src="{{ asset('viewsCustom/assets/images/icon-lazada.svg') }}"
                         style="width:30px; height:30px;" />
-                    <span style="margin-left:10px;">lazada</span>
+                    <span style="margin-left:10px;">Lazada</span>
                 </div>
                 <div style="width: 120px;"><span
-                        style="color: #000;text-align: center;font-size: 14px;font-style: normal;font-weight: 500;line-height: normal;letter-spacing: 0.84px;">09012345678</span>
+                        style="color: #000;text-align: center;font-size: 14px;font-style: normal;font-weight: 500;line-height: normal;letter-spacing: 0.84px;">09002343478</span>
                 </div>
                 <div><span
                         style="color: #565656;text-align: center;font-size: 14px;font-style: normal;font-weight: 500;line-height: normal;">230725VXU7WUJC</span>
