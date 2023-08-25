@@ -95,7 +95,7 @@
         <div class="row">
             <div class="col-12 col-md-3 sidebar-left-right d-mobi-none position-relative" id="sidebar-left"
                  style="background: #fff;padding-top:65px;padding-right:2px;">
-                <div style="position: fixed;overflow-y:scroll;height:95%;width:16.88%;max-width:243px;" @class([
+                <div style="position: fixed;overflow-y:scroll;height:95%;width:16.88%;max-width:243px;background-color: #fff;" @class([
                             'd-none' => Route::is('login.index', 'register.index')
                         ]) id="sidebar-left-child">
                     <x-sidebar_home_left/>
