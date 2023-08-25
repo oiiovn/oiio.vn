@@ -352,7 +352,7 @@
             <a href="#">&raquo;</a>
         </div>
     </div>
-    <div class="job-list-mobile" style="width:88%;padding-top:20px;height:100%;display:none;margin-left: 15px;">
+    <div class="job-list-mobile" style="width:88%;padding-top:20px;height:100%;display:none !important;margin-left: 15px;">
         <div class="list-item-mb">
             <div class="job-item-mb"
                 style="background:#fff;width:100%;height:133px;display:flex;justify-content:center;align-items:center;border-radius: 8px;border: 1px solid #D2D2CD;box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.15);">
