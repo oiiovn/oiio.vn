@@ -593,12 +593,6 @@
         margin-bottom: 5px !important;
     }
 }
-
-
-body {
-    padding-bottom: 68px;
-}
-
 .container-job-list {
     width: 100% !important;
     margin-top: 0 !important;
@@ -690,11 +684,6 @@ body {
 
 .items-col2 {
     margin-bottom: 5px !important;
-}
-}
-
-body {
-    padding-bottom: 68px;
 }
 
 .col-grid {
@@ -841,6 +830,10 @@ input::-webkit-calendar-picker-indicator {
 }
 
 #sidebar-left {
-    height: 1600px;
+    height: 100vh;
+    padding-bottom: 200px;
+}
+#sidebar-left-child{
+    height: 100vh;
 }
 </style>
